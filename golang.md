@@ -1,0 +1,24 @@
+
+最後更新： 2016-01-13     
+
+~~~~~~~ 
+shell> apt-get install golang
+~~~~~~~
+
+~~~~~~~
+shell> vi hello.go
+~~~~~~~
+
+~~~~~~~
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Printf("hello, world\n")
+}
+
+~~~~~~~
+~~~~~~~
+shell> go run hello.go
+~~~~~~~

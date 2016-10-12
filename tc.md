@@ -1,0 +1,50 @@
+上次更新日期： 2016-10-12  
+
+---
+
+```console
+shell> tc qdisc del dev eth0 root
+shell> tc qdisc add dev eth0 root netem delay 100ms
+shell> tc qdisc add dev eth0 root netem rate 5kbit 20 100 5
+```
+
+```console
+shell> tc qdisc sh dev eth0
+```
+
+---
+
+```console
+shell> modprobe ifb
+shell> ip link set dev ifb0 up
+```
+
+```console
+shell> tc qdisc del dev eth0 ingress
+shell> tc qdisc add dev eth0 ingress
+shell> tc filter add dev eth0 parent ffff: protocol ip u32 match u32 0 0 flowid 1:1 action mirred egress redirect dev ifb0
+```
+
+```console
+shell> tc qdisc del dev eth0 root
+shell> tc qdisc add dev eth0 root handle 1: htb default 10
+shell> tc class add dev eth0 parent 1: classid 1:1 htb rate 6mbit
+shell> tc class add dev eth0 parent 1:1 classid 1:10 htb rate 5mbit
+```
+
+```console
+shell> tc qdisc del dev ifb0 root
+shell> tc qdisc add dev ifb0 root handle 1: htb default 10
+shell> tc class add dev ifb0 parent 1: classid 1:1 htb rate 6mbit
+shell> tc class add dev ifb0 parent 1:1 classid 1:10 htb rate 5mbit
+```
+
+---
+
+### :books: 參考網站：
+- [tc](http://manpages.ubuntu.com/manpages/trusty/man8/tc.8.html)
+- [tc-netem](http://manpages.ubuntu.com/manpages/trusty/man8/tc-netem.8.html)
+- [ip](http://manpages.ubuntu.com/manpages/trusty/man8/ip.8.html)
+- [Linux 高级流控](http://www.ibm.com/developerworks/cn/linux/1412_xiehy_tc/)
+- [](http://www.ibm.com/developerworks/cn/aix/library/au-fine-grain-network/)
+- [](https://docs.oracle.com/cd/E24628_01/doc.121/e56523/gre.htm#g1013049)
