@@ -1,4 +1,4 @@
-上次更新日期： 2016-10-12  
+上次更新日期： 2016-10-13
 
 ---
 
@@ -29,15 +29,37 @@ shell> tc filter add dev eth0 parent ffff: protocol ip u32 match u32 0 0 flowid 
 shell> tc qdisc del dev eth0 root
 shell> tc qdisc add dev eth0 root handle 1: htb default 10
 shell> tc class add dev eth0 parent 1: classid 1:1 htb rate 6mbit
-shell> tc class add dev eth0 parent 1:1 classid 1:10 htb rate 5mbit
+shell> tc qdisc add dev eth0 parent 1:1 handle 10: netem delay 100ms
+
 ```
 
 ```console
 shell> tc qdisc del dev ifb0 root
 shell> tc qdisc add dev ifb0 root handle 1: htb default 10
 shell> tc class add dev ifb0 parent 1: classid 1:1 htb rate 6mbit
-shell> tc class add dev ifb0 parent 1:1 classid 1:10 htb rate 5mbit
+shell> tc qdisc add dev ifb0 parent 1:1 handle 10: netem delay 100ms
 ```
+
+```console
+shell> tc qdisc add dev eth0 root netem delay 100ms rate 1mbit
+shell> tc qdisc add dev ifb0 root netem delay 100ms rate 1mbit
+
+shell> tc qdisc del dev eth0 root
+shell> tc qdisc del dev ifb0 root
+shell> tc qdisc add dev eth0 root netem rate 1mbps
+shell> tc qdisc add dev ifb0 root netem delay 100ms rate 1mbps
+```
+
+tc qdisc del dev eth0 root
+tc qdisc del dev ifb0 root
+tc qdisc add dev eth0 root netem rate 2mbps
+tc qdisc add dev ifb0 root netem delay 100ms rate 2mbps
+
+
+iperf3 -c 192.168.11.7 -t 3600 -f k -u -b 2
+iperf3 -s -f k -4
+
+
 
 ---
 
