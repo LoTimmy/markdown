@@ -41,7 +41,6 @@ shell> git config --global user.email you@example.com
 shell> git config --global color.ui true
 shell> git config --global push.default simple
 
-
 shell> git config --local user.name "Your Name"
 shell> git config --local user.email you@example.com
 shell> git config --local color.ui true
@@ -59,7 +58,6 @@ shell> git commit -m "initial commit"
 shell> git remote add azure [URL for remote repository]
 shell> git push azure master
 ```
-
 
 ```console
 shell> mkdir HelloWorld
@@ -90,7 +88,6 @@ shell> git diff 0fcd2baef5b6741412db6eb3bd2c2b559a02b64f fd7f63f055f2e6ecc23be1a
 
 shell> git remote add origin https://username@your-azure-website.scm.azurewebsites.net:443/your-azure-website.git
 shell> git push
-
 ```
 
 ```console
@@ -168,6 +165,7 @@ shell> git push origin --delete Branch_df65c30a8bb632955646b90f778c0cb5a7c5b28f
 ```
 
 - [gitignore](https://git-scm.com/docs/gitignore)
+
 ---
 
 
