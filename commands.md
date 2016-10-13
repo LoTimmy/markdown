@@ -75,7 +75,94 @@
 
 ---
 
-pwgen 密碼產生器
+**tar - an archiving utility**
+
+```console
+shell> tar cvf file.tar directory
+shell> tar xvf file.tar
+
+shell> tar zcvf file.tar.gz directory
+shell> tar zxvf file.tar.gz
+
+shell> tar jxvf file.tar.bz
+
+shell> tar Zxvf file.tar.Z directory
+shell> tar Zxvf file.tar.Z
+
+```
+
+```
+file.tar.gz
+file.tgz
+file.tar.bz
+```
+
+---
+
+**gzip -- compression/decompression tool using Lempel-Ziv coding (LZ77)**
+
+
+```console
+shell> gzip file1
+shell> gzip -d file1.gz
+shell> gunzip file1.gz
+shell> zcat file.Z
+shell> uncompress file.Z
+```
+
+---
+
+```console
+shell> bzip2 --help
+shell> bzip2 -z filename
+shell> bzip2 -d filename.bz
+shell> bunzip2 filename.bz
+```
+
+```
+filename.bz2
+filename.tbz2
+filename.bz
+filename.tbz
+```
+
+---
+
+```console
+shell> xz --help
+shell> xz -z filename
+shell> xz -d filename.xz
+```
+
+---
+
+**p7zip - 7z file archiver with high compression ratio**
+
+```console
+shell> brew install p7zip
+shell> apt-get install p7zip-full
+shell> 7z a filename.7z filename
+shell> 7z a filename.7z filename -pPassword
+shell> 7z x filename.7z
+shell> tar cf - directory | 7z a -si directory.tar.7z
+shell> 7z x -so directory.tar.7z | tar xf -
+```
+
+---
+
+**rarcrack - Password cracker for rar archives**
+**unrar-free - Unarchiver for .rar files**
+
+```console
+shell> brew install unrar
+shell> apt-get install unrar-free
+shell> unrar --help
+shell> unrar -x rar_file
+```
+
+---
+
+**pwgen 密碼產生器**
 
 ```console
 shell> brew install pwgen
