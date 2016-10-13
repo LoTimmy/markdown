@@ -19,14 +19,6 @@ Chocolatey v0.9.9.11
 shell> choco install mkvtoolnix
 shell> choco install ffmpeg
 
-
-
-
-shell> choco install mpc-hc
-shell> choco install defraggler
-
-
-
 shell> choco install googlechrome
 shell> choco install firefox
 shell> choco install jre8
@@ -55,8 +47,6 @@ shell> choco install virtualclonedrive
 
 shell> choco install winscp.install
 shell> choco install mariadb
-
-
 
 ```
 

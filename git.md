@@ -145,6 +145,16 @@ shell> git push origin master
 shell> git pull origin master
 ```
 
+---
+
+.gitignore
+
+```
+*.swp
+```
+
+- [gitignore](https://git-scm.com/docs/gitignore)
+---
 
 
 ### :books: 參考網站：
