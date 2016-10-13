@@ -47,6 +47,12 @@ shell> git commit --amend -m "Initial commit" --author "A U Thor <author@example
 shell> git log
 ```
 
+- [git-log](https://git-scm.com/docs/git-log)
+- [git-init](https://git-scm.com/docs/git-init)
+- [git-add](https://git-scm.com/docs/git-add)
+- [git-status](https://git-scm.com/docs/git-status)
+- [git-commit](https://git-scm.com/docs/git-commit)
+
 ---
 
 ```console
@@ -69,6 +75,8 @@ shell> git config --local color.ui true
 
 shell> git config --unset user.name
 ```
+
+- [git-config](https://git-scm.com/docs/git-config)
 
 ---
 
@@ -100,6 +108,7 @@ shell> git rm --cached hello.c
 shell> git reset HEAD hello.c
 ```
 - [git-reset](https://git-scm.com/docs/git-reset)
+- [git-rm](https://git-scm.com/docs/git-rm)
 
 ---
 
