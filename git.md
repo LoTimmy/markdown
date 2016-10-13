@@ -143,7 +143,21 @@ shell> git push origin master
 
 ```console
 shell> git pull origin master
+shell> git pull --progress
 ```
+
+---
+
+```console
+shell> git branch
+shell> git branch -vv
+shell> git branch --remotes
+```
+
+```console
+shell> git push origin --delete Branch_df65c30a8bb632955646b90f778c0cb5a7c5b28f
+```
+
 
 ---
 
