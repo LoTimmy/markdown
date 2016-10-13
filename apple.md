@@ -1,7 +1,7 @@
 ![](http://i.imgur.com/Dd0Sffn.png)
 <!-- ![](http://i.imgur.com/t51VWq9.png) -->
 
-最後更新： 2016-10-11            
+最後更新： 2016-10-13
 
 
 <kbd>Command ⌘</kbd>
@@ -81,6 +81,8 @@ shell> echo Hello, World | pbcopy
 shell> pbpaste
 ```
 
+- [pbcopy](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/pbcopy.1.html)
+
 ---
 
 ```console
@@ -92,11 +94,18 @@ shell> say -v sin-ji Hello, World
 shell> say Hello, World
 ```
 
+- [say](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/say.1.html)
+
 ---
 
 ```console
-shell> hdiutil imageinfo
+shell> hdiutil imageinfo ubuntu-16.04-server-i386.iso
+shell> hdiutil imageinfo 2016-09-23-raspbian-jessie-lite.img
+shell> hdiutil burn ubuntu-16.04-server-i386.iso
 ```
+
+- [hdiutil](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/hdiutil.1.html)
+
 ---
 
 /private/etc/hosts
@@ -104,11 +113,11 @@ shell> hdiutil imageinfo
 
 ---
 
-- [ditto](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/ditto.1.html)
-
 ```console
 shell> ditto src dst_directory 
 ```
+
+- [ditto](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/ditto.1.html)
 
 ---
 
@@ -130,6 +139,8 @@ Software Update found the following new or updated software:
 shell> softwareupdate --install Safari8.0.6Yosemite-8.0.6
 shell> softwareupdate --install --all 
 ```
+
+- [softwareupdate](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man8/softwareupdate.8.html)
 
 ---
 
@@ -166,6 +177,9 @@ ProductVersion:	10.11.5
 BuildVersion:	15F34
 ```
 
+- [system_profiler](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man8/system_profiler.8.html)
+- [sw_vers](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/sw_vers.1.html)
+
 ---
 
 ```console
@@ -184,6 +198,8 @@ shell> defaults read com.apple.finder
 shell> defaults write com.apple.finder ShowHardDrivesOnDesktop true
 ```
 
+- [defaults](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/defaults.1.html)
+
 ---
 
 ### 磁碟工具程式
@@ -197,12 +213,11 @@ shell> diskutil unmountDisk /dev/disk2
 shell> diskutil eject /dev/disk2
 ```
 
-
 ```console
 shell> disktype
 ```
 
-
+- [diskutil](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man8/diskutil.8.html)
 
 ---
 ```console
@@ -226,12 +241,15 @@ root    ALL=(ALL) ALL
 ```
 
 ---
+
 ```console
 shell> xcodebuild
 
 shell> xcode-select --version
 shell> xcode-select --install
 ```
+- [xcode-select](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html)
+- [xcodebuild](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/xcodebuild.1.html)
 
 ---
 
@@ -241,62 +259,6 @@ shell> tell application "Finder" to launch
 ```
 
 ---
-
-```console
-shell> softwareupdate --list
-
-Software Update Tool
-Copyright 2002-2012 Apple Inc.
-
-Finding available software
-Software Update found the following new or updated software:
-   * Safari8.0.6Yosemite-8.0.6
-  Safari (8.0.6), 67425K [recommended]
-   * RAWCameraUpdate6.04-6.04
-  數位相機 RAW 相容性更新 (6.04), 7215K [recommended]
-   * iTunesXPatch-12.1.2
-  iTunes (12.1.2), 101172K [recommended]
-```
-
-```console
-shell> softwareupdate --install Safari8.0.6Yosemite-8.0.6
-```
-```console
-shell> softwareupdate --install --all
-```
-
----
-
-```console
-shell> system_profiler SPSoftwareDataType
-
-Software:
-
-    System Software Overview:
-
-      System Version: OS X 10.10.3 (14D136)
-      Kernel Version: Darwin 14.3.0
-      Boot Volume: Macintosh HD
-      Boot Mode: Normal
-      Computer Name: Timmy的MacBook Air
-      User Name: Timmy (timmy)
-      Secure Virtual Memory: Enabled
-      Time since boot: 4:18
-```
-```console
-shell> sw_vers
-
-ProductName:	Mac OS X
-ProductVersion:	10.10.3
-BuildVersion:	14D136
-```
-
-```console
-shell> sw_vers -productName
-shell> sw_vers -productVersion
-shell> sw_vers -buildVersion
-```
-----------
 
 ```console
 shell> brew doctor
@@ -336,14 +298,6 @@ shell> npm install -g npm@latest
 shell> npm install -g bower
 ```
 
-```console
-shell> defaults read com.apple.desktopservices
-shell> defaults write com.apple.desktopservices DSDontWriteNetworkStores true
-
-shell> defaults read com.apple.finder
-shell> defaults write com.apple.finder ShowHardDrivesOnDesktop true
-```
-
 <!--
 Fusion 8 Pro
 ```
@@ -355,9 +309,7 @@ GC1HA-01Z14-H8D2P-04NNZ-Z6RY0
 ```
 -->
 
-
-
-----------
+---
 
 ### :books: 參考網站：
 [http://support.apple.com/kb/HT1629](http://support.apple.com/kb/HT1629)
