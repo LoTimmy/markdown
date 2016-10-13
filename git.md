@@ -36,6 +36,28 @@
 ---
 
 ```console
+shell> mkdir helloworld 
+shell> git init
+shell> edit hello.c
+shell> git add hello.c
+shell> git status
+shell> git commit -m "initial commit" --author "A U Thor <author@example.com>"
+shell> git log
+shell> git commit --amend -m "Initial commit" --author "A U Thor <author@example.com>"
+shell> git log
+```
+
+---
+
+```console
+shell> git config -l
+shell> git config --system -l
+shell> git config --global -l
+shell> git config --local -l
+
+shell> git config --system user.name "Your Name"
+shell> git config --system user.email you@example.com
+
 shell> git config --global user.name "Your Name"
 shell> git config --global user.email you@example.com
 shell> git config --global color.ui true
@@ -45,8 +67,39 @@ shell> git config --local user.name "Your Name"
 shell> git config --local user.email you@example.com
 shell> git config --local color.ui true
 
-shell> git config --local -l
+shell> git config --unset user.name
 ```
+
+---
+
+```console
+shell> edit hello.c hello.h
+shell> git add hello.c
+shell> git status
+shell> edit .gitignore
+shell> git commit -m "My changes"
+shell> git log
+```
+.gitignore
+
+```
+.gitignore
+*.h
+```
+
+- [gitignore](https://git-scm.com/docs/gitignore)
+
+
+---
+
+```console
+shell> edit hello.c
+shell> git add hello.c
+shell> git rm hello.c
+shell> git rm --cached hello.c
+shell> git reset HEAD hello.c
+```
+- [git-reset](https://git-scm.com/docs/git-reset)
 
 ---
 
@@ -58,6 +111,7 @@ shell> git commit -m "initial commit"
 shell> git remote add azure [URL for remote repository]
 shell> git push azure master
 ```
+---
 
 ```console
 shell> mkdir HelloWorld
@@ -158,13 +212,6 @@ shell> git push origin --delete Branch_df65c30a8bb632955646b90f778c0cb5a7c5b28f
 
 ---
 
-.gitignore
-
-```
-*.swp
-```
-
-- [gitignore](https://git-scm.com/docs/gitignore)
 
 ---
 
