@@ -68,5 +68,5 @@ iperf3 -s -f k -4
 - [tc-netem](http://manpages.ubuntu.com/manpages/trusty/man8/tc-netem.8.html)
 - [ip](http://manpages.ubuntu.com/manpages/trusty/man8/ip.8.html)
 - [Linux 高级流控](http://www.ibm.com/developerworks/cn/linux/1412_xiehy_tc/)
-- [](http://www.ibm.com/developerworks/cn/aix/library/au-fine-grain-network/)
+- [在多租戶雲環境中細粒度調整IBM AIX 7.1 和Linux 上的網絡服務質量](http://www.ibm.com/developerworks/cn/aix/library/au-fine-grain-network/)
 - [](https://docs.oracle.com/cd/E24628_01/doc.121/e56523/gre.htm#g1013049)

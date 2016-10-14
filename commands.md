@@ -1081,6 +1081,9 @@ shell> lshw
 
 ```console
 shell> grep PATTERN testfile.txt
+shell> grep -r PATTERN .
+shell> grep -nrI PATTERN .
+shell> grep -r PATTERN --include "*.txt" .
 ```
 
 ```console

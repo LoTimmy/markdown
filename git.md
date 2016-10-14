@@ -36,6 +36,13 @@
 ---
 
 ```console
+shell> brew install git
+shell> brew cask install sourcetree
+```
+
+---
+
+```console
 shell> mkdir helloworld 
 shell> git init
 shell> edit hello.c
@@ -54,6 +61,7 @@ shell> git log
 - [git-commit](https://git-scm.com/docs/git-commit)
 
 ---
+
 
 ```console
 shell> git config -l
@@ -231,10 +239,8 @@ shell> git push origin --delete Branch_df65c30a8bb632955646b90f778c0cb5a7c5b28f
 ---
 
 ### :books: 參考網站：
-- [git-clone](http://git-scm.com/docs/git-clone)
 - [git-remote](http://git-scm.com/docs/git-remote)
 - [Customizing-Git-Git-Configuration](http://git-scm.com/book/en/Customizing-Git-Git-Configuration)
-- [git-commit](http://git-scm.com/docs/git-commit)
 - [Git for Windows](https://msysgit.github.io/)
 - [程式開發者的社群網路新世界](http://www.ithome.com.tw/node/79439)
 - [從集中版本控制到分散式版本控制](http://www.ithome.com.tw/node/77088)
