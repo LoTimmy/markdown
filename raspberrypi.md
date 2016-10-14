@@ -48,6 +48,12 @@ shell> update-alternatives --set editor /usr/bin/vim.tiny
 ---
 
 ```console
+shell> sudo nmap -sP 192.168.11.0/24 | awk '/^Nmap/{ipaddr=$NF}/B8:27:EB/{print ipaddr}'
+```
+
+---
+
+```console
 shell> lsusb
 ```
 

@@ -461,6 +461,7 @@ canonical_maps = hash:/etc/postfix/canonical
 ```
 
 - [ADDRESS_REWRITING_README](http://www.postfix.org/ADDRESS_REWRITING_README.html)
+
 ---
 
 Default user:	admin
