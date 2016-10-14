@@ -1,6 +1,6 @@
 ![](https://raw.githubusercontent.com/docker-library/docs/master/httpd/logo.png)
 
-最後更新： 2016-09-06                   
+最後更新： 2016-10-14                   
 
 ### 在 `Ubuntu` 14.04 LTS 上建置 `Apache`
 
@@ -309,3 +309,4 @@ Complete!
 - [Apache內建基本驗證機制 快速啟用mod_auth網頁認證](http://www.netadmin.com.tw/article_content.aspx?sn=1107080004&ns=1107190008)
 - [用MySQL資料庫 提供Apache控管帳號權限](http://www.netadmin.com.tw/article_content.aspx?sn=1107150002)
 - [ab - Apache HTTP server benchmarking tool](http://httpd.apache.org/docs/2.2/programs/ab.html)
+- [htpasswd](http://httpd.apache.org/docs/2.2/programs/htpasswd.html)
