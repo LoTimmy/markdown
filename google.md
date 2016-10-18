@@ -37,6 +37,15 @@ function initMap() {
 
 ---
 
+chrome://settings/
+
+
+顯示進階設定...
+在可用時使用硬體加速
+
+
+---
+
 
 Google 翻譯
 ```
