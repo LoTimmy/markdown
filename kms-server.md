@@ -50,6 +50,14 @@ slmgr.vbs /ato
 slmgr.vbs /dlv
 ```
 
+<!--
+Windows 10 Professional
+W269N-WFGWX-YVC9B-4J6C9-T83GX
+
+Windows 7 專業版
+FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4
+-->
+
 
 ### :books: 參考網站：
 
