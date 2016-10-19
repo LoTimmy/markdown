@@ -34,6 +34,9 @@ shell> mkvpropedit movie.mkv --edit info --set "title=The movie" --edit track:a1
 shell> mkvpropedit movie.mkv --edit track:s1 --set flag-default=0 --edit track:s2 --set flag-default=1
 shell> mkvpropedit movie.mkv --edit track:s1 --set language=fre
 shell> mkvpropedit movie.mkv --edit track:s1 --set language=chi
+shell> mkvpropedit movie.mkv --edit track:s3 --set name="中文(简体)"
+shell> mkvpropedit movie.mkv --edit track:s2 --set name="中文(香港)"
+shell> mkvpropedit movie.mkv --edit track:s1 --set name="中文(繁體)"
 
 ```
 
