@@ -29,6 +29,18 @@ Korean                                                                          
 shell> mkvpropedit movie.mkv --tags all:
 ```
 
+```console 
+shell> mkvpropedit movie.mkv --edit info --set "title=The movie" --edit track:a1 --set language=fre --edit track:a2 --set language=ita
+shell> mkvpropedit movie.mkv --edit track:s1 --set flag-default=0 --edit track:s2 --set flag-default=1
+shell> mkvpropedit movie.mkv --edit track:s1 --set language=fre
+shell> mkvpropedit movie.mkv --edit track:s1 --set language=chi
+
+```
+
+### :books: 參考網站：
+- [mkvmerge](https://mkvtoolnix.download/doc/mkvmerge.html)
+- [mkvpropedit](https://mkvtoolnix.download/doc/mkvpropedit.html)
+
 
 
 ```

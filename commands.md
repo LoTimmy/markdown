@@ -1037,6 +1037,7 @@ shell> strace -fF -p 1234
 ---
 **dd - convert and copy a file**
 <a name="dd"></a>
+
 ```console
 shell> dd if=/dev/sda of=/dev/sdb
 shell> dd if=/dev/sda of=/dev/sdb conv=noerror,sync
@@ -1052,7 +1053,9 @@ shell> dd if=/dev/cdrom of=cdrom.iso bs=2048
 shell> dd if=/dev/sda | gzip > HardDisk.img.gz
 shell> gzip -dc HardDisk.img.gz | dd of=/dev/sda   
 
+shell> dd if=/dev/fd0 of=filename.flp
 ```
+
 ---
 **lscpu - display information on CPU architecture**
 **lsblk - list block devices**
