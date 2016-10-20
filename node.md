@@ -1,6 +1,6 @@
 ![](https://raw.githubusercontent.com/docker-library/docs/master/node/logo.png)
 
-上次更新日期： 5/19/2016 6:22:23 PM    
+上次更新日期： 2016-10-20     
 
 # Table of Contents
 
