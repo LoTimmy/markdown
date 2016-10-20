@@ -47,6 +47,10 @@ SBL
 myorigin = $myhostname
 myorigin = $mydomain
 
+
+accept_domain = test.net 
+mydestination = $accept_domain
+
 mydestination = $myhostname localhost.$mydomain localhost
 mydestination = $myhostname localhost.$mydomain localhost $mydomain
 mydestination = $myhostname localhost.$mydomain localhost www.$mydomain ftp.$mydomain
@@ -54,6 +58,7 @@ mydestination = $myhostname localhost.$mydomain localhost www.$mydomain ftp.$myd
 mynetworks_style = subnet
 mynetworks_style = host
 
+mynetworks = 172.168.96.0/24
 mynetworks = 127.0.0.0/8
 mynetworks = 127.0.0.0/8 168.100.189.2/32
 mynetworks = 168.100.189.0/28, 127.0.0.0/8
@@ -306,9 +311,46 @@ plugin {
 
 <img src="http://i.imgur.com/GHjoJiD.jpg" alt="sqlserver" width=58 height=58>
 
+### 服务器使用 SpamAssassin 防治垃圾邮件
+
 > SpamAssassin 是免費的垃圾郵件篩選器
+> SpamAssassin 是一个邮件过滤器，它部署在邮件服务器端，可以使用一系列的机制来确认垃圾邮件，这些机制包括：文本分析、Bayesian （贝叶斯判决规则）过滤、DNS 数据块列表，以及合作性的过滤数据库。
+> SpamAssassin 包括 spamd 守护进程和 spamc 客户端。
+
+- Headeranalysis (标题分析)：检查疑似垃圾邮件的标题，有些垃圾邮件被人采用某种技巧处理后，可能会被误认为是合法的电子邮件。
+- Text analysis (文本分析)：检查电子邮件正文中的垃圾邮件特征。
+- Blacklists (黑名单)：检查名单，看看发件人是否在现有垃圾邮件发送者列表中。
+- Database (数据库)：检查针对 Vipul's Razor (razor.sourceforge.net) 的邮件签名，它是一个垃圾邮件跟踪数据库。
+
 
 sample-nonspam.txt.gz
+
+```console
+shell> echo "hi there" | spamc
+```
+
+``` 
+ X-Spam-Checker-Version: SpamAssassin 3.3.2-r929478 (2010-03-31) on sobell.com 
+ X-Spam-Flag: YES 
+ X-Spam-Level: ****** 
+ X-Spam-Status: Yes, score=6.9 required=5.0 tests=EMPTY_MESSAGE,MISSING_DATE, 
+ MISSING_HEADERS,MISSING_MID,MISSING_SUBJECT,NO_HEADERS_MESSAGE,NO_RECEIVED, 
+ NO_RELAYS autolearn=no version=3.3.2-r929478 
+ X-Spam-Report: 
+ * -0.0 NO_RELAYS Informational: message was not relayed via SMTP 
+ * 1.2 MISSING_HEADERS Missing To: header 
+ * 0.1 MISSING_MID Missing Message-Id: header 
+ * 1.8 MISSING_SUBJECT Missing Subject: header 
+ * 2.3 EMPTY_MESSAGE Message appears to have no textual parts and no 
+ * Subject: text 
+ * -0.0 NO_RECEIVED Informational: message has no Received headers 
+ * 1.4 MISSING_DATE Missing Date: header 
+ * 0.0 NO_HEADERS_MESSAGE Message appears to be missing most RFC-822 
+ * headers 
+ hi there 
+ Subject: [SPAM] 
+ X-Spam-Prev-Subject: (nonexistent)
+```
 
 ```console
 shell> spamassassin --help
@@ -320,7 +362,6 @@ shell> mail -s "mail-tester" web-PDYtN2@mail-tester.com < /usr/share/doc/spamass
 shell> mail -s "mail-tester" web-PDYtN2@mail-tester.com < /usr/share/doc/spamassassin/examples/sample-spam.txt
 
 shell> spamc -R < /usr/share/doc/spamassassin/examples/sample-spam.txt
-
 
 shell> sendmail root < /usr/share/doc/spamassassin/examples/sample-nonspam.txt
 shell> sendmail root < /usr/share/doc/spamassassin/examples/sample-spam.txt
@@ -471,3 +512,7 @@ Default password: 	secret
 ```
 myserver.net.in.	3599	IN	TXT	"v=spf1 mx mx:ds1515.dyndns.info -all"
 ```
+
+
+
+- [企业开源电子邮件系统安全保障实战精要: 第 2 部分，Postfix 安全防护实战及垃圾邮件防范](http://www.ibm.com/developerworks/cn/linux/1304_liyang_mailsecure2/)
