@@ -73,6 +73,54 @@
 - [fio](#fio)
 - [systemctl](#systemctl)
 
+
+---
+
+netdiag - Net-Diagnostics (trafshow,netwatch,statnet,tcpspray,tcpblast)
+netload - Network device load monitor
+
+
+```console
+shell> apt-get install netdiag
+shell> netload eth0
+```
+
+---
+
+iftop - displays bandwidth usage information on an network interface
+
+```console
+shell> apt-get install iftop
+shell> iftop -n
+```
+
+---
+
+**iptraf-ng - Next Generation Interactive Colorful IP LAN Monitor**
+**iptraf - Interactive Colorful IP LAN Monitor**
+
+```console
+shell> apt-get install iptraf
+shell> apt-get install iptraf-ng
+shell> iptraf-ng
+```
+
+- [iptraf](http://manpages.ubuntu.com/manpages/precise/man8/iptraf.8.html)
+
+---
+
+speedometer
+**speedometer - measure and display the rate of data across a network connection**
+
+```console
+shell> apt-get install speedometer
+shell> speedometer -r eth0 -t eth0
+shell> speedometer -r wlan0 -t wlan0
+shell> speedometer -rx eth0
+```
+
+- [speedometer](http://manpages.ubuntu.com/manpages/wily/man1/speedometer.1.html)
+
 ---
 
 **tar - an archiving utility**

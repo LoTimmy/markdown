@@ -213,6 +213,32 @@ shell> diskutil unmountDisk /dev/disk2
 shell> diskutil eject /dev/disk2
 ```
 
+```
+/dev/disk0 (internal, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *500.3 GB   disk0
+   1:                        EFI EFI                     209.7 MB   disk0s1
+   2:          Apple_CoreStorage Macintosh HD            499.4 GB   disk0s2
+   3:                 Apple_Boot Recovery HD             650.0 MB   disk0s3
+
+/dev/disk1 (internal, virtual):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:                            Macintosh HD           +499.0 GB   disk1
+                                 Logical Volume on disk0s2
+                                 3CC9C26E-BF69-4488-8E6C-FA12C20CACBB
+                                 Unencrypted
+
+/dev/disk2 (internal, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:     FDisk_partition_scheme                        *31.1 GB    disk2
+   1:             Windows_FAT_32 NO NAME                 31.1 GB    disk2s1
+
+/dev/disk3 (external, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:     FDisk_partition_scheme                        *16.1 GB    disk3
+   1:             Windows_FAT_32 NO NAME                 16.1 GB    disk3s1
+```
+
 ```console
 shell> disktype
 ```
