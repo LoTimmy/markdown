@@ -120,6 +120,17 @@ shell> git reset HEAD hello.c
 
 ---
 
+
+```console
+shell> git log --pretty=oneline
+shell> git remote add origin https://github.com/you/HelloWorld.git
+```
+
+
+
+
+---
+
 ```console
 shell> mkdir helloworld 
 shell> git init
