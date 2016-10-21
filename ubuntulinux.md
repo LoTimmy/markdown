@@ -319,6 +319,22 @@ shell> uname -m
 x86_64
 ```
 
+```console
+shell> debconf-set-selections
+shell> debconf-get-selections
+```
+
+```
+mysql-server-5.7	mysql-server/root_password	password	
+mysql-server-5.7	mysql-server/root_password_again	password	
+mysql-server-5.7	mysql-server/no_upgrade_when_using_ndb	error	
+mysql-server-5.7	mysql-server-5.7/postrm_remove_databases	boolean	false
+mysql-server-5.7	mysql-server-5.7/really_downgrade	boolean	false
+mysql-server-5.7	mysql-server/password_mismatch	error	
+mysql-server-5.7	mysql-server-5.7/nis_warning	note	
+mysql-server-5.7	mysql-server-5.7/start_on_boot	boolean	true
+```
+
 
 ### :books: 參考網站：
 - [Official Ubuntu Documentation](https://help.ubuntu.com/)
