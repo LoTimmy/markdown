@@ -54,6 +54,7 @@ shell> git commit --amend -m "Initial commit" --author "A U Thor <author@example
 shell> git log
 ```
 
+### :books: 參考網站：
 - [git-log](https://git-scm.com/docs/git-log)
 - [git-init](https://git-scm.com/docs/git-init)
 - [git-add](https://git-scm.com/docs/git-add)
@@ -84,6 +85,7 @@ shell> git config --local color.ui true
 shell> git config --unset user.name
 ```
 
+### :books: 參考網站：
 - [git-config](https://git-scm.com/docs/git-config)
 
 ---
@@ -103,6 +105,7 @@ shell> git log
 *.h
 ```
 
+### :books: 參考網站：
 - [gitignore](https://git-scm.com/docs/gitignore)
 
 
@@ -115,6 +118,8 @@ shell> git rm hello.c
 shell> git rm --cached hello.c
 shell> git reset HEAD hello.c
 ```
+
+### :books: 參考網站：
 - [git-reset](https://git-scm.com/docs/git-reset)
 - [git-rm](https://git-scm.com/docs/git-rm)
 
@@ -126,7 +131,8 @@ shell> git log --pretty=oneline
 shell> git remote add origin https://github.com/you/HelloWorld.git
 ```
 
-
+### :books: 參考網站：
+- [changing-a-remote-s-url](https://help.github.com/articles/changing-a-remote-s-url/)
 
 
 ---
