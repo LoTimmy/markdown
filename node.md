@@ -1,6 +1,6 @@
 ![](https://raw.githubusercontent.com/docker-library/docs/master/node/logo.png)
 
-上次更新日期： 2016-10-20     
+上次更新日期： 2016-10-28     
 
 # Table of Contents
 
@@ -46,13 +46,37 @@ shell> git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && gi
 shell> echo "source ~/.nvm/nvm.sh" >> .bashrc
 
 shell> nvm ls-remote
+shell> nvm ls-remote --lts
+
+
+shell> nvm install --lts
+shell> nvm install --lts=argon
+shell> nvm install --lts=boron
 shell> nvm install v0.12.0
 shell> nvm install v4.2.2
 shell> nvm install v6.1.0
 
+shell> nvm use --lts
+shell> nvm use --lts=argon
+shell> nvm use --lts=boron
+
 shell> nvm ls
 shell> nvm alias default 0.12.0
 shell> nvm alias default 4.2.2
+shell> nvm alias default lts/argon
+shell> nvm alias default lts/boron
+```
+
+```
+->       v4.6.1
+         v6.9.1
+node -> stable (-> v6.9.1) (default)
+stable -> 6.9 (-> v6.9.1) (default)
+iojs -> N/A (default)
+lts/* -> lts/boron (-> v6.9.1)
+lts/argon -> v4.6.1
+lts/boron -> v6.9.1
+
 ```
 
 ```console
