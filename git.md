@@ -42,6 +42,11 @@ shell> brew cask install sourcetree
 
 ---
 
+![Imgur](http://i.imgur.com/2V2g0Sx.png)
+![Imgur](http://i.imgur.com/unRQXHr.png)
+
+
+
 ```console
 shell> mkdir helloworld 
 shell> git init
@@ -134,8 +139,26 @@ shell> git remote add origin https://github.com/you/HelloWorld.git
 ### :books: 參考網站：
 - [changing-a-remote-s-url](https://help.github.com/articles/changing-a-remote-s-url/)
 
+---
+
+```console
+shell> git add -A
+shell> git add .
+shell> git add -u
+```
+
+
+
+
+
+
 
 ---
+
+
+
+
+
 
 ```console
 shell> mkdir helloworld 
