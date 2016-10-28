@@ -2,11 +2,8 @@
 
 ```console
 shell> sudo apt-get update
-shell> sudo apt-get install python-pip
-
-shell> pip install speedtest-cli
-shell> easy_install speedtest-cli
-
+shell> sudo apt-get install speedtest-cli
+shell> brew install speedtest_cli
 shell> speedtest-cli
 
 Retrieving speedtest.net configuration...

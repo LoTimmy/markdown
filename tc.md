@@ -16,6 +16,7 @@ shell> tc qdisc sh dev eth0
 
 ```console
 shell> modprobe ifb
+shell> modprobe sch_htb
 shell> ip link set dev ifb0 up
 ```
 
@@ -49,16 +50,6 @@ shell> tc qdisc del dev ifb0 root
 shell> tc qdisc add dev eth0 root netem rate 1mbps
 shell> tc qdisc add dev ifb0 root netem delay 100ms rate 1mbps
 ```
-
-tc qdisc del dev eth0 root
-tc qdisc del dev ifb0 root
-tc qdisc add dev eth0 root netem rate 2mbps
-tc qdisc add dev ifb0 root netem delay 100ms rate 2mbps
-
-
-iperf3 -c 192.168.11.7 -t 3600 -f k -u -b 2
-iperf3 -s -f k -4
-
 
 
 ---
