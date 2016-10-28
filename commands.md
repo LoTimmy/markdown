@@ -1,4 +1,4 @@
-上次更新日期： 2016-10-11  
+上次更新日期： 2016-10-28  
 
 # Table of Contents
 
@@ -583,6 +583,11 @@ shell> sysctl -w fs.file-max=65536
 shell> sysctl -w net.ipv6.conf.all.disable_ipv6=1
 ```
 
+### 參考網站：
+- [tuning-os](https://docs.oracle.com/cd/E26576_01/doc.312/e24936/tuning-os.htm#GSPTG00007)
+- [8.2. Optimized Network Settings](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Performance_Tuning_Guide/s-network-dont-adjust-defaults.html)
+
+
 ---
 <a name="mtr"></a>
 **mtr - a network diagnostic tool**
@@ -918,6 +923,7 @@ shell> export MANPAGER="/usr/bin/most -s"
 shell> update-alternatives --config pager
 ```
 
+### 參考網站：
 - [update-alternatives](http://manpages.ubuntu.com/manpages/jaunty/man8/update-alternatives.8.html)
 
 ---
@@ -1251,7 +1257,7 @@ login myuser
 password mypass 
 ```
 
-###  參考網站：
+### 參考網站：
 - [curlftpfs](http://curlftpfs.sourceforge.net/)
 
 ---
@@ -1608,7 +1614,7 @@ shell> mount /newdisk
 
 ```
 
-###  參考網站：
+### 參考網站：
 - [disks-adding](https://www.freebsd.org/doc/handbook/disks-adding.html)
 
 ---
@@ -1637,7 +1643,7 @@ auth required /lib/security/pam_google_authenticator.so
 ```
 ---
 
-###  參考網站：
+### 參考網站：
 
 - [putty](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html)
 
