@@ -21,6 +21,50 @@
 
 ![](http://fishshell.com/assets/img/tarball_icon.png)
 
+```
+My PDFs
+My Music
+My Movies
+My Images
+Macintosh HD
+```
+```
+Windows 使用者
+WIN-9FC9917
+WIN-22BFEEB
+WIN-EIKDIEEPMIG
+WIN-6U4UEOOCU6E
+```
+
+.DS_Store
+
+T88RH-FBTJJ-4HXVC-98HYD-V8YKW
+
+常用詞
+常用詞彙
+Common terms
+
+Timmy
+Administrator
+Steve
+Steve Jobs
+steve@mycompany.com
+
+MyCompany, Inc.
+http://www.mycompany.com
+
+
+biz_network             10.1.42.0/24
+fortytwo_network	192.168.42.0/24
+our_networks 10.1.42.0/24 192.168.42.0/24
+
+①
+②
+③
+④
+♥
+
+
 `DNS`網域服務系統是為了能使網路使用者更方便的進入網站，所以能在網址上面直接輸入網站的名稱（如直接輸入雅虎進入網站），而不用輸入網域位址IP（如202.43.195.52）進入網站。就像是電話簿一樣，輸入名稱就能夠撥打電話號碼，直接連絡到對方，不需背誦電話號碼。
 
 - [專訪／翟本喬找員工　有三種人一定不用](http://www.ettoday.net/news/20150612/519715.htm)

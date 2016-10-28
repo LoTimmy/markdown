@@ -14,6 +14,40 @@ shell> tc qdisc sh dev eth0
 
 ```console
 shell> modprobe ifb
+shell> modprobe sch_htb
+shell> ip link show 
+shell> ip link set dev ifb0 up
+```
+
+```console
+shell> tc qdisc del dev eth0 ingress
+shell> tc qdisc add dev eth0 ingress
+shell> tc filter add dev eth0 parent ffff: protocol ip u32 match u32 0 0 flowid 1:1 action mirred egress redirect dev ifb0
+```
+
+```console
+shell> tc qdisc del dev eth0 root
+shell> tc qdisc add dev eth0 root handle 1: htb default 10
+shell> tc class add dev eth0 parent 1: classid 1:1 htb rate 6mbit
+shell> tc qdisc add dev eth0 parent 1:1 handle 10: netem delay 100ms
+
+```
+
+```console
+shell> tc qdisc del dev ifb0 root
+shell> tc qdisc add dev ifb0 root handle 1: htb default 10
+shell> tc class add dev ifb0 parent 1: classid 1:1 htb rate 6mbit
+shell> tc qdisc add dev ifb0 parent 1:1 handle 10: netem delay 100ms
+```
+
+```console
+shell> tc qdisc add dev eth0 root netem delay 100ms rate 1mbit
+shell> tc qdisc add dev ifb0 root netem delay 100ms rate 1mbit
+
+shell> tc qdisc del dev eth0 root
+shell> tc qdisc del dev ifb0 root
+shell> tc qdisc add dev eth0 root netem rate 1mbps
+shell> tc qdisc add dev ifb0 root netem delay 100ms rate 1mbps
 ```
 
 ---
