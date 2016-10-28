@@ -132,7 +132,7 @@ shell> git remote add origin https://github.com/you/HelloWorld.git
 ```
 
 ### :books: 參考網站：
--[changing-a-remote-s-url](https://help.github.com/articles/changing-a-remote-s-url/)
+- [changing-a-remote-s-url](https://help.github.com/articles/changing-a-remote-s-url/)
 
 
 ---
