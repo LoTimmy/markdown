@@ -2,7 +2,7 @@
 
 ![](http://manpages.ubuntu.com/assets/light/images/footer_logo.png)
 
-上次更新日期： 2016-08-23    
+上次更新日期： 2016-11-03     
 
 ```console
 shell> lsb_release -a
@@ -40,20 +40,14 @@ shell> sudo rm /var/lib/update-notifier/release-upgrade-available
 shell> sudo sed -i '/^/s/^/#/" /etc/apt/sources.list
 ```
 
-sed -i "/^deb cdrom:/s/^/#/" /etc/apt/sources.list
-
-
-
 ```console
 shell> apt-get --version
 shell> apt-get -o Acquire::ForceIPv4=true update  
 ```
 
-
 apt.conf
 ```
 Acquire::ForceIPv4 "true";
-
 
 Acquire
 {
@@ -67,9 +61,9 @@ Acquire::http
 };  
 ```
 
-
-[apt.conf](http://manpages.ubuntu.com/manpages/raring/man5/apt.conf.5.html)
-[apt-cacher-ng](https://docs.docker.com/engine/examples/apt-cacher-ng/)
+### :books: 參考網站：
+- [apt.conf](http://manpages.ubuntu.com/manpages/raring/man5/apt.conf.5.html)
+- [apt-cacher-ng](https://docs.docker.com/engine/examples/apt-cacher-ng/)
 
 Acquire::http::Timeout "10";
 Acquire::ftp::Timeout "10";
@@ -170,14 +164,12 @@ shell> reboot
 
 ---
 
-
 ```console
 shell> cat /proc/sys/fs/file-nr
 shell> cat /proc/sys/fs/file-max
 
 shell> cat /proc/sys/fs/inode-nr
 ```
-
 
 ---
 
@@ -187,8 +179,6 @@ shell> cat /proc/sys/fs/inode-nr
 shell> apt-get install unattended-upgrades
 shell> dpkg-reconfigure unattended-upgrades  
 ```
-
-
 ### :books: 參考網站：
 - [automatic-updates](https://help.ubuntu.com/lts/serverguide/automatic-updates.html)
 - [dpkg-reconfigure](http://manpages.ubuntu.com/manpages/saucy/man8/dpkg-reconfigure.8.html)
@@ -290,11 +280,9 @@ ks=floppy:/<path>
 ks=cdrom:/<path>
 ```
 
+### :books: 參考網站：
 - [ch04s06](https://help.ubuntu.com/lts/installation-guide/i386/ch04s06.html)
 - [s1-kickstart2-startinginstall](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/System_Administration_Guide/s1-kickstart2-startinginstall.html)
-
-
-
 
 
 ```
@@ -324,20 +312,102 @@ shell> debconf-set-selections
 shell> debconf-get-selections
 ```
 
+---
+
+**free - Display amount of free and used memory in the system**
+
+```console
+shell> free -b
+shell> free -m
+shell> free -g
+shell> free -t
+shell> free -s 1
+shell> free
 ```
-mysql-server-5.7	mysql-server/root_password	password	
-mysql-server-5.7	mysql-server/root_password_again	password	
-mysql-server-5.7	mysql-server/no_upgrade_when_using_ndb	error	
-mysql-server-5.7	mysql-server-5.7/postrm_remove_databases	boolean	false
-mysql-server-5.7	mysql-server-5.7/really_downgrade	boolean	false
-mysql-server-5.7	mysql-server/password_mismatch	error	
-mysql-server-5.7	mysql-server-5.7/nis_warning	note	
-mysql-server-5.7	mysql-server-5.7/start_on_boot	boolean	true
+```
+              total        used        free      shared  buff/cache   available
+Mem:         500308       54208      117568        6612      328532      416220
+Swap:             0           0           0
 ```
 
+```
+free   = total  - used  - buff/cache
+117568 = 500308 - 54208 - 328532
+
+free   + buff/cache = total  - used
+117568 + 328532     = 500308 - 54208
+```
+
+```
+             total       used       free     shared    buffers     cached
+Mem:       4049592    1044268    3005324          0      55864     768244
+-/+ buffers/cache:     220160    3829432
+Swap:      2095100          0    2095100
+```
+
+```
+used    - (buffers + cached)
+1044268 - (55864   + 768244) = 220160
+
+free    + buffers + cached
+3005324 + 55864   + 768244 = 3829432
+```
+
+
+```console
+shell> cat /proc/meminfo
+
+MemTotal:         500308 kB
+MemFree:          117504 kB
+MemAvailable:     416268 kB
+Buffers:           87608 kB
+Cached:           177412 kB
+SwapCached:            0 kB
+Active:           204196 kB
+Inactive:          95904 kB
+Active(anon):      35640 kB
+Inactive(anon):     6052 kB
+Active(file):     168556 kB
+Inactive(file):    89852 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:         35108 kB
+Mapped:            16312 kB
+Shmem:              6612 kB
+Slab:              63628 kB
+SReclaimable:      50892 kB
+SUnreclaim:        12736 kB
+KernelStack:        1904 kB
+PageTables:         3444 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:      250152 kB
+Committed_AS:     141116 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       77816 kB
+DirectMap2M:      446464 kB
+DirectMap1G:           0 kB
+```
+
+---
 
 ### :books: 參考網站：
 - [Official Ubuntu Documentation](https://help.ubuntu.com/)
 - [vlan-interfaces](http://manpages.ubuntu.com/manpages/intrepid/man5/vlan-interfaces.5.html)
-
 - [Setting File Handles](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/5/html/Tuning_and_Optimizing_Red_Hat_Enterprise_Linux_for_Oracle_9i_and_10g_Databases/chap-Oracle_9i_and_10g_Tuning_Guide-Setting_File_Handles.html)

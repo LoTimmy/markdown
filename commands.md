@@ -75,19 +75,30 @@
 
 
 ---
+**rename - renames multiple files**
 
-netdiag - Net-Diagnostics (trafshow,netwatch,statnet,tcpspray,tcpblast)
-netload - Network device load monitor
+```console
+shell> brew install rename
+shell> rename 's/\.bak$//' *.bak
+shell> rename 'y/A-Z/a-z/' *
 
+shell> rename IMG img *.jpg
+shell> rename .html .htm *.html
+```
+
+### :books: 參考網站：
+- [rename](http://manpages.ubuntu.com/manpages/xenial/man1/rename.ul.1.html)
+
+---
+**netdiag - Net-Diagnostics (trafshow,netwatch,statnet,tcpspray,tcpblast)**
+**netload - Network device load monitor**
 
 ```console
 shell> apt-get install netdiag
 shell> netload eth0
 ```
-
 ---
-
-iftop - displays bandwidth usage information on an network interface
+**iftop - displays bandwidth usage information on an network interface**
 
 ```console
 shell> apt-get install iftop
@@ -105,11 +116,10 @@ shell> apt-get install iptraf-ng
 shell> iptraf-ng
 ```
 
+### :books: 參考網站：
 - [iptraf](http://manpages.ubuntu.com/manpages/precise/man8/iptraf.8.html)
 
 ---
-
-speedometer
 **speedometer - measure and display the rate of data across a network connection**
 
 ```console
@@ -119,6 +129,7 @@ shell> speedometer -r wlan0 -t wlan0
 shell> speedometer -rx eth0
 ```
 
+### :books: 參考網站：
 - [speedometer](http://manpages.ubuntu.com/manpages/wily/man1/speedometer.1.html)
 
 ---
@@ -144,11 +155,8 @@ file.tar.gz
 file.tgz
 file.tar.bz
 ```
-
 ---
-
 **gzip -- compression/decompression tool using Lempel-Ziv coding (LZ77)**
-
 
 ```console
 shell> gzip file1
@@ -157,7 +165,6 @@ shell> gunzip file1.gz
 shell> zcat file.Z
 shell> uncompress file.Z
 ```
-
 ---
 
 ```console
@@ -173,7 +180,6 @@ filename.tbz2
 filename.bz
 filename.tbz
 ```
-
 ---
 
 ```console
@@ -181,9 +187,7 @@ shell> xz --help
 shell> xz -z filename
 shell> xz -d filename.xz
 ```
-
 ---
-
 **p7zip - 7z file archiver with high compression ratio**
 
 ```console
@@ -195,9 +199,7 @@ shell> 7z x filename.7z
 shell> tar cf - directory | 7z a -si directory.tar.7z
 shell> 7z x -so directory.tar.7z | tar xf -
 ```
-
 ---
-
 **rarcrack - Password cracker for rar archives**
 **unrar-free - Unarchiver for .rar files**
 
@@ -247,7 +249,6 @@ dlroWolleH
 ```
 
 ---
-
 **inxi - full featured system information script**
 
 ```console
@@ -261,7 +262,6 @@ shell> inxi -r
 shell> inxi -D -c 3
 ```
 ---
-
 **funny-manpages - more funny manpages**
 
 ```console
@@ -273,27 +273,19 @@ shell> apt-get install funny-manpages
 ```
 
 ---
-
 **redir - Redirect TCP connections**
 
 ```console
 shell> apt-get install redir
 shell> redir --lport=22960 --caddr=10.192.28.72 --cport=22 &
 ```
-
 ---
-
-python-software-properties - manage the repositories that you install software from
-software-properties-common - manage the repositories that you install software from (common)
-
 ```console
 shell> apt-get install python-software-properties software-properties-common -y
 shell> add-apt-repository 
 ```
 
 ---
-
-unattended-upgrades - automatic installation of security upgrades
 
 ```console
 shell> apt-get install unattended-upgrades -y
@@ -309,9 +301,7 @@ shell> ntpdate -u time.asia.apple.com
 shell> ntpdate -u time.euro.apple.com
 shell> ntpdate -u ntp.ubuntu.com
 ```
-
 ---
-
 **tasksel - a user interface for installing tasks**
 
 ```console
@@ -319,15 +309,12 @@ shell> tasksel
 shell> tasksel install
 shell> tasksel remove
 ```
-
-
 ---
 **sitecopy - program for managing a WWW site via FTP, SFTP, DAV or HTTP**
 
 ```console
 shell> apt-get install sitecopy
 ```
-
 ---
 
 ```console
@@ -336,7 +323,6 @@ update-rc.d
 ```
 
 ---
-
 **netdiscover - active/passive network address scanner using arp requests**
 
 ```console
@@ -359,7 +345,6 @@ shell> arp-scan 192.168.42.0/24
 **avahi-utils - Avahi browsing, publishing and discovery utilities**
 **avahi-daemon - Avahi mDNS/DNS-SD daemon**
 
-
 ```console
 shell> apt-get install avahi-utils
 shell> avahi-browse --help
@@ -369,7 +354,6 @@ shell> avahi-browse -al
 shell> avahi-browse -rt _workstation._tcp 
 shell> avahi-browse -rt _http._tcp
 ```
-
 
 _http._tcp
 
@@ -407,7 +391,7 @@ use-ipv6=yes
 </service-group>
 ```
 
-###  參考網站：
+### :books: 參考網站：
 - [avahi.service](http://manpages.ubuntu.com/manpages/precise/man5/avahi.service.5.html)
 - [avahi-daemon](http://manpages.ubuntu.com/manpages/precise/man8/avahi-daemon.8.html)
 - [avahi-browse](http://manpages.ubuntu.com/manpages/precise/man1/avahi-browse.1.html)
@@ -462,7 +446,7 @@ shell> sudo mount -t cifs //servicename/mysharename /mnt/mountpoint -o vers=3.0,
 //servicename/mysharename /mymountpoint cifs vers=3.0,username= myaccountname,password= StorageAccountKeyEndingIn==,dir_mode=0777,file_mode=0777
 ```
 
-###  參考網站：
+### :books: 參考網站：
 - [如何搭配使用 Azure 檔案儲存體與 Linux](https://azure.microsoft.com/zh-tw/documentation/articles/storage-how-to-use-files-linux/)
 
 ---
@@ -480,8 +464,6 @@ shell> apt-get install cowsay
 ```console
 shell> apt-get install figlet
 ```
-
-
 ---
 **systemctl - Control the systemd system and service manager**
 
@@ -583,7 +565,7 @@ shell> sysctl -w fs.file-max=65536
 shell> sysctl -w net.ipv6.conf.all.disable_ipv6=1
 ```
 
-### 參考網站：
+### :books: 參考網站：
 - [tuning-os](https://docs.oracle.com/cd/E26576_01/doc.312/e24936/tuning-os.htm#GSPTG00007)
 - [8.2. Optimized Network Settings](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Performance_Tuning_Guide/s-network-dont-adjust-defaults.html)
 
@@ -754,7 +736,7 @@ shell> arp -f
 ```
 
 
-###  參考網站：
+### :books: 參考網站：
 - [ethers](http://manpages.ubuntu.com/manpages/intrepid/man5/ethers.5.html)
 
 ---
@@ -923,7 +905,7 @@ shell> export MANPAGER="/usr/bin/most -s"
 shell> update-alternatives --config pager
 ```
 
-### 參考網站：
+### :books: 參考網站：
 - [update-alternatives](http://manpages.ubuntu.com/manpages/jaunty/man8/update-alternatives.8.html)
 
 ---
@@ -1231,9 +1213,6 @@ shell> sudo -K
 ```
 sudo: unable to resolve host 
 ```
-
-
-
 ---
 **ldd - print shared library dependencies**
 <a name="ldd"></a>
@@ -1257,7 +1236,7 @@ login myuser
 password mypass 
 ```
 
-### 參考網站：
+### :books: 參考網站：
 - [curlftpfs](http://curlftpfs.sourceforge.net/)
 
 ---
@@ -1595,7 +1574,6 @@ Linux 3.18.11+ (ip-192-168-42-23) 	09/22/2015 	_armv6l_	(1 CPU)
 ```
 
 ---
-
 **freebsd**
 **disks-adding**
 
@@ -1614,7 +1592,7 @@ shell> mount /newdisk
 
 ```
 
-### 參考網站：
+### :books: 參考網站：
 - [disks-adding](https://www.freebsd.org/doc/handbook/disks-adding.html)
 
 ---
@@ -1643,7 +1621,7 @@ auth required /lib/security/pam_google_authenticator.so
 ```
 ---
 
-### 參考網站：
+### :books: 參考網站：
 
 - [putty](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html)
 

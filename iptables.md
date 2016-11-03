@@ -311,18 +311,36 @@ Members:
 
 
 ```console
-shell> ipset create test hash:ip 
+shell> ipset create test hash:net family inet hashsize 131072 maxelem 236294
+shell> ipset create test hash:net
+shell> ipset add test 192.168.0.0/24
+shell> ipset add test 10.1.0.0/16
+shell> ipset add test 192.168.0/24
 
-
-shell> ipset create test hash:ip maxelem 2048
-
-shell> ipset create foo hash:net
-shell> ipset add foo 192.168.0.0/24
-shell> ipset add foo 10.1.0.0/16
-shell> ipset add foo 192.168.0/24
+shell> ipset test test 192.168.0/24
 
 shell> iptables -A INPUT -m set --match-set foo src -j DROP
 shell> iptables -A INPUT -m set --match-set foo src -p tcp --dport 80 -j DROP
+```
+
+```console
+shell> ipset create test hash:ip timeout 300
+shell> ipset add test 192.168.0.1 timeout 60
+shell> ipset -exist add test 192.168.0.1 timeout 600
+```
+
+```console
+shell> ipset create foo hash:mac
+shell> ipset add foo 01:02:03:04:05:06
+shell> ipset test foo 01:02:03:04:05:06
+```
+
+```console
+shell> ipset create foo hash:ip,port
+shell> ipset add foo 192.168.1.0/24,80-82
+shell> ipset add foo 192.168.1.1,udp:53
+shell> ipset add foo 192.168.1.1,vrrp:0
+shell> ipset test foo 192.168.1.1,80
 ```
 
 ```console
@@ -333,11 +351,18 @@ shell> sudo ipset restore -f /etc/ipset.conf
 ```
 
 ```console
+shell> ipset flush foo 
+shell> ipset flush
+```
+
+```console
 shell> ipset destroy foo 
 shell> ipset destroy
 ```
 
 ```
+ipset v6.29: Timeout cannot be used: set was created without timeout support
+ipset v6.29: Set cannot be created: set with the same name already exists
 ipset v6.20.1: Set cannot be destroyed: it is in use by a kernel component
 ```
 
@@ -352,7 +377,6 @@ shell> sudo ipset restore -f foo.txt
 
 ```
 http://list.iblocklist.com/?list=ydxerpxkpcfqjaybcssw&fileformat=p2p&archiveformat=gz
-
 ```
 
 
@@ -360,6 +384,7 @@ http://list.iblocklist.com/?list=ydxerpxkpcfqjaybcssw&fileformat=p2p&archiveform
 - [ipset](http://ipset.netfilter.org/)
 - [ipset](http://ipset.netfilter.org/ipset.man.html)
 - [ipset](http://manpages.ubuntu.com/manpages/xenial/man8/ipset.8.html)
+- [ChangeLog](http://ipset.netfilter.org/changelog.html)
 - [iptables](http://ipset.netfilter.org/iptables.man.html)
 - [iptables-extensions](http://ipset.netfilter.org/iptables-extensions.man.html)
 - [iblocklist](https://www.iblocklist.com/)
@@ -379,7 +404,6 @@ shell> mturoute host
 ```console
 shell> apt install iputils-tracepath
 shell> tracepath host
-
 ```
 
 
