@@ -1,4 +1,4 @@
-上次更新日期： 2016-10-28  
+上次更新日期： 2016-11-03   
 
 # Table of Contents
 
@@ -73,6 +73,50 @@
 - [fio](#fio)
 - [systemctl](#systemctl)
 
+
+
+---
+
+**dphys-swapfile - Autogenerate and use a swap file**
+
+```console
+shell> apt-get install dphys-swapfile
+```
+
+/var/swap
+/etc/dphys-swapfile
+
+```
+CONF_SWAPFILE=/var/swap
+CONF_SWAPSIZE=100
+```
+
+---
+
+**grive - Google Drive client for GNU/Linux**
+
+```console
+shell> apt-get install grive
+shell> lnav
+shell> lnav syslog.5.gz
+```
+
+
+---
+
+**lnav - ncurses-based log file viewer**
+```console
+shell> apt-get install lnav
+shell> lnav
+shell> lnav syslog.5.gz
+```
+---
+
+**vnstat - console-based network traffic monitor**
+```console
+shell> apt-get install vnstat
+shell> netload eth0
+```
 
 ---
 **rename - renames multiple files**
