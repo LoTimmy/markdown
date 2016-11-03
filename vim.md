@@ -119,6 +119,23 @@ if has("autocmd")
 endif
 ```
 
+---
+
+```vim
+if has("autocmd")
+  autocmd BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal g`\"" |
+    \ endif
+endif " has("autocmd")
+```
+
+### :books: 參考網站：
+- https://en.opensuse.org/SDB:VIM_disable_line_resume
+- [autocmd](http://vimdoc.sourceforge.net/htmldoc/autocmd.html)
+
+---
+
 ```
 set nocompatible
 set encoding=utf-8
@@ -254,6 +271,7 @@ shell> cd ~/.vim/bundle/vim-jsbeautify && git submodule update --init --recursiv
 
 - [Vundle](https://github.com/VundleVim/Vundle.vim)
 - [vim-jsbeautify](https://github.com/maksimr/vim-jsbeautify)
+
 
 ---
 
