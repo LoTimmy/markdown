@@ -375,7 +375,7 @@ shell> mturoute host
 
 ---
 ```console
-shell> aptitude install iputils-tracepath
+shell> apt install iputils-tracepath
 shell> tracepath host
 ```
 
