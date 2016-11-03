@@ -1,5 +1,7 @@
 最後更新： 2016-11-03 
 
+![](http://i.imgur.com/3gzXLPj.png)
+
 ---
 
 ```console
@@ -295,8 +297,23 @@ shell> ipset help
 shell> ipset list
 ```
 
+```
+Name: foo
+Type: hash:net
+Revision: 6
+Header: family inet hashsize 1024 maxelem 65536
+Size in memory: 448
+References: 0
+Members:
+192.168.0.0/24
+```
+
+
 ```console
 shell> ipset create test hash:ip 
+
+
+shell> ipset create test hash:ip maxelem 2048
 
 shell> ipset create foo hash:net
 shell> ipset add foo 192.168.0.0/24
@@ -324,6 +341,7 @@ ipset v6.20.1: Set cannot be destroyed: it is in use by a kernel component
 ```
 
 ```console
+shell> apt install python-pip
 shell> pip install iblocklist2ipset
 ```
 
@@ -331,6 +349,7 @@ shell> pip install iblocklist2ipset
 ### :books: 參考網站：
 - [ipset](http://ipset.netfilter.org/)
 - [ipset](http://ipset.netfilter.org/ipset.man.html)
+- [ipset](http://manpages.ubuntu.com/manpages/xenial/man8/ipset.8.html)
 - [iptables](http://ipset.netfilter.org/iptables.man.html)
 - [iptables-extensions](http://ipset.netfilter.org/iptables-extensions.man.html)
 
