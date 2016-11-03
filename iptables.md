@@ -1,4 +1,4 @@
-最後更新： 2016-09-12
+最後更新： 2016-11-03 
 
 ---
 
@@ -7,10 +7,10 @@ shell> iptables
 ```
 
 ```console
-#Circumvent MTU issues
+# Circumvent MTU issues
 shell> iptables -t mangle -A FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
 
-## Masquerade everything out ppp0.
+# Masquerade everything out ppp0.
 shell> iptables -t nat -A POSTROUTING -o ppp0 -j MASQUERADE
 ```
 
@@ -104,22 +104,107 @@ iptables -A INPUT -j REJECT --reject-with icmp-host-prohibited
 iptables -A FORWARD -j REJECT --reject-with icmp-host-prohibited
 ```
 
-```
+```sh
+#! /bin/bash
+
 # Private interface
 IF_PRV=eth0
 IP_PRV=192.168.1.1
 NET_PRV=192.168.1.0/24
 
-# Public interface 1
+# Public interface
 IF_PUB=eth1
 IP_PUB=10.0.0.1
 NET_PUB=10.0.0.0/24
 
 # Others
 ANYWHERE=0.0.0.0/0
+
+
+SetDefaultPolicy() {
+	# Drop everything
+	iptables -P INPUT DROP
+	iptables -P OUTPUT DROP
+	iptables -P FORWARD DROP
+}
+
+FlushTables() {
+	iptables -F -t nat
+	iptables -F -t mangle
+	iptables -F -t filter
+	iptables -X
+}
+
+SetForwardingRules() {
+	iptables -A FORWARD -i $IF_PUB -o $IF_PRV -m state --state ESTABLISHED,RELATED -j ACCEPT
+	iptables -A FORWARD -i $IF_PRV -o $IF_PUB -j ACCEPT
+}
+
+SetLoopbackRules() {
+	# Allow everything
+	iptables -A INPUT -i lo -j ACCEPT
+	iptables -A OUTPUT -o lo -j ACCEPT
+}
+
+SetPrivateInterfaceRules() {
+	# Allow everything
+	iptables -A INPUT -i $IF_PRV -s $NET_PRV -j ACCEPT
+	iptables -A OUTPUT -o $IF_PRV -d $NET_PRV -j ACCEPT
+}
+
+SetPublicInterfaceRules() {
+	iptables -A INPUT -i $IF_PUB -m state --state ESTABLISHED,RELATED -j ACCEPT
+	iptables -A OUTPUT -o $IF_PUB -j ACCEPT
+}
+
+EnableSourceNAT() {
+	# Then source NAT everything else
+	iptables -t nat -A POSTROUTING -s $NET_PRV -o $IF_PUB -j SNAT --to $IP_PUB
+}
+
+SetICMP_Open() {
+	iptables -A INPUT -p icmp --icmp-type 0 -j ACCEPT
+	iptables -A INPUT -p icmp --icmp-type 3 -j ACCEPT
+	iptables -A INPUT -p icmp --icmp-type 11 -j ACCEPT
+	iptables -A INPUT -p icmp --icmp-type 8 -m limit --limit 1/second -j ACCEPT
+}
+
+SetSSH_Open() {
+	iptables -A INPUT -i $IF_PUB -p tcp -d $IP_PUB --dport 2202 -j ACCEPT
+}
+
+SetSMTP_DNAT() {
+	iptables -t nat -A PREROUTING -i $IF_PUB -d $IP_PUB -p tcp --dport smtp -j DNAT --to 192.168.1.254
+	iptables -A FORWARD -m state --state NEW,ESTABLISHED,RELATED -i $IF_PUB -p tcp --dport smtp -j ACCEPT
+}
+
+SetPOP3_DNAT() {
+	iptables -t nat -A PREROUTING -i $IF_PUB -d $IP_PUB -p tcp --dport pop3 -j DNAT --to 192.168.10.254
+	iptables -A FORWARD -m state --state NEW,ESTABLISHED,RELATED -i $IF_PUB -p tcp --dport pop3 -j ACCEPT
+}
+
+SetHTTP_DNAT() {
+	iptables -t nat -A PREROUTING -i $IF_PUB -d $IP_PUB -p tcp --dport http -j DNAT --to 192.168.10.253
+	iptables -A FORWARD -m state --state NEW,ESTABLISHED,RELATED -i $IF_PUB -p tcp --dport http -j ACCEPT
+}
+
+SetBlockedHosts() {
+	iptables -A INPUT -i $IF_PUB -s 10.220.231.236 -j REJECT --reject-with icmp-host-prohibited
+	iptables -A FORWARD -i $IF_PUB -s 10.220.231.236 -j REJECT --reject-with icmp-host-prohibited
+}
+
+SetBlockedNetworks() {
+	iptables -A INPUT -i $IF_PUB -s 10.220.232.0/24 -j REJECT --reject-with icmp-net-prohibited
+	iptables -A FORWARD -i $IF_PUB -d $IP_PUB -s 10.220.232.0/24 -j REJECT --reject-with icmp-net-prohibited
+}
+
+
+
 ```
 
-[](https://www.novell.com/coolsolutions/feature/18139.html)
+### :books: 參考網站：
+- [Simple Firewall Configuration Using NetFilter/iptables](https://www.novell.com/coolsolutions/feature/18139.html)
+- [Linux 下网络性能优化方法简析](https://www.ibm.com/developerworks/cn/linux/l-cn-network-pt/)
 
 ```
 iptables -P INPUT ACCEPT
@@ -265,6 +350,18 @@ shell> mturoute host
 shell> aptitude install iputils-tracepath
 shell> tracepath host
 ```
+
+
+---
+
+`TSO` (`TCP Segmentation Offload`) **是一种利用网卡分割大数据包，减小 CPU 负荷的一种技术**，也被叫做 `LSO` (`Large segment offload`) ，如果数据包的类型只能是 TCP，则被称之为 TSO，如果硬件支持 TSO 功能的话，也需要同时支持硬件的 TCP 校验计算和分散 - 聚集 (Scatter Gather) 功能。
+
+`GSO` (`Generic Segmentation Offload`)
+
+`TSO` 是使得网络协议栈能够将大块 buffer 推送至网卡，然后网卡执行分片工作，这样减轻了 CPU 的负荷，但 `TSO` 需要硬件来实现分片功能；而性能上的提高，主要是因为延缓分片而减轻了 CPU 的负载，因此，可以考虑将 `TSO` 技术一般化，因为其本质实际是延缓分片，这种技术，在 Linux 中被叫做 `GSO`(`Generic Segmentation Offload`)，它比 `TSO` 更通用，原因在于它不需要硬件的支持分片就可使用，对于支持 TSO 功能的硬件，则先经过 `GSO` 功能，然后使用网卡的硬件分片能力执行分片；而对于不支持 `TSO` 功能的网卡，将分片的执行，放在了将数据推送的网卡的前一刻，也就是在调用驱动的 xmit 函数前。
+
+### :books: 參考網站：
+- https://www.ibm.com/developerworks/cn/linux/l-cn-network-pt/
 
 ---
 
