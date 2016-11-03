@@ -1999,7 +1999,7 @@ FLUSH TABLES WITH READ LOCK;
 SHOW MASTER STATUS;
 ```
 
-```
+```console
 shell> mysqldump --all-databases --master-data > dbdump.db
 ```
 
@@ -2024,7 +2024,7 @@ STOP SLAVE;
 RESET SLAVE ALL;
 ```
 
-```
+```console
 shell> mysql < dbdump.db
 ```
 
@@ -2063,6 +2063,34 @@ PURGE BINARY LOGS BEFORE '2013-04-22 09:55:22';
 - [replication](http://dev.mysql.com/doc/refman/5.7/en/replication.html)
 - [using-and-maintaining-the-binary-log](https://mariadb.com/kb/en/mariadb/using-and-maintaining-the-binary-log/)
 - [option_mysqld_report-host](http://dev.mysql.com/doc/refman/5.7/en/replication-options-slave.html#option_mysqld_report-host)
+
+---
+<a name="mysqlslap"></a>
+**mysqlslap - load emulation client**
+
+```console
+shell> mysqlslap
+shell> mysqlslap --delimiter=";" --create="CREATE TABLE a (b int);INSERT INTO a VALUES (23)" --query="SELECT * FROM a" --concurrency=50 --iterations=200
+shell> mysqlslap --concurrency=5 --iterations=5 --query=query.sql --create=create.sql --delimiter=";"
+shell> mysqlslap --user=root --password=insecure --auto-generate-sql --verbose --host=localhost
+shell> mysqlslap --user=root --password=insecure --auto-generate-sql --concurrency=50 --iterations=200 --verbose --host=localhost 
+```
+
+```
+Benchmark
+        Average number of seconds to run all queries: 0.358 seconds
+        Minimum number of seconds to run all queries: 0.230 seconds
+        Maximum number of seconds to run all queries: 0.938 seconds
+        Number of clients running queries: 50
+        Average number of queries per client: 0
+```
+
+
+---
+
+### :books: 參考網站：
+- [percona-monitoring-plugins](https://www.percona.com/downloads/percona-monitoring-plugins/LATEST/)
+- [installing-templates](https://www.percona.com/doc/percona-monitoring-plugins/1.0/cacti/installing-templates.html)
 
 ---
 
