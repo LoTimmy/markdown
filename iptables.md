@@ -342,7 +342,15 @@ ipset v6.20.1: Set cannot be destroyed: it is in use by a kernel component
 
 ```console
 shell> apt install python-pip
+shell> pip install --upgrade pip
 shell> pip install iblocklist2ipset
+
+shell> iblocklist2ipset generate --ipset=foo "http://list.iblocklist.com/?list=ydxerpxkpcfqjaybcssw&fileformat=p2p&archiveformat=" > foo.txt
+shell> sudo ipset restore -f foo.txt
+```
+
+```
+http://list.iblocklist.com/?list=ydxerpxkpcfqjaybcssw&fileformat=p2p&archiveformat=gz
 ```
 
 
@@ -352,6 +360,7 @@ shell> pip install iblocklist2ipset
 - [ipset](http://manpages.ubuntu.com/manpages/xenial/man8/ipset.8.html)
 - [iptables](http://ipset.netfilter.org/iptables.man.html)
 - [iptables-extensions](http://ipset.netfilter.org/iptables-extensions.man.html)
+- [iblocklist](https://www.iblocklist.com/)
 
 ---
 
