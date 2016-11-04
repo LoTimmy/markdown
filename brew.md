@@ -1,13 +1,10 @@
-上次更新日期： 2016-10-11              
+上次更新日期： 2016-11-04               
 
 ---
-
 
 ```console
 shell> ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
-
-
 
 ```console
 shell> brew update

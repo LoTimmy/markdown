@@ -21,9 +21,14 @@ Next
 
 
 ```console
+shell> apt-get install screen
 shell> screen
 shell> screen -d -m aria2c http://example.org/mylinux.torrent
 shell> screen -r
 shell> screen -ls
+shell> screen -d -S foo -m bash -c ""
+
 ```
 
+### :books: 參考網站：
+- [screen](https://www.gnu.org/software/screen/)
