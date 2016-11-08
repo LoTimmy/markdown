@@ -63,6 +63,9 @@ server {
 
 	ssl_prefer_server_ciphers on;
 
+	ssl_session_cache   shared:SSL:10m;
+	ssl_session_timeout 10m;
+
 	resolver 8.8.8.8;
 	ssl_stapling on;
 	ssl_stapling_verify on;
