@@ -36,9 +36,16 @@ WIN-EIKDIEEPMIG
 WIN-6U4UEOOCU6E
 ```
 
+<!--
+Xshell 5
+101210-450789-147200
+-->
+
 .DS_Store
 
+<!--
 T88RH-FBTJJ-4HXVC-98HYD-V8YKW
+-->
 
 常用詞
 常用詞彙
