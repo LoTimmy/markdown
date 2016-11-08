@@ -499,6 +499,13 @@ shell> swaks --to user@example.com --from me@example.com --auth CRAM-MD5 --auth-
 shell> swaks --to user@example.com --from me@gmail.com --auth --auth-user=me --auth-password= -tls --server smtp.gmail.com:587 --header ""
 ```
 
+```console
+shell> swaks --attach-type text/html --attach report.html
+shell> swaks --body report.html --add-header "MIME-Version: 1.0" --add-header "Content-Type: text/html"
+```
+
+
+
 ---
 
 ```console

@@ -107,6 +107,8 @@ Google 翻譯
 =GOOGLETRANSLATE("", "ja", "")
 =GOOGLETRANSLATE("", "en", "")
 =GOOGLETRANSLATE("", "zh-TW", "en")
+```
 
-
+```
+=GOOGLEFINANCE("currency:USDTWD")
 ```

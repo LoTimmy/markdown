@@ -1,4 +1,4 @@
-上次更新日期： 2016-11-03   
+上次更新日期： 2016-11-04    
 
 # Table of Contents
 
@@ -77,6 +77,39 @@
 ---
 **oathtool - OATH one-time password tool**
 
+---
+
+**logrotate ‐ rotates, compresses, and mails system logs**
+
+```console
+shell> logrotate -f /etc/logrotate.conf
+```
+
+logrotate.conf
+
+```
+/var/log/ifstat.log {
+    daily
+    dateext
+    missingok
+    rotate 5
+    compress
+    delaycompress 
+    notifempty
+    copytruncate
+}
+```
+
+---
+
+**ifstat - InterFace STATistics Monitoring**
+
+```console
+shell> apt-get install ifstat
+shell> ifstat -a
+shell> ifstat -i eth0 -b -t
+```
+
 ```console
 shell> brew install oath-toolkit
 shell> oathtool --totp -b WQSWOTKQK6YQEY4E
@@ -99,14 +132,43 @@ CONF_SWAPSIZE=100
 
 ---
 
+**fallocate - preallocate space to a file**
+
+```console
+shell> fallocate -l 100M /var/swap
+```
+
+```console
+shell> swapon -s
+shell> fallocate -l 100M /var/swap
+shell> chmod 0600 /var/swap
+shell> mkswap /var/swap
+shell> swapon /var/swap
+```
+
+/etc/fstab
+
+```
+/var/swap       none            swap    sw                              0 0
+```
+
+```console
+shell> swapoff /var/swap
+```
+```console
+shell> swapoff -a
+```
+
+- /usr/share/doc/util-linux/examples/fstab.example2
+
+
+---
+
 **grive - Google Drive client for GNU/Linux**
 
 ```console
 shell> apt-get install grive
-shell> lnav
-shell> lnav syslog.5.gz
 ```
-
 
 ---
 
@@ -124,6 +186,8 @@ shell> apt-get install vnstat
 shell> netload eth0
 ```
 
+$HOME/.netloadrc
+
 ---
 **rename - renames multiple files**
 
@@ -134,6 +198,9 @@ shell> rename 'y/A-Z/a-z/' *
 
 shell> rename IMG img *.jpg
 shell> rename .html .htm *.html
+
+shell> rename 's/$/.sh/' filename
+shell> rename 's/$/.bak/' filename
 ```
 
 ### :books: 參考網站：
@@ -1519,6 +1586,10 @@ all-proxy=http://user:pass@proxy:8888
 ```console
 shell> screen -d -m aria2c http://example.org/mylinux.torrent
 ```
+
+### :books: 參考網站：
+- [screen](https://www.gnu.org/software/screen/)
+
 ---
 
 ```console
