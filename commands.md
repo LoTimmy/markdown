@@ -74,7 +74,13 @@
 - [systemctl](#systemctl)
 
 
+---
+**oathtool - OATH one-time password tool**
 
+```console
+shell> brew install oath-toolkit
+shell> oathtool --totp -b WQSWOTKQK6YQEY4E
+```
 ---
 
 **dphys-swapfile - Autogenerate and use a swap file**
