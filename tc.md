@@ -1,10 +1,13 @@
-上次更新日期： 2016-10-26
+上次更新日期： 2016-11-08 
 
 ---
 
 ```console
 shell> tc qdisc del dev eth0 root
-shell> tc qdisc add dev eth0 root netem delay 100ms
+
+# Add +40ms latency
+shell> tc qdisc add dev eth0 root netem delay 40ms
+
 shell> tc qdisc add dev eth0 root netem rate 5kbit 20 100 5
 ```
 

@@ -39,6 +39,47 @@ shell> iperf3 -c iperf.biznetnetworks.com -t -i
 shell> iperf3 -c iperf.he.net -t -i -b 1M
 ```
 
+---
+
+```
+#!/bin/dash
+/bin/sleep 10
+/usr/bin/killall iperf3
+/bin/sleep 0.1
+/usr/bin/killall -9 iperf3
+/bin/sleep 0.1
+if [ `ps -C iperf3 | wc -l` = "1" ]
+then
+  /usr/bin/sudo -u nobody /usr/bin/iperf3 -s -p 5200 -D >/dev/null 2>&1
+  /usr/bin/sudo -u nobody /usr/bin/iperf3 -s -p 5201 -D >/dev/null 2>&1
+  /usr/bin/sudo -u nobody /usr/bin/iperf3 -s -p 5202 -D >/dev/null 2>&1
+  /usr/bin/sudo -u nobody /usr/bin/iperf3 -s -p 5203 -D >/dev/null 2>&1
+  /usr/bin/sudo -u nobody /usr/bin/iperf3 -s -p 5204 -D >/dev/null 2>&1
+  /usr/bin/sudo -u nobody /usr/bin/iperf3 -s -p 5205 -D >/dev/null 2>&1
+  /usr/bin/sudo -u nobody /usr/bin/iperf3 -s -p 5206 -D >/dev/null 2>&1
+  /usr/bin/sudo -u nobody /usr/bin/iperf3 -s -p 5207 -D >/dev/null 2>&1
+  /usr/bin/sudo -u nobody /usr/bin/iperf3 -s -p 5208 -D >/dev/null 2>&1
+  /usr/bin/sudo -u nobody /usr/bin/iperf3 -s -p 5209 -D >/dev/null 2>&1
+fi
+```
+```
+# Start iPerf3
+/sbin/iptables -A INPUT -p udp --dport 5200:5209 -j DROP
+/sbin/ip6tables -A INPUT -p udp --dport 5200:5209 -j DROP
+/home/scripts/restart_iperf.sh
+```
+```
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name  command to be executed
+# Restart iPerf3 every hour
+  59 *  *  *  * /home/scripts/restart_iperf.sh >/dev/null 2>&1
+```
 
 
 
