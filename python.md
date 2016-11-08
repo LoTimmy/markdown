@@ -1,5 +1,16 @@
+最後更新： 2016-11-07 
 
-最後更新： 2015-01-08    
+**python3-pip - alternative Python package installer - Python 3 version of the package**
+**python3-dev - header files and a static library for Python (default)**
+
+```console
+shell> apt-get install python3-pip python3-dev
+shell> pip install --upgrade pip
+shell> pip3 install --upgrade pip
+```
+---
+
+    
 ```python 
 print "Test Message"
 ```
@@ -28,7 +39,6 @@ print squares
 print squares[0]
 print squares[-1]
 ```
-
 
 ---
 

@@ -32,13 +32,13 @@ shell> curl -sSL http://nginx.org/keys/nginx_signing.key | sudo apt-key add -
 shell> echo deb http://nginx.org/packages/ubuntu/ "$(lsb_release -sc)" nginx | sudo tee /etc/apt/sources.list.d/nginx.list
 shell> echo deb-src http://nginx.org/packages/ubuntu/ "$(lsb_release -sc)" nginx | sudo tee -a /etc/apt/sources.list.d/nginx.list
 shell> sudo apt-get update
-shell> sudo apt-get install nginx-extras
 shell> sudo apt-get install nginx
 ```
 
 ```console
 shell> nginx -v
 nginx version: nginx/1.6.2
+nginx version: nginx/1.10.2
 ```
 
 ```console
