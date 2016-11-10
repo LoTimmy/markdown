@@ -110,6 +110,13 @@ shell> hdiutil burn ubuntu-16.04-server-i386.iso
 
 /private/etc/hosts
 
+---
+
+```console
+shell> route get default
+shell> route get default | grep gateway
+shell> netstat -rn | grep default | awk '{ print $2 }'
+```
 
 ---
 
