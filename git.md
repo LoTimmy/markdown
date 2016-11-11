@@ -131,6 +131,12 @@ shell> git reset HEAD hello.c
 ---
 
 
+### :books: 參考網站：
+- [remove-sensitive-data](https://help.github.com/articles/remove-sensitive-data/)
+
+---
+
+
 ```console
 shell> git log --pretty=oneline
 shell> git remote add origin https://github.com/you/HelloWorld.git
@@ -147,18 +153,7 @@ shell> git add .
 shell> git add -u
 ```
 
-
-
-
-
-
-
 ---
-
-
-
-
-
 
 ```console
 shell> mkdir helloworld 
@@ -265,10 +260,11 @@ shell> git branch --remotes
 ```console
 shell> git push origin --delete Branch_df65c30a8bb632955646b90f778c0cb5a7c5b28f
 ```
-
-
 ---
 
+```
+Already up-to-date.
+```
 
 ---
 
