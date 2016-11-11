@@ -17,9 +17,6 @@ shell> aptitude install pkg
 
 ---
 
-iotop - simple top-like I/O monitor
-ifstat - InterFace STATistics Monitoring
-
 ---
 
 ```console 
@@ -43,11 +40,6 @@ shell> aptitude install ajaxterm
 
 ---
 
-mencoder - MPlayer's Movie Encoder
-```console 
-shell> aptitude install mencoder
-```
-
 ---
 
 mplayer - movie player for Unix-like systems
@@ -68,7 +60,6 @@ shell> aptitude install perltidy
 shell> aptitude install libstring-mkpasswd-perl
 ```
 
-
 ---
 
 ```console 
@@ -78,14 +69,7 @@ shell> aptitude install grepcidr
 
 ```console 
 shell> aptitude install qrencode
-shell> aptitude install imagemagick
 ```
-```console 
-shell> convert *.jpg output-file.pdf  
-shell> convert rose.jpg rose.png  
-shell> convert rose.jpg -resize 50% rose.png
-```
-
 ---
 
 htop - interactive processes viewer

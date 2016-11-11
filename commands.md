@@ -2,8 +2,10 @@
 
 # Table of Contents
 
-- [dig](#dig)
+- [dig - DNS lookup utility](#dig)
 - [named-checkzone](#named-checkzone)
+
+
 
 - [freebcp](#freebcp) 
 - [tsql](#tsql)
@@ -19,13 +21,12 @@
 - [dmidecode](#dmidecode)
 - [lsb_release](#lsb_release)
   
-- [ldd](#ldd)
+- [ldd - print shared library dependencies](#ldd)
 - [geoip](#geoip)
 - [grep](#grep)
 - [sed](#sed)
 - [perl](#perl)
-- [redir](#redir)
-
+- [redir - Redirect TCP connections](#redir)
 - [fuser](#fuser)
 - [strace](#strace)
 - [netmask](#netmask)
@@ -57,27 +58,59 @@
 - [loco](#loco)
 - [most](#most)
 
-- [ip](#ip)
-- [ifconfig](#ifconfig)
+- [ifstat - InterFace STATistics Monitoring](#ifstat)
+- [ip - show / manipulate routing, devices, policy routing and tunnels](#ip)
+- [ifconfig - configure a network interface](#ifconfig)
 - [route](#route)
 - [netstat](#netstat)
-- [ss](#ss) 
-
+- [ethtool - query or control network driver and hardware settings](#ethtool)
+- [ss - another utility to investigate sockets](#ss) 
 - [curlftpfs](#curlftpfs)
-- [ethtool](#ethtool)
+- [lsmod - Show the status of modules in the Linux Kernel](#lsmod)
+- [modinfo - Show information about a Linux Kernel module](#lsmod)
+- [modprobe - Add and remove modules from the Linux Kernel](#lsmod)
+- [fio - flexible I/O tester](#fio)
+- [systemctl - Control the systemd system and service manager](#systemctl)
+- [imagemagick - image manipulation programs -- binaries](#imagemagick)
+- [nikto - Scan web server for known vulnerabilities](#nikto)
+- [dmitry - Deepmagic Information Gathering Tool](#dmitry)
+- [iotop - simple top-like I/O monitor](#iotop)
+- [mencoder - MPlayer's Movie Encoder](#mencoder)
 
-- [lsmod](#lsmod)
-- [modinfo](#lsmod)
-- [modprobe](#lsmod)
+---
+<a name="mencoder"></a>
 
-- [fio](#fio)
-- [systemctl](#systemctl)
+**mencoder - MPlayer's Movie Encoder**
 
+```console 
+shell> apt-get install mencoder
+```
 
 
 ---
+<a name="iotop"></a>
 
-nikto
+**iotop - simple top-like I/O monitor**
+
+---
+<a name="imagemagick"></a>
+
+**imagemagick - image manipulation programs -- binaries**
+
+```console 
+shell> apt-get install imagemagick
+shell> convert file1.pdf file2.pdf output-file.pdf
+shell> convert file1.pdf[1] file2.pdf[0,5] output-file.pdf
+shell> convert file1.pdf[0-9] file2.pdf[0-4] output-file.pdf  
+shell> convert *.jpg output-file.pdf  
+shell> convert rose.jpg rose.png  
+shell> convert rose.jpg -resize 50% rose.png
+```
+
+---
+<a name="nikto"></a>
+
+**nikto - Scan web server for known vulnerabilities**
 
 ```console
 shell> apt-get install nikto
@@ -101,6 +134,8 @@ shell> nikto -C all -h 127.0.0.1
 ```
 
 ---
+
+<a name="dmitry"></a>
 
 **dmitry - Deepmagic Information Gathering Tool**
 
@@ -145,6 +180,8 @@ logrotate.conf
 ```
 
 ---
+
+<a name="ifstat"></a>
 
 **ifstat - InterFace STATistics Monitoring**
 
@@ -815,6 +852,8 @@ shell> route del -host ip-addr reject
 ```console
 shell> named-checkzone example.com /etc/bind/db.example.com
 ```
+### :books: 參考網站：
+- [named-checkzone](http://manpages.ubuntu.com/manpages/xenial/en/man8/named-checkzone.8.html)
 
 ---
 <a name="sed"></a>
