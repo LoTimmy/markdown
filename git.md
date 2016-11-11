@@ -131,19 +131,22 @@ shell> git reset HEAD hello.c
 ---
 
 ```console
-shell> bfg --delete-files YOUR-FILE-WITH-SENSITIVE-DATA
-shell> bfg --replace-text passwords.txt
-
+shell> bfg --no-blob-protection --delete-files YOUR-FILE-WITH-SENSITIVE-DATA
 ```
+
 ```console
-shell> bfg --delete-files id_{dsa,rsa}  my-repo.git
+shell> bfg --no-blob-protection --delete-files id_{dsa,rsa}  my-repo.git
 ```
 
 ```console
 shell> git reflog expire --expire=now --all && git gc --prune=now --aggressive
 ```
 
---no-blob-protection
+
+```console
+shell> git clone --bare https://github.com/you/HelloWorld.git HelloWorld.git
+shell> bfg --no-blob-protection --delete-files id_{dsa,rsa} HelloWorld.git
+```
 
 
 ### :books: 參考網站：
