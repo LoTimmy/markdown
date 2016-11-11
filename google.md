@@ -112,3 +112,6 @@ Google 翻譯
 ```
 =GOOGLEFINANCE("currency:USDTWD")
 ```
+
+### :books: 參考網站：
+- https://www.google.com/finance/converter

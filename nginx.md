@@ -193,6 +193,8 @@ server {
 shell> openssl s_client -connect www.godaddy.com:443
 ```
 
+
+
 ### :books: 參考網站：
 - [enable-ocsp-stapling-on-nginx](https://support.comodo.com/index.php?/Default/Knowledgebase/Article/View/1015/38/enable-ocsp-stapling-on-nginx)
 - [ngx_http_v2_module](http://nginx.org/en/docs/http/ngx_http_v2_module.html)
@@ -210,9 +212,37 @@ shell> openssl s_client -connect www.godaddy.com:443
 - [root-comodo-rsa-certification-authority-sha-2](https://support.comodo.com/index.php?/Knowledgebase/Article/View/969/0/root-comodo-rsa-certification-authority-sha-2)
 - [intermediate-2-sha-2-comodo-rsa-domain-validation-secure-server-ca](https://support.comodo.com/index.php?/Knowledgebase/Article/View/970/0/intermediate-2-sha-2-comodo-rsa-domain-validation-secure-server-ca)
 
-<!--
-https://gist.github.com/bradmontgomery/6487319
--->
+---
+```
+server_tokens off;
+```
+
+```
+HTTP/1.1 200 OK
+Server: nginx/1.10.2
+Date: Wed, 09 Nov 2016 04:11:31 GMT
+Content-Type: text/html
+Content-Length: 612
+Last-Modified: Tue, 18 Oct 2016 15:03:13 GMT
+Connection: keep-alive
+ETag: "580639b1-264"
+Accept-Ranges: bytes
+```
+
+```
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 09 Nov 2016 04:13:01 GMT
+Content-Type: text/html
+Content-Length: 612
+Last-Modified: Tue, 18 Oct 2016 15:03:13 GMT
+Connection: keep-alive
+ETag: "580639b1-264"
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+X-Frame-Options: SAMEORIGIN
+Alternate-Protocol:: 443:npn-spdy/3
+Accept-Ranges: bytes
+```
 
 ---
 ```console
@@ -288,7 +318,6 @@ http {
         ssl_stapling on;
         resolver 192.0.2.1;
         ssl_trusted_certificate file;
-
 }
 
 events {
@@ -320,9 +349,9 @@ http {
 ```
 net.ipv4.ip_local_port_range = 1024	65000
 net.ipv4.tcp_fin_timeout = 15
-
 ```
 
+### :books: 參考網站：
 -  [Changing Network Kernel Settings](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/5/html/Tuning_and_Optimizing_Red_Hat_Enterprise_Linux_for_Oracle_9i_and_10g_Databases/sect-Oracle_9i_and_10g_Tuning_Guide-Adjusting_Network_Settings-Changing_Network_Kernel_Settings.html)
 
 ---
@@ -372,13 +401,69 @@ User-agent: Googlebot
 User-agent: Baiduspider
 Disallow: /
 ```
-
 ### :books: 參考網站：
 - [建立 robots.txt 檔案](https://support.google.com/webmasters/answer/6062596?hl=zh-Hant)
 - [robots.txt](https://support.google.com/webmasters/answer/6062608?hl=zh-Hant)
 - [透過 robots.txt 測試工具來測試 robots.txt](https://support.google.com/webmasters/answer/6062598)
 
+---
 
+```
+nginx - high performance web server
+nginx-dbg - nginx debug symbols
+nginx-module-geoip - nginx GeoIP dynamic modules
+nginx-module-geoip-dbg - debug symbols for the nginx-module-geoip
+nginx-module-image-filter - nginx image filter dynamic module
+nginx-module-image-filter-dbg - debug symbols for the nginx-module-image-filter
+nginx-module-njs - nginx nginScript dynamic modules
+nginx-module-njs-dbg - debug symbols for the nginx-module-njs
+nginx-module-perl - nginx Perl dynamic module
+nginx-module-perl-dbg - debug symbols for the nginx-module-perl
+nginx-module-xslt - nginx xslt dynamic module
+nginx-module-xslt-dbg - debug symbols for the nginx-module-xslt
+```
+
+```
+--prefix=/etc/nginx
+--sbin-path=/usr/sbin/nginx
+--conf-path=/etc/nginx/nginx.conf
+--error-log-path=/var/log/nginx/error.log
+--http-log-path=/var/log/nginx/access.log
+--pid-path=/var/run/nginx.pid
+--lock-path=/var/run/nginx.lock
+--http-client-body-temp-path=/var/cache/nginx/client_temp
+--http-proxy-temp-path=/var/cache/nginx/proxy_temp
+--http-fastcgi-temp-path=/var/cache/nginx/fastcgi_temp
+--http-uwsgi-temp-path=/var/cache/nginx/uwsgi_temp
+--http-scgi-temp-path=/var/cache/nginx/scgi_temp
+--user=nginx
+--group=nginx
+--with-http_ssl_module
+--with-http_realip_module
+--with-http_addition_module
+--with-http_sub_module
+--with-http_dav_module
+--with-http_flv_module
+--with-http_mp4_module
+--with-http_gunzip_module
+--with-http_gzip_static_module
+--with-http_random_index_module
+--with-http_secure_link_module
+--with-http_stub_status_module
+--with-http_auth_request_module
+--with-threads
+--with-stream
+--with-stream_ssl_module
+--with-http_slice_module
+--with-mail
+--with-mail_ssl_module
+--with-file-aio
+--with-http_v2_module
+--with-ipv6
+```
+
+
+- [linux_packages](http://nginx.org/en/linux_packages.html)
 ---
 
 ### :books: 參考網站：
