@@ -74,6 +74,42 @@
 - [systemctl](#systemctl)
 
 
+
+---
+
+nikto
+
+```console
+shell> apt-get install nikto
+shell> nikto -C all -h 127.0.0.1
+```
+```
+- Nikto v2.1.5
+---------------------------------------------------------------------------
++ Target IP:          127.0.0.1
++ Target Hostname:    localhost
++ Target Port:        80
++ Start Time:         2016-11-10 21:32:00 (GMT-7)
+---------------------------------------------------------------------------
++ Server: nginx/1.10.2
++ Server leaks inodes via ETags, header found with file /, fields: 0x580639b1 0x264 
++ The anti-clickjacking X-Frame-Options header is not present.
++ 6544 items checked: 0 error(s) and 2 item(s) reported on remote host
++ End Time:           2016-11-10 21:32:23 (GMT-7) (23 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+```
+
+---
+
+**dmitry - Deepmagic Information Gathering Tool**
+
+
+```console
+shell> apt-get install dmitry
+shell> dmitry
+```
+
 ---
 **tree - displays an indented directory tree, in color**
 
