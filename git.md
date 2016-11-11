@@ -130,9 +130,25 @@ shell> git reset HEAD hello.c
 
 ---
 
+```console
+shell> bfg --delete-files YOUR-FILE-WITH-SENSITIVE-DATA
+shell> bfg --replace-text passwords.txt
+
+```
+```console
+shell> bfg --delete-files id_{dsa,rsa}  my-repo.git
+```
+
+```console
+shell> git reflog expire --expire=now --all && git gc --prune=now --aggressive
+```
+
+--no-blob-protection
+
 
 ### :books: 參考網站：
 - [remove-sensitive-data](https://help.github.com/articles/remove-sensitive-data/)
+- [bfg](https://rtyley.github.io/bfg-repo-cleaner/)
 
 ---
 
