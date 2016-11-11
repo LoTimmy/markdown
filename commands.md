@@ -75,6 +75,14 @@
 
 
 ---
+**tree - displays an indented directory tree, in color**
+
+```console
+shell> apt-get install tree
+shell> tree
+```
+
+---
 **oathtool - OATH one-time password tool**
 
 ---
@@ -1264,6 +1272,7 @@ shell> grep -E 'PATTERN1.*PATTERN2' testfile.txt
 
 ```console
 shell> grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" testfile.txt
+shell> grep -E -o "\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,6}\b" testfile.txt 
 ```
 ---
 **date - print or set the system date and time**

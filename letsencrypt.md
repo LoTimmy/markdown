@@ -1,16 +1,24 @@
-
-上次更新日期： 2016-11-08                                                     
-
----
-
 ![](https://letsencrypt.org/images/letsencrypt-logo-horizontal.svg)
-
 
 letsencrypt
 
-```console
-mkdir /opt/letsencrypt
+上次更新日期： 2016-11-08
 
+# Table of Contents
+
+- [getstarted](#getstarted)
+
+---
+<a name="getstarted"></a>
+
+> `電子前線基金會` (`EFF`)、`Mozilla`、`Cisco`、`Akamai`、`IdenTrust`與密西根大學研究人員於2014年共同成立非營利組織「`網際網路安全研究小組`」 (`Internet Security Research Group, ISRG`)，隨後推出`Let's Encrypt`免費憑證服務，希望藉由簡化憑證的申請與部署，推動全球網站採用HTTPS加密傳輸。
+
+---
+
+![](https://certbot.eff.org/images/certbot-logo-1A.svg)
+
+```console
+shell> mkdir /opt/letsencrypt
 shell> wget https://dl.eff.org/certbot-auto
 shell> chmod a+x ./certbot-auto
 shell> ./certbot-auto --help
@@ -18,6 +26,10 @@ shell> ./certbot-auto
 shell> ./certbot-auto certonly --standalone --standalone-supported-challenges tls-sni-01 --register-unsafely-without-email --agree-tos -d example.com -d www.example.com -d other.example.net
 
 shell> ./certbot-auto renew
+```
+
+```console
+shell> ./certbot-auto renew --standalone --pre-hook "service nginx stop" --post-hook "service nginx start"
 ```
 
 ```console
@@ -32,12 +44,15 @@ shell> ./certbot-auto --help
 ```
 
 ```console
-shell> certbot renew --dry-run
+shell> ./certbot-auto renew --dry-run
 ```
 
 ![Imgur](http://i.imgur.com/7hNAFJa.png)
 ![Imgur](http://i.imgur.com/3w8fptF.png)
 ![Imgur](http://i.imgur.com/szPIxbh.png)
+
+### :books: 參考網站：
+- [renewing-certificates](https://certbot.eff.org/docs/using.html#renewing-certificates)
 
 ---
 
@@ -77,16 +92,21 @@ server {
 }
 ```
 
+---
 
+```console
+shell> sudo apt-get install letsencrypt 
+shell> letsencrypt certonly --webroot -w /var/www/example -d example.com -d www.example.com -w /var/www/thing -d thing.is -d m.thing.is
+shell> letsencrypt certonly --standalone -d example.com -d www.example.com
+shell> letsencrypt renew --dry-run --agree-tos 
+shell> letsencrypt renew --pre-hook "service nginx stop" --post-hook "service nginx start"
+shell> letsencrypt renew 
+```
 
-
-----------
+---
 ### :books: 參考網站：
 
 - [letsencrypt](https://letsencrypt.org/)
 - [certbot](https://github.com/certbot/certbot)
 - [certbot](https://certbot.eff.org/docs/contributing.html)
-
-
-`㊙`
-
+- [](https://certbot.eff.org/#ubuntuxenial-haproxy)
