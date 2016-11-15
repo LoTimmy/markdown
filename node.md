@@ -43,6 +43,8 @@ shell> apt-get install nodejs
 
 ```console
 shell> git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
+
+shell> curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
 shell> echo "source ~/.nvm/nvm.sh" >> .bashrc
 
 shell> nvm ls-remote

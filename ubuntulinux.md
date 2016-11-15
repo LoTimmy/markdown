@@ -177,11 +177,23 @@ shell> cat /proc/sys/fs/inode-nr
 
 ```console
 shell> apt-get install unattended-upgrades
-shell> dpkg-reconfigure unattended-upgrades  
+shell> dpkg-reconfigure unattended-upgrades
+shell> dpkg-reconfigure -plow unattended-upgrades  
 ```
+
+![Imgur](http://i.imgur.com/kFM6tSt.png)
+![Imgur](http://i.imgur.com/GbfS21y.png)
+
+/etc/apt/apt.conf.d/20auto-upgrades
+```
+APT::Periodic::Update-Package-Lists "1";
+APT::Periodic::Unattended-Upgrade "1";
+```
+
 ### :books: 參考網站：
 - [automatic-updates](https://help.ubuntu.com/lts/serverguide/automatic-updates.html)
 - [dpkg-reconfigure](http://manpages.ubuntu.com/manpages/saucy/man8/dpkg-reconfigure.8.html)
+- http://docs.openstack.org/icehouse/install-guide/install/apt-debian/content/debian_packages.html
 
 ---
 

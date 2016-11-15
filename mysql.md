@@ -78,15 +78,35 @@ Release:	14.04
 Codename:	trusty
 ```
 
+```console
+shell> MYSQL_PASSWORD=MYSQL_PASSWORD
+shell> echo "mysql-server-5.5 mysql-server/root_password password ${MYSQL_PASSWORD}
+mysql-server-5.5 mysql-server/root_password seen true
+mysql-server-5.5 mysql-server/root_password_again password ${MYSQL_PASSWORD}
+mysql-server-5.5 mysql-server/root_password_again seen true
+" | debconf-set-selections
+shell> DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes mysql-server
+```
+
+---
+
 ![](http://i.imgur.com/HS5iAz1.png)
 
-### 安裝 Percona Server 5.6
+### 安裝 Percona Server 5.7
 ```console
-shell> sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A
+shell> sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 8507EFA5
 shell> echo "deb http://repo.percona.com/apt "$(lsb_release -sc)" main" | sudo tee /etc/apt/sources.list.d/percona.list
 shell> sudo apt-get update
 shell> sudo apt-get install percona-server-server-5.6
+shell> sudo apt-get install percona-server-server-5.7
+
+shell> mysql -e "CREATE FUNCTION fnv1a_64 RETURNS INTEGER SONAME 'libfnv1a_udf.so'"
+shell> mysql -e "CREATE FUNCTION fnv_64 RETURNS INTEGER SONAME 'libfnv_udf.so'"
+shell> mysql -e "CREATE FUNCTION murmur_hash RETURNS INTEGER SONAME 'libmurmur_udf.so'"
 ```
+
+- [percona-server-server-5.7](https://www.percona.com/doc/percona-server/5.7/installation/apt_repo.html)
+
 
 ![](http://i.imgur.com/wtp11Uj.png)
 
@@ -100,8 +120,6 @@ shell> sudo apt-get update
 shell> sudo apt-get install mariadb-server
 shell> sudo apt-get install mariadb-connect-engine-10.1
 ```
-
-
 ### :books: 參考網站： 
 - [Installing Percona Server on Debian and Ubuntu](https://www.percona.com/doc/percona-server/5.6/installation/apt_repo.html)
 - [mariadb](http://downloads.mariadb.org/mariadb/repositories/)
