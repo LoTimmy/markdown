@@ -55,5 +55,110 @@
 ```
 ---
 
+```html
+<ul id="example-1">
+  <li v-for="item in items">
+    {{ item.message }}
+  </li>
+</ul>
+```
+
+```js
+var example1 = new Vue({
+  el: '#example-1',
+  data: {
+    items: [
+      { message: 'Foo' },
+      { message: 'Bar' }
+    ]
+  }
+})
+```
+
+```html
+<ul id="example-2">
+  <li v-for="(item, index) in items">
+    {{ parentMessage }} - {{ index }} - {{ item.message }}
+  </li>
+</ul>
+```
+
+
+```js
+var example2 = new Vue({
+  el: '#example-2',
+  data: {
+    parentMessage: 'Parent',
+    items: [
+      { message: 'Foo' },
+      { message: 'Bar' }
+    ]
+  }
+})
+```
+
+```html
+<ul id="repeat-object" class="demo">
+  <li v-for="value in object">
+    {{ value }}
+  </li>
+</ul>
+```
+```html
+<div v-for="(value, key) in object">
+  {{ key }} : {{ value }}
+</div>
+```
+```html
+<div v-for="(value, key, index) in object">
+  {{ index }}. {{ key }} : {{ value }}
+</div>
+```
+
+
+```js
+new Vue({
+  el: '#repeat-object',
+  data: {
+    object: {
+      FirstName: 'John',
+      LastName: 'Doe',
+      Age: 30
+    }
+  }
+})
+```
+
+```html
+<div id="example-1">
+  <div v-for="item in items">
+    <!-- bind an attribute -->
+    <img v-bind:src="item.imageSrc">
+
+    <!-- shorthand -->
+    <img :src="item.imageSrc">
+  </div>
+</div>
+```
+
+```js
+var example1 = new Vue({
+  el: '#example-1',
+  data: {
+    items: [
+      { imageSrc: 'http://placehold.it/263x184' },
+      { imageSrc: 'http://placehold.it/263x184' }
+    ]
+  }
+})
+```
+
+### :books: 參考網站：
+- [list](https://vuejs.org/v2/guide/list.html)
+- https://vuejs.org/v2/api/
+
+---
+
 ### :books: 參考網站：
 - [vuejs](https://vuejs.org/)
+
