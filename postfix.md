@@ -18,6 +18,7 @@
 `SMTP` (Simple Mail Transfer Protocol，簡易郵件傳輸協定) 是電子郵件在進行傳遞時所使用的標準，顧名思義，它是個簡單的通訊協定（可是管理過郵件伺服器的網管人員，都不認為管理郵件伺服器是件簡單的事）。 
 
 `SMTP`通訊協定相關指令
+
 ![](http://www.netadmin.com.tw/images/news/NP130401000513040115020002.png)
 
 `POP3`
@@ -86,8 +87,9 @@ smtpd_sender_restrictions = reject_unknown_sender_domain,
     check_sender_access hash:/etc/postfix/access
 ```
 
-The Spamhaus Block List
-SBL
+**The Spamhaus Block List**
+
+**`SBL`**
 
 ```
 myorigin = $myhostname
@@ -148,14 +150,6 @@ shell> egrep '(reject|warning|error|fatal|panic):' /some/log/file
 
 ### :books: 參考網站：
 - [BASIC_CONFIGURATION_README](http://www.postfix.org/BASIC_CONFIGURATION_README.html)
-
-<!--
-smtpd_client_restrictions 設定來源 IP 是否被列入黑名單
-smtpd_sender_restrictions 設定會額外驗證來源端的寄件者是否合法有效
-unverified_sender_reject_code 設定驗證失敗的寄件者收到 550 (嚴重錯誤) 狀態，叫他不要在寄了!
-address_verify_map 設定儲存地址驗證狀態的 Lookup Table
--->
-
 
 ```
 permit_mynetworks
@@ -447,10 +441,6 @@ MAILDIR=$HOME/Mail
 .Junk/
 ```
 
-<!--
-http://www.wkb.idv.tw/moodle/mod/page/view.php?id=7832&lang=zh_tw
--->
-
 ### :books: 參考網站：
 - [sample-nonspam.txt](http://spamassassin.apache.org/full/3.0.x/dist/sample-nonspam.txt)
 - [sample-spam.txt](http://spamassassin.apache.org/full/3.0.x/dist/sample-spam.txt)
@@ -480,21 +470,12 @@ mydomain.com.   3600    IN  TXT "v=spf1 ip4:192.168.1.100 -all"
 
 ---
 
-opendkim-genkey - DKIM filter key generation tool
-
-
-> 產生網域金鑰
-> 更新 DNS 紀錄 
+**opendkim-genkey - DKIM filter key generation tool**
 
 ```console
 shell> apt-get install opendkim-tools
 shell> opendkim-genkey -r -D -d mydomain.com
 ```
-
-<!--
-http://www.myhome.net.tw/2014_11/p11.htm
--->
-
 ---
 
 ### :books: 參考網站：
@@ -502,7 +483,7 @@ http://www.myhome.net.tw/2014_11/p11.htm
 
 ---
 
-swaks - SMTP command-line test tool
+**swaks - SMTP command-line test tool**
 
 ```console
 shell> apt-get install swaks 
@@ -571,6 +552,7 @@ canonical_maps = hash:/etc/postfix/canonical
 
 ### :books: 參考網站：
 - [ADDRESS_REWRITING_README](http://www.postfix.org/ADDRESS_REWRITING_README.html)
+- [canonical](http://www.postfix.org/canonical.5.html)
 
 ---
 
