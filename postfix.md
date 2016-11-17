@@ -1,4 +1,4 @@
-上次更新日期： 2016-10-11                                                            
+上次更新日期： 2016-11-17                                                            
 
 `MTA`
 
@@ -47,7 +47,6 @@
 
 用戶在連接郵件伺服器時，會先認證用戶的合法性（利用帳號和密碼的機制進行驗證），一旦驗證通過，方可使用郵件伺服器收發電子郵件。 
 
-
 ---
 
 ```console
@@ -90,7 +89,6 @@ smtpd_sender_restrictions = reject_unknown_sender_domain,
 The Spamhaus Block List
 SBL
 
-
 ```
 myorigin = $myhostname
 myorigin = $mydomain
@@ -122,8 +120,23 @@ relayhost = [mail.isp.tld]
 
 proxy_interfaces = 1.2.3.4
 
+virtual_alias_domains = example.com ...other hosted domains...
 virtual_alias_maps = hash:/etc/postfix/virtual
 ```
+
+```
+postmaster@example.com postmaster
+info@example.com       joe
+sales@example.com      jane
+```
+
+```console
+shell> postmap /etc/postfix/virtual
+shell> postfix reload
+```
+
+### :books: 參考網站：
+- [Postfix Virtual Domain Hosting Howto](http://www.postfix.org/VIRTUAL_README.html)
 
 ```console
 shell> postfix reload
@@ -133,7 +146,7 @@ shell> egrep '(reject|warning|error|fatal|panic):' /some/log/file
  
 ```
 
-
+### :books: 參考網站：
 - [BASIC_CONFIGURATION_README](http://www.postfix.org/BASIC_CONFIGURATION_README.html)
 
 <!--
@@ -246,6 +259,7 @@ Scanned Subject Text = {Scanned}
 
 ```
 
+### :books: 參考網站：
 - [mailscanner](https://www.mailscanner.info/)
 - [mailscanner](https://www.mailscanner.info/MailScanner.conf.index.html)
 - [mailscanner](https://www.mailscanner.info/postfix/)
@@ -437,11 +451,11 @@ MAILDIR=$HOME/Mail
 http://www.wkb.idv.tw/moodle/mod/page/view.php?id=7832&lang=zh_tw
 -->
 
+### :books: 參考網站：
 - [sample-nonspam.txt](http://spamassassin.apache.org/full/3.0.x/dist/sample-nonspam.txt)
 - [sample-spam.txt](http://spamassassin.apache.org/full/3.0.x/dist/sample-spam.txt)
 - [procmailrc](http://spamassassin.apache.org/full/3.0.x/dist/procmailrc.example)
 - [透過Procmail連結Postfix伺服器與MySQL](http://www.netadmin.com.tw/article_content.aspx?sn=1304010005)
-
 
 ---
 
@@ -483,6 +497,7 @@ http://www.myhome.net.tw/2014_11/p11.htm
 
 ---
 
+### :books: 參考網站：
 - [mail-tester](http://www.mail-tester.com/)
 
 ---
@@ -504,14 +519,11 @@ shell> swaks --attach-type text/html --attach report.html
 shell> swaks --body report.html --add-header "MIME-Version: 1.0" --add-header "Content-Type: text/html"
 ```
 
-
-
 ---
 
 ```console
 shell> sa-update && /etc/init.d/spamassassin reload
 ```
-
 ---
 
 `轉發` (`Relay`)
@@ -536,6 +548,7 @@ shell> sa-update && /etc/init.d/spamassassin reload
 
 ---
 
+### :books: 參考網站：
 - [zen](https://www.spamhaus.org/zen/)
 - [setup.dns](http://www.iredmail.org/docs/setup.dns.html)
 - [SPF_Record_Syntax](http://www.openspf.org/SPF_Record_Syntax)
@@ -556,6 +569,7 @@ example.com
 canonical_maps = hash:/etc/postfix/canonical
 ```
 
+### :books: 參考網站：
 - [ADDRESS_REWRITING_README](http://www.postfix.org/ADDRESS_REWRITING_README.html)
 
 ---
@@ -567,7 +581,5 @@ Default password: 	secret
 ```
 myserver.net.in.	3599	IN	TXT	"v=spf1 mx mx:ds1515.dyndns.info -all"
 ```
-
-
-
+### :books: 參考網站：
 - [企业开源电子邮件系统安全保障实战精要: 第 2 部分，Postfix 安全防护实战及垃圾邮件防范](http://www.ibm.com/developerworks/cn/linux/1304_liyang_mailsecure2/)
