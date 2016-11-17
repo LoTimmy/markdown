@@ -1,5 +1,7 @@
 ![](https://letsencrypt.org/images/letsencrypt-logo-horizontal.svg)
 
+![Imgur](http://i.imgur.com/pEBGT1B.png)
+
 letsencrypt
 
 上次更新日期： 2016-11-08

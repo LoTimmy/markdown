@@ -559,7 +559,6 @@ canonical_maps = hash:/etc/postfix/canonical
 Default user:	admin
 Default password: 	secret
 
-
 ```
 myserver.net.in.	3599	IN	TXT	"v=spf1 mx mx:ds1515.dyndns.info -all"
 ```
