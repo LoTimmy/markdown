@@ -7,6 +7,8 @@
 - 若沒有搭配所視即所得編輯器，`HTML`語法本身並不適合書寫，因此，就文字書寫來說，可以選擇一個輕量標記語言，像是`Markdown`，再透過程式轉換為`HTML`，之後也能達到在各個格式間轉換之目的。
 
 ---
+
+---
 First Header  | Second Header
 ------------- | -------------
 Content Cell  | Content Cell

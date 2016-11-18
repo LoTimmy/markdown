@@ -129,6 +129,8 @@ new Vue({
 })
 ```
 
+---
+
 ```html
 <div id="example-1">
   <div v-for="item in items">
@@ -152,10 +154,69 @@ var example1 = new Vue({
   }
 })
 ```
+---
 
+```html
+<div id="example">
+  <span v-for="n in 10">{{ n }}</span>
+</div>
+```
+```js
+new Vue({
+  el: '#example'
+})
+```
 ### :books: 參考網站：
 - [list](https://vuejs.org/v2/guide/list.html)
 - https://vuejs.org/v2/api/
+
+---
+```html
+<div id="example">
+  <my-component></my-component>
+</div>
+```
+
+
+```js
+// register
+Vue.component('my-component', {
+  template: '<div>A custom component!</div>'
+})
+// create a root instance
+new Vue({
+  el: '#example'
+})
+```
+
+---
+
+```html
+<div id="example-1">
+  <button v-on:click="counter += 1">Add 1</button>
+  <p>The button above has been clicked {{ counter }} times.</p>
+</div>
+```
+
+```js
+var example1 = new Vue({
+  el: '#example-1',
+  data: {
+    counter: 0
+  }
+})
+```
+
+### :books: 參考網站：
+- [events](https://vuejs.org/v2/guide/events.html)
+
+---
+
+```js
+const NotFound = { template: '<p>Page not found</p>' }
+const Home = { template: '<p>home page</p>' }
+const About = { template: '<p>about page</p>' }
+```
 
 ---
 

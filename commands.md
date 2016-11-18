@@ -1,5 +1,3 @@
-上次更新日期： 2016-11-04    
-
 # Table of Contents
 
 - [dig - DNS lookup utility](#dig)
@@ -76,6 +74,57 @@
 - [dmitry - Deepmagic Information Gathering Tool](#dmitry)
 - [iotop - simple top-like I/O monitor](#iotop)
 - [mencoder - MPlayer's Movie Encoder](#mencoder)
+- [pv - Shell pipeline element to meter data passing through](#pv)
+- [dialog - Displays user-friendly dialog boxes from shell scripts](#dialog)
+
+
+---
+
+```console
+shell> md5sum file
+shell> md5sum file > MD5SUMS
+shell> md5sum -c MD5SUMS
+
+shell> sha1sum file
+shell> sha1sum file > SHA1SUMS
+shell> sha1sum -c SHA1SUMS
+
+shell> sha256sum file
+shell> sha256sum file > SHA256SUMS
+shell> sha256sum -c SHA256SUMS
+```
+---
+<a name="pv"></a>
+<a name="dialog"></a>
+
+**pv - Shell pipeline element to meter data passing through**
+**dialog - Displays user-friendly dialog boxes from shell scripts**
+
+```console 
+shell> apt-get install pv
+shell> yum install pv
+shell> brew install pv
+
+shell> apt-get install dialog
+shell> brew install dialog
+
+shell> pv file | gzip > file.gz
+shell> pv file | nc -w 1 somewhere.com 3000
+
+shell> (pv -n file | gzip > file.gz) 2>&1 | dialog --gauge "Please Wait" 10 70 0
+shell> (pv -n file | gzip > file.gz) 2>&1 | dialog --gauge "請稍候" 10 70 0
+
+
+shell> pv file | md5sum
+shell> pv file | sha256sum
+shell> pv file | sha512sum
+
+shell> pv -EE /dev/sda > disk-image.img
+shell> pv disk-image.img > /dev/sda
+
+shell> pv < /dev/zero > /dev/sda
+
+```
 
 ---
 <a name="mencoder"></a>
@@ -86,6 +135,7 @@
 shell> apt-get install mencoder
 ```
 
+- [yum](https://www.centos.org/docs/5/html/yum/sn-managing-packages.html)
 
 ---
 <a name="iotop"></a>

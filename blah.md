@@ -1,8 +1,6 @@
-
-上次更新日期： 2016-10-24   
-
 ---
 
+<!--
 ![](http://software.opensuse.org/assets/download/centos-de865c285c8e1567761ee0feadbf4778.png)
 ![](http://software.opensuse.org/assets/download/debian-7c7747407454caca1c5ab01fed35581d.png)
 ![](http://software.opensuse.org/assets/download/fedora-10876c2633b36d3485ae59b3fb03e66a.png)
@@ -20,6 +18,7 @@
 ![](http://fishshell.com/assets/img/cyg_icon.png)
 
 ![](http://fishshell.com/assets/img/tarball_icon.png)
+-->
 
 
 在距離遠或穿牆的情況下，5G WiFi的信號強度會弱於2.4G WiFi（5G頻率高，穿牆弱），在5G WiFi信號很弱的情況下，建議切換至2.4G WiFi。
@@ -28,8 +27,47 @@
 WiFi根據環境情況自動切換到20Mhz寬頻，所以顯示的協商速率可能會降低。而且根據訊號強度的變化，用戶端和路由器的協商速率會隨時變化。
 
 
+<!--
+```
+admin@example.com
+p@55w0rd
+P@55w0rd
+My p@55w0Rd
+example.com
+```
+-->
 
 ```
+beginDate
+endDate
+completedDate
+adminEmailAddress
+COMPLETED
+status
+userEmailAddress
+```
+
+```
+HumanResources.Employee
+Production.Product
+EmpID
+JobTitle
+ProductID
+ProductNumber
+OrderQty
+Total
+UnitPrice
+ListPrice
+ProductName
+Name
+LastName
+FirstName
+ModifiedDate
+```
+
+
+```
+MyData
 My PDFs
 My Music
 My Movies

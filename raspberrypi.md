@@ -43,6 +43,7 @@ bob ALL=(ALL) NOPASSWD: ALL
 shell> update-alternatives --set editor /usr/bin/vim.tiny
 ```
 
+### :books: 參考網站：
 - [users](https://www.raspberrypi.org/documentation/linux/usage/users.md)
 
 ---
@@ -95,6 +96,7 @@ network={
 
 ---
 
+### :books: 參考網站：
 - [downloads](http://www.raspberrypi.org/downloads/)
 
 
@@ -232,13 +234,26 @@ shell> lolcat
 ```
 
 ---
-```console
-shell> vim /etc/dphys-swapfile
-CONF_SWAPSIZE=100
 
+
+**dphys-swapfile - Autogenerate and use a swap file**
+
+
+```console
+shell> sudo apt-get install dphys-swapfile
+
+shell> vim /etc/dphys-swapfile
 shell> service dphys-swapfile stop
 shell> service dphys-swapfile start
 ```
+
+```
+CONF_SWAPFILE=/var/swap
+CONF_SWAPSIZE=2048
+```
+
+### :books: 參考網站：
+- [dphys-swapfile](http://manpages.ubuntu.com/manpages/xenial/man8/dphys-swapfile.8.html)
 
 ---
 
@@ -320,11 +335,11 @@ shell> ntpstat
 shell> hciconfig
 ```
 
-###  參考網站：
+### :books: 參考網站：
 - [dphys-swapfile](http://manpages.ubuntu.com/manpages/trusty/man8/dphys-swapfile.8.html)
 
 ---
-###  參考網站：
+### :books: 參考網站：
 
 - [raspi-config](http://www.raspberrypi.org/documentation/configuration/raspi-config.md)
 - [config-txt](http://www.raspberrypi.org/documentation/configuration/config-txt.md)

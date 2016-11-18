@@ -1,7 +1,7 @@
-
-最後更新： 2016-11-15
-
 <img src="https://pbs.twimg.com/media/CZGHPChUAAA3jqE.png:thumb" alt="">        
+
+![Imgur](http://i.imgur.com/TFg9kMXt.png)
+![Imgur](http://i.imgur.com/sOfjAiH.png)
 
 ---
 
@@ -38,6 +38,8 @@ shell> sudo apt-get install percona-server-server-5.7
 ```sql
 CREATE USER 'root'@'%' IDENTIFIED BY 'mypass';
 GRANT ALL ON *.* TO 'root'@'%';
+CREATE DATABASE foo_development;
+CREATE DATABASE foo_test;
 ```
 
 ```console
@@ -82,6 +84,14 @@ Usage: rails server [mongrel, thin etc] [options]
 ```console
 shell> rails server -b 10.195.38.90 -p 8080
 ```
+
+```
+* Environment: development
+* Listening on tcp://localhost:8080
+Use Ctrl-C to stop
+```
+
+
 
 /usr/local/rvm/
 
