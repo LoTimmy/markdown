@@ -338,6 +338,23 @@ shell> hciconfig
 ### :books: 參考網站：
 - [dphys-swapfile](http://manpages.ubuntu.com/manpages/trusty/man8/dphys-swapfile.8.html)
 
+
+---
+
+EDIMAX EW-7811Un無線網路卡
+
+<img src="http://www.edimax.com.tw/edimax/mw/cufiles/images/products/pics/ew-7811un/big/EW-7811Un_01_1000x1000.jpg" alt="" width=30% height=30%>
+
+<img src="http://www.edimax.com.tw/edimax/mw/cufiles/images/products/pics/ew-7811un/download/EW-7811Un_03_side_1000x1000.png" alt="" width=30% height=30%>
+
+<img src="http://www.edimax.com.tw/edimax/mw/cufiles/images/products/pics/ew-7811un/big/EW-7811Un_02_top_1000x1000.jpg" alt="" width=30% height=30%>
+
+<img src="http://www.edimax.com.tw/edimax/mw/cufiles/images/products/pics/ew-7811un/big/EW-7811Un_05_Raspberry_Pi.jpg" alt="" width=50% height=50%>
+
+
+### :books: 參考網站：
+- [ew-7811un](http://www.edimax.com.tw/edimax/merchandise/merchandise_detail/data/edimax/tw/wireless_adapters_n150/ew-7811un/)
+
 ---
 ### :books: 參考網站：
 

@@ -21,7 +21,7 @@ Codename:	trusty
 ### 安裝 Apache 
 
 ```console
-shell> aptitude install libapache2-mod-php5 php5 php5-gd php5-gd php5-mysql php5-curl php-apc php-mdb2 php-mail php-date php-pear apache2
+shell> apt-get install libapache2-mod-php5 php5 php5-gd php5-gd php5-mysql php5-curl php-apc php-mdb2 php-mail php-date php-pear apache2
 ```
 
 ```console
@@ -181,13 +181,43 @@ SpdyEnabled on
 
 ---
 
-`ModSecurity`是一種網頁防火牆軟體，可與網站伺服器結合（依照官方網站的說明，`ModSecurity`可安裝在`Apache`或`IIS`等知名的網站伺服器），提供針對Web攻擊如`資料庫注入攻擊` (`SQL injection Attacks`)、`跨網站Script攻擊` (`Cross-site Scripting`)、`目錄路徑外洩` (`Path Traversal Attacks`)等等相關攻擊的防衛能力。
- 
+` `是一種網頁防火牆軟體，可與網站伺服器結合（依照官方網站的說明，`ModSecurity`可安裝在`Apache`或`IIS`等知名的網站伺服器），提供針對Web攻擊如`資料庫注入攻擊` (`SQL injection Attacks`)、`跨網站Script攻擊` (`Cross-site Scripting`)、`目錄路徑外洩` (`Path Traversal Attacks`)等等相關攻擊的防衛能力。
+
+```
+libapache2-mod-security2 - Tighten web applications security for Apache
+libapache2-modsecurity - Dummy transitional package
+modsecurity-crs - modsecurity's Core Rule Set
+```
+
+```console
+shell> apt-get install libapache2-mod-security2
+shell> dpkg -L libapache2-mod-security2
+shell> /etc/modsecurity/modsecurity.conf
+```
+
+**413 Payload Too Large**
+
+```apacheconf
+SecRequestBodyAccess On
+```
+
+```console
+shell> a2dismod security2
+shell> service apache2 restart
+```
+
+```
+spring.http.multipart.max-file-size=128KB
+spring.http.multipart.max-request-size=128KB
+```
+
+- [uploading-files](https://spring.io/guides/gs/uploading-files/)
+- [413 Payload Too Large](https://tools.ietf.org/html/rfc7231#section-6.5.11)
 
 ---
 
 ```console
-shell> aptitude install libapache2-mod-rpaf
+shell> apt-get install libapache2-mod-rpaf
 shell> vim /etc/apache2/mods-available/rpaf.conf
 ```
 ```apacheconf
@@ -248,7 +278,7 @@ Syntax OK
 ---
 
 ```console
-shell> aptitude install liblwp-online-perl
+shell> apt-get install liblwp-online-perl
 shell> HEAD http://127.0.0.1/
 shell> GET -Used http://127.0.0.1/
 ```

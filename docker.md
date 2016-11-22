@@ -40,34 +40,29 @@
 ```console
 shell> lsb_release -a
 ```
-```
-No LSB modules are available.
-Distributor ID:	Ubuntu
-Description:	Ubuntu 14.04.4 LTS
-Release:	14.04
-Codename:	trusty
-```
-```console
-shell> sudo apt-get update
-shell> sudo apt-get install apt-transport-https ca-certificates
-shell> sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
-```
+![Imgur](http://i.imgur.com/ci0qpEH.png)
 
 /etc/apt/sources.list.d/docker.list
 
-
+```
 Ubuntu Precise 12.04 (LTS)
 Ubuntu Trusty 14.04 (LTS)
 Ubuntu Wily 15.10
 Ubuntu Xenial 16.04 (LTS)
+```
+- [ubuntulinux](https://docs.docker.com/engine/installation/linux/ubuntulinux/)
+- [mac](https://docs.docker.com/engine/installation/mac/)
+- [docker-for-mac](https://docs.docker.com/docker-for-mac/)
+
+```console
+shell> sudo apt-get update
+```
+
 
 ```
 deb https://apt.dockerproject.org/repo ubuntu-precise main
-
 deb https://apt.dockerproject.org/repo ubuntu-trusty main
-
 deb https://apt.dockerproject.org/repo ubuntu-wily main
-
 deb https://apt.dockerproject.org/repo ubuntu-xenial main
 ```
 
@@ -75,8 +70,14 @@ deb https://apt.dockerproject.org/repo ubuntu-xenial main
 shell> sudo apt-get update
 shell> sudo apt-get install apt-transport-https ca-certificates
 shell> sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+
+shell> echo "<REPO>" | sudo tee /etc/apt/sources.list.d/docker.list
+
 shell> sudo apt-get install linux-image-generic-lts-trusty
 shell> sudo reboot
+
+shell> sudo apt-get install linux-image-extra-$(uname -r) linux-image-extra-virtual
+
 
 shell> sudo apt-get install docker-engine
 shell> sudo service docker start

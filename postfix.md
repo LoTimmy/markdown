@@ -366,7 +366,7 @@ plugin {
 ```
 ---
 
-<img src="http://i.imgur.com/GHjoJiD.jpg" alt="sqlserver" width=58 height=58>
+<img src="http://i.imgur.com/GHjoJiD.jpg" alt="" width=58 height=58>
 
 ### 服务器使用 SpamAssassin 防治垃圾邮件
 
