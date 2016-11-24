@@ -58,7 +58,6 @@ Ubuntu Xenial 16.04 (LTS)
 shell> sudo apt-get update
 ```
 
-
 ```
 deb https://apt.dockerproject.org/repo ubuntu-precise main
 deb https://apt.dockerproject.org/repo ubuntu-trusty main
@@ -219,7 +218,8 @@ shell> docker rm <container_id>
 shell> docker run --rm ubuntu /bin/ping 8.8.8.8
 ```
 
-[basics](https://docs.docker.com/engine/userguide/basics/)
+### :books: 參考網站：
+- [basics](https://docs.docker.com/engine/userguide/basics/)
 
 
 ```console
@@ -421,6 +421,7 @@ shell> docker-compose run web env
 - [virtual-machines-docker-compose-quickstart](https://azure.microsoft.com/zh-tw/documentation/articles/virtual-machines-docker-compose-quickstart/)
 - [compose-file](https://docs.docker.com/compose/compose-file/)
 
+
 ---
 
 ```console
@@ -450,10 +451,9 @@ shell> boot2docker shellinit # Display the environment variables for the Docker 
 
 shell> docker run -d -P --name web nginx
 shell> docker ps # Display your running container with docker ps command
-
 ```
 
-
+### :books: 參考網站：
 - [](https://docs.docker.com/machine/get-started/)
 
 ---
@@ -533,6 +533,7 @@ shell> docker-compose up -d
 shell> docker inspect web
 ```
 
+### :books: 參考網站：
 - [dockervolumes](https://docs.docker.com/engine/userguide/containers/dockervolumes/)
 - [phpinfo](http://php.net/manual/en/function.phpinfo.php)
 - [The-TERM-variable](https://www.gnu.org/software/gettext/manual/html_node/The-TERM-variable.html)
@@ -542,8 +543,6 @@ shell> docker inspect web
 shell> docker volume ls -qf dangling=true
 shell> docker volume rm $(docker volume ls -qf dangling=true)
 ```
-
-
 
 ---
 
@@ -564,7 +563,6 @@ vim - Vi IMproved - enhanced vi editor
 unzip - De-archiver for .zip files
 git - fast, scalable, distributed revision control system
 ```
-
 
 **Dockerfile**
 
@@ -594,9 +592,7 @@ ENV foo /bar
 WORKDIR ${foo}   # WORKDIR /bar
 ADD . $foo       # ADD . /bar
 COPY \$foo /quux # COPY $foo /quux
-
 ```
-
 
 ```
 FROM ubuntu:14.04
@@ -628,16 +624,16 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log \
 EXPOSE 80 443
 
 CMD ["nginx", "-g", "daemon off;"]
-
 ```
 
-
+```console
 shell> docker build -f /path/to/a/Dockerfile .
 shell> docker build -t foo/myapp .
 shell> docker build -t foo/myapp:1.0.2 -t foo/myapp:latest .
 shell> docker run -i -t foo/myapp /bin/bash
+```
 
-
+```
 NAME                      DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
 nginx                     Official build of Nginx.                        3604      [OK]       
 redis                     Redis is an open source key-value store th...   2452      [OK]       
@@ -648,21 +644,39 @@ neurodebian               NeuroDebian provides neuroscience research...   25    
 ubuntu                    Ubuntu is a Debian-based Linux operating s...   4337      [OK]       
 ubuntu-debootstrap        debootstrap --variant=minbase --components...   25        [OK]       
 ubuntu-upstart            Upstart is an event-based replacement for ...   65        [OK]       
+```
 
-
-
-
-shell> docker run -i -t busybox 
-
-
+### :books: 參考網站：
 - [builder](https://docs.docker.com/engine/reference/builder/)
 - [manage_images](https://msdn.microsoft.com/zh-tw/virtualization/windowscontainers/management/manage_images)
 - [manage_windows_dockerfile](https://msdn.microsoft.com/zh-tw/virtualization/windowscontainers/docker/manage_windows_dockerfile)
 - [faq](https://docs.docker.com/engine/faq/)
 
-
 ---
 
+```
+FROM ubuntu:16.04
+MAINTAINER Sven Dowideit <SvenDowideit@docker.com>
+
+RUN apt-get update && apt-get install -y openssh-server
+RUN mkdir /var/run/sshd
+RUN echo 'root:screencast' | chpasswd
+RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+
+# SSH login fix. Otherwise user is kicked off after login
+RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
+
+ENV NOTVISIBLE "in users profile"
+RUN echo "export VISIBLE=now" >> /etc/profile
+
+EXPOSE 22
+CMD ["/usr/sbin/sshd", "-D"]
+```
+
+### :books: 參考網站：
+- [running_ssh_service](https://docs.docker.com/engine/examples/running_ssh_service/)
+
+---
 
 /src/webapp
 /src/docs
@@ -672,23 +686,22 @@ web
 db1 
 db2 
 /dbdata 
-dbstore 
+dbstore
+ 
 ---
 
-[Docker新版網路功能升級終於支援IPv6，容器可設唯讀強化控管，新增統計API即時監控運作狀態](http://www.ithome.com.tw/news/94137)
+### :books: 參考網站：
+- [Docker新版網路功能升級終於支援IPv6，容器可設唯讀強化控管，新增統計API即時監控運作狀態](http://www.ithome.com.tw/news/94137)
+- http://docs.docker.com/installation/ubuntulinux/
+- [First steps with Docker](http://docs.docker.com/articles/basics/)
+- http://docs.docker.com/reference/commandline/cli/
 
-http://docs.docker.com/installation/ubuntulinux/
-[First steps with Docker](http://docs.docker.com/articles/basics/)
-http://docs.docker.com/reference/commandline/cli/
-
-https://coreos.com/docs/launching-containers/building/getting-started-with-docker/
-http://www.ithome.com.tw/news/91847
-http://www.ithome.com.tw/news/91848
-http://www.ithome.com.tw/news/91602
-http://www.ithome.com.tw/news/92150
-
-[http://www.fig.sh/yml.html](http://www.fig.sh/yml.html)
-
-[https://registry.hub.docker.com/_/nginx/](https://registry.hub.docker.com/_/nginx/)
-[https://registry.hub.docker.com/_/ubuntu/](https://registry.hub.docker.com/_/ubuntu/)
-[https://registry.hub.docker.com/_/mysql/](https://registry.hub.docker.com/_/mysql/)
+- https://coreos.com/docs/launching-containers/building/getting-started-with-docker/
+- http://www.ithome.com.tw/news/91847
+- http://www.ithome.com.tw/news/91848
+- http://www.ithome.com.tw/news/91602
+- http://www.ithome.com.tw/news/92150
+- http://www.fig.sh/yml.html
+- https://registry.hub.docker.com/_/nginx/
+- https://registry.hub.docker.com/_/ubuntu/
+- https://registry.hub.docker.com/_/mysql/
