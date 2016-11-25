@@ -1,6 +1,3 @@
-上次更新日期： 6/27/2016 10:28:49 AM                                                   
-
-
 # Table of Contents
 
 :blue_book:

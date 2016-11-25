@@ -1,5 +1,9 @@
 
-上次更新日期： 2016-04-28                                                   
+### :books: 參考網站：
+- https://api.jquery.com/mouseout/
+- https://api.jquery.com/css/
+---
+
 
 - [lazyload](#lazyload)
 
