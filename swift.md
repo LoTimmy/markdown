@@ -1,5 +1,3 @@
-上次更新日期： 6/27/2016 1:58:35 PM                                                           
-
 <img src="https://swift.org/assets/images/swift.svg" alt="swift" width=20% height=20%>
 
 ![](https://devimages.apple.com.edgekey.net/swift/images/xcode.png)

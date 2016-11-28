@@ -1,16 +1,22 @@
 ![](https://d207aa93qlcgug.cloudfront.net/dockerized-0.23.1/img/explore_repos/official_ubuntu-h.png)
-
 ![](http://manpages.ubuntu.com/assets/light/images/footer_logo.png)
-
-上次更新日期： 2016-11-03     
 
 ```console
 shell> lsb_release -a
+```
+```
 No LSB modules are available.
 Distributor ID:	Ubuntu
 Description:	Ubuntu 14.04 LTS
 Release:	14.04
 Codename:	trusty
+```
+```
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 16.04.1 LTS
+Release:	16.04
+Codename:	xenial
 ```
 
 ```console
@@ -312,7 +318,6 @@ linux ks=floppy
 ```console
 shell> apt-get install lib32z1 lib32ncurses5 lib32bz2-1.0
 ```
-
 
 ```console
 shell> uname -m

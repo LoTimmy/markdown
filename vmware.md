@@ -1,5 +1,3 @@
-上次更新日期： 2016-10-11         
-
 - 虛擬化系統主要可分為全虛擬化與半虛擬化兩種，前者是安裝在原本作業系統之上，如`VMware Server`；而後者則直接安裝在伺服器上、不須架構在一般作業系統上，像`Citrix XenServer`、`VMware ESX`等。兩者相較，半虛擬化的效能比較佳，因此在實務上，也都是以此建置虛擬化系統。      
 - `開放虛擬化格式` (`Open Virtualization Format`, `OVF`) 是 Distributed Management Task Force, Inc. 提供的封裝標準，其設計目的是要協助移植和部署虛擬裝置。
 
@@ -39,7 +37,6 @@ shell> vmware-checkvm
 ---
 
 vmware-manager - utility to manage VMware virtual machines
-
 
 ---
 

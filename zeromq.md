@@ -1,6 +1,3 @@
-上次更新日期： 2016-10-11                                                   
-
-
 ![](http://zeromq.wdfiles.com/local--files/admin:css/logo.gif)
 
 ![](http://i.imgur.com/9qzI8QR.jpg)

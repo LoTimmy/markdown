@@ -1,6 +1,4 @@
 
-最後更新： 2016-10-05          
-
 ![](http://i.imgur.com/VrzlDHZ.jpg)
 ![](http://i.imgur.com/FBrDWD9.jpg)
 ![](http://i.imgur.com/s8y0JOO.jpg)

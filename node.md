@@ -1,7 +1,5 @@
 ![](https://raw.githubusercontent.com/docker-library/docs/master/node/logo.png)
 
-上次更新日期： 2016-10-28     
-
 # Table of Contents
 
 - [install](#install)
@@ -42,14 +40,13 @@ shell> apt-get install nodejs
 ```
 
 ```console
-shell> git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
-
 shell> curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
+shell> wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
+
 shell> echo "source ~/.nvm/nvm.sh" >> .bashrc
 
 shell> nvm ls-remote
 shell> nvm ls-remote --lts
-
 
 shell> nvm install --lts
 shell> nvm install --lts=argon
@@ -69,6 +66,9 @@ shell> nvm alias default lts/argon
 shell> nvm alias default lts/boron
 ```
 
+### :books: 參考網站：
+- [nvm](https://github.com/creationix/nvm)
+
 ```
 ->       v4.6.1
          v6.9.1
@@ -80,6 +80,9 @@ lts/argon -> v4.6.1
 lts/boron -> v6.9.1
 
 ```
+
+
+
 
 ```console
 shell> node --version
@@ -184,8 +187,7 @@ function letTest() {
 }
 ```
 
-
-
+### :books: 參考網站：
 - [let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
 - [const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
 
@@ -260,8 +262,8 @@ myObj.toString = function() {
 } 
 
 console.log(myObj.toString());  // → "Fred"
- 
 ```
+
 ---
 
 陣列 (Array)
@@ -367,7 +369,7 @@ Array.isArray([1]);
 Array.isArray(new Array());
 ```
 
-###  參考網站：
+### :books: 參考網站：
 
 - [pop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
 - [shift](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
@@ -391,7 +393,7 @@ parseInt("12abc");   // → "12"
 
 ```
 
-###  參考網站：
+### :books: 參考網站：
 - [typeof 運算子 (JavaScript)](https://msdn.microsoft.com/zh-tw/library/259s7zc1(v=vs.94).aspx)
 - [parseInt 函式 (JavaScript)](https://msdn.microsoft.com/zh-tw/library/x53yedee(v=vs.94).aspx)
 - [parseFloat 函式 (JavaScript)](https://msdn.microsoft.com/zh-tw/library/d5hbbd4z(v=vs.94).aspx)
@@ -445,7 +447,7 @@ else
 if (err) console.log("Error: ", err);
 ```
 
-###  參考網站：
+### :books: 參考網站：
 - [條件 (三元) 運算子 (?:) (JavaScript)](https://msdn.microsoft.com/zh-tw/library/be21c7hw(v=vs.94).aspx)
 - [Conditional_Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
@@ -561,7 +563,7 @@ console.timeEnd('100-elements');
 // prints 100-elements: 262ms
 ```
 
-###  參考網站：
+### :books: 參考網站：
 - [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
 ---
@@ -597,7 +599,7 @@ console.log(fn(function(num) { return num + num; } (2))); // → 16
 console.log([1, 4, 9].map(function(num) { return num * num; })); // → [ 1, 16, 81 ]
 ```
 
-###  參考網站：
+### :books: 參考網站：
 - [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
 ---
@@ -830,7 +832,7 @@ rg.greet();
 
 ```
 
-###  參考網站：
+### :books: 參考網站：
 -  [prototype](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype)
 - [this] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
 - [JavaScript 物件導向介紹](https://developer.mozilla.org/zh-TW/docs/JavaScript_物件導向介紹)
@@ -907,7 +909,7 @@ em.emit('sayHello', 'Eric');
 ```
 ---
 
-###  參考網站：
+### :books: 參考網站：
 - [length](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length)
 
 ---
@@ -933,7 +935,7 @@ hello-compiled.js
 function hello(a){alert("Hello, "+a)}hello("New User");
 ```
 
-###  參考網站：
+### :books: 參考網站：
 - [Closure Compiler](https://developers.google.com/closure/compiler/docs/gettingstarted_app)
 
 ---
@@ -972,7 +974,7 @@ var str = aes_decrypt(crypt_str, 'my_secret_password');
 console.log(str);
 ```
 
-###  參考網站：
+### :books: 參考網站：
 - [aes_encrypt](https://mariadb.com/kb/en/mariadb/aes_encrypt/)
 
 ---
@@ -1027,7 +1029,7 @@ setInterval(function() {
 
 ---
 
-###  參考網站：
+### :books: 參考網站：
 
 - [runnable](http://code.runnable.com/)
 - [新版Node.js終於支援類別](http://www.ithome.com.tw/news/98663)

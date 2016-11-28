@@ -1,10 +1,3 @@
-上次更新日期： 2016-05-09
-
-<!--
-```console
-setup.exe /unattend:filename
-```
--->
 
 ```xml
 <Value>Windows 7 STARTER</Value><!-- Windows 7 簡易版 -->

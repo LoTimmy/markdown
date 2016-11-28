@@ -1,6 +1,3 @@
-最後更新： 2015-07-09              
-
-
 - `SysBench`是開源碼社群中頗富盛名的壓力測試軟體，可用來**測試主機上的檔案系統及記憶體的讀寫效能、CPU的運作效能**。 
 除了上述傳統的效能測試項目外，`SysBench`更提供了**資料庫的運作效能測試，目前支援測試`MySQL`、`Oracle`、`PostgreSQL`等相關著名的資料庫軟體**。 
 - `SysBench`測試資料庫的主要重點在於`OLTP`(`On-Line Transaction Processing system`，`連線交易處理系統`) 的效能測試。 
@@ -23,7 +20,7 @@ Codename:	trusty
 ```
 ### 安裝 sysbench 
 ```console
-shell> aptitude install sysbench
+shell> sudo apt-get install sysbench
 ```
 
 

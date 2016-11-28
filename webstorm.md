@@ -1,6 +1,3 @@
-上次更新日期： 5/12/2016 2:49:44 PM   
-
-
 - `Reformatting code` `Ctrl+Alt+L`
 - `Deleting lines` `Ctrl+Y`
 - `Duplicating lines` `Ctrl+D`
@@ -17,7 +14,6 @@ ygktCL0!EObEBzvUsU5U1215z7NvLr
 4NtxGDVWPtHJPXjcYrJiJiw82JOlwb
 ===== LICENSE END =====
 ```
-
 
 ---
 
