@@ -1,6 +1,4 @@
 
-上次更新日期： 2016-09-12    
-
 - [VirtualBox](https://www.virtualbox.org/)
 - [Chapter 6. Virtual networking](https://www.virtualbox.org/manual/ch06.html)
 - [Chapter 8. VBoxManage](https://www.virtualbox.org/manual/ch08.html)

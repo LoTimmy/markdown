@@ -1,6 +1,4 @@
 
-最後更新： 2016-10-11               
-
 ```console
 WMIC  BaseBoard GET Product,Manufacturer,Version,SerialNumber
 ```

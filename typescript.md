@@ -1,6 +1,3 @@
-
-最後更新： 2015-07-27
-
 typescript
 
 ```console

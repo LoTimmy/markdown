@@ -1,5 +1,3 @@
-上次更新日期： 2016-11-02    
-
 ![](https://vuejs.org/images/logo.png)
 
 ---

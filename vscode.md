@@ -1,5 +1,3 @@
-上次更新日期： 2016-04-21  
-
 Visual Studio Code
 
 ---

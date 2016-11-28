@@ -1,7 +1,3 @@
-
-最後更新： 2015-09-16        
-
-
 ```console
 shell> npm install webpack -g
 ```

@@ -1,7 +1,5 @@
 ![](http://i.imgur.com/VzpZv22.png)
 
-上次更新日期： 2016-10-11           
-
 ---
 <kbd>Ctrl</kbd> + <kbd>V</kbd>, <kbd>Ctrl</kbd> + <kbd>M</kbd>
 
@@ -186,10 +184,6 @@ inoremap <Esc>OS -
 inoremap <Esc>OM <Enter>
 
 ```
-
-
-
-
 
 ---
 
