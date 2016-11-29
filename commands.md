@@ -1206,16 +1206,24 @@ shell> /etc/crontab
 ```
 
 ``` 
+SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=root
+HOME=/
+# For details see man 4 crontabs
 # Example of job definition:
 # .---------------- minute (0 - 59)
-# |  .------------- hour (0 - 23)
-# |  |  .---------- day of month (1 - 31)
-# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
-# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
-# |  |  |  |  |
-# *  *  *  *  * user-name  command to be executed
+# | .------------- hour (0 - 23)
+# | | .---------- day of month (1 - 31)
+# | | | .------- month (1 - 12) OR jan,feb,mar,apr ...
+# | | | | .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# | | | | |
+# * * * * * username  command to be executed
+
 ```
 
+### :books: 參考網站：
+- https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-Automating_System_Tasks.html
 
 ---
 **netmask - a netmask generation and conversion program**
