@@ -665,8 +665,9 @@ FROM ubuntu:16.04
 MAINTAINER Sven Dowideit <SvenDowideit@docker.com>
 
 RUN apt-get update && apt-get install -y openssh-server
+RUN apt-get install -y net-tools
 RUN mkdir /var/run/sshd
-RUN echo 'root:screencast' | chpasswd
+RUN echo 'root:toor' | chpasswd
 RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
 # SSH login fix. Otherwise user is kicked off after login
@@ -677,6 +678,18 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 
 EXPOSE 22
 CMD ["/usr/sbin/sshd", "-D"]
+```
+
+```
+shell> docker build -t openssh-server .
+shell> docker run -d -P --name test_sshd openssh-server
+shell> docker port test_sshd 22
+
+0.0.0.0:49154
+
+
+shell> docker inspect test_sshd
+shell> ssh root@127.0.0.1 -p 49154
 ```
 
 ### :books: 參考網站：
