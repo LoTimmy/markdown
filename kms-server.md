@@ -1,6 +1,4 @@
 
-上次更新日期： 2016-04-13                                                   
-
 ```console
 shell> apt-get install p7zip-full
 

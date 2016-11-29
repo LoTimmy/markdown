@@ -1,4 +1,3 @@
-上次更新日期： 2016-11-14
 
 ![](http://ophcrack.sourceforge.net/logo.png)
 

@@ -1,6 +1,4 @@
 
-最後更新： 2015-11-13         
-
 ```console
 shell> choco install gpg4win
 ```

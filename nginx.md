@@ -2,8 +2,6 @@
 
 ![](https://d33np9n32j53g7.cloudfront.net/assets/stacks/nginxstack/img/nginxstack-stack-110x117-5c92eb04fa128dcd0e9259e63b1dba01.png)
 
-最後更新： 2016-10-11                    
-
 ### 在 `Raspbian` 8.0 上建置 `nginx`
 
 安裝作業系統及`nginx`相關套件。

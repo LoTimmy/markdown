@@ -1,6 +1,3 @@
-最後更新： 2015-07-28
-
-
 http://electron.atom.io/docs/v0.30.0/tutorial/quick-start/
 
 

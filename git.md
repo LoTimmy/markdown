@@ -279,18 +279,41 @@ shell> git push origin --delete Branch_df65c30a8bb632955646b90f778c0cb5a7c5b28f
 ```
 ---
 
+```console
+shell> mkdir web.git
+shell> cd web.git
+shell> git init --bare
 ```
-Already up-to-date.
-```
-```
-On branch master
-Your branch is up-to-date with 'origin/master'.
-nothing to commit, working tree clean
+
+hooks/post-receive
 
 ```
+#!/bin/sh
+git --work-tree=/var/www/html clean -fd
+git --work-tree=/var/www/html checkout --force
+
+chown -R www:www /var/www/html
+```
+```console
+shell> chmod -x hooks/post-receive
+```
+```console
+shell> git remote add prd 192.168.8.88:/opt/web.git
+shell> git remote add tst 192.168.8.88:/opt/web-tst.git
+shell> git add *
+shell> git commit -m ''
+shell> git push tst master
+shell> git push prd master
+```
+
+
+### :books: 參考網站：
+- [githooks](https://git-scm.com/docs/githooks)
+- [git-checkout](https://git-scm.com/docs/git-checkout)
+- [git-clean](https://git-scm.com/docs/git-clean)
+- [git](https://git-scm.com/docs/git)
 
 ---
-
 
 ### :books: 參考網站：
 - [4.2 伺服器上的 Git - 在伺服器上部署 Git](https://git-scm.com/book/zh-tw/v1/%E4%BC%BA%E6%9C%8D%E5%99%A8%E4%B8%8A%E7%9A%84-Git-%E5%9C%A8%E4%BC%BA%E6%9C%8D%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2-Git)

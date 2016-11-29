@@ -1,9 +1,8 @@
 ![](http://www.ntop.org/wp-content/uploads/2011/08/logo_new_m.png)
 
-最後更新： 2015-11-02        
 
 ----------
-因本文主要介紹`yowsup`如何安裝及設定，作業系統方面就不再詳述。
+
 ##### 安裝`ntop`
 
 安裝`ntop`套件。

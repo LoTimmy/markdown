@@ -1,8 +1,6 @@
 ![](http://i.imgur.com/3hIAdKc.png)
 ![](http://i.imgur.com/PTsVNBp.png)
 
-最後更新： 2014-12-30       
-
 `OpenVPN`是透過`OpenSSL`加密庫中的SSLv3/TLSv1協議函數庫，建構企業內部`虛擬私有網路`，`OpenVPN`允許參與建立`VPN`的單點使用公開金鑰、電子證書或是帳戶／密碼來進行身分認證。它並不是一個Web-based的`VPN`軟體，也不與`IPsce`及其他`VPN`軟體相容，目前`OpenVPN`能夠在`Linux`、`FreeBSD`、`OpenBSD`、`Solaris`、`Mac OS X`與微軟的Windows 2000/XP/Vista/2003上運行。 
 
 `OpenVPN`預設採用`1194`埠做通訊，並且**推薦使用`UDP`協議，不過同時也支援`TCP`，使用者可以自己修改**。`OpenVPN`提供了`Tun`和`Tap`驅動兩種虛擬網路介面，透過它們可以建立`Layer3`的IP通道或是虛擬`Layer2`乙太網路，後者可以傳送任何類型的`Layer2`乙太網路封包，並可以使用`LZO演算法`壓縮。使用`Layer3`或`Layer2`時，使用者可以依自己的網路架構做選擇。 

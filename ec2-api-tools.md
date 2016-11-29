@@ -1,6 +1,3 @@
-
-最後更新： 2016-08-26         
-
 ![](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/images/overview_getting_started.png)
 
 ----------

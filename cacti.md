@@ -1,6 +1,3 @@
-
-最後更新： 2016-10-21    
-
 ```
 cacti	cacti/app-password-confirm	password	
 # MySQL application password for cacti:

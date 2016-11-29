@@ -1,7 +1,5 @@
 <img src="http://i.imgur.com/x3bCOdV.png" alt="ansible" width=58 height=58>
 
-最後更新： 2016-10-11   
-
 # Table of Contents
 
 - [getstarted](#getstarted)

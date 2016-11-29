@@ -1,7 +1,5 @@
 ![](https://raw.githubusercontent.com/docker-library/docs/master/mongo/logo.png)
 
-上次更新日期： 6/22/2016 12:00:27 PM              
-
 - `MongoDB`為一跨平台的文件導向開放源碼資料庫系統，是目前最受歡迎的`非關聯性資料庫` (`NoSQL`)。
 - `MongoDB`兼具關聯式資料多鍵值查詢的方便性，又有`NoSQL`資料庫處理大量資料的速度。
 - 可橫向擴展的`NoSQL`資料庫`MongoDB`。`MongoDB`橫向擴展的能力，不只能讓資料庫儲存大量資料，也能具備承載瞬間大量系統存取的能力。

@@ -1,7 +1,5 @@
 ![](https://raw.githubusercontent.com/docker-library/docs/master/mono/logo.png)
 
-最後更新： 2014/11/26 16:55:36     
-
 MyProject
 
 ```csharp

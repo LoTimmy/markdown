@@ -1,5 +1,3 @@
-上次更新日期： 2016/07/04   
-
 
 ![](http://i.imgur.com/qfadnu3.png)
 

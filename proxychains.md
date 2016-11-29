@@ -1,5 +1,3 @@
-最後更新： 2016-11-11 
-
 **proxychains - proxy chains - redirect connections through proxy servers**
 
 ```console

@@ -1,7 +1,5 @@
 ![](https://raw.githubusercontent.com/docker-library/docs/master/httpd/logo.png)
 
-最後更新： 2016-10-14                   
-
 ### 在 `Ubuntu` 14.04 LTS 上建置 `Apache`
 
 安裝作業系統及`Apache`相關套件。

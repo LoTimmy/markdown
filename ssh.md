@@ -1,7 +1,4 @@
 
-最後更新： 2016-08-18     
-
-
 ```
 Port 22960 
 LoginGraceTime 30 

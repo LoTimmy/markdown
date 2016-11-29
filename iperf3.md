@@ -1,4 +1,3 @@
-最後更新： 2016-11-04 
 
 ```console
 shell> iperf3 -s

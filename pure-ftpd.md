@@ -1,8 +1,4 @@
 
-上次更新日期： 6/8/2016 11:25:16 AM       
-
----
-
 ```console
 shell> apt-get install pure-ftpd
 shell> mkdir /home/ftpusers

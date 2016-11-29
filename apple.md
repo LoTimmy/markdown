@@ -1,9 +1,6 @@
 ![](http://i.imgur.com/Dd0Sffn.png)
 <!-- ![](http://i.imgur.com/t51VWq9.png) -->
 
-最後更新： 2016-10-13
-
-
 <kbd>Command ⌘</kbd>
 
 <kbd>Option ⌥</kbd>

@@ -1,6 +1,3 @@
-最後更新： 2015-12-07                  
-
-
 ```html
 <!doctype html>
 <html>
@@ -34,17 +31,6 @@
     <div class="pure-u-1-3"><p>Thirds</p></div>
     <div class="pure-u-1-3"><p>Thirds</p></div>
 </div>
-```
-
-
-```css
-
-```
-
----
-
-```css
-
 ```
 
 ### :books: 參考網站：

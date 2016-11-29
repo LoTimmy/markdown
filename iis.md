@@ -1,4 +1,3 @@
-最後更新： 2016-01-26 
 
 - 在應用程式類型的支援上，`IIS`除了運行`ASP`、`ASP .NET`等`Microsoft`自家的程式語言外，還可以手動方式或者透過`WPI` (`Web Platform Installer`) 圖形介面來安裝在`Linux`作業系統中最廣泛使用的`PHP`程式語言元件，並將其最佳搭檔`MySQL`資料庫系統一併安裝在`Windows`作業系統內。
 - 透過`WPI`介面所能夠安裝的不僅只有`IIS`元件、語言套件或是相關管理工具，還可以找到許多以`ASP.NET`或`PHP`所發展的開源應用程式，包括知名的`WordPress`、`Joomla`、`Moodle`、`Gallery Server`、`.Net CMS`等等，而且一旦經由`WPI`介面進行安裝設定後，原本複雜的操作過程都會變得相當容易。 

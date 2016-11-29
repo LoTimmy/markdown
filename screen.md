@@ -1,4 +1,3 @@
-最後更新： 2016-11-07     
 
 **screen - terminal multiplexer with VT100/ANSI terminal emulation**
 

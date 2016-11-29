@@ -7,6 +7,27 @@ shell> lsb_release -a
 ```
 No LSB modules are available.
 Distributor ID:	Ubuntu
+Description:	Ubuntu 10.04.4 LTS
+Release:	10.04
+Codename:	lucid
+```
+```
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 12.04.5 LTS
+Release:	12.04
+Codename:	precise
+```
+```
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 12.10
+Release:	12.10
+Codename:	quantal
+```
+```
+No LSB modules are available.
+Distributor ID:	Ubuntu
 Description:	Ubuntu 14.04 LTS
 Release:	14.04
 Codename:	trusty
@@ -18,27 +39,37 @@ Description:	Ubuntu 16.04.1 LTS
 Release:	16.04
 Codename:	xenial
 ```
-
 ```console
 shell> lsb_release -si
+```
+```
 Ubuntu
 ```
 
 ---
-/etc/update-manager/release-upgrades
 
 ```
 New release '14.04.3 LTS' available.
 Run 'do-release-upgrade' to upgrade to it.
+
+New release '14.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
 ```
+
+`/etc/update-manager/release-upgrades`
 
 ```
 #Prompt=lts
 Prompt=never
 ```
 
+### :books: 參考網站：
+- https://help.ubuntu.com/lts/serverguide/installing-upgrading.html
+
+
 ```console
 shell> sudo sed -i 's/Prompt=.*/Prompt=never/' /etc/update-manager/release-upgrades
+shell> sudo perl -pi -e 's/Prompt=.*/Prompt=never/' /etc/update-manager/release-upgrades
 shell> sudo rm /var/lib/update-notifier/release-upgrade-available
 ```
 
@@ -51,7 +82,7 @@ shell> apt-get --version
 shell> apt-get -o Acquire::ForceIPv4=true update  
 ```
 
-apt.conf
+`apt.conf`
 ```
 Acquire::ForceIPv4 "true";
 
@@ -71,9 +102,10 @@ Acquire::http
 - [apt.conf](http://manpages.ubuntu.com/manpages/raring/man5/apt.conf.5.html)
 - [apt-cacher-ng](https://docs.docker.com/engine/examples/apt-cacher-ng/)
 
+```
 Acquire::http::Timeout "10";
 Acquire::ftp::Timeout "10";
-
+```
 ---
 
 ```console
@@ -190,7 +222,7 @@ shell> dpkg-reconfigure -plow unattended-upgrades
 ![Imgur](http://i.imgur.com/kFM6tSt.png)
 ![Imgur](http://i.imgur.com/GbfS21y.png)
 
-/etc/apt/apt.conf.d/20auto-upgrades
+`/etc/apt/apt.conf.d/20auto-upgrades`
 ```
 APT::Periodic::Update-Package-Lists "1";
 APT::Periodic::Unattended-Upgrade "1";
@@ -287,7 +319,6 @@ skipx
 
 user joe --fullname "Joe User" --password iamjoe
 ```
-
 
 ```
 ks=cdrom:/ks.cfg
@@ -421,6 +452,25 @@ DirectMap4k:       77816 kB
 DirectMap2M:      446464 kB
 DirectMap1G:           0 kB
 ```
+
+
+---
+
+```console
+shell> sudo sed -i -e 's/us.archive.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
+shell> sudo sed -i -e 's/security.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
+
+shell> sudo sed -i -e 's/us.archive.ubuntu.com\|security.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
+```
+
+```console
+shell> do-release-upgrade
+```
+
+### :books: 參考網站：
+- http://old-releases.ubuntu.com/releases/
+- http://us.archive.ubuntu.com/
+- http://security.ubuntu.com/ubuntu/
 
 ---
 

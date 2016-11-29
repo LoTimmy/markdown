@@ -1,7 +1,5 @@
 ![](https://raw.githubusercontent.com/docker-library/docs/master/mysql/logo.png)
 
-最後更新： 2016-11-04             
-
 # Table of Contents
 
 - [getstarted](#getstarted)

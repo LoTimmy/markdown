@@ -1,7 +1,5 @@
-最後更新： 2016-11-03 
 
 ![](http://i.imgur.com/3gzXLPj.png)
-
 
 ---
 

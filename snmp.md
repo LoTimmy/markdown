@@ -1,7 +1,5 @@
 ![](http://www.net-snmp.org/images/logos/logo1_65_tr_small.gif)
 
-最後更新： 2016-01-13              
-
 ---
 
 ```console

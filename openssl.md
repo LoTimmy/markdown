@@ -1,7 +1,5 @@
 ![OpenSSL](http://i.imgur.com/1Za6NhV.jpg)
 
-最後更新： 2016-04-21             
-
 - [`OpenSSL`][openssl]是非常普遍的傳輸加密開源套件
 
 * [Create CA certificate](#newca)

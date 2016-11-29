@@ -1,6 +1,4 @@
 
-最後更新： 2014-07-23 20:45:45   
-
 ![](http://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Gnupg_logo.svg/200px-Gnupg_logo.svg.png)
 
 ~~~~~~~~~~

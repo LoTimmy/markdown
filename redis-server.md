@@ -1,7 +1,5 @@
 ![](https://raw.githubusercontent.com/docker-library/docs/master/redis/logo.png)
 
-最後更新： 6/23/2016 1:20:04 PM           
-
 - 高效能的記憶體式`NoSQL`資料庫`Redis`。
 - **`Redis`是近年來出現`NoSQL`開源資料庫的一種，並且將資料存放在記憶體中，以提升讀取的效率。**
 - **`記憶體資料庫` (`In-memory Database`) 就是將資料儲存在記憶體的`NoSQL`資料庫**，包括了`Memcached`、`Redis`、`Velocity`、`Tuple space`等。**其實像`Memcached`、`Redis`都是一種`Key-Value`資料架構的資料庫，只是這類資料庫改將資料儲存在記憶體中來提高讀取效率，大多用來快取常用網頁，加快傳遞網頁的速度，減少讀取硬碟的次數，不過系統關機後就無法保存。**

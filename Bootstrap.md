@@ -1,4 +1,3 @@
-上次更新日期： 2016-10-11                                                  
 
 ```html
 <!-- Latest compiled and minified CSS -->

@@ -1,4 +1,3 @@
-最後更新： 2016-11-07 
 
 **python3-pip - alternative Python package installer - Python 3 version of the package**
 **python3-dev - header files and a static library for Python (default)**

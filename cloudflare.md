@@ -1,7 +1,5 @@
 ![](https://www.cloudflare.com/media/images/core/cloudflare-logo.png)
 
-最後更新： 2015-01-06    
-
 - `CloudFlare`是一家專門提供分散式`網路名稱伺服器` (`DNS`)及`內容遞送網路服務`(`CDN`)的業者。
 
 ----------

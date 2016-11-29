@@ -1,6 +1,3 @@
-
-最後更新： 2015-11-26           
-
 <img src="http://i.imgur.com/D8x5kJw.png" alt="" width=58 height=58>
 
 - `JavaScript`是一種`函數語言`(`Functional Language`)，可用來控制動態物件，也提供開發者熟悉的語法，這反映出它的功能特殊性，從物件角度來看，其實`JavaScript`語言比`Java`、`C++`或`C#`語言更優秀。

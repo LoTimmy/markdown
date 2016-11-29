@@ -1,6 +1,4 @@
 
-最後更新： 2015-01-06    
-
 ![](http://www.jrsoftware.org/images/is-welcome.png)
 ![](http://www.jrsoftware.org/images/is-ide.png)
 

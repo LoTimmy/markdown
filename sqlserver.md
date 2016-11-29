@@ -1,7 +1,5 @@
 ![](http://i.imgur.com/D6krnAM.png)
 
-上次更新日期： 6/8/2016 11:25:16 AM       
-
 :star::star::star:
 ```sql
 USE master;

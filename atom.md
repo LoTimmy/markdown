@@ -1,5 +1,3 @@
-上次更新日期： 2016-10-11
-
 Atom
 
 <img src="http://i.imgur.com/Je0OrHU.png" alt="atom" width=58 height=58>

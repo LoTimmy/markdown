@@ -1,5 +1,3 @@
-最後更新： 2016-01-13              
-
 ### 在 `Ubuntu` 14.04 LTS 上建置 `stunnel4`
 
 ```console

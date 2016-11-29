@@ -1,7 +1,4 @@
-上次更新日期： 2016-03-15               
-
 ![](http://i.imgur.com/4JzyLLO.jpg)
-
 
 - `CodeIgniter`是由`PHP`寫出的`Framework`
 

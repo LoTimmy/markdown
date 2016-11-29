@@ -4,8 +4,6 @@
 
 letsencrypt
 
-上次更新日期： 2016-11-08
-
 # Table of Contents
 
 - [getstarted](#getstarted)

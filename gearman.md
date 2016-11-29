@@ -1,5 +1,3 @@
-上次更新日期： 5/12/2016 7:45:58 PM    
-
 <a name="getstarted"></a>
 
 ![](http://gearman.org/img/logo.png)

@@ -1,4 +1,3 @@
-最後更新： 2016-01-27   
 
 ```console
 shell> sudo apt-get update

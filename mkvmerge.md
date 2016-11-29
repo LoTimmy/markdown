@@ -1,4 +1,3 @@
-上次更新日期： 6/23/2016 6:26:00 PM                                                          
 
 ```console 
 shell> mkvmerge --no-subtitles --title '' -o mymovie.mkv input.mkv

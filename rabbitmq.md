@@ -1,7 +1,5 @@
 ![](http://i.imgur.com/66fTC7N.jpg)
 
-最後更新： 2015-11-02 
-
 <a name="getstarted"></a>
 
 `訊息管理服務` (`RabbitMQ`)

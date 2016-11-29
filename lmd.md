@@ -1,5 +1,3 @@
-上次更新日期： 2016-11-15
-
 ```console 
 shell> wget http://www.rfxn.com/downloads/maldetect-current.tar.gz
 shell> tar zxvf maldetect-current.tar.gz

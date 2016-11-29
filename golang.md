@@ -1,6 +1,3 @@
-
-最後更新： 2016-01-13     
-
 ~~~~~~~ 
 shell> apt-get install golang
 ~~~~~~~

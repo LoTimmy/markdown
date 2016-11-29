@@ -1,6 +1,3 @@
-
-最後更新： 5/31/2016 1:43:28 PM 
-
 ![](http://jmeter.apache.org/images/logo.svg)
 
 - `Apache JMeter`壓力測試
