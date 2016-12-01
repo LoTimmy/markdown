@@ -82,6 +82,15 @@ shell> pbpaste
 
 ---
 
+dot_clean
+
+```console
+shell> dot_clean /Volumes/test
+shell> dot_clean .
+```
+
+---
+
 ```console
 shell> say Hello, World
 shell> say -v Alex -o hi -f hello_world.txt
