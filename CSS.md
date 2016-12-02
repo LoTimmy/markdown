@@ -126,12 +126,38 @@ a:active, a:hover { text-decoration: underline; }
 
 <div class="show">...</div>
 <div class="hidden">...</div>
+```
 
+```html
+<link rel="stylesheet" media="screen and (max-device-width: 799px)" href="http://foo.bar.com/stylesheet.css" />
 ```
 
 ### :books: 參考網站：
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
 - https://developer.mozilla.org/en-US/docs/Web/CSS/@media
+
+---
+
+```html
+<head>
+<style>
+.vis1 {
+   visibility: visible;
+}
+.vis2 {
+   visibility: hidden;
+}
+</style>
+</head>
+<body>
+   <img id="oSphere" src="sphere.jpg" alt="sphere">
+   <p onmouseover="oSphere.className='vis2'" onmouseout="oSphere.className='vis1'">
+   Mouseover this text to set visibility to hidden on the image of the sphere.</p>
+</body>
+```
+
+### :books: 參考網站：
+- https://msdn.microsoft.com/zh-tw/library/ms531180(v=vs.85).aspx
 
 ---
 
