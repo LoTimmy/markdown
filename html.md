@@ -344,6 +344,24 @@ AAAAAAAAAAAAAAAAAAAAAAID%2FABMSqAfj%2FsLmvAAAAABJRU5ErkJggg%3D%3D">mygraphic.png
 </html>
 ```
 
+
+---
+
+```html
+<!-- Un poco de codigo CSS -->
+<pre>
+body{
+  color:  red;
+}
+a   {
+  color:green;
+}
+</pre>
+```
+
+- [pre](https://developer.mozilla.org/es/docs/Web/HTML/Elemento/pre)
+
+
 ---
 
 ```html

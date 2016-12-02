@@ -34,6 +34,13 @@ function initMap() {
 ### :books: 參考網站：
 - [Hello, World](https://developers.google.com/maps/documentation/javascript/tutorial?hl=zh-tw#The_Hello_World_of_Google_Maps_v3)
 
+```
+<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&source=s_q&hl=zh-TW&geocode=&q=25.079264,121.482652&z=16&output=embed&t=h"></iframe>
+```
+
+- http://maps.googleapis.com/maps/api/geocode/json?address=三和路四段191巷5號&sensor=false&language=zh-TW
+
+
 ---
 
 ![](http://i.imgur.com/5oWbqTd.png)

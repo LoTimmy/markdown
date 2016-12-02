@@ -78,4 +78,5 @@ shell> ipsec statusall
 - [strongswan](https://www.strongswan.org/)
 - [ipsec.conf](http://manpages.ubuntu.com/manpages/wily/man5/ipsec.conf.5.html)
 - [ipsec.secrets](http://manpages.ubuntu.com/manpages/xenial/man5/ipsec.secrets.5.html)
+- http://www.cisco.com/cisco/web/support/CN/113/1133/1133929_117258-config-l2l.html
 

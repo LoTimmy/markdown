@@ -1600,13 +1600,13 @@ echo '{ "_id" : 5, "type" : "food", "item" : "aaa", "ratings" : [ 5, 8, 9 ] }' |
 <a name="optipng"></a>
 <a name="jpegoptim"></a>
 ```console
-shell> aptitude install optipng
+shell> apt-get install optipng
 shell> optipng file.png
 shell> optipng -o7 file.png
 shell> find . -type f -name "*.png" -exec optipng {} \;
 ```
 ```console
-shell> aptitude install jpegoptim
+shell> apt-get install jpegoptim
 shell> jpegoptim --help
 shell> jpegoptim --strip-all --preserve --totals --all-progressive --max=90
 

@@ -260,6 +260,8 @@ $.getJSON( "test.js", function( json ) {
 
 ```
 
+<script src="https://gist.github.com/LoTimmy/a59c54a9b903d7c7c5db0cef38a36467.js"></script>
+
 
 ```js
 $( "#result" ).load( "ajax/test.html" );
@@ -276,16 +278,6 @@ $( "#result" ).load( "ajax/test.html", function() {
 });
 
 ```
-
-$( "#book" )
-  .error(function() {
-    alert( "Handler for .error() called." )
-  })
-  .attr( "src", "missing.png" ).height(145).width(145);
-
-
-
-
 
 ---
 
@@ -294,3 +286,60 @@ $( "#book" )
 - [dummyimage](http://dummyimage.com/)
 - [jquery-dateFormat](https://github.com/phstc/jquery-dateFormat)
 - [jquery-number](https://github.com/customd/jquery-number)
+- [jQuery.formError](https://github.com/GarethElms/jQuery.formError)
+
+
+
+---
+
+```js
+$(function() {
+});
+
+```
+
+---
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>scrollTop demo</title>
+  <style>
+  pre {
+    height: 600px;
+  }
+  </style>
+</head>
+<body>
+ 
+<a href="#" id="header">Header</a>
+<pre></pre>
+Go to <a href="#header">Header</a>
+<pre></pre>
+Go to <a href="#header">Header</a>
+<pre></pre>
+Go to <a href="#header">Header</a>
+ 
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> 
+<script>
+  $(function() {
+    $('a').click(function() {
+      $('html,body').animate({
+        scrollTop: $('#header').offset().top
+      }, 2000, 'easeOutBounce');
+	  	
+      return false;
+    });
+  });
+</script>
+ 
+</body>
+</html>
+```
+
+### :books: 參考網站：
+
+- http://gsgd.co.uk/sandbox/jquery/easing/

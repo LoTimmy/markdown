@@ -86,6 +86,55 @@ a:active, a:hover { text-decoration: underline; }
 
 ---
 
+```html
+<style>
+@media (max-width: 600px) {
+  .facet_sidebar {
+    display: none;
+  }
+}
+
+.show {
+  display: block !important;
+}
+.hidden {
+  display: none !important;
+}
+.invisible {
+  visibility: hidden;
+}
+
+</style>
+```
+
+```html
+<head> 
+<style>
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px) {
+    .hidden { display: none; }
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) {
+    .hidden { display: none; }
+}
+</style>
+</head>
+
+<div class="show">...</div>
+<div class="hidden">...</div>
+
+```
+
+### :books: 參考網站：
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
+- https://developer.mozilla.org/en-US/docs/Web/CSS/@media
+
+---
+
 ```css
 p { background: #ccccff; border: solid 1px #666699; }
 h1 { background: #ccff99; }
@@ -94,10 +143,10 @@ h1 { background: #ccff99; }
 
 ---
 
-
 ![](https://i-msdn.sec.s-msft.com/en-us/expression/dd326790.PixieMill04_02(en-us,MSDN.10).gif)
 ---
 
+### :books: 參考網站：
 [Learning CSS](https://msdn.microsoft.com/en-us/expression/dd326792.aspx)
 [margin](https://msdn.microsoft.com/en-us/library/ms530799(v=vs.85).aspx)
 [margin-top](https://msdn.microsoft.com/zh-tw/library/ms530808(v=vs.85).aspx)
