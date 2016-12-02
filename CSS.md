@@ -1,5 +1,5 @@
 
-![](http://amazeui.org/i/docs/box-sizing.png)
+![](http://i.imgur.com/hSMa5Oy.png)
 
 ```css
 background: green;
