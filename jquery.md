@@ -343,3 +343,17 @@ Go to <a href="#header">Header</a>
 ### :books: 參考網站：
 
 - http://gsgd.co.uk/sandbox/jquery/easing/
+- [animate](http://api.jquery.com/animate/)
+- [offset](http://api.jquery.com/offset/)
+
+---
+
+```
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="http://malsup.github.com/jquery.cycle2.js"></script>
+```
+
+
+### :books: 參考網站：
+- http://jquery.malsup.com/cycle2/
+- http://jquery.malsup.com/cycle2/demo/background.php
