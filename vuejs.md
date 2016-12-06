@@ -1,4 +1,4 @@
-![](https://vuejs.org/images/logo.png)
+<img src="https://vuejs.org/images/logo.png" width="10%">
 
 ---
 
@@ -12,6 +12,10 @@
 <body>
   <div id="app">
     {{ message }}
+  </div>
+
+  <div id="app-2">
+    <span v-for="n in 10">{{ n }}</span>
   </div>
 
   <div id="app-6">
@@ -32,6 +36,10 @@
       data: {
         message: 'Hello Vue!'
       }
+    })
+
+    var app2 = new Vue({
+      el: '#app-2'   
     })
 
     var app6 = new Vue({

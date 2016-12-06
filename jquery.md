@@ -1,10 +1,213 @@
 
-### :books: 參考網站：
-- https://api.jquery.com/mouseout/
-- https://api.jquery.com/css/
+<a name="getstarted"></a>
+> **`jQuery` 是一个跨浏览器的免费开源 `JavaScript` 库**。
+> 流行的 `jQuery` `JavaScript` 库有一个简洁便携的 `JavaScript` `API` 集合，用于快速的 `web` 开发，该库是经 `MIT` 和 `GPL` 许可的免费库。
+> `jQuery` 库是轻量级的（缩小/Gzip 压缩后仅 25KB）、`CSS3` 兼容且跨浏览器的。它提供一个丰富的 `API` 集合，包括 `HTML` `文档对象模型`（`DOM`）遍历和操作，可使用事件，且允许通过使用 `Asynchronous JavaScript` 和 `XML` (`Ajax`) 请求 `API` 进行服务器通信。除此之外，它也提供了网页动画和图像效果，以及一个功能强大的插件架构。
+
+
+> 其核心设计思想是“`写更少的代码，做更多的事情`”(`Write Less Do More`)。
+
+> `jQuery` 提供了一套易于使用的 `API`。这些 `API` 极大地简化了客户端(浏览器)编程过程中的许多方面，包括：
+- `HTML` `DOM` 的遍历与操作
+- 浏览器事件处理
+- `AJAX`（`Asynchronous JavaScript And XML`）编程
+- 特效（如动画效果）
+
+> 在直接使用 `JavaScropt`+`DHTML` 的传统客户端编程方式下，开发人员不得不编写冗长的代码。并且，为了使这些代码能够兼容不同的浏览器，我们还得编写额外的代码来处理这些跨浏览器问题。`jQuery` 的设计目标正是在于简化客户端编程。让我们能够编写简练的代码，节约开发时间，而这些代码却一样可以功能强大，并且兼容多种浏览器。
+
+> **`jQuery` 网站上提供了两种方式的发布文件。一种是内容经过压缩的文件；另一种是原始文件。前者文件中不包含代码注释以及代码运行过程中不需要的空白字符，它适合于生产环境(正式使用的环境)中使用，可以减少文件加载所需时间。后者文件中包含详细的代码注释，适合于开发和测试环境中使用。**
+
+> **`jQuery` 语法的设计思想是"选择元素，对其操作"。这和 `CSS` 规则的语法非常类似。**
+
+`jQuery` 的语法其实正是模仿了 `CSS` 规则的语法。其语法如下：
+
+```js
+  $(selector).action(actionParameter);
+```
+
+这是个链式语法。因此，上述的语法等效于：
+
+```js
+var objTargetElements;//要施加操作的目标元素
+objTargetElements=$(selector);//指定目标元素
+//调用 objTargetElements 的相关方法，对目标元素进行操作
+objTargetElements.action(actionParameter);
+```
+
+$ ：美元符是 jQuery 核心函数 jQuery 的一个别名。当然，在 JavaScript 中“$”是一个合法的函数名。 Selector 参数指定了一个 jQuery 选择器。jQuery 选择器类似于 CSS 中的选择器，它告诉 jQuery 我们准备对哪些元素进行操作(action)。并且，CSS 中的各种选择器 jQuery 中都有等同的选择器。
+
+action ：该方法指定了要对 selector 所指定的元素进行什么具体操作。actionParameter 参数是个可选参数，是根据具体所指定的方法来定的，它会随具体方法的变化而变化。
+
+
+##### 从本地站点引用 jQuery
+```html
+<html>
+<head>
+  <title>使用 jQuery</title>
+  <script src="../js/lib/jQuery/1.9.1/jQuery.js"></script>
+</head>
+<body>
+</body>
+</html>
+```
+
+##### 从 CDN 引用 jQuery
+```html
+<html>
+<head>
+  <title>使用 jQuery</title>
+  <script src='//ajax.googleapis.com/ajax/libs/jQuery/1.9.1/jQuery.min.js'></script>
+</head>
+<body> 
+</body>
+</html>
+```
+
+##### Hello World
+```html
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <script src="../js/lib/jQuery/1.9.1/jQuery.js"></script>
+  <script>
+    function initPage(){
+      //jQuery 代码：调用 jQuery 的核心函数－－－$函数
+      $("#message").html("Hello World, it is now:"+new Date().toLocaleString());
+    }
+  </script>
+</head>
+<body onload="initPage()">
+  <span id="message"></span>
+</body>
+</html>
+```
+initPage 这个函数会在页面加载完毕后被调用。而该函数在执行后会在 ID 为 message 的 HTML 结点内添加表示客户端当前时间的字符串。
+
+![](http://www.ibm.com/developerworks/cn/web/1311_huangwh_jqueryhandson/image007.jpg)
+
+```html
+<a href="https://www.ibm.com/developerworks/cn/" target="_blank">IBM developerWorks 中文站</a><br/>
+<a href="https://www.ibm.com/developerworks" target="_blank">IBM developerWorks</a><br/>
+<a href="/" target="_blank">首页</a><br/>
+```
+
+```js
+//用基于元素名称的选择器去匹配页面中的所有链接元素
+$("a").each(function(index,ele){//匿名函数作为 each 方法的参数，供其调用
+  console.log("链接"+index+":"+ele.href);//往控制台中打印链接 URL
+});
+```
+
+```js
+$("#tip").css("font-weight","bold");
+```
+
 ---
 
+```css
+a {
+  font-size:25px;
+}
+```
 
+
+```js
+$("a").each(function(){//选择器表达式是"a"
+  $(this).css("fontSize","25px");
+});
+```
+
+```js
+/*
+选择所有类为 amount 的元素
+each 方法会针对选择器所匹配的每个元素
+调用该方法的参数中所指定的函数。并将该
+元素作为函数调用的第二个实际参数。
+*/
+$(".amount").each(function(i,ele){
+  //设置元素的值为其当前值加上货币符号前缀
+  $(ele).val('￥'+$(ele).val());
+});
+```
+
+```css
+input[type="text"] {
+  background-color:yellow;
+}
+```
+
+```js
+$("input[type=text]").css('background-color','yellow');
+```
+---
+
+```js
+$(document).ready(initPage); //页面加载完毕后，jQuery 会回调 initPage
+```
+
+```js
+$(function(){ //该函数在页面加载完毕会被 jQuery 调用
+//事件处理代码
+});
+```
+---
+
+```js
+//当 ID 为 btnDetails 的按钮被单击时，下面的匿名函数会被 jQuery 调用
+$("#btnDetails").bind("click",function() {
+  $("#divDetails").toggle();  //显示或者隐藏 ID 为 divDetails 的元素
+});
+```
+
+`bind` 方法的语法是：
+`event`：要处理的事件的名称。该名称不需要加前缀 on。
+`handler`：事件监听器，即对浏览器事件进行处理的函数。这通常是一个匿名函数。**在 `event` 参数所表示的事件被触发后，`jQuery` 会调用这个函数（即回调），并向该函数传入一个 `jQuery` 自定义的事件对象**。该事件对象是 `jQuery` 根据原始的浏览器事件对象创建的。`jQuery` 这么做是通过一个"中立"的事件对象来规避不同的浏览器所提供的同一个事件的事件对象的属性不同的问题。这使得我们可以用同样的代码处理事件，而不必关心不同浏览器所提供的原始事件对象的差异。
+`data` ：表示需要在事件触发后传递给事件监听器的额外数据。它是作为 `jQuery` 事件对象的 `data` 属性传递给事件监听器的。
+
+```js
+$("#txtVerifyCode").bind("keypress",function(evt){
+  var keyCode=evt.which;  //从事件对象中获取当前按键的编码值
+  var char=String.fromCharCode(keyCode);  //将按键的编码转换为相应的字符
+  if(!/\d/.test(char)){  //当前输入的字符不是数字字符
+    //调用事件对象的 preventDefault 方法，取消事件的默认行为，此处即取消输入。
+    evt.preventDefault();
+  }
+});
+```
+---
+
+```js
+function showTip(msg){
+  $('#divTips').html(msg);  //显示具体的提示内容
+}
+```
+
+```js
+function showTipHandler(evt){
+  var data=evt.data;  //获取额外参数
+  /*额外参数是一个我们根据需要的自定义对象。这里，我们假设这个对象有个 msg 属性。
+    它表示希望要显示的提示信息。
+  */
+  var msg=data.msg;
+  showTip(msg);
+}
+```
+
+```js
+$('#tip1').bind('click',{msg:'中文提示'},showTipHandler);
+$('#tip2').bind('click',{msg:'English tip'},showTipHandler);
+```
+
+
+### :books: 參考網站：
+- [jQuery 实验教程](http://www.ibm.com/developerworks/cn/web/1311_huangwh_jqueryhandson/)
+- [使用 jQuery 进行基于 DOM 的数据存储和检索 ](http://www.ibm.com/developerworks/cn/web/wa-domjquery/)
+- [.mouseout()](https://api.jquery.com/mouseout/)
+- [.css()](https://api.jquery.com/css/)
+
+---
+
+### :books: 參考網站：
 - [lazyload](#lazyload)
 
 ---
@@ -345,6 +548,7 @@ Go to <a href="#header">Header</a>
 - http://gsgd.co.uk/sandbox/jquery/easing/
 - [animate](http://api.jquery.com/animate/)
 - [offset](http://api.jquery.com/offset/)
+- [fadeout](http://api.jquery.com/fadeout/)
 
 ---
 
@@ -357,3 +561,41 @@ Go to <a href="#header">Header</a>
 ### :books: 參考網站：
 - http://jquery.malsup.com/cycle2/
 - http://jquery.malsup.com/cycle2/demo/background.php
+
+
+
+- http://jquery.malsup.com/block/
+
+
+---
+
+```js
+var a = 1;
+function myCallback() {
+  if (a == 1) {
+    $( this ).css( "background-image", "url('http://placehold.it/350x150')" );
+    a = 2;
+  } else if (a == 2) {
+    $( this ).css( "background-image", "url('http://placehold.it/350x150')" );
+    a = 3;
+  } else if (a == 3) {
+    $( this ).css( "background-image", "url('http://placehold.it/350x150')" );
+    a = 1;
+  }
+}
+
+setInterval(myCallback, 2000);
+```
+```js
+var a = 1;
+setInterval(function() {
+  switch (a++%3) {
+    case 0: $( this ).css( "background-image", "url('http://placehold.it/350x150')" ); break;
+    case 1: $( this ).css( "background-image", "url('http://placehold.it/350x150')" ); break;
+    case 2: $( this ).css( "background-image", "url('http://placehold.it/350x150')" ); break;
+  }
+}, 2000);
+```
+
+### :books: 參考網站：
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch

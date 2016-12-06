@@ -1,6 +1,43 @@
 
 ![](http://i.imgur.com/hSMa5Oy.png)
 
+##### CSS 规则示意图
+![](http://www.ibm.com/developerworks/cn/web/1311_huangwh_jqueryhandson/image003.jpg)
+
+
+要将页面中一个 ID 为 message 的元素的字体颜色设置为蓝色、字体大小设置为 17px
+```css
+#message {
+  color:blue;
+  font-size:17px;
+}
+```
+从上述 CSS 规则中可见，我们期望的对元素外观的操作（字体颜色设置为蓝色、字体大小设置为 17px）是通过” color:blue”和”font-size:17px”这 2 个属性声明指定的。而这些操作要作用于哪些元素，则是通过 CSS 的选择器”#message”指定为 ID 等于“message”的元素。
+
+
+```css
+div {
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  float: left;
+}
+
+pre, p {
+  font-size: 1.5em;
+  color: #FE7F88;
+  background-color: transparent;
+}
+
+```
+
+```html
+<div style="background-color:blue;"></div>
+<div style="background-color:rgb(15,99,30);"></div>
+<div style="background-color:#123456;"></div>
+<div style="background-color:#f11;"></div>
+```
+
 ```css
 background: green;
 background: yellow;
@@ -8,6 +45,7 @@ background-color: #123456;
 background-color: #f11;
 background-color: blue;
 background-color: rgb(15, 99, 30);
+background-color: transparent;
 border: 2px solid green;
 border: solid 2px blue;
 border-bottom-left-radius: 15px 30px;
@@ -173,7 +211,10 @@ h1 { background: #ccff99; }
 ---
 
 ### :books: 參考網站：
-[Learning CSS](https://msdn.microsoft.com/en-us/expression/dd326792.aspx)
-[margin](https://msdn.microsoft.com/en-us/library/ms530799(v=vs.85).aspx)
-[margin-top](https://msdn.microsoft.com/zh-tw/library/ms530808(v=vs.85).aspx)
-[font-family](https://msdn.microsoft.com/zh-tw/library/ms530758(v=vs.85).aspx)
+- [Learning CSS](https://msdn.microsoft.com/en-us/expression/dd326792.aspx)
+- [margin](https://msdn.microsoft.com/en-us/library/ms530799(v=vs.85).aspx)
+- [margin-top](https://msdn.microsoft.com/zh-tw/library/ms530808(v=vs.85).aspx)
+- [font-family](https://msdn.microsoft.com/zh-tw/library/ms530758(v=vs.85).aspx)
+
+
+- https://developer.mozilla.org/en-US/docs/Web/CSS/background-image
