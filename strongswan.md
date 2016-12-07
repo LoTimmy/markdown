@@ -1,11 +1,11 @@
 ![](https://www.strongswan.org/images/strongswan.png)
 
 
-strongswan - IPsec VPN solution metapackage
-strongswan-plugin-xauth-generic - strongSwan plugin for the generic XAuth backend
+`strongswan - IPsec VPN solution metapackage`
+`strongswan-plugin-xauth-generic - strongSwan plugin for the generic XAuth backend`
 
 ```console
-shell> sudo apt-get install strongswan  strongswan-plugin-xauth-generic
+shell> sudo apt-get install strongswan strongswan-plugin-xauth-generic
 ```
 
 /etc/sysctl.conf
@@ -70,6 +70,48 @@ shell> ipsec statusall
 
 ```
 /usr/share/doc/strongswan
+```
+
+`options.xl2tpd`
+```
+require-mschap-v2
+refuse-mschap
+refuse-chap
+refuse-pap
+
+
+name l2tpd
+ms-dns 8.8.8.8
+
+mtu 1400
+mru 1400
+connect-delay 5000
+noccp
+auth
+crtscts
+lock
+debug
+proxyarp
+
+plugin /var/packages/VPNCenter/target/lib/pppd/radius.so
+plugin /var/packages/VPNCenter/target/lib/pppd/radattr.so
+
+unit 301
+```
+
+`xl2tpd.conf`
+
+```
+[global]
+force userspace=no
+listen-addr=192.168.1.35
+[lns default]
+length bit=yes
+ip range=10.2.0.1-20
+ppp debug=no
+require authentication=yes
+local ip=10.2.0.0
+pppoptfile=/usr/syno/etc/packages/VPNCenter/l2tp/options.xl2tpd
 ```
 
 ---
