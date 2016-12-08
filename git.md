@@ -86,6 +86,9 @@ shell> git config --local user.email you@example.com
 shell> git config --local color.ui true
 
 shell> git config --unset user.name
+
+shell> git config --global --edit
+shell> git commit --amend --reset-author
 ```
 
 ### :books: 參考網站：
