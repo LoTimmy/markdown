@@ -1,7 +1,14 @@
 ```console
+shell> brew install rbenv ruby-build
+
+export RBENV_ROOT=/usr/local/var/rbenv
+eval "$(rbenv init -)"
+
+shell> rbenv install 2.3.3
+shell> rbenv global 2.3.3
+
 shell> gem update --system
 shell> gem install sass
-
 
 shell> sass input.scss output.css
 shell> sass --watch input.scss:output.css
