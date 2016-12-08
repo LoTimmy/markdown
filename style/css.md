@@ -32,6 +32,12 @@ pre, p {
 ```
 
 ```html
+<style type="text/css">
+div { padding: 10px; }
+</style>
+```
+
+```html
 <div style="background-color:blue;"></div>
 <div style="background-color:rgb(15,99,30);"></div>
 <div style="background-color:#123456;"></div>
@@ -120,7 +126,6 @@ a:active, a:hover { text-decoration: underline; }
 }
 
 ```
-
 
 ---
 

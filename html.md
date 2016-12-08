@@ -124,6 +124,9 @@
 <meta name="robots" content="noindex,nofollow">
 <meta name="googlebot" content="noindex,nofollow">
 
+<meta name="robots" content="noindex">
+<meta name="googlebot" content="noindex">
+
 <meta name="description" content="">	
 <meta name="description" content="A description of the page" />
 
@@ -131,6 +134,14 @@
 
 <meta name="viewport" content="width=device-width">
 <meta name="viewport" content="initial-scale=1">	
+<meta name="viewport" content="width=500, initial-scale=1">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=320; initial-scale=1.0; user-scalable=no;">
+
+
+<meta name="HandheldFriendly" content="true">
+<meta name="MobileOptimized" content="{device-width-in-pixels}"/>
 
 <meta name="title" content="">
 
@@ -154,8 +165,47 @@
 
 ```
 
+### :books: 參考網站：
 - [可讓 Google 識別的中繼標記](https://support.google.com/webmasters/answer/79812?hl=zh-Hant)
+- [Viewport_meta_tag](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag)
+- [HandheldFriendly](https://developer.blackberry.com/playbook/html5/documentation/handheldfriendly.html)
+- [viewport](https://developer.blackberry.com/playbook/html5/documentation/viewport.html)
+- http://www.ibm.com/support/knowledgecenter/SS4SHV_7.0.0/com.volantis.mcs.eclipse.doc/wag/wag_meta_viewport.html
+- https://support.google.com/webmasters/answer/93710?hl=zh-Hant
 
+---
+
+![](http://ogp.me/logo.png)
+
+`opengraph`
+
+```html
+<meta property="og:type" content="article" />
+<meta property="og:type" content="video.movie" />
+<meta property="og:type" content="book" />
+
+<meta property="og:title"           content="Introducing our New Site" />
+<meta property="og:description"    content="http://samples.ogp.me/390580850990722" />
+<meta property="og:type"            content="article" /> 
+<meta property="og:image"           content="https://scontent-sea1-1.xx.fbcdn.net/hphotos-xap1/t39.2178-6/851565_496755187057665_544240989_n.jpg" /> 
+<meta property="og:url"             content="http://newsblog.org/news/136756249803614" />
+```
+
+```html
+<meta property="og:url" content="http://www.imdb.com/title/tt2562232/" />
+<meta property='og:image' content="https://images-na.ssl-images-amazon.com/images/M/MV5BODAzNDMxMzAxOV5BMl5BanBnXkFtZTgwMDMxMjA4MjE@._V1_UY1200_CR90,0,630,1200_AL_.jpg" />
+<meta property='og:type' content="video.movie" />
+<meta property='og:title' content="Birdman or (The Unexpected Virtue of Ignorance) (2014)" />
+<meta property='og:site_name' content='IMDb' />
+<meta property="og:description" content="Directed by Alejandro G. Inarritu.  With Michael Keaton, Zach Galifianakis, Edward Norton, Andrea Riseborough. Illustrated upon the progress of his latest Broadway play, a former popular actor's struggle to cope with his current life as a wasted actor is shown." />
+```
+
+![Imgur](http://i.imgur.com/DXvQWTV.png)
+
+- [Open Graph protocol](http://ogp.me/)
+- [opengraph](https://developers.facebook.com/docs/sharing/opengraph)
+
+---
 
 ```html
 <option selected="" value="">請擇一</option>	
