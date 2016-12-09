@@ -128,6 +128,7 @@ The file will have its original line endings in your working directory.
 ```console
 shell> git config --global core.autocrlf input
 shell> git config --global core.autocrlf true
+shell> git config --global core.autocrlf false
 ```
 ---
 

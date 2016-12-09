@@ -119,5 +119,9 @@ Google 翻譯
 =GOOGLEFINANCE("currency:USDTWD")
 ```
 
+---
+
+DNS_PROBE_FINISHED_NXDOMAIN
+
 ### :books: 參考網站：
 - https://www.google.com/finance/converter
