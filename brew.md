@@ -1,11 +1,7 @@
----
 
-```console
-shell> /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
+![](http://brew.sh/img/homebrew-256x256.png)
 
 ---
-
 
 ```console
 shell> brew update
@@ -248,6 +244,11 @@ shell> brew cask install tuntap
 
 ---
 
+```console
+shell> /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+---
 
 ### :books: 參考網站：
 - [brew](http://brew.sh/)
