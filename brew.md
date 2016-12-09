@@ -1,9 +1,10 @@
 ---
 
-
 ```console
 shell> ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
+---
+
 
 ```console
 shell> brew update
@@ -20,6 +21,7 @@ shell> brew outdated
 
 shell> brew info
 ```
+---
 
 `ioping - Simple disk I/O latency measuring tool`
 `wget - retrieves files from the web`
