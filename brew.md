@@ -23,9 +23,13 @@ shell> brew info
 ---
 
 `ioping - Simple disk I/O latency measuring tool`
+
 `wget - retrieves files from the web`
+
 `bash-completion - programmable completion for the bash shell`
+
 `aria2 - High speed download utility`
+
 `fio - flexible I/O tester`
 
 ```console
