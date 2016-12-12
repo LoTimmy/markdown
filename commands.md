@@ -82,9 +82,7 @@ shell> sha256sum file
 shell> sha256sum file > SHA256SUMS
 shell> sha256sum -c SHA256SUMS
 ```
-
 **[⬆ Back to Top](#table-of-contents)**
-
 
 ---
 <a name="pv"></a>
@@ -117,6 +115,8 @@ shell> pv disk-image.img > /dev/sda
 
 shell> pv < /dev/zero > /dev/sda
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ```
 
 ---
@@ -130,10 +130,14 @@ shell> apt-get install mencoder
 
 - [yum](https://www.centos.org/docs/5/html/yum/sn-managing-packages.html)
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 <a name="iotop"></a>
 
 **iotop - simple top-like I/O monitor**
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 <a name="imagemagick"></a>
@@ -149,6 +153,8 @@ shell> convert *.jpg output-file.pdf
 shell> convert rose.jpg rose.png  
 shell> convert rose.jpg -resize 50% rose.png
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 <a name="nikto"></a>
