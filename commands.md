@@ -82,6 +82,10 @@ shell> sha256sum file
 shell> sha256sum file > SHA256SUMS
 shell> sha256sum -c SHA256SUMS
 ```
+
+**[⬆ back to top](#table-of-contents)**
+
+
 ---
 <a name="pv"></a>
 <a name="dialog"></a>

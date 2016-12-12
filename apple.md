@@ -318,6 +318,17 @@ shell> tell application "Finder" to launch
 
 ---
 
+`.bash_profile`
+
+```
+export CLICOLOR=1
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+```
+---
+
 <!--
 Fusion 8 Pro
 ```

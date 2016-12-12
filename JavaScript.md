@@ -11,6 +11,42 @@ alert("load new content");
 document.write("<h1>Main title</h1>")
 ```
 
+```js 
+result = number1 * number2;
+
+result *= expression;
+result = result * expression;
+
+var index = 5;
+var result = (typeof index === 'number');
+// Output: true
+
+var description = "abc";
+var result = (typeof description === 'string');
+// Output: true
+
+var declared;
+var result = (declared === undefined);
+// Output: true
+
+var result = (typeof declared === 'undefined');
+// Output: true
+
+var result = (typeof notDeclared === 'undefined');
+// Output: true
+
+var obj = {};
+var result = (typeof obj.propNotDeclared === 'undefined');
+// Output: true
+
+
+
+my_object = new Object;
+my_array = new Array();
+my_date = new Date("Jan 5 1996");
+```
+
+
 ```html
 <div>
   <script type="text/javascript">
