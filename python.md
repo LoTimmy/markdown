@@ -68,6 +68,21 @@ shell> python -c "import random,string,crypt; print crypt.crypt('', '\$6\$%s\$' 
 - https://docs.python.org/3/library/crypt.html
 
 ---
+
+```python
+# This example requires the requests library be installed.  You can learn more
+# about the Requests library here: http://docs.python-requests.org/en/latest/
+from requests import get
+
+ip = get('https://api.ipify.org').text
+print 'My public IP address is:', ip
+```
+
+### :books: 參考網站：
+- [ipify](https://www.ipify.org/)
+
+---
+
 ### :books: 參考網站：
 
 - https://docs.python.org/release/3.4.2/tutorial/introduction.html

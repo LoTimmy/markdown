@@ -8,15 +8,15 @@ iHeight = window.screen.height
 lWidth = window.screen.width
 
 alert("load new content");
-document.write("<h1>Main title</h1>") 
+document.write("<h1>Main title</h1>")
 ```
 
 ```html
-<div> 
-  <script type="text/javascript"> 
-    document.write("<h1>Main title</h1>") 
-  </script> 
- </div>
+<div>
+  <script type="text/javascript">
+    document.write("<h1>Main title</h1>")
+  </script>
+</div>
 ```
 
 ```html

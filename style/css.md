@@ -45,13 +45,19 @@ div { padding: 10px; }
 ```
 
 ```css
+background-image: none;
+background-image: url("http://www.example.com/bck.png");
+background-image: inherit;
+
 background: green;
 background: yellow;
+
 background-color: #123456;
 background-color: #f11;
 background-color: blue;
 background-color: rgb(15, 99, 30);
 background-color: transparent;
+
 border: 2px solid green;
 border: solid 2px blue;
 border-bottom-left-radius: 15px 30px;

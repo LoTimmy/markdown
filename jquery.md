@@ -387,14 +387,15 @@ $.post("ajax/test.html", function(data) {
 
 ---
 
-
 <a name="lazyload"></a>
+
+- https://jsfiddle.net/cccgtso7/
 
 ```html
 <script src="jquery.js"></script>
 <script src="jquery.lazyload.js"></script>
 
-<img class="lazy" data-original="img/example.jpg" width="640" height="480">
+<img class="lazy" data-original="http://placehold.it/640x480" width="640" height="480">
 
 <script>
   $(function() {
@@ -411,6 +412,10 @@ $.post("ajax/test.html", function(data) {
 ```console
 shell> bower install jquery.lazyload
 ```
+
+- [jquery_lazyload](https://github.com/tuupola/jquery_lazyload)
+- [lazyload](http://www.appelsiini.net/projects/lazyload)
+- [lazyload](http://www.appelsiini.net/projects/lazyload/enabled_fadein.html)
 
 ---
 
@@ -501,12 +506,14 @@ $("#result").load("ajax/test.html", function() {
 - [jquery-number](https://github.com/customd/jquery-number)
 - [jQuery.formError](https://github.com/GarethElms/jQuery.formError)
 
-
-
 ---
+
+- https://jsfiddle.net/vfrvgzpn/
+
 ```html
 <!doctype html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8">
     <title>scrollTop demo</title>
@@ -549,7 +556,7 @@ $("#result").load("ajax/test.html", function() {
 
 ---
 
-```
+```html
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="http://malsup.github.com/jquery.cycle2.js"></script>
 ```
@@ -563,6 +570,51 @@ $("#result").load("ajax/test.html", function() {
 
 - http://jquery.malsup.com/block/
 
+---
+
+- https://jsfiddle.net/wo3oqodm/
+
+```html
+<div id="box1"></div>
+```
+```css
+#box1 {
+  width: 60px;
+  height: 60px;
+  background-color: green;
+}
+```
+```js
+$("#box1").click(function() {
+  $(this).fadeOut(1000, function() {
+    $(this).css("background-color", "blue").fadeIn(1000);
+  });
+});
+
+```
+
+### :books: 參考網站：
+- [click](http://api.jquery.com/click/)
+- [fadeOut](http://api.jquery.com/fadeOut/)
+- [css](http://api.jquery.com/css/)
+- [fadeIn](http://api.jquery.com/fadeIn/)
+
+
+---
+
+```html
+<script type="application/javascript">
+  $(function() {
+    $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
+      function(json) {
+        document.write("My public IP address is: ", json.ip);
+      }
+    );
+  });
+</script>
+```
+### :books: 參考網站：
+- [ipify](https://www.ipify.org/)
 
 ---
 
@@ -604,3 +656,159 @@ setInterval(function() {
 ### :books: 參考網站：
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
 - https://jsfiddle.net/
+
+---
+
+`jQuery UI`
+
+
+
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Draggable - Default functionality</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <style>
+      #draggable {
+        width: 150px;
+        height: 150px;
+        padding: 0.5em;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $(function() {
+        $("#draggable").draggable();
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="draggable" class="ui-widget-content">
+      <p>Drag me around</p>
+    </div>
+  </body>
+</html>
+```
+
+### Accordion
+
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Accordion - Default functionality</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $(function() {
+        $("#accordion").accordion();
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="accordion">
+      <h3>Section 1</h3>
+      <div>
+        <p>
+          Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum
+          a velit eu ante scelerisque vulputate.
+        </p>
+      </div>
+      <h3>Section 2</h3>
+      <div>
+        <p>
+          Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna.
+        </p>
+      </div>
+      <h3>Section 3</h3>
+      <div>
+        <p>
+          Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam
+          nisi, eu iaculis leo purus venenatis dui.
+        </p>
+        <ul>
+          <li>List item one</li>
+          <li>List item two</li>
+          <li>List item three</li>
+        </ul>
+      </div>
+      <h3>Section 4</h3>
+      <div>
+        <p>
+          Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est.
+        </p>
+        <p>
+          Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+```
+
+### Autocomplete
+
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Autocomplete - Default functionality</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $(function() {
+        var availableTags = [
+          "ActionScript",
+          "AppleScript",
+          "Asp",
+          "BASIC",
+          "C",
+          "C++",
+          "Clojure",
+          "COBOL",
+          "ColdFusion",
+          "Erlang",
+          "Fortran",
+          "Groovy",
+          "Haskell",
+          "Java",
+          "JavaScript",
+          "Lisp",
+          "Perl",
+          "PHP",
+          "Python",
+          "Ruby",
+          "Scala",
+          "Scheme"
+        ];
+        $("#tags").autocomplete({
+          source: availableTags
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="ui-widget">
+      <label for="tags">Tags: </label>
+      <input id="tags">
+    </div>
+  </body>
+</html>
+
+```

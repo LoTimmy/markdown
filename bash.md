@@ -48,7 +48,6 @@ expression1 && expression2
   
 ```
 
-
 ```sh
 #!/bin/bash
 while true
@@ -89,9 +88,19 @@ echo $RANDOM
 
 echo My home directory is $HOME
 echo "My current directory is $PWD"
-
-
 ```
+
+---
+```sh
+#!/bin/bash
+
+ip=$(curl -s https://api.ipify.org)
+echo "My public IP address is: $ip"
+```
+
+### :books: 參考網站：
+- [ipify](https://www.ipify.org/)
+
 ---
 
 ### :books: 參考網站：

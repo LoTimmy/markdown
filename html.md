@@ -530,3 +530,11 @@ myfile2.html
 - [為 CSS 傳送進行最佳化處理](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery)
 - [CSS Sprite Generator](http://spritegen.website-performance.org/)
 - [HEAD](https://github.com/joshbuchea/HEAD)
+
+
+---
+
+- http://placehold.it/60/ffffff/000000
+- https://placeholdit.imgix.net/~text?txtsize=75&txt=&w=800&h=300
+- https://placeholdit.imgix.net/~text?txtsize=75&txt=800×300&w=800&h=300
+- https://placeholdit.imgix.net/~text?txtsize=8&bg=ffffff&txtclr=000000&txt=&w=60&h=60
