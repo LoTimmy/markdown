@@ -83,7 +83,7 @@ shell> sha256sum file > SHA256SUMS
 shell> sha256sum -c SHA256SUMS
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Back to Top](#table-of-contents)**
 
 
 ---
