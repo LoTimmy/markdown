@@ -537,4 +537,4 @@ myfile2.html
 - http://placehold.it/60/ffffff/000000
 - https://placeholdit.imgix.net/~text?txtsize=75&txt=&w=800&h=300
 - https://placeholdit.imgix.net/~text?txtsize=75&txt=800×300&w=800&h=300
-- https://placeholdit.imgix.net/~text?txtsize=8&bg=ffffff&txtclr=000000&txt=&w=60&h=60
+- https://placeholdit.imgix.net/~text?txtsize=8&bg=008000&txtclr=000000&txt=&w=60&h=60
