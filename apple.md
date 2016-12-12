@@ -54,9 +54,10 @@
 
 
 OS X作業系統
-山獅 (Mountain Lion, 10.8)
-小牛 (Mavericks, 10.9)
-優勝美地 (Yosemite, 10.10)
+
+- 山獅 (Mountain Lion, 10.8)
+- 小牛 (Mavericks, 10.9)
+- 優勝美地 (Yosemite, 10.10)
 
 ### :books: 參考網站：
 - [sierra](http://www.apple.com/tw/macos/sierra/)
