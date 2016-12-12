@@ -60,7 +60,7 @@ OS X作業系統
 
 ### :books: 參考網站：
 - [sierra](http://www.apple.com/tw/macos/sierra/)
-- [macOS Sierra][https://itunes.apple.com/tw/app/macos-sierra/id1127487414?l=zh&mt=12]
+- [macOS Sierra](https://itunes.apple.com/tw/app/macos-sierra/id1127487414?l=zh&mt=12)
 
 ---
 
