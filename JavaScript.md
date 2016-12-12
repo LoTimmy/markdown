@@ -1,4 +1,6 @@
 
+<script async src="//jsfiddle.net/uh4074m1/embed/"></script>
+
 ```js 
 bitDepth = window.screen.colorDepth
 iAvail = window.screen.availHeight
