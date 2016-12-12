@@ -35,11 +35,8 @@ document.write("<h1>Main title</h1>")
 ---
 
 ```html
-<p 
-	onmouseover="this.style.color='red'" 
-    onmouseout="this.style.color='black'">
-    	Move the mouse pointer over this text to change its color. Move the pointer off the text 
-        to change the color back.
+<p onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">
+  Move the mouse pointer over this text to change its color. Move the pointer off the text to change the color back.
 </p>
 ```
 
@@ -57,55 +54,53 @@ document.write("<h1>Main title</h1>")
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-  <title>getElementById example</title>
-  <script>
-  function changeColor(newColor) {
-    var elem = document.getElementById("para1");
-    elem.style.color = newColor;
-  }
-  </script>
-</head>
-<body>
-  <p id="para1">Some text here</p>
-  <button onclick="changeColor('blue');">blue</button>
-  <button onclick="changeColor('red');">red</button>
-</body>
-</html>
+  <head>
+    <title>getElementById example</title>
+    <script>
+      function changeColor(newColor) {
+        var elem = document.getElementById("para1");
+        elem.style.color = newColor;
+      }
+    </script>
+  </head>
 
+  <body>
+    <p id="para1">Some text here</p>
+    <button onclick="changeColor('blue');">blue</button>
+    <button onclick="changeColor('red');">red</button>
+  </body>
+</html>
 ```
 
 ```html
 <!doctype html>
 <html>
-<head>
+  <head>
     <meta charset="UTF-8">
     <title>Document</title>
-</head>
-<body>
+  </head>
+
+  <body>
     <div id="parent-id">
-        <p>hello word1</p>
-        <p id="test1">hello word2</p>
-        <p >hello word3</p>
-        <p>hello word4</p>
+      <p>hello word1</p>
+      <p id="test1">hello word2</p>
+      <p>hello word3</p>
+      <p>hello word4</p>
     </div>
     <script>
-        var parentDOM = document.getElementById("parent-id");
-        var test1=parentDOM.getElementById("test1");
-        //throw error
-        //Uncaught TypeError: parentDOM.getElementById is not a function
+      var parentDOM = document.getElementById("parent-id");
+      var test1 = parentDOM.getElementById("test1");
+      //throw error
+      //Uncaught TypeError: parentDOM.getElementById is not a function
     </script>
-</body>
+  </body>
 </html>
-
 ```
 
 
 ### :books: 參考網站：
 - [getElementById](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)
-
-
-node.md:- [for...in](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
+- [for...in](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
 
 
 ---
@@ -115,27 +110,27 @@ node.md:- [for...in](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Ref
 - [width](https://developer.mozilla.org/en-US/docs/Web/API/Screen/width)
 
 ```js 
-var myCar = {};           // 物件 (Object)
+var myCar = {}; // 物件 (Object)
 var myCar = new Object(); // 物件 (Object)
 ```
 
 objectName.propertyName
 
 ```js 
-myCar.make = "Ford";     // 屬性 (Property)
+myCar.make = "Ford"; // 屬性 (Property)
 myCar.model = "Mustang"; // 屬性 (Property)
-myCar.year = 1969;       // 屬性 (Property)
+myCar.year = 1969; // 屬性 (Property)
 
-myCar["make"] = "Ford";      // 屬性 (Property)
-myCar["model"] = "Mustang";  // 屬性 (Property)
-myCar["year"] = 1969;        // 屬性 (Property)
+myCar["make"] = "Ford"; // 屬性 (Property)
+myCar["model"] = "Mustang"; // 屬性 (Property)
+myCar["year"] = 1969; // 屬性 (Property)
 ```
 
 ```js
 var myCar = {
-'make': 'Ford',
-'model': 'Mustang',
-'year': 1969
+  'make': 'Ford',
+  'model': 'Mustang',
+  'year': 1969
 };
 ```
 
