@@ -38,7 +38,6 @@
 
 ---
 
-
 **Finder 快速鍵**
 
 <kbd>Command ⌘</kbd> + <kbd>E</kbd> 退出所選磁碟或卷宗。
@@ -58,6 +57,10 @@ OS X作業系統
 山獅 (Mountain Lion, 10.8)
 小牛 (Mavericks, 10.9)
 優勝美地 (Yosemite, 10.10)
+
+### :books: 參考網站：
+- [sierra](http://www.apple.com/tw/macos/sierra/)
+- [macOS Sierra][https://itunes.apple.com/tw/app/macos-sierra/id1127487414?l=zh&mt=12]
 
 ---
 

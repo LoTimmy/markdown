@@ -163,7 +163,84 @@ auth-nocache
 ```
 
 ---
-### :books: 參考網站：
+
+`openvpn.zip`
+
+
+`C:\Program Files\OpenVPN\config`
+`YOUR_SERVER_IP`
+`ca.crt`
+`VPNConfig.ovpn` 
+
+```
+dev tun
+tls-client
+
+remote YOUR_SERVER_IP 1194
+
+# The "float" tells OpenVPN to accept authenticated packets from any address,
+# not only the address which was specified in the --remote option.
+# This is useful when you are connecting to a peer which holds a dynamic address
+# such as a dial-in user or DHCP client.
+# (Please refer to the manual of OpenVPN for more information.)
+
+#float
+
+# If redirect-gateway is enabled, the client will redirect it's
+# default network gateway through the VPN.
+# It means the VPN connection will firstly connect to the VPN Server
+# and then to the internet.
+# (Please refer to the manual of OpenVPN for more information.)
+
+redirect-gateway def1
+
+# dhcp-option DNS: To set primary domain name server address.
+# Repeat this option to set secondary DNS server addresses.
+
+#dhcp-option DNS DNS_IP_ADDRESS
+
+pull
+
+# If you want to connect by Server's IPv6 address, you should use
+# "proto udp6" in UDP mode or "proto tcp6-client" in TCP mode
+proto udp
+
+script-security 2
+
+comp-lzo
+
+reneg-sec 0
+
+auth-user-pass mypassword.txt
+auth-nocache
+
+<ca>
+-----BEGIN CERTIFICATE-----
+MIIDdTCCAl2gAwIBAgIJAOBnOMIz3wR1MA0GCSqGSIb3DQEBCwUAMFExCzAJBgNV
+BAYTAlRXMQ8wDQYDVQQHDAZUYWlwZWkxFjAUBgNVBAoMDVN5bm9sb2d5IEluYy4x
+GTAXBgNVBAMMEFN5bm9sb2d5IEluYy4gQ0EwHhcNMTYwOTEzMDcyMTAwWhcNMzYw
+NTMxMDcyMTAwWjBRMQswCQYDVQQGEwJUVzEPMA0GA1UEBwwGVGFpcGVpMRYwFAYD
+VQQKDA1TeW5vbG9neSBJbmMuMRkwFwYDVQQDDBBTeW5vbG9neSBJbmMuIENBMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnpNSQgXXqAJ4rAtZ+HXQH5NW
+kSBkfNVDwe/Whq/m4OwZTdkf5zGVNhzPJrs79lXSRyM7K/n8D3SIYFNzz024TnQa
+dAR1k5+c4gkUOLiV+njTz7T3LLRKIHrKPtvST6fQRCK0wHiREFHXHS+v0QbnYgQj
+rSl8or60GvsnaeTgCdudwaIyuDFI20fgOrCGDY+pDGlWY8gXM6Puj8kyNAf/RLY2
+CWcpIdgkL2jUnULRKIwHtDBy2Dvq34ZfBKa03+tZDet4gh/rPlYDuBRYu3vnRadq
+rvqbpBwGyvU+/Vx+Ahc2RelrR/qlemtl5NR1d4FHxpjEj89zPA8UZS8OlGcwJQID
+AQABo1AwTjAdBgNVHQ4EFgQUkWAnEs0LgCwcZctxM0i7E6mk3qAwHwYDVR0jBBgw
+FoAUkWAnEs0LgCwcZctxM0i7E6mk3qAwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0B
+AQsFAAOCAQEAY/DQy/yovdS+aZJPUgI5cY+M1oy0AUBb7tcI19RsWuLcLEz6/qR1
+Mr5HXKyCr6FxAE3fv8NX6cuPuoOy0DW5Fyq1EGXFe2e9xsKJ9jAJyANrYNS+jSK1
+OKAlrdzCFkp1Llxy0ROClrPf6fcD0EtXlrA5HB5fU/6AJgRUQsSK3m/y6+VB1aBb
+5aFZ7VQZBGGJyadHQorTgPEKXOlyDTskoOEsqMrSbRO6Yom68fRupKna7RS+gYOb
+DFqCHX/3I2SqPpgLdNez1TZ5i8boll17sAauT3Sub/G1Z7vpsUfwKFvUbm6Fnncm
+7+fqsz22Ii2+v2TRqmp5kdrgw0nHK/awxQ==
+-----END CERTIFICATE-----
+</ca>
+```
+
+
+---
 
 
 ### :books: 參考網站：
