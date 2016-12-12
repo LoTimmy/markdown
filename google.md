@@ -45,12 +45,16 @@ function initMap() {
 
 ![](http://i.imgur.com/5oWbqTd.png)
 
+> `Google`從`Chrome` 53版本開始便分階著手段淘汰`Flash`，在最新釋出的桌面版`Chrome` 55直接預設載入網頁為`HTML5`，除了YouTube、Facebook、Yahoo等十大網站享有`Flash`豁免權外，其他Flash網頁都必須主動啟用。
+
+
+
 chrome://settings/
 
 顯示進階設定... → ☑ 在可用時使用硬體加速
 
 
-Chrome 鍵盤快速鍵
+`Chrome` 鍵盤快速鍵
 
 **重新開啟並切換至最近關閉的分頁**	<kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd>
 **切換至特定分頁**	     <kbd>⌘</kbd> + <kbd>1</kbd> 到 <kbd>⌘</kbd> + <kbd>8</kbd> 

@@ -17,7 +17,7 @@ shell> mkvmerge --list-languages
 
 ```
 English language name                                                            | ISO639-2 code | ISO639-1 code
--------------------------------+---------------+--------------
+---------------------------------------------------------------------------------+---------------+--------------
 Chinese                                                                          | chi           | zh           
 English                                                                          | eng           | en
 Japanese                                                                         | jpn           | ja           
