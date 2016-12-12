@@ -6,6 +6,7 @@ eval "$(rbenv init -)"
 
 shell> rbenv install 2.3.3
 shell> rbenv global 2.3.3
+shell> ruby -v
 
 shell> gem update --system
 shell> gem install sass
