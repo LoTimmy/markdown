@@ -114,10 +114,9 @@ shell> pv -EE /dev/sda > disk-image.img
 shell> pv disk-image.img > /dev/sda
 
 shell> pv < /dev/zero > /dev/sda
+```
 
 **[⬆ Back to Top](#table-of-contents)**
-
-```
 
 ---
 <a name="mencoder"></a>
