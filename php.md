@@ -1,3 +1,16 @@
+
+```php
+<?php
+    $ip = file_get_contents('https://api.ipify.org');
+    echo "My public IP address is: " . $ip;
+?>
+```
+
+### :books: 參考網站：
+- [ipify](https://www.ipify.org/)
+
+---
+
 ![](http://i.imgur.com/4JzyLLO.jpg)
 
 - `CodeIgniter`是由`PHP`寫出的`Framework`

@@ -128,6 +128,7 @@ The file will have its original line endings in your working directory.
 ```console
 shell> git config --global core.autocrlf input
 shell> git config --global core.autocrlf true
+shell> git config --global core.autocrlf false
 ```
 ---
 
@@ -333,6 +334,14 @@ shell> git push prd master
 ---
 
 - [gist](https://gist.github.com/)
+---
+
+```console
+shell> git mv JavaScript javascript
+```
+
+### :books: 參考網站：
+- [git-mv](https://git-scm.com/docs/git-mv)
 ---
 
 ### :books: 參考網站：

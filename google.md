@@ -6,29 +6,39 @@
 <html>
   <head>
     <style type="text/css">
-      html, body { height: 100%; margin: 0; padding: 0; }
-      #map { height: 100%; }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+      #map {
+        height: 100%;
+      }
     </style>
   </head>
+
   <body>
     <div id="map"></div>
     <script type="text/javascript">
+      var map;
 
-var map;
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -34.397, lng: 150.644},
-    zoom: 8
-  });
-}
-
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {
+            lat: -34.397,
+            lng: 150.644
+          },
+          zoom: 8
+        });
+      }
     </script>
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
     </script>
   </body>
-</html>
 
+</html>
 ```
 
 ### :books: 參考網站：
@@ -38,6 +48,7 @@ function initMap() {
 <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&source=s_q&hl=zh-TW&geocode=&q=25.079264,121.482652&z=16&output=embed&t=h"></iframe>
 ```
 
+### :books: 參考網站：
 - http://maps.googleapis.com/maps/api/geocode/json?address=三和路四段191巷5號&sensor=false&language=zh-TW
 
 
@@ -45,12 +56,14 @@ function initMap() {
 
 ![](http://i.imgur.com/5oWbqTd.png)
 
+> `Google`從`Chrome` 53版本開始便分階著手段淘汰`Flash`，在最新釋出的桌面版`Chrome` 55直接預設載入網頁為`HTML5`，除了YouTube、Facebook、Yahoo等十大網站享有`Flash`豁免權外，其他Flash網頁都必須主動啟用。
+
 chrome://settings/
 
-顯示進階設定... → ☑ 在可用時使用硬體加速
+`顯示進階設定...` → ☑ `在可用時使用硬體加速`
 
 
-Chrome 鍵盤快速鍵
+`Chrome` 鍵盤快速鍵
 
 **重新開啟並切換至最近關閉的分頁**	<kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd>
 **切換至特定分頁**	     <kbd>⌘</kbd> + <kbd>1</kbd> 到 <kbd>⌘</kbd> + <kbd>8</kbd> 
@@ -76,36 +89,33 @@ Chrome 鍵盤快速鍵
 
 ---
 
-```
+```css
 /*
  * cwTeXHei (Chinese-traditional) http://www.google.com/fonts/earlyaccess
  */
+
 @font-face {
   font-family: 'cwTeXHei';
   font-style: normal;
   font-weight: 500;
   src: url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.eot);
-  src: url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.eot?#iefix) format('embedded-opentype'),
-       url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff2) format('woff2'),
-       url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff) format('woff'),
-       url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.ttf) format('truetype');
+  src: url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.eot?#iefix) format('embedded-opentype'), url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff2) format('woff2'), url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff) format('woff'), url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.ttf) format('truetype');
 }
 ```
 
 ```css
 @import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
 ```
-```
-font-family: 'cwTeXHei', sans-serif;
+```css
+font-family: 'cwTeXHei',
+sans-serif;
 ```
 
 ### :books: 參考網站：
 - [Google Fonts](https://fonts.google.com/)
 - [earlyaccess](https://fonts.google.com/earlyaccess)
 
-
 ---
-
 
 Google 翻譯
 ```
@@ -118,6 +128,86 @@ Google 翻譯
 ```
 =GOOGLEFINANCE("currency:USDTWD")
 ```
+---
+
+
 
 ### :books: 參考網站：
 - https://www.google.com/finance/converter
+
+---
+
+```html
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+```
+
+```html
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+<script type="text/javascript">
+  google.load("search", "1");
+  google.load("jquery", "1.4.2");
+  google.load("jqueryui", "1.7.2");
+</script>
+```
+
+- https://jsfiddle.net/api/post/library/pure/
+
+```html
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<div id="piechart" style="width: 900px; height: 500px;"></div>
+```
+```js
+google.charts.load('current', {
+  'packages': ['corechart']
+});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+    ['Task', 'Hours per Day'],
+    ['Work', 11],
+    ['Eat', 2],
+    ['Commute', 2],
+    ['Watch TV', 2],
+    ['Sleep', 7]
+  ]);
+
+  var options = {
+    title: 'My Daily Activities'
+  };
+
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+  chart.draw(data, options);
+}
+```
+
+
+
+### :books: 參考網站：
+- https://developers.google.com/speed/libraries/
+- https://developers.google.com/loader/
+- https://developers.google.com/chart/
+
+---
+
+- https://jsfiddle.net/g356phw2/
+
+```html
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/XxJKnDLYZz4?list=PLj7CmGWxRE8RIpxvAB7iBEWz3-VcwOirm" frameborder="0" allowfullscreen></iframe>
+
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/yk2CUjbyyQY?list=PLj7CmGWxRE8RIpxvAB7iBEWz3-VcwOirm" frameborder="0" allowfullscreen></iframe>
+```
+
+---
+
+DNS_PROBE_FINISHED_NXDOMAIN

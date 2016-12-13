@@ -1,8 +1,9 @@
----
 
-```console
-shell> ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
+![](http://brew.sh/img/homebrew-256x256.png)
+
+# Homebrew
+
+---
 
 ```console
 shell> brew update
@@ -19,13 +20,17 @@ shell> brew outdated
 
 shell> brew info
 ```
+---
 
-ioping - Simple disk I/O latency measuring tool
-wget - retrieves files from the web
-bash-completion - programmable completion for the bash shell
-aria2 - High speed download utility
-fio - flexible I/O tester
+`ioping - Simple disk I/O latency measuring tool`
 
+`wget - retrieves files from the web`
+
+`bash-completion - programmable completion for the bash shell`
+
+`aria2 - High speed download utility`
+
+`fio - flexible I/O tester`
 
 ```console
 shell> brew install wget
@@ -237,9 +242,19 @@ Or, if you don't want/need a background service you can just run:
 ```console
 shell> brew install dnscrypt-proxy
 ```
+---
+
+```console
+shell> brew cask install tuntap
+```
 
 ---
 
+```console
+shell> /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+---
 
 ### :books: 參考網站：
 - [brew](http://brew.sh/)

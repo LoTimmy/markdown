@@ -38,7 +38,6 @@
 
 ---
 
-
 **Finder 快速鍵**
 
 <kbd>Command ⌘</kbd> + <kbd>E</kbd> 退出所選磁碟或卷宗。
@@ -54,11 +53,26 @@
 - 以往的`OS X`版本是以大型貓科動物命名，例如Mac OS X v10.7被稱為「`Lion`」，隨著2013年6月OS X Mavericks的公布，命名方式開始轉為採用加州地標。 
 
 
-OS X作業系統
-山獅 (Mountain Lion, 10.8)
-小牛 (Mavericks, 10.9)
-優勝美地 (Yosemite, 10.10)
+`OS X`作業系統
 
+- `山獅` (`Mountain Lion`, 10.8)
+- `小牛` (`Mavericks`, 10.9)
+- `優勝美地` (`Yosemite`, 10.10)
+
+### :books: 參考網站：
+- [sierra](http://www.apple.com/tw/macos/sierra/)
+- [macOS Sierra](https://itunes.apple.com/tw/app/macos-sierra/id1127487414?l=zh&mt=12)
+
+
+---
+
+```console
+shell> sudo scutil --get HostName
+shell> sudo scutil --set HostName ""       
+```
+
+### :books: 參考網站：
+- [scutil](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man8/scutil.8.html)
 ---
 
 **在 OS X 重置 DNS 快取**
@@ -69,6 +83,7 @@ shell> sudo discoveryutil mdnsflushcache
 shell> sudo dscacheutil -flushcache
 ```
 
+### :books: 參考網站：
 - [在 OS X 重置 DNS 快取](https://support.apple.com/zh-tw/HT202516)
 
 ---
@@ -78,6 +93,7 @@ shell> echo Hello, World | pbcopy
 shell> pbpaste
 ```
 
+### :books: 參考網站：
 - [pbcopy](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/pbcopy.1.html)
 
 ---
@@ -100,6 +116,7 @@ shell> say -v sin-ji Hello, World
 shell> say Hello, World
 ```
 
+### :books: 參考網站：
 - [say](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/say.1.html)
 
 ---
@@ -110,6 +127,7 @@ shell> hdiutil imageinfo 2016-09-23-raspbian-jessie-lite.img
 shell> hdiutil burn ubuntu-16.04-server-i386.iso
 ```
 
+### :books: 參考網站：
 - [hdiutil](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/hdiutil.1.html)
 
 ---
@@ -130,6 +148,7 @@ shell> netstat -rn | grep default | awk '{ print $2 }'
 shell> ditto src dst_directory 
 ```
 
+### :books: 參考網站：
 - [ditto](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/ditto.1.html)
 
 ---
@@ -153,6 +172,7 @@ shell> softwareupdate --install Safari8.0.6Yosemite-8.0.6
 shell> softwareupdate --install --all 
 ```
 
+### :books: 參考網站：
 - [softwareupdate](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man8/softwareupdate.8.html)
 
 ---
@@ -188,8 +208,13 @@ shell> sw_vers -buildVersion
 ProductName:	Mac OS X
 ProductVersion:	10.11.5
 BuildVersion:	15F34
+
+ProductName:	Mac OS X
+ProductVersion:	10.12.1
+BuildVersion:	16B2555
 ```
 
+### :books: 參考網站：
 - [system_profiler](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man8/system_profiler.8.html)
 - [sw_vers](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/sw_vers.1.html)
 
@@ -211,6 +236,7 @@ shell> defaults read com.apple.finder
 shell> defaults write com.apple.finder ShowHardDrivesOnDesktop true
 ```
 
+### :books: 參考網站：
 - [defaults](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/defaults.1.html)
 
 ---
@@ -256,6 +282,7 @@ shell> diskutil eject /dev/disk2
 shell> disktype
 ```
 
+### :books: 參考網站：
 - [diskutil](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man8/diskutil.8.html)
 
 ---
@@ -287,6 +314,8 @@ shell> xcodebuild
 shell> xcode-select --version
 shell> xcode-select --install
 ```
+
+### :books: 參考網站：
 - [xcode-select](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html)
 - [xcodebuild](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/xcodebuild.1.html)
 
@@ -299,43 +328,16 @@ shell> tell application "Finder" to launch
 
 ---
 
-```console
-shell> brew doctor
-shell> brew help
-shell> brew update
-shell> brew upgrade --all
-shell> brew install
-shell> brew search
-shell> brew list
+`.bash_profile`
 
-shell> brew install bash-completion
-shell> brew install lftp
-shell> brew install wget
-shell> brew install aria2
-
-shell> brew cask install Caskroom/cask/osxfuse
-shell> brew install homebrew/fuse/sshfs
 ```
+export CLICOLOR=1
 
-```console
-shell> brew install nvm
-
-shell> mkdir ~/.nvm
-shell> cp $(brew --prefix nvm)/nvm-exec ~/.nvm/
-
-shell> export NVM_DIR=~/.nvm
-shell> source $(brew --prefix nvm)/nvm.sh
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
 ```
-
-```console
-shell> nvm install v0.12.2
-shell> nvm use 0.12.2
-shell> nvm alias default 0.12.2
-
-shell> npm install -g npm@latest
-
-shell> npm install -g bower
-```
+---
 
 <!--
 Fusion 8 Pro
