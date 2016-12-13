@@ -1,13 +1,12 @@
 ![](http://i.imgur.com/3hIAdKc.png)
 ![](http://i.imgur.com/PTsVNBp.png)
 
-`OpenVPN`是透過`OpenSSL`加密庫中的SSLv3/TLSv1協議函數庫，建構企業內部`虛擬私有網路`，`OpenVPN`允許參與建立`VPN`的單點使用公開金鑰、電子證書或是帳戶／密碼來進行身分認證。它並不是一個Web-based的`VPN`軟體，也不與`IPsce`及其他`VPN`軟體相容，目前`OpenVPN`能夠在`Linux`、`FreeBSD`、`OpenBSD`、`Solaris`、`Mac OS X`與微軟的Windows 2000/XP/Vista/2003上運行。 
+> 開放源碼的`OpenVPN`為全球最廣為使用的虛擬私有網路之一，它支援跨平台
+> `OpenVPN`是透過`OpenSSL`加密庫中的SSLv3/TLSv1協議函數庫，建構企業內部`虛擬私有網路`，`OpenVPN`允許參與建立`VPN`的單點使用公開金鑰、電子證書或是帳戶／密碼來進行身分認證。它並不是一個Web-based的`VPN`軟體，也不與`IPsce`及其他`VPN`軟體相容，目前`OpenVPN`能夠在`Linux`、`FreeBSD`、`OpenBSD`、`Solaris`、`Mac OS X`與微軟的Windows 2000/XP/Vista/2003上運行。 
+> `OpenVPN`預設採用`1194`埠做通訊，並且**推薦使用`UDP`協議，不過同時也支援`TCP`，使用者可以自己修改**。`OpenVPN`提供了`Tun`和`Tap`驅動兩種虛擬網路介面，透過它們可以建立`Layer3`的IP通道或是虛擬`Layer2`乙太網路，後者可以傳送任何類型的`Layer2`乙太網路封包，並可以使用`LZO演算法`壓縮。使用`Layer3`或`Layer2`時，使用者可以依自己的網路架構做選擇。 
+> 在選擇使用`TCP`或`UPD`協議時，需要注意**如果有高延遲或是遺失封包較多的情況，建議選擇`TCP`協議作為底層傳輸的協定，因`UDP`協定為不可靠傳輸，網路不穩定時可能會導致要求通道上層的協議進行重傳，效率非常低**。 
+> `OpenVPN`是基於`SSL` (`Secure Socket Layer`)進行資料加密傳輸。
 
-`OpenVPN`預設採用`1194`埠做通訊，並且**推薦使用`UDP`協議，不過同時也支援`TCP`，使用者可以自己修改**。`OpenVPN`提供了`Tun`和`Tap`驅動兩種虛擬網路介面，透過它們可以建立`Layer3`的IP通道或是虛擬`Layer2`乙太網路，後者可以傳送任何類型的`Layer2`乙太網路封包，並可以使用`LZO演算法`壓縮。使用`Layer3`或`Layer2`時，使用者可以依自己的網路架構做選擇。 
-
-在選擇使用`TCP`或`UPD`協議時，需要注意**如果有高延遲或是遺失封包較多的情況，建議選擇`TCP`協議作為底層傳輸的協定，因`UDP`協定為不可靠傳輸，網路不穩定時可能會導致要求通道上層的協議進行重傳，效率非常低**。 
-
-`OpenVPN`是基於`SSL` (`Secure Socket Layer`)進行資料加密傳輸。
 
 ### 在 `Ubuntu` 14.04 LTS 上建置 `OpenVPN` (`SSL VPN`)
 

@@ -149,10 +149,54 @@ Google 翻譯
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 ```
 
+```html
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+<script type="text/javascript">
+  google.load("search", "1");
+  google.load("jquery", "1.4.2");
+  google.load("jqueryui", "1.7.2");
+</script>
+```
+
+- https://jsfiddle.net/api/post/library/pure/
+
+```html
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<div id="piechart" style="width: 900px; height: 500px;"></div>
+```
+```js
+google.charts.load('current', {
+  'packages': ['corechart']
+});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+    ['Task', 'Hours per Day'],
+    ['Work', 11],
+    ['Eat', 2],
+    ['Commute', 2],
+    ['Watch TV', 2],
+    ['Sleep', 7]
+  ]);
+
+  var options = {
+    title: 'My Daily Activities'
+  };
+
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+  chart.draw(data, options);
+}
+```
+
+
 
 ### :books: 參考網站：
 - https://developers.google.com/speed/libraries/
-
+- https://developers.google.com/loader/
+- https://developers.google.com/chart/
 
 ---
 

@@ -39,13 +39,12 @@ var obj = {};
 var result = (typeof obj.propNotDeclared === 'undefined');
 // Output: true
 
-
-
 my_object = new Object;
 my_array = new Array();
 my_date = new Date("Jan 5 1996");
 ```
 
+---
 
 ```html
 <div>

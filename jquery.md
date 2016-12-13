@@ -21,7 +21,7 @@
 `jQuery` 的语法其实正是模仿了 `CSS` 规则的语法。其语法如下：
 
 ```js
-  $(selector).action(actionParameter);
+$(selector).action(actionParameter);
 ```
 
 这是个链式语法。因此，上述的语法等效于：
@@ -561,12 +561,9 @@ $("#result").load("ajax/test.html", function() {
 <script src="http://malsup.github.com/jquery.cycle2.js"></script>
 ```
 
-
 ### :books: 參考網站：
 - http://jquery.malsup.com/cycle2/
 - http://jquery.malsup.com/cycle2/demo/background.php
-
-
 
 - http://jquery.malsup.com/block/
 
