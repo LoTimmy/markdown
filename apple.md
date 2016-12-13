@@ -63,6 +63,16 @@
 - [sierra](http://www.apple.com/tw/macos/sierra/)
 - [macOS Sierra](https://itunes.apple.com/tw/app/macos-sierra/id1127487414?l=zh&mt=12)
 
+
+---
+
+```console
+shell> sudo scutil --get HostName
+shell> sudo scutil --set HostName ""       
+```
+
+### :books: 參考網站：
+- [scutil](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man8/scutil.8.html)
 ---
 
 **在 OS X 重置 DNS 快取**
