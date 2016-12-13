@@ -1,4 +1,6 @@
 
+![](https://pbs.twimg.com/profile_images/788777950132830208/vgO3N1r7_bigger.jpg)
+
 ```html
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -57,7 +59,7 @@ shell> composer require twbs/bootstrap
 </html>
 ```
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
