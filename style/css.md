@@ -47,10 +47,10 @@ div { padding: 10px; }
 background-image: none;
 background-image: url("http://www.example.com/bck.png");
 background-image: inherit;
-
 background: green;
 background: yellow;
-
+background-repeat: repeat;
+background-repeat: no-repeat;
 background-color: #123456;
 background-color: #f11;
 background-color: red;
@@ -75,20 +75,24 @@ border-top-left-radius: 50px 30px;
 border-top-right-radius: 50px 25px;
 border-top-right-radius: 50px 30px;
 border-width: 1px;
+
 box-shadow: 0 0 5px 5px sienna;
 box-shadow: 5px 5px 5px lightgray;
 
-z-index: -1;
-
 clear: both;
 clear: left;
+
 color: blue;
 color: grey;
 color: red;
 color: rgb(255, 255, 255);
 color: yellow;
+
 cursor: pointer;
+
+display: none;
 display: block;
+
 float: left;
 font: 11px Verdana, Arial, Helvetica;
 font-family: Arial;
@@ -101,12 +105,14 @@ height: 60px;
 left: 50px;
 line-height: 25px;
 list-style: none;
+
 margin: 20px 0px 10px 75%;
 margin: 8px;
 margin: 0px auto;
 margin-left: 3%;
 margin-right: 10px;
 margin-top: 10px;
+
 -moz-border-radius: 10em 0 5em 2em;
 -moz-border-radius: 10px;
 -moz-box-shadow: 10px 10px 10px #FFFFCC inset;
@@ -114,12 +120,18 @@ overflow: hidden;
 padding: 10px;
 padding: 5px;
 padding-top: 10px;
+
 position: absolute;
 position: relative;
+position: fixed;
+
 text-align: center;
 text-decoration: line-through;
 text-decoration: overline;
 text-decoration: underline;
+
+visibility: hidden;
+
 -webkit-border-radius: 10em 0 5em 2em;
 -webkit-border-radius: 10px;
 -webkit-box-shadow: 10px 10px 10px #FFFFCC inset;
@@ -127,9 +139,9 @@ white-space: normal;
 white-space: nowrap;
 width: 45%;
 width: 60px;
+z-index: -1;
 
-background-repeat: repeat;
-background-repeat: no-repeat;
+
 
 
 a:link { color: #ff0000; text-decoration: none; }
@@ -237,17 +249,128 @@ h1 { background: #ccff99; }
 - [margin-top](https://msdn.microsoft.com/zh-tw/library/ms530808(v=vs.85).aspx)
 - [font-family](https://msdn.microsoft.com/zh-tw/library/ms530758(v=vs.85).aspx)
 - [background-image](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image)
+- [position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
+- [bottom](https://developer.mozilla.org/en-US/docs/Web/CSS/bottom)
 
 ---
 
+![Imgur](http://i.imgur.com/WJl0p5y.png)
+
+- https://jsfiddle.net/b4u961fe/
+
 ```css
-img {
-  width: 60px;
-  height: 60px;
-  margin: 5px;
-  float: left;
+#d5ESWAchesut {
+  position: absolute;
+  background-color: #800080;
+  width: 150px;
+  height: 150px;
+  top: 10px;
+  left: 10px;
+  z-index: 3;
+}
+
+#S2aKEGaMeswu {
+  position: absolute;
+  background-color: #008000;
+  width: 150px;
+  height: 150px;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+}
+
+#xeSW8nagutr6 {
+  position: absolute;
+  background-color: #FF8040;
+  width: 150px;
+  height: 150px;
+  top: 30px;
+  left: 30px;
+  z-index: 1;
 }
 ```
+```html
+<div id="d5ESWAchesut"></div>
+<div id="S2aKEGaMeswu"></div>
+<div id="xeSW8nagutr6"></div>
+```
+
+
+---
+
+![Imgur](http://i.imgur.com/S5v6IzG.png)
+- https://jsfiddle.net/vf8euwaa/
+
+```css
+div {
+  background-color: #FF00FF;
+  width: 60px;
+  height: 60px;
+}
+
+p {
+  position: relative;
+  top: 10px;
+  left: 50px;
+}
+```
+```html
+<div><p>HelloWorld</p></div>
+```
+
+---
+
+- https://jsfiddle.net/r1bhgry3/
+
+```css
+.w8EpEstevaWr {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 100px;
+  background-color: red;
+}
+
+pre {
+  height: 600px;
+}
+```
+
+```html
+<div class="w8EpEstevaWr">HelloWorld</div>
+
+<pre><p> HelloWorld</p><img id="sawezuswePh7" src="http://placehold.it/200x60" alt=""></pre>
+<pre><p> HelloWorld</p><img id="sawezuswePh7" src="http://placehold.it/200x60" alt=""></pre>
+<pre><p> HelloWorld</p><img id="sawezuswePh7" src="http://placehold.it/200x60" alt=""></pre>
+```
+
+
+---
+
+- https://jsfiddle.net/dcwnbthk/
+
+```css
+img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+```
+```html
+<p> HelloWorld</p><img id="sawezuswePh7" src="http://placehold.it/200x60" alt="">
+```
+- https://jsfiddle.net/b92xasu9/
+
+```css
+img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+```
+
 
 ---
 
