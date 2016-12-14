@@ -67,6 +67,8 @@
 ---
 
 ```console
+shell> sudo scutil --get ComputerName
+shell> sudo scutil --set ComputerName ""
 shell> sudo scutil --get HostName
 shell> sudo scutil --set HostName ""       
 ```
