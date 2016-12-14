@@ -58,144 +58,28 @@
 - [modprobe - Add and remove modules from the Linux Kernel](#lsmod)
 - [fio - flexible I/O tester](#fio)
 - [systemctl - Control the systemd system and service manager](#systemctl)
-- [imagemagick - image manipulation programs -- binaries](#imagemagick)
-- [nikto - Scan web server for known vulnerabilities](#nikto)
-- [dmitry - Deepmagic Information Gathering Tool](#dmitry)
-- [iotop - simple top-like I/O monitor](#iotop)
-- [mencoder - MPlayer's Movie Encoder](#mencoder)
+
+
+
+---
 - [pv - Shell pipeline element to meter data passing through](#pv)
 - [dialog - Displays user-friendly dialog boxes from shell scripts](#dialog)
-
-
+- [md5sum - compute and check MD5 message digest](#md5sum)
+- [sha1sum - compute and check SHA1 message digest](#sha1sum)
+- [sha256sum - compute and check SHA256 message digest](#sha256sum)
+- [mencoder - MPlayer's Movie Encoder](#mencoder)
+- [imagemagick - image manipulation programs -- binaries](#imagemagick)
+- [nikto - Scan web server for known vulnerabilities](#nikto)
+- [iotop - simple top-like I/O monitor](#iotop)
+- [dmitry - Deepmagic Information Gathering Tool](#dmitry)
 ---
-
-```console
-shell> md5sum file
-shell> md5sum file > MD5SUMS
-shell> md5sum -c MD5SUMS
-
-shell> sha1sum file
-shell> sha1sum file > SHA1SUMS
-shell> sha1sum -c SHA1SUMS
-
-shell> sha256sum file
-shell> sha256sum file > SHA256SUMS
-shell> sha256sum -c SHA256SUMS
-```
-**[⬆ Back to Top](#table-of-contents)**
-
----
-<a name="pv"></a>
-<a name="dialog"></a>
-
-**pv - Shell pipeline element to meter data passing through**
-**dialog - Displays user-friendly dialog boxes from shell scripts**
-
-```console 
-shell> apt-get install pv
-shell> yum install pv
-shell> brew install pv
-
-shell> apt-get install dialog
-shell> brew install dialog
-
-shell> pv file | gzip > file.gz
-shell> pv file | nc -w 1 somewhere.com 3000
-
-shell> (pv -n file | gzip > file.gz) 2>&1 | dialog --gauge "Please Wait" 10 70 0
-shell> (pv -n file | gzip > file.gz) 2>&1 | dialog --gauge "請稍候" 10 70 0
-
-
-shell> pv file | md5sum
-shell> pv file | sha256sum
-shell> pv file | sha512sum
-
-shell> pv -EE /dev/sda > disk-image.img
-shell> pv disk-image.img > /dev/sda
-
-shell> pv < /dev/zero > /dev/sda
-```
-
-**[⬆ Back to Top](#table-of-contents)**
-
----
-<a name="mencoder"></a>
-
-**mencoder - MPlayer's Movie Encoder**
-
-```console 
-shell> apt-get install mencoder
-```
 
 - [yum](https://www.centos.org/docs/5/html/yum/sn-managing-packages.html)
-
-**[⬆ Back to Top](#table-of-contents)**
-
----
-<a name="iotop"></a>
-
-**iotop - simple top-like I/O monitor**
-
-**[⬆ Back to Top](#table-of-contents)**
-
----
-<a name="imagemagick"></a>
-
-**imagemagick - image manipulation programs -- binaries**
-
-```console 
-shell> apt-get install imagemagick
-shell> convert file1.pdf file2.pdf output-file.pdf
-shell> convert file1.pdf[1] file2.pdf[0,5] output-file.pdf
-shell> convert file1.pdf[0-9] file2.pdf[0-4] output-file.pdf  
-shell> convert *.jpg output-file.pdf  
-shell> convert rose.jpg rose.png  
-shell> convert rose.jpg -resize 50% rose.png
-```
-
-**[⬆ Back to Top](#table-of-contents)**
-
----
-<a name="nikto"></a>
-
-**nikto - Scan web server for known vulnerabilities**
-
-```console
-shell> apt-get install nikto
-shell> nikto -C all -h 127.0.0.1
-```
-```
-- Nikto v2.1.5
----------------------------------------------------------------------------
-+ Target IP:          127.0.0.1
-+ Target Hostname:    localhost
-+ Target Port:        80
-+ Start Time:         2016-11-10 21:32:00 (GMT-7)
----------------------------------------------------------------------------
-+ Server: nginx/1.10.2
-+ Server leaks inodes via ETags, header found with file /, fields: 0x580639b1 0x264 
-+ The anti-clickjacking X-Frame-Options header is not present.
-+ 6544 items checked: 0 error(s) and 2 item(s) reported on remote host
-+ End Time:           2016-11-10 21:32:23 (GMT-7) (23 seconds)
----------------------------------------------------------------------------
-+ 1 host(s) tested
-```
-
-**[⬆ Back to Top](#table-of-contents)**
+- [tools](http://tools.kali.org/tools-listing)
 
 ---
 
-<a name="dmitry"></a>
 
-**dmitry - Deepmagic Information Gathering Tool**
-
-
-```console
-shell> apt-get install dmitry
-shell> dmitry
-```
-
-**[⬆ Back to Top](#table-of-contents)**
 
 ---
 **tree - displays an indented directory tree, in color**
@@ -333,7 +217,7 @@ shell> apt-get install vnstat
 shell> netload eth0
 ```
 
-$HOME/.netloadrc
+`$HOME/.netloadrc`
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2135,6 +2019,140 @@ auth required /lib/security/pam_google_authenticator.so
 **[⬆ Back to Top](#table-of-contents)**
 
 ---
+
+**md5sum - compute and check MD5 message digest**<a name="md5sum"></a>
+**sha1sum - compute and check SHA1 message digest**<a name="sha1sum"></a>
+**sha256sum - compute and check SHA256 message digest**<a name="sha256sum"></a>
+
+```console
+shell> md5sum file
+shell> md5sum file > MD5SUMS
+shell> md5sum -c MD5SUMS
+
+shell> sha1sum file
+shell> sha1sum file > SHA1SUMS
+shell> sha1sum -c SHA1SUMS
+
+shell> sha256sum file
+shell> sha256sum file > SHA256SUMS
+shell> sha256sum -c SHA256SUMS
+```
+**[⬆ Back to Top](#table-of-contents)**
+
+---
+
+<a name="pv"></a>
+<a name="dialog"></a>
+
+**pv - Shell pipeline element to meter data passing through**
+**dialog - Displays user-friendly dialog boxes from shell scripts**
+
+```console 
+shell> apt-get install pv
+shell> yum install pv
+shell> brew install pv
+
+shell> apt-get install dialog
+shell> brew install dialog
+
+shell> pv file | gzip > file.gz
+shell> pv file | nc -w 1 somewhere.com 3000
+
+shell> (pv -n file | gzip > file.gz) 2>&1 | dialog --gauge "Please Wait" 10 70 0
+shell> (pv -n file | gzip > file.gz) 2>&1 | dialog --gauge "請稍候" 10 70 0
+
+
+shell> pv file | md5sum
+shell> pv file | sha256sum
+shell> pv file | sha512sum
+
+shell> pv -EE /dev/sda > disk-image.img
+shell> pv disk-image.img > /dev/sda
+
+shell> pv < /dev/zero > /dev/sda
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+---
+
+<a name="mencoder"></a>
+
+**mencoder - MPlayer's Movie Encoder**
+
+```console 
+shell> apt-get install mencoder
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+---
+
+**iotop - simple top-like I/O monitor**<a name="iotop"></a>
+
+**[⬆ Back to Top](#table-of-contents)**
+
+---
+
+**imagemagick - image manipulation programs -- binaries**<a name="imagemagick"></a>
+
+```console 
+shell> apt-get install imagemagick
+shell> convert file1.pdf file2.pdf output-file.pdf
+shell> convert file1.pdf[1] file2.pdf[0,5] output-file.pdf
+shell> convert file1.pdf[0-9] file2.pdf[0-4] output-file.pdf  
+shell> convert *.jpg output-file.pdf  
+shell> convert rose.jpg rose.png  
+shell> convert rose.jpg -resize 50% rose.png
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+---
+
+**nikto - Scan web server for known vulnerabilities**<a name="nikto"></a>
+
+```console
+shell> apt-get install nikto
+shell> nikto -C all -h 127.0.0.1
+```
+```
+- Nikto v2.1.5
+---------------------------------------------------------------------------
++ Target IP:          127.0.0.1
++ Target Hostname:    localhost
++ Target Port:        80
++ Start Time:         2016-11-10 21:32:00 (GMT-7)
+---------------------------------------------------------------------------
++ Server: nginx/1.10.2
++ Server leaks inodes via ETags, header found with file /, fields: 0x580639b1 0x264 
++ The anti-clickjacking X-Frame-Options header is not present.
++ 6544 items checked: 0 error(s) and 2 item(s) reported on remote host
++ End Time:           2016-11-10 21:32:23 (GMT-7) (23 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+---
+
+**dmitry - Deepmagic Information Gathering Tool**<a name="dmitry"></a>
+
+`DMitry`
+
+```console
+shell> apt-get install dmitry
+shell> dmitry
+shell> dmitry -winsepo example.txt example.com
+```
+
+- [DMitry](http://tools.kali.org/information-gathering/dmitry)
+
+**[⬆ Back to Top](#table-of-contents)**
+
+---
+
 
 ### :books: 參考網站：
 

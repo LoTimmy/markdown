@@ -44,11 +44,18 @@ div { padding: 10px; }
 ```
 
 ```css
+
+background: green;
+background: yellow;
+
+background: url("../img/bg-pattern.png"), #7b4397;
+background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #7b4397, #dc2430);
+background: url("../img/bg-pattern.png"), linear-gradient(to left, #7b4397, #dc2430);
+
 background-image: none;
 background-image: url("http://www.example.com/bck.png");
 background-image: inherit;
-background: green;
-background: yellow;
+
 background-repeat: repeat;
 background-repeat: no-repeat;
 background-color: #123456;
@@ -87,6 +94,7 @@ color: grey;
 color: red;
 color: rgb(255, 255, 255);
 color: yellow;
+color: white;
 
 cursor: pointer;
 

@@ -809,5 +809,7 @@ setInterval(function() {
 </html>
 
 ```
+---
 
+- [jQuery.Marquee](https://github.com/aamirafridi/jQuery.Marquee)
 
