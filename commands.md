@@ -181,6 +181,8 @@ shell> nikto -C all -h 127.0.0.1
 + 1 host(s) tested
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 
 <a name="dmitry"></a>
@@ -193,6 +195,8 @@ shell> apt-get install dmitry
 shell> dmitry
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **tree - displays an indented directory tree, in color**
 
@@ -200,9 +204,12 @@ shell> dmitry
 shell> apt-get install tree
 shell> tree
 ```
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 **oathtool - OATH one-time password tool**
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 
@@ -227,6 +234,8 @@ logrotate.conf
 }
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 
 <a name="ifstat"></a>
@@ -243,6 +252,8 @@ shell> ifstat -i eth0 -b -t
 shell> brew install oath-toolkit
 shell> oathtool --totp -b WQSWOTKQK6YQEY4E
 ```
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 
 **dphys-swapfile - Autogenerate and use a swap file**
@@ -258,6 +269,8 @@ shell> apt-get install dphys-swapfile
 CONF_SWAPFILE=/var/swap
 CONF_SWAPSIZE=100
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 
@@ -290,6 +303,7 @@ shell> swapoff -a
 
 - /usr/share/doc/util-linux/examples/fstab.example2
 
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 
@@ -299,6 +313,8 @@ shell> swapoff -a
 shell> apt-get install grive
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 
 **lnav - ncurses-based log file viewer**
@@ -307,6 +323,8 @@ shell> apt-get install lnav
 shell> lnav
 shell> lnav syslog.5.gz
 ```
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 
 **vnstat - console-based network traffic monitor**
@@ -316,6 +334,8 @@ shell> netload eth0
 ```
 
 $HOME/.netloadrc
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 **rename - renames multiple files**
@@ -335,6 +355,8 @@ shell> rename 's/$/.bak/' filename
 ### :books: 參考網站：
 - [rename](http://manpages.ubuntu.com/manpages/xenial/man1/rename.ul.1.html)
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **netdiag - Net-Diagnostics (trafshow,netwatch,statnet,tcpspray,tcpblast)**
 **netload - Network device load monitor**
@@ -343,6 +365,8 @@ shell> rename 's/$/.bak/' filename
 shell> apt-get install netdiag
 shell> netload eth0
 ```
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **iftop - displays bandwidth usage information on an network interface**
 
@@ -350,6 +374,8 @@ shell> netload eth0
 shell> apt-get install iftop
 shell> iftop -n
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 
@@ -365,6 +391,8 @@ shell> iptraf-ng
 ### :books: 參考網站：
 - [iptraf](http://manpages.ubuntu.com/manpages/precise/man8/iptraf.8.html)
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **speedometer - measure and display the rate of data across a network connection**
 
@@ -377,6 +405,8 @@ shell> speedometer -rx eth0
 
 ### :books: 參考網站：
 - [speedometer](http://manpages.ubuntu.com/manpages/wily/man1/speedometer.1.html)
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 
@@ -401,6 +431,9 @@ file.tar.gz
 file.tgz
 file.tar.bz
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **gzip -- compression/decompression tool using Lempel-Ziv coding (LZ77)**
 
@@ -411,6 +444,9 @@ shell> gunzip file1.gz
 shell> zcat file.Z
 shell> uncompress file.Z
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 
 ```console
@@ -426,6 +462,9 @@ filename.tbz2
 filename.bz
 filename.tbz
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 
 ```console
@@ -433,6 +472,8 @@ shell> xz --help
 shell> xz -z filename
 shell> xz -d filename.xz
 ```
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **p7zip - 7z file archiver with high compression ratio**
 
@@ -445,6 +486,9 @@ shell> 7z x filename.7z
 shell> tar cf - directory | 7z a -si directory.tar.7z
 shell> 7z x -so directory.tar.7z | tar xf -
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **rarcrack - Password cracker for rar archives**
 **unrar-free - Unarchiver for .rar files**
@@ -455,6 +499,8 @@ shell> apt-get install unrar-free
 shell> unrar --help
 shell> unrar -x rar_file
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 
@@ -467,6 +513,8 @@ shell> pwgen
 shell> pwgen --capitalize --symbols --ambiguous --num-passwords=1
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 
 ```console
@@ -476,15 +524,19 @@ shell> lftp -u h2s,"NMG)h6" 192.168.168.188
 shell> lftp -u h2s,"NMG)h6" 192.168.168.188 -e "cd ; put ; bye"
 ```
 
-/etc/lftp.conf
-~/.lftprc
-~/.lftp/rc
+`/etc/lftp.conf`
+`~/.lftprc`
+`~/.lftp/rc`
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 
 ```console
 shell> yes
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 
@@ -493,6 +545,8 @@ shell> echo HelloWorld | rev
 
 dlroWolleH
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 **inxi - full featured system information script**
@@ -507,6 +561,9 @@ shell> inxi -N
 shell> inxi -r
 shell> inxi -D -c 3
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **funny-manpages - more funny manpages**
 
@@ -517,6 +574,8 @@ shell> apt-get install funny-manpages
 ```
 /usr/share/figlet
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 **redir - Redirect TCP connections**
