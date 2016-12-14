@@ -584,11 +584,15 @@ shell> apt-get install funny-manpages
 shell> apt-get install redir
 shell> redir --lport=22960 --caddr=10.192.28.72 --cport=22 &
 ```
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 ```console
 shell> apt-get install python-software-properties software-properties-common -y
 shell> add-apt-repository 
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 
@@ -596,6 +600,8 @@ shell> add-apt-repository
 shell> apt-get install unattended-upgrades -y
 shell> dpkg-reconfigure unattended-upgrades  
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 
@@ -606,6 +612,8 @@ shell> ntpdate -u time.asia.apple.com
 shell> ntpdate -u time.euro.apple.com
 shell> ntpdate -u ntp.ubuntu.com
 ```
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **tasksel - a user interface for installing tasks**
 
@@ -614,18 +622,24 @@ shell> tasksel
 shell> tasksel install
 shell> tasksel remove
 ```
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **sitecopy - program for managing a WWW site via FTP, SFTP, DAV or HTTP**
 
 ```console
 shell> apt-get install sitecopy
 ```
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 
 ```console
 insserv
 update-rc.d
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 **netdiscover - active/passive network address scanner using arp requests**
@@ -641,9 +655,13 @@ shell> apt-get install arp-scan
 shell> arp-scan 192.168.42.0/24
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 
 **bleachbit - delete unnecessary files from the system**
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 
@@ -660,13 +678,13 @@ shell> avahi-browse -rt _workstation._tcp
 shell> avahi-browse -rt _http._tcp
 ```
 
-_http._tcp
+`_http._tcp`
 
 ```console
 shell> apt-get install avahi-daemon
 ```
 
-/etc/avahi/avahi-daemon.conf
+`/etc/avahi/avahi-daemon.conf`
 
 ```conf
 [server]
@@ -676,9 +694,9 @@ use-ipv4=yes
 use-ipv6=yes
 ```
 
-/usr/share/doc/avahi-daemon/examples
+`/usr/share/doc/avahi-daemon/examples`
 
-/etc/avahi/services
+`/etc/avahi/services`
 
 ```xml
 <?xml version="1.0" standalone='no'?><!--*-nxml-*-->
@@ -701,6 +719,8 @@ use-ipv6=yes
 - [avahi-daemon](http://manpages.ubuntu.com/manpages/precise/man8/avahi-daemon.8.html)
 - [avahi-browse](http://manpages.ubuntu.com/manpages/precise/man1/avahi-browse.1.html)
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 
 ```console
@@ -712,6 +732,8 @@ shell> truncate --size=0 testfile.txt
 shell> du -h --max-depth=1 | sort -n -r
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 
 **ifconfig - configure a network interface**
@@ -722,6 +744,8 @@ shell> du -h --max-depth=1 | sort -n -r
 shell> ifconfig eth0 | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*'  
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 
 ```console
@@ -731,8 +755,9 @@ shell> blkid
 shell> btdownloadcurses ubuntu-8.10-server-i386.iso.torrent
 
 shell> vmstat
-
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 
@@ -746,13 +771,15 @@ shell> sudo mkdir /mnt/mountpoint
 shell> sudo mount -t cifs //servicename/mysharename /mnt/mountpoint -o vers=3.0,user=myaccountname,password=StorageAccountKeyEndingIn==,dir_mode=0777,file_mode=0777
 ```
 
-/etc/fstab
+`/etc/fstab`
 ```
 //servicename/mysharename /mymountpoint cifs vers=3.0,username= myaccountname,password= StorageAccountKeyEndingIn==,dir_mode=0777,file_mode=0777
 ```
 
 ### :books: 參考網站：
 - [如何搭配使用 Azure 檔案儲存體與 Linux](https://azure.microsoft.com/zh-tw/documentation/articles/storage-how-to-use-files-linux/)
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 **cowsay/cowthink - configurable speaking/thinking cow (and a bit more)**
@@ -769,6 +796,9 @@ shell> apt-get install cowsay
 ```console
 shell> apt-get install figlet
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **systemctl - Control the systemd system and service manager**
 
@@ -786,12 +816,17 @@ shell> systemctl start nginx.service
 shell> systemctl stop nginx.service
 shell> systemctl status nginx.service   
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 
 **pstree - display a tree of processes**
 ```console
 shell> pstree -a
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 **hostname - show or set the system's host name**
@@ -801,6 +836,8 @@ shell> pstree -a
 ```console
 shell> hostname -a
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 **fio - flexible I/O tester**
@@ -813,8 +850,9 @@ shell> fio --name=str --direct=1 --readwrite=randwrite --bs=4k --size=1G --numjo
 shell> fio --name=str --direct=1 --readwrite=randwrite --bs=4k --size=10M --numjobs=16 --runtime=180 --group_reporting --refill_buffers --ioengine=libaio --iodepth=16 
 
 shell> fio --name=str --direct=1 --readwrite=randread --bs=4k --size=10M --numjobs=16 --runtime=180 --group_reporting --refill_buffers --ioengine=libaio --iodepth=16 
-
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 **lsmod - Show the status of modules in the Linux Kernel**
@@ -831,6 +869,8 @@ shell> modprobe nf_conntrack_pptp
 shell> modprobe nf_nat_pptp
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **netstat - Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships**
 
@@ -845,6 +885,8 @@ Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
 shell> netstat -na
 shell> netstat -ntlp
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 **ss - another utility to investigate sockets**
@@ -862,6 +904,8 @@ Display all established ssh connections.
 shell> ss -o state established '( dport = :ssh or sport = :ssh )'
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 <a name="sysctl"></a>
 **sysctl - configure kernel parameters at runtime**
@@ -874,6 +918,7 @@ shell> sysctl -w net.ipv6.conf.all.disable_ipv6=1
 - [tuning-os](https://docs.oracle.com/cd/E26576_01/doc.312/e24936/tuning-os.htm#GSPTG00007)
 - [8.2. Optimized Network Settings](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Performance_Tuning_Guide/s-network-dont-adjust-defaults.html)
 
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 <a name="mtr"></a>
@@ -922,6 +967,8 @@ shell> traceroute 8.8.8.8
 shell> traceroute -n 8.8.8.8
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 <a name="ping"></a>
 ```console
@@ -935,6 +982,8 @@ shell> ping6 ::1
 shell> ping6 -I eth0 FF02::1
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 <a name="perl"></a>
 
@@ -942,6 +991,8 @@ shell> ping6 -I eth0 FF02::1
 shell> perl -pi -e 's/regexp/replacement/g' input-file
 shell> perl -e 'print "Hello World\n"'
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 <a name="route"></a>
@@ -953,6 +1004,8 @@ shell> route del ip-addr
 shell> route del -host ip-addr reject
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 <a name="named-checkzone"></a>
 
@@ -961,6 +1014,8 @@ shell> named-checkzone example.com /etc/bind/db.example.com
 ```
 ### :books: 參考網站：
 - [named-checkzone](http://manpages.ubuntu.com/manpages/xenial/en/man8/named-checkzone.8.html)
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 <a name="sed"></a>
@@ -973,6 +1028,8 @@ shell> sed -n '5,10p' input-file
 shell> sed -i -e 's/regexp/replacement/g' -e 's/str/newstr/' -e '/re/d' input-file
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 <a name="most"></a>
 **most - browse or page through a text file**
@@ -981,6 +1038,8 @@ shell> apt-get install most
 shell> most
 shell> export MANPAGER="/usr/bin/most -s" 
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 <a name="dpkg-reconfigure"></a>
@@ -997,11 +1056,15 @@ shell> dpkg-reconfigure console-setup
 shell> dpkg-reconfigure openssh-server  
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 <a name="loco"></a>
 ```console
 shell> loco /var/log/messages
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 
@@ -1010,6 +1073,7 @@ shell> loco /var/log/messages
 shell> w3m -no-cookie -dump http://checkip.dyndns.org/
 shell> w3m -dump_head http://www.ubuntu.com/
 ```
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 <a name="lsb_release"></a>
@@ -1027,6 +1091,7 @@ Codename:	trusty
 ```console
 shell> lsb_release -i -s
 ```
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 <a name="arp"></a>
@@ -1036,15 +1101,16 @@ shell> arp
 shell> arp -f
 ```
 
-
-/etc/ethers
+`/etc/ethers`
 ```
+# Ethernet-address  IP-number
 08:00:20:00:61:CA  pal
 ```
 
-
 ### :books: 參考網站：
 - [ethers](http://manpages.ubuntu.com/manpages/intrepid/man5/ethers.5.html)
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 
@@ -1057,6 +1123,8 @@ shell> arptables -A INPUT --source-mac 00:15:af:66:ec:57 -j ACCEPT
 shell> arptables -A INPUT --source-ip 192.168.111.9 -j ACCEPT
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 <a name="arpspoof"></a>
 
@@ -1066,6 +1134,8 @@ shell> arpspoof 192.168.111.1
 shell> arpspoof -t 192.168.111.2 192.168.111.1
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **seq - print a sequence of numbers**
 <a name="seq"></a>
@@ -1074,6 +1144,7 @@ shell> arpspoof -t 192.168.111.2 192.168.111.1
 shell> seq -f "server%03g" 999
 shell> seq 1 2 20
 ```
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 **ssh — OpenSSH SSH client (remote login program)**
@@ -1097,12 +1168,16 @@ shell> ssh -CqTfnN -D 1080 user@hostname
 shell> plink.exe user@hostname -N -D 1080
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **ip - show / manipulate routing, devices, policy routing and tunnels**
 <a name="ip"></a>
 ```console
 shell> ip neigh show
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 **arping - sends IP and/or ARP pings (to the MAC address)**
@@ -1113,6 +1188,8 @@ shell> arping
 shell> arping -I ethX -c 3 ip-addr
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **fuser - identify processes using files or sockets**
 <a name="fuser"></a>
@@ -1121,12 +1198,16 @@ shell> arping -I ethX -c 3 ip-addr
 shell> fuser -k 80/tcp
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 <a name="host"></a>
 
 ```console
 shell> host www.apple.com 8.8.8.8
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 **dig - DNS lookup utility**
@@ -1145,6 +1226,8 @@ shell> dig +short myip.opendns.com @resolver1.opendns.com
 
 https://diagnostic.opendns.com/myip
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **freebcp - bulk loading utility for Sybase and Microsoft databases**
 **tsql - utility to test FreeTDS connections and queries**
@@ -1155,7 +1238,7 @@ https://diagnostic.opendns.com/myip
 shell> apt-get install freetds-bin
 ```
 
-/etc/freetds/freetds.conf
+`/etc/freetds/freetds.conf`
 ```
 [egServer70]
 	host = ntmachine.domain.com
@@ -1187,6 +1270,8 @@ using default charset "UTF-8"
 2> GO 
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **gpg - OpenPGP encryption and signing tool**
 <a name="gpg"></a>
@@ -1202,6 +1287,8 @@ gpg: CAST5 encrypted data
 Enter passphrase: 
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 <a name="export"></a>
 
@@ -1214,6 +1301,8 @@ shell> update-alternatives --config pager
 
 ### :books: 參考網站：
 - [update-alternatives](http://manpages.ubuntu.com/manpages/jaunty/man8/update-alternatives.8.html)
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 **recode - converts files between character sets**
@@ -1234,6 +1323,8 @@ shell> recode big5..utf8
 shell> echo -n 0x02 | recode latin9/x1..dump-with-names
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **iconv - Convert encoding of given files from one encoding to another**
 <a name="iconv"></a>
@@ -1251,6 +1342,7 @@ shell> iconv -f utf8 -t gb2312
 shell> iconv -f BIG-5 -t UTF-8 big5.txt > utf8.txt
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 **convmv - converts filenames from one encoding to another**
@@ -1264,6 +1356,8 @@ shell> apt-get install convmv
 shell> convmv --list
 shell> convmv -f big5 -t utf-8 -r --notest *
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 <a name="crontab"></a>
@@ -1322,6 +1416,8 @@ string         meaning
 ### :books: 參考網站：
 - https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-Automating_System_Tasks.html
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **netmask - a netmask generation and conversion program**
 <a name="netmask"></a>
@@ -1355,6 +1451,8 @@ shell> netmask 60.248.90.0/25 -r
 60.248.90.0-60.248.90.127   (128)
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **sipcalc - IP subnet calculator**
 <a name="sipcalc"></a>
@@ -1382,6 +1480,8 @@ Usable range		- 60.248.90.1 - 60.248.90.254
 -
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **dmidecode - DMI table decoder**
 <a name="dmidecode"></a>
@@ -1397,6 +1497,8 @@ shell> dmidecode -t processor
 shell> dmidecode -t bios
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **lsof - list open files**
 <a name="lsof"></a>
@@ -1408,12 +1510,17 @@ shell> lsof -i TCP:25
 shell> lsof -i -P
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **strace - trace system calls and signals**
 <a name="strace"></a>
 ```console
 shell> strace -fF -p 1234
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **dd - convert and copy a file**
 <a name="dd"></a>
@@ -1436,6 +1543,8 @@ shell> gzip -dc HardDisk.img.gz | dd of=/dev/sda
 shell> dd if=/dev/fd0 of=filename.flp
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **lscpu - display information on CPU architecture**
 **lsblk - list block devices**
@@ -1457,6 +1566,8 @@ shell> lspci -v
 shell> lsblk
 shell> lshw
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 <a name="grep"></a>
@@ -1493,6 +1604,9 @@ shell> grep -E 'PATTERN1.*PATTERN2' testfile.txt
 shell> grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" testfile.txt
 shell> grep -E -o "\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,6}\b" testfile.txt 
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **date - print or set the system date and time**
 <a name="date"></a>
@@ -1507,13 +1621,18 @@ shell> date +%s --date '2014-09-13 09:19:36'
 shell> date -d @1410571176
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 ```console
 shell> set +o history
 shell> set -o history
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
+
 ```console
 shell> getconf LONG_BIT
 64
@@ -1524,6 +1643,8 @@ armv7l
 x86_64 // 64 位元
        // 32 位元	
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 **update-alternatives - maintain symbolic links determining default commands**
@@ -1558,12 +1679,17 @@ shell> sudo -K
 ```
 sudo: unable to resolve host 
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **ldd - print shared library dependencies**
 <a name="ldd"></a>
 ```console
 shell> ldd /bin/ls
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 <a name="curlftpfs"></a>
@@ -1584,6 +1710,8 @@ password mypass
 ### :books: 參考網站：
 - [curlftpfs](http://curlftpfs.sourceforge.net/)
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **curl - transfer a URL**
 <a name="curl"></a>
@@ -1603,6 +1731,8 @@ shell> curl -w "\n" -d '{"username":"admin", "password":"secret"}' -H "Content-T
  -H "Accept-Language: zh-TW"
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **Wget - The non-interactive network downloader.**
 <a name="wget"></a>
@@ -1616,7 +1746,7 @@ shell> wget --mirror --convert-links --adjust-extension --page-requisites --no-p
 shell> wget -mkEpnp http://getbootstrap.com/      
 ```
 
-~/.wgetrc
+`~/.wgetrc`
 ```
 # You can set the default proxies for Wget to use for http, https, and ftp.
 # They will override the value in the environment.
@@ -1636,18 +1766,21 @@ shell> wget -mkEpnp http://getbootstrap.com/
 content_disposition = on
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 ```console
 shell> apt-get install exfat-utils exfat-fuse
 ```
 ---
-**ethtool - query or control network driver and hardware settings**
-<a name="ethtool"></a>
+**ethtool - query or control network driver and hardware settings**<a name="ethtool"></a>
 ```console
 shell> apt-get install ethtool
 shell> ethtool -i eth0
 shell> ethtool eth0
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 
@@ -1656,6 +1789,8 @@ shell> ethtool eth0
 shell> apt-get install wakeonlan
 shell> wakeonlan 00:1c:c0:5e:e4:e8
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 ```console
@@ -1669,12 +1804,13 @@ Mounted /org/freedesktop/UDisks/devices/sda1 at /media/AEE8EC25E8EBEA13
 shell> udisks --show-info /dev/sda1
 shell> udisks --unmount /dev/sda1
 
-
 shell> ls -al /dev/disk/by-uuid
 
 shell> udisks --mount /dev/disk/by-uuid/3AEE81A116ADF905
-
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 
 time of last system boot
@@ -1690,12 +1826,12 @@ echo '{"json":"obj"}' | jq '.'
 echo '{ "_id" : 5, "type" : "food", "item" : "aaa", "ratings" : [ 5, 8, 9 ] }' | python -mjson.tool | jq '.item'
 ```
 
----
-**OptiPNG - Optimize Portable Network Graphics files**
-**jpegoptim - utility to optimize/compress JPEG/JFIF files.**
+**[⬆ Back to Top](#table-of-contents)**
 
-<a name="optipng"></a>
-<a name="jpegoptim"></a>
+---
+**OptiPNG - Optimize Portable Network Graphics files**<a name="optipng"></a>
+**jpegoptim - utility to optimize/compress JPEG/JFIF files.**<a name="jpegoptim"></a>
+
 ```console
 shell> apt-get install optipng
 shell> optipng file.png
@@ -1709,6 +1845,9 @@ shell> jpegoptim --strip-all --preserve --totals --all-progressive --max=90
 
 shell> find . -type f -name "*.png" -exec jpegoptim {} \;
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 ```console
 shell> apt-get install nfs-kernel-server
@@ -1737,10 +1876,11 @@ shell> mount.nfs 54.183.226.77:/pub /mnt/pub
 shell> mount.nfs -o rsize=8192,wsize=8192,timeo=14,intr 54.183.226.77:/pub /mnt/pub
 ```
 
----
-<a name="rsync"></a>
+**[⬆ Back to Top](#table-of-contents)**
 
-**rsync - fast, versatile, remote (and local) file-copying tool**
+---
+
+**rsync - fast, versatile, remote (and local) file-copying tool**<a name="rsync"></a>
 
 ```console
 shell> rsync -avz foo:src/bar /data/tmp
@@ -1748,12 +1888,13 @@ shell> rsync -avz --delete src/ dst_directory/
 
 shell> rsync -av --partial --append --progress mylinux.iso 10.1.2.3:~/
 shell> rsync -avP --append mylinux.iso 10.1.2.3:~/
-
 ```
----
-<a name="aria2"></a>
 
-**aria2 - High speed download utility**
+**[⬆ Back to Top](#table-of-contents)**
+
+---
+
+**aria2 - High speed download utility**<a name="aria2"></a>
 ```console
 shell> apt-get install aria2
 ```
@@ -1775,7 +1916,7 @@ shell> aria2c http://example.org/mylinux.torrent
 shell> aria2c http://example.org/mylinux.metalink
 ```
 
-$HOME/.aria2/aria2.conf
+`$HOME/.aria2/aria2.conf`
 ```
 http-accept-gzip=true
 
@@ -1818,17 +1959,25 @@ shell> screen -d -m aria2c http://example.org/mylinux.torrent
 ### :books: 參考網站：
 - [screen](https://www.gnu.org/software/screen/)
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 
 ```console
 shell> apt-get install mosh
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 
 ```console
 shell> apt-get install dhcping
 shell> dhcping -s 255.255.255.255 -r -v
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 
 ``` .ruby
@@ -1866,25 +2015,30 @@ shell> ./srvrinfo.rb www.apache.org
   The server at www.apache.org is Apache/2.4.10 (Unix) OpenSSL/1.0.1i
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 **ncdu - ncurses disk usage viewer**
 **pydf - colourised df(1)-clone**
 **htop - interactive processes viewer**
+
 ```console
 shell> apt-get install ncdu
 shell> apt-get install pydf
 shell> apt-get install htop
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 <a name="geoip"></a>
 
-/etc/cron.d/geoip-database-contrib
-/usr/share/GeoIP
+`/etc/cron.d/geoip-database-contrib`
+`/usr/share/GeoIP`
 
-/usr/share/GeoIP/GeoIP.dat
-/usr/share/GeoIP/GeoIPv6.dat
+`/usr/share/GeoIP/GeoIP.dat`
+`/usr/share/GeoIP/GeoIPv6.dat`
 
-:star::star::star:
 ```console
 shell> apt-get install geoip-bin
 shell> apt-get install geoip-database-contrib
@@ -1894,10 +2048,11 @@ shell> wget -q http://geolite.maxmind.com/download/geoip/database/GeoIPv6.dat.gz
 shell> gunzip -f GeoIP.dat.gz GeoIPv6.dat.gz
 shell> geoiplookup 80.60.233.195
 ```
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 <a name="hping3"></a>
 
-:star::star::star:
 ```console
 shell> apt-get install hping3
 shell> hping3 -S -p 80 www.apple.com
@@ -1907,6 +2062,9 @@ shell> hping3 www.apple.com –i u100000 –F –S –R –P –A –U –a 100.
 
 shell> hping3 --rand-source www.apple.com       
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 
 ```console
@@ -1921,6 +2079,8 @@ Linux 3.18.11+ (ip-192-168-42-23) 	09/22/2015 	_armv6l_	(1 CPU)
 12:50:14 PM  all    2.03    0.00    0.59    0.55    0.00    0.02    0.00    0.00   96.82
 12:50:14 PM    0    2.03    0.00    0.59    0.55    0.00    0.02    0.00    0.00   96.82
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 **freebsd**
@@ -1938,11 +2098,12 @@ shell> mkdir /newdisk
 shell> vi /etc/fstab
 /dev/da0	/newdisk	ufs	rw	2	2
 shell> mount /newdisk
-
 ```
 
 ### :books: 參考網站：
 - [disks-adding](https://www.freebsd.org/doc/handbook/disks-adding.html)
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 <a name="usbmount"></a>
@@ -1954,6 +2115,8 @@ shell> apt-get install usbmount
 shell> /etc/usbmount/usbmount.conf
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 
 ```console
@@ -1961,19 +2124,21 @@ shell> apt-get install libpam-google-authenticator
 shell> google-authenticator
 ```
 
-/etc/pam.d/sshd
+`/etc/pam.d/sshd`
 ```
 auth required /lib/security/pam_google_authenticator.so
 
 # Standard Un*x authentication.
 # @include common-auth
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 
 ### :books: 參考網站：
 
 - [putty](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html)
-
 - [Better Monitoring Tools For Ubuntu And CentOS](https://www.vultr.com/docs/better-monitoring-tools-for-ubuntu-and-centos)
 - https://www.centos.org/docs/5/html/5.2/Deployment_Guide/s1-nfs-client-config-options.html
 - https://www.centos.org/docs/5/html/5.2/Deployment_Guide/s1-nfs-client-config.html
