@@ -85,6 +85,9 @@ Wi-Fi ID: a0:99:9b:08:cb:87
 
 ---
 
+**scutil** -- Manage system configuration parameters
+
+
 ```console
 shell> sudo scutil --get ComputerName
 shell> sudo scutil --set ComputerName ""
