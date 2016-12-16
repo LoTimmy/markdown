@@ -1,5 +1,5 @@
 
-上次更新日期： 5/19/2016 2:05:01 PM    
+<img src="https://pbs.twimg.com/profile_images/482670411402858496/Xrtdc94q_400x400.png" width="200">    
 
 ```console
 shell> npm install moment --save

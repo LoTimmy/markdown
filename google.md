@@ -207,7 +207,28 @@ function drawChart() {
 <iframe width="1280" height="720" src="https://www.youtube.com/embed/XxJKnDLYZz4?list=PLj7CmGWxRE8RIpxvAB7iBEWz3-VcwOirm" frameborder="0" allowfullscreen></iframe>
 
 <iframe width="1280" height="720" src="https://www.youtube.com/embed/yk2CUjbyyQY?list=PLj7CmGWxRE8RIpxvAB7iBEWz3-VcwOirm" frameborder="0" allowfullscreen></iframe>
+
+
+<iframe style="height: 400px;" frameborder="0" allowfullscreen="1" title="YouTube video player" width="640" height="400" src="https://www.youtube.com/embed/qE5SMobMr9Q?autoplay=1&amp;cc_load_policy=1&amp;controls=2&amp;hl=zh-Hant&amp;rel=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fsupport.google.com&amp;widgetid=1" id="widget2"></iframe>
+
 ```
+
+`controls=0`
+`controls=1`
+`autoplay=1`
+`showinfo=0`
+`showinfo=1`
+
+> 如要讓嵌入影片自動顯示字幕，請將「`&cc_load_policy=1`」加到影片內嵌程式碼中。
+> 「`cc_lang_pref`」可設定影片字幕的語言。
+> 「`cc_load_policy=1`」預設開啟字幕。
+
+
+
+### :books: 參考網站：
+- https://support.google.com/youtube/answer/6172631?hl=zh-Hant
+- https://support.google.com/youtube/answer/171780?hl=zh-Hant
+- https://developers.google.com/youtube/player_parameters
 
 ---
 

@@ -1,3 +1,5 @@
+<img src="https://pbs.twimg.com/profile_images/583681608269471744/jCR2zNJV_400x400.png" width="200">
+
 ```console
 shell> brew install rbenv ruby-build
 

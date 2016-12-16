@@ -24,7 +24,7 @@ div {
 }
 
 pre, p {
-  font-size: 1.5em;
+  font-size: 2.5em;
   color: #FE7F88;
   background-color: transparent;
 }
@@ -32,9 +32,31 @@ pre, p {
 
 ```html
 <style type="text/css">
-div { padding: 10px; }
+  div {
+    padding: 10px;
+  }
 </style>
 ```
+
+---
+
+<a href="https://jsfiddle.net/agmkxp55/"><img src="http://i.imgur.com/A9cwqLx.png" width="50"></a>
+
+```css
+.fontSize-18 {
+  font-size: 18px;
+}
+
+.colorRed {
+  color: red;
+}
+```
+
+```html
+<div class="fontSize-18 colorRed">Test Message</div>
+```
+
+---
 
 ```html
 <div style="background-color:blue;"></div>
@@ -44,7 +66,6 @@ div { padding: 10px; }
 ```
 
 ```css
-
 background: green;
 background: yellow;
 
@@ -140,6 +161,19 @@ text-decoration: underline;
 
 visibility: hidden;
 
+/* Content is clipped, with no scrollbars */
+overflow-y: hidden;
+/* Content is not clipped */
+overflow-y: visible;
+/* Content is clipped, with scrollbars */
+overflow-y: scroll;
+/* Let the browser decide */
+overflow-y: auto;
+/* Global values */
+overflow-y: inherit;
+overflow-y: initial;
+overflow-y: unset;
+
 -webkit-border-radius: 10em 0 5em 2em;
 -webkit-border-radius: 10px;
 -webkit-box-shadow: 10px 10px 10px #FFFFCC inset;
@@ -148,9 +182,6 @@ white-space: nowrap;
 width: 45%;
 width: 60px;
 z-index: -1;
-
-
-
 
 a:link { color: #ff0000; text-decoration: none; }
 a:visited { color: #990000; text-decoration: none; }
@@ -214,6 +245,7 @@ a:active, a:hover { text-decoration: underline; }
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
 - https://developer.mozilla.org/en-US/docs/Web/CSS/@media
 - https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat
+- https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-y
 
 ---
 
@@ -264,7 +296,7 @@ h1 { background: #ccff99; }
 
 ![Imgur](http://i.imgur.com/WJl0p5y.png)
 
-- https://jsfiddle.net/b4u961fe/
+<a href="https://jsfiddle.net/b4u961fe/"><img src="http://i.imgur.com/A9cwqLx.png" width="50"></a>
 
 ```css
 #d5ESWAchesut {
@@ -307,7 +339,8 @@ h1 { background: #ccff99; }
 ---
 
 ![Imgur](http://i.imgur.com/S5v6IzG.png)
-- https://jsfiddle.net/vf8euwaa/
+
+<a href="https://jsfiddle.net/vf8euwaa/"><img src="http://i.imgur.com/A9cwqLx.png" width="50"></a>
 
 ```css
 div {
@@ -328,7 +361,7 @@ p {
 
 ---
 
-- https://jsfiddle.net/r1bhgry3/
+<a href="https://jsfiddle.net/r1bhgry3/"><img src="http://i.imgur.com/A9cwqLx.png" width="50"></a>
 
 ```css
 .w8EpEstevaWr {
@@ -355,7 +388,7 @@ pre {
 
 ---
 
-- https://jsfiddle.net/dcwnbthk/
+<a href="https://jsfiddle.net/dcwnbthk/"><img src="http://i.imgur.com/A9cwqLx.png" width="50"></a>
 
 ```css
 img {
@@ -368,7 +401,8 @@ img {
 ```html
 <p> HelloWorld</p><img id="sawezuswePh7" src="http://placehold.it/200x60" alt="">
 ```
-- https://jsfiddle.net/b92xasu9/
+
+<a href="https://jsfiddle.net/b92xasu9/"><img src="http://i.imgur.com/A9cwqLx.png" width="50"></a>
 
 ```css
 img {
@@ -382,7 +416,7 @@ img {
 
 ---
 
-- https://jsfiddle.net/yaj5n67j/
+<a href="https://jsfiddle.net/yaj5n67j/"><img src="http://i.imgur.com/A9cwqLx.png" width="50"></a>
 
 ```css
 div {
@@ -428,7 +462,7 @@ div {
 
 ---
 
-- https://jsfiddle.net/5sn6d0hg/
+<a href="https://jsfiddle.net/5sn6d0hg/"><img src="http://i.imgur.com/A9cwqLx.png" width="50"></a>
 
 ```html
 <div id="d5ESWAchesut"></div>
@@ -474,5 +508,11 @@ shell> bower install --save normalize-css
 ### :books: 參考網站：
 - [svg4everybody](https://github.com/jonathantneal/svg4everybody)
 - [svg4everybody](https://jonathantneal.github.io/svg4everybody/)
+---
 
+### :books: 參考網站：
+- [Materialize](http://materializecss.com/)
+- http://getbootstrap.com/
+- [Semantic UI](http://semantic-ui.com/)
+- http://susy.oddbird.net/
 

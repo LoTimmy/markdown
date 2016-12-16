@@ -81,9 +81,6 @@ lts/boron -> v6.9.1
 
 ```
 
-
-
-
 ```console
 shell> node --version
 v4.1.1
@@ -1017,7 +1014,7 @@ main();
 
 ---
 
-Iterator 迭代器
+#### `Iterator` `迭代器`
 
 ``` .js
 function makeIterator(array){

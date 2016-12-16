@@ -1,6 +1,4 @@
 
-最後更新： 2015-10-13         
-
 ![](http://enclosejs.com/screenshot.png)
 
 ```console

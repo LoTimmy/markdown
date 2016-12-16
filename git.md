@@ -303,7 +303,8 @@ shell> cd web.git
 shell> git init --bare
 ```
 
-hooks/post-receive
+`hooks/post-receive`
+
 
 ```
 #!/bin/sh
@@ -330,6 +331,15 @@ shell> git push prd master
 - [git-checkout](https://git-scm.com/docs/git-checkout)
 - [git-clean](https://git-scm.com/docs/git-clean)
 - [git](https://git-scm.com/docs/git)
+- https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
+
+
+`hooks/pre-commit`
+
+```console
+shell> git add .
+shell> git diff --cached --name-only --diff-filter=ACM
+```
 
 ---
 

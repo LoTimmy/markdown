@@ -1,3 +1,7 @@
+- http://rubyinstaller.org/downloads/
+
+![](https://cdn.rubyinstaller.org/images/logo.png)
+
 
 ```console
 shell> gem update --system

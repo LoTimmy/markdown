@@ -1,4 +1,6 @@
 
+<img src="https://pbs.twimg.com/profile_images/788014136575668224/lxEKmMnB_400x400.jpg" width="200">
+
 <a name="getstarted"></a>
 > **`jQuery` 是一个跨浏览器的免费开源 `JavaScript` 库**。
 > 流行的 `jQuery` `JavaScript` 库有一个简洁便携的 `JavaScript` `API` 集合，用于快速的 `web` 开发，该库是经 `MIT` 和 `GPL` 许可的免费库。

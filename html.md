@@ -1,3 +1,6 @@
+<img src="http://i.imgur.com/diUQ0Gl.png" width="200">
+<img src="http://i.imgur.com/Ovy92WP.png" width="200">
+
 # Table of Contents
 
 :blue_book:
@@ -7,8 +10,30 @@
 - [meta](#meta)
 
 ---
-**doctype**
-<a name="doctype"></a>
+
+```
+MyWebsite/
+  |--css/
+  |  |--style.css <-- compiled from scss/style.scss
+  |
+  |--images/
+  |
+  |--js/
+  |  |--materialize.js
+  |
+  |--scss/
+  |  |--style.scss
+  |  |--components/
+  |
+  |--index.html
+```
+
+---
+- [video](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)
+
+---
+
+**doctype**<a name="doctype"></a>
 
 ```html
 <!doctype html>
@@ -48,8 +73,9 @@
 ```
 
 ---
-**script**
-<a name="script"></a>
+
+**script**<a name="script"></a>
+
 ```html
 <!-- HTML4 and (x)HTML -->
 <script type="text/javascript" src="javascript.js"></script>
@@ -173,7 +199,7 @@
 
 ---
 
-![](http://ogp.me/logo.png)
+<img src="http://ogp.me/logo.png" width="200">
 
 `opengraph`
 
