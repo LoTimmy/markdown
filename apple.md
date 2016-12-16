@@ -79,6 +79,43 @@ IPv6 IP address: none
 IPv6 Router: none
 Wi-Fi ID: a0:99:9b:08:cb:87
 ```
+```console
+shell> networksetup -listallhardwareports
+```
+```
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: a0:99:9b:08:cb:87
+
+Hardware Port: Bluetooth PAN
+Device: en3
+Ethernet Address: a0:99:9b:08:cb:88
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 6a:00:00:93:8e:00
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 6a:00:00:93:8e:01
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 6a:00:00:93:8e:00
+
+VLAN Configurations
+===================
+```
+```console
+shell> networksetup -getairportpower en0
+```
+```
+Wi-Fi Power (en0): On
+```
+```console
+shell> networksetup -setairportpower on
+shell> networksetup -setairportpower off
+```
 
 ### :books: 參考網站：
 - [networksetup](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man8/networksetup.8.html)
@@ -136,6 +173,9 @@ shell> dot_clean .
 
 ---
 
+**say** - Convert text to audible speech
+
+
 ```console
 shell> say Hello, World
 shell> say -v Alex -o hi -f hello_world.txt
@@ -149,6 +189,9 @@ shell> say Hello, World
 - [say](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/say.1.html)
 
 ---
+
+**hdiutil** -- manipulate disk images (attach, verify, burn, etc)
+
 
 ```console
 shell> hdiutil imageinfo ubuntu-16.04-server-i386.iso
