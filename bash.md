@@ -73,7 +73,6 @@ done
 RAM_SIZE=$(free -b | grep Mem | awk '{print $2}')
 HOSTNAME=`/bin/hostname -f`
 
-
 uname -m | grep 64
 IS_64BIT=$?
 #BIT_WIDTH=64
@@ -84,7 +83,6 @@ echo $IS_64BIT
 echo $CONNTRACK_MAX
 echo $RAM_SIZE
 echo $RANDOM
-
 
 echo My home directory is $HOME
 echo "My current directory is $PWD"
@@ -100,6 +98,15 @@ echo "My public IP address is: $ip"
 
 ### :books: 參考網站：
 - [ipify](https://www.ipify.org/)
+
+---
+
+```sh
+#!/bin/bash
+if COMMANDS; then COMMANDS;
+else COMMANDS;
+fi
+```
 
 ---
 

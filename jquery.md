@@ -1,6 +1,8 @@
 
 <img src="https://pbs.twimg.com/profile_images/788014136575668224/lxEKmMnB_400x400.jpg" width="200">
 
+---
+
 <a name="getstarted"></a>
 > **`jQuery` 是一个跨浏览器的免费开源 `JavaScript` 库**。
 > 流行的 `jQuery` `JavaScript` 库有一个简洁便携的 `JavaScript` `API` 集合，用于快速的 `web` 开发，该库是经 `MIT` 和 `GPL` 许可的免费库。
@@ -85,7 +87,8 @@ objTargetElements.action(actionParameter);
   </body>
 </html>
 ```
-initPage 这个函数会在页面加载完毕后被调用。而该函数在执行后会在 ID 为 message 的 HTML 结点内添加表示客户端当前时间的字符串。
+
+> initPage 这个函数会在页面加载完毕后被调用。而该函数在执行后会在 ID 为 message 的 HTML 结点内添加表示客户端当前时间的字符串。
 
 ![](http://www.ibm.com/developerworks/cn/web/1311_huangwh_jqueryhandson/image007.jpg)
 
@@ -163,7 +166,7 @@ $("#btnDetails").bind("click", function() {
 });
 ```
 
-`bind` 方法的语法是：
+> `bind` 方法的语法是：
 `event`：要处理的事件的名称。该名称不需要加前缀 on。
 `handler`：事件监听器，即对浏览器事件进行处理的函数。这通常是一个匿名函数。**在 `event` 参数所表示的事件被触发后，`jQuery` 会调用这个函数（即回调），并向该函数传入一个 `jQuery` 自定义的事件对象**。该事件对象是 `jQuery` 根据原始的浏览器事件对象创建的。`jQuery` 这么做是通过一个"中立"的事件对象来规避不同的浏览器所提供的同一个事件的事件对象的属性不同的问题。这使得我们可以用同样的代码处理事件，而不必关心不同浏览器所提供的原始事件对象的差异。
 `data` ：表示需要在事件触发后传递给事件监听器的额外数据。它是作为 `jQuery` 事件对象的 `data` 属性传递给事件监听器的。

@@ -306,7 +306,7 @@ shell> git init --bare
 `hooks/post-receive`
 
 
-```
+```sh
 #!/bin/sh
 git --work-tree=/var/www/html clean -fd
 git --work-tree=/var/www/html checkout --force
@@ -325,7 +325,6 @@ shell> git push tst master
 shell> git push prd master
 ```
 
-
 ### :books: 參考網站：
 - [githooks](https://git-scm.com/docs/githooks)
 - [git-checkout](https://git-scm.com/docs/git-checkout)
@@ -333,12 +332,21 @@ shell> git push prd master
 - [git](https://git-scm.com/docs/git)
 - https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
 
-
 `hooks/pre-commit`
 
 ```console
 shell> git add .
 shell> git diff --cached --name-only --diff-filter=ACM
+```
+
+```sh
+#!/bin/sh
+
+if `git diff --cached --name-only --diff-filter=ACM | grep '.js'`
+then
+  jshint --verbose 
+fi
+exit $?
 ```
 
 ---

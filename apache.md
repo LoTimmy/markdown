@@ -1,4 +1,5 @@
-![](https://raw.githubusercontent.com/docker-library/docs/master/httpd/logo.png)
+
+<img src="https://raw.githubusercontent.com/docker-library/docs/master/httpd/logo.png" width="200">
 
 ### 在 `Ubuntu` 14.04 LTS 上建置 `Apache`
 
