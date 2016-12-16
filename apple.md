@@ -1,5 +1,6 @@
 
 <img src="http://i.imgur.com/Dd0Sffn.png" width="200">
+
 <img src="http://i.imgur.com/t51VWq9.png" width="100">
 
 <kbd>Command ⌘</kbd>
@@ -60,6 +61,26 @@
 
 ```console
 shell> networksetup -listallnetworkservices
+```
+```
+An asterisk (*) denotes that a network service is disabled.
+Wi-Fi
+Bluetooth PAN
+Thunderbolt Bridge
+```
+```console
+shell> networksetup -getinfo Wi-Fi
+```
+```
+DHCP Configuration
+IP address: 192.168.8.114
+Subnet mask: 255.255.255.0
+Router: 192.168.8.88
+Client ID: 
+IPv6: Automatic
+IPv6 IP address: none
+IPv6 Router: none
+Wi-Fi ID: a0:99:9b:08:cb:87
 ```
 
 ### :books: 參考網站：
