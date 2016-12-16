@@ -1,20 +1,16 @@
 
 <img src="http://i.imgur.com/Dd0Sffn.png" width="200">
 
-<img src="http://i.imgur.com/t51VWq9.png" width="100">
+<!-- <img src="http://i.imgur.com/t51VWq9.png" width="100"> -->
 
 <kbd>Command ⌘</kbd>
-
 <kbd>Option ⌥</kbd>
-
 <kbd>Caps Lock ⇪</kbd>
-
 <kbd>Control ⌃</kbd>
-
 <kbd>Shift ⇧</kbd>
-
 <kbd>Fn</kbd>
 
+### :books: 參考網站：
 - [Keyboard_Shortcuts](http://www.sequelpro.com/docs/Keyboard_Shortcuts)
 
 ---
@@ -55,6 +51,7 @@
 ### :books: 參考網站：
 - [sierra](http://www.apple.com/tw/macos/sierra/)
 - [macOS Sierra](https://itunes.apple.com/tw/app/macos-sierra/id1127487414?l=zh&mt=12)
+
 ---
 
 **networksetup** -- configuration tool for network settings in System Preferences.
@@ -97,6 +94,7 @@ shell> sudo scutil --set HostName ""
 
 ### :books: 參考網站：
 - [scutil](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man8/scutil.8.html)
+
 ---
 
 **在 OS X 重置 DNS 快取**
@@ -122,12 +120,16 @@ shell> pbpaste
 
 ---
 
-dot_clean
+**dot_clean** -- Merge ._* files with corresponding native files.
+
 
 ```console
 shell> dot_clean /Volumes/test
 shell> dot_clean .
 ```
+
+### :books: 參考網站：
+- [dot_clean](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/dot_clean.1.html)
 
 ---
 
