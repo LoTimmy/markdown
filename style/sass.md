@@ -2,10 +2,13 @@
 
 ```console
 shell> brew install rbenv ruby-build
-
+```
+```
 export RBENV_ROOT=/usr/local/var/rbenv
 eval "$(rbenv init -)"
+```
 
+```console
 shell> rbenv install 2.3.3
 shell> rbenv global 2.3.3
 shell> ruby -v
@@ -14,6 +17,13 @@ shell> gem update --system
 shell> gem install sass
 
 shell> sass input.scss output.css
+
+shell> sass --style nested input.scss output.css
+shell> sass --style compact input.scss output.css
+shell> sass --style compressed input.scss output.css
+shell> sass --style expanded input.scss output.css
+
+
 shell> sass --watch input.scss:output.css
 shell> sass --watch app/sass:public/stylesheets
 
@@ -219,8 +229,8 @@ aside[role="complementary"] {
 - http://sass-lang.com/
 - http://sass-lang.com/guide
 - http://sass-lang.com/documentation/file.SASS_REFERENCE.html
-
-
+- https://github.com/gruntjs/grunt-contrib-sass
+- http://bourbon.io/
 ---
 
 
@@ -251,3 +261,34 @@ header {
   }
 }
 ```
+
+---
+
+```sass
+$font-size: 20px;
+
+@mixin background() {
+  background: yellow;
+  font-size: 20px;
+}
+
+.header {
+  @include background;
+}
+
+.footer {
+  @include background;
+}
+
+```
+
+```
+.header {
+  background: yellow;
+  font-size: 20px; }
+
+.footer {
+  background: yellow;
+  font-size: 20px; }
+```
+
