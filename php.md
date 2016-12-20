@@ -1,8 +1,26 @@
 
+```console
+shell> apt-get install php5-common libapache2-mod-php5 php5-cli
+shell> apt-get install php7.0-common libapache2-mod-php7.0 php7.0-cli
+shell> apt-get install php-common libapache2-mod-php php-cli
+
+shell> apt-get install php5-mysql php5-curl
+shell> apt-get install php7.0-mysql php7.0-curl
+shell> apt-get install php-mysql php-curl
+
+shell> /etc/init.d/apache2 stop
+shell> /etc/init.d/apache2 start
+```
+
+### :books: 參考網站：
+- http://php.net/manual/en/install.unix.debian.php
+
+---
+
 ```php
 <?php
-    $ip = file_get_contents('https://api.ipify.org');
-    echo "My public IP address is: " . $ip;
+  $ip = file_get_contents('https://api.ipify.org');
+  echo "My public IP address is: " . $ip;
 ?>
 ```
 
@@ -11,7 +29,7 @@
 
 ---
 
-![](http://i.imgur.com/4JzyLLO.jpg)
+<img src="http://i.imgur.com/4JzyLLO.jpg" width="100">
 
 - `CodeIgniter`是由`PHP`寫出的`Framework`
 
@@ -19,7 +37,8 @@
 
 ---
 
-application/controllers/Pages.php
+`application/controllers/Pages.php`
+
 ```php
 <?php
 class Pages extends CI_Controller {
@@ -42,7 +61,8 @@ class Pages extends CI_Controller {
 }
 ```
 
-application/views/templates/header.php
+`application/views/templates/header.php`
+
 ```php
 <html>
   <head>
@@ -53,24 +73,24 @@ application/views/templates/header.php
     <h1><?php echo $title; ?></h1>
 ```
 
-application/views/templates/footer.php
+`application/views/templates/footer.php`
+
 ```php
     <em>&copy; 2015</em>
   </body>
 </html>
 ```
 
-application/views/pages/home.php
-application/views/pages/about.php
+`application/views/pages/home.php`
+`application/views/pages/about.php`
 
-
-application/config/routes.php
+`application/config/routes.php`
 ```php
 $route['default_controller'] = 'pages/view';
 $route['(:any)'] = 'pages/view/$1';
 ```
 
-.htaccess
+`.htaccess`
 ```
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -81,7 +101,7 @@ RewriteRule ^(.*)$ index.php/$1 [L]
 ---
 
 ```console
-shell> apt-get install php5-cli
+shell> apt-get install php-cli git zip
 shell> curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin && \
        mv /usr/local/bin/composer.phar /usr/local/bin/composer
 
@@ -94,7 +114,6 @@ shell> composer create-project codeigniter/framework your-project-name
 
 shell> composer create-project laravel/laravel your-project-name 4.2.*
 
-
 shell> composer remove codeigniter/framework 
 ```
 
@@ -103,15 +122,14 @@ shell> composer require monolog/monolog
 shell> composer require phpmailer/phpmailer
 ```
 
-composer.json
+`composer.json`
 ```json
 {
-    "require": {
-        "monolog/monolog": "^1.18"
-    }
+  "require": {
+    "monolog/monolog": "^1.18"
+  }
 }
 ```
-
 
 ```php
 <?php
@@ -136,7 +154,6 @@ $logger->addInfo('My logger is now ready');
 $logger->addInfo('Adding a new user', array('username' => 'Seldaek'));
 
 ```
-
 
 ```php
 <?php
@@ -168,19 +185,17 @@ $logger->addAlert('My logger is now ready');
 $logger->addEmergency('My logger is now ready');
 
 $logger->addInfo('Adding a new user', array('username' => 'Seldaek'));
-
 ```
-
 
 ```console
 shell> composer require geoip/geoip
+shell> wget -N http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz
+shell> gunzip GeoIP.dat.gz
 ```
 
 ```php
 <?php
-
 require __DIR__ . '/vendor/autoload.php';
-
 
 $gi = geoip_open("GeoIP.dat",GEOIP_STANDARD);
 
@@ -192,9 +207,7 @@ echo geoip_country_code_by_addr($gi, "61.231.58.233") . "\t" .
 geoip_close($gi);
 ```
 
-composer require geoip2/geoip2
-
-
+### :books: 參考網站：
 - [composer](https://getcomposer.org/doc/03-cli.md)
 - [download](https://getcomposer.org/download/)
 - [packagist](https://packagist.org/)
@@ -203,7 +216,55 @@ composer require geoip2/geoip2
     
 ---
 
+### :books: 參考網站：
 - [codeigniter](https://ellislab.com/codeigniter)
 - [docs](http://www.codeigniter.com/docs)
 - [user_guide](http://www.codeigniter.com/user_guide/)
 - [urls](https://www.codeigniter.com/userguide3/general/urls.html)
+
+
+
+---
+
+```php
+<?php
+
+$array = array(
+  "catalog" => "bar",
+  "book" => array(
+    array(
+      'title' => 'Corets, Eva',
+      'author' => 'Maeve Ascendant'
+    ),
+    array(
+      'title' => 'Midnight Rain',
+      'author' => 'Ralls, Kim'
+    )
+  )
+);
+
+
+$array = array(
+    "foo" => "bar",
+    42    => 24,
+    "multi" => array(
+         "dimensional" => array(
+             "array" => "foo"
+         )
+    )
+);
+
+echo json_encode($array);
+```
+
+```
+{
+  "42": 24,
+  "foo": "bar",
+  "multi": {
+    "dimensional": {
+      "array": "foo"
+    }
+  }
+}
+```

@@ -2,6 +2,97 @@
 
 ---
 
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>vue 异步获取数据</title>
+    <style type="text/css">
+        div{
+            margin: 20px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+ 
+<!-- vue ajax获取数据 -->
+<div class="vue-box">
+    <h1>{{ posts.category }}</h1>
+    <ul v-for="item in posts.article">
+        <li>{{ item.title }}</li>
+        <li>{{ item.author }}</li>
+    </ul>
+</div>
+ 
+<!-- 引入veujs -->
+<script src="./js/vue.js"></script>
+<!-- 引入用于配合vuejs执行ajax操作的插件 -->
+<script src="./js/vue-resource.min.js"></script>
+ 
+<script>
+// ajax 获取数据
+var vm2=new Vue({
+    el: '.vue-ajax',
+    data: {
+        posts:{}
+    },
+    // 页面加载的时候会自动执行ready
+    ready: function(){
+        // 等同于jquery的$.ajax
+        this.$http.get('data.php').then(function(response){
+                this.posts=response.data;
+            })
+    }
+});
+</script>
+ 
+</body>
+</html>
+```
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js"></script>
+
+
+  <script>
+  var app6 = new Vue({
+    el: '#app-6',
+    data: {
+      message: 'Hello Vue!'
+    }
+  })
+  </script>
+
+</body>
+</html>
+```
+
+```js
+{
+  // GET /someUrl
+  this.$http.get('/someUrl').then((response) => {
+    // success callback
+  }, (response) => {
+    // error callback
+  });
+}
+```
+
+### :books: 參考網站：
+- https://github.com/pagekit/vue-resource
+
+---
+
 ```html
 <!DOCTYPE html>
 <html lang="en">

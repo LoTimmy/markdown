@@ -223,8 +223,6 @@ function drawChart() {
 > 「`cc_lang_pref`」可設定影片字幕的語言。
 > 「`cc_load_policy=1`」預設開啟字幕。
 
-
-
 ### :books: 參考網站：
 - https://support.google.com/youtube/answer/6172631?hl=zh-Hant
 - https://support.google.com/youtube/answer/171780?hl=zh-Hant
@@ -233,3 +231,8 @@ function drawChart() {
 ---
 
 DNS_PROBE_FINISHED_NXDOMAIN
+
+
+---
+
+- https://fonts.google.com/earlyaccess#Noto+Sans+TC

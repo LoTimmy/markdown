@@ -1,6 +1,11 @@
 - http://rubyinstaller.org/downloads/
 
+<img src="http://i.imgur.com/COF6WsD.png" width="200">
+
 ![](https://cdn.rubyinstaller.org/images/logo.png)
+
+> `Compass` 是開放原始碼 `CSS` 撰寫架構，可讓您使用 `Sass` 來建立 `CSS3` 樣式表。
+
 
 
 ```console

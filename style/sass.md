@@ -23,7 +23,6 @@ shell> sass --style compact input.scss output.css
 shell> sass --style compressed input.scss output.css
 shell> sass --style expanded input.scss output.css
 
-
 shell> sass --watch input.scss:output.css
 shell> sass --watch app/sass:public/stylesheets
 
@@ -32,6 +31,8 @@ shell> sass-convert style.sass style.scss
 
 # Convert SCSS to Sass
 shell> sass-convert style.scss style.sass
+
+shell> sass-convert style.css style.scss
 ```
 ---
 

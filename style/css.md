@@ -516,10 +516,31 @@ shell> bower install --save normalize-css
 - [Semantic UI](http://semantic-ui.com/)
 - http://susy.oddbird.net/
 
+
+
 ---
 
+<a href="https://jsfiddle.net/u6bsgrt9/"><img src="http://i.imgur.com/A9cwqLx.png" width="50"></a>
+
+```css
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+* {
+  font-family: 'Noto Sans TC', sans-serif;
+}
 ```
+
+---
+
+```css
 @charset "UTF-8";
 @charset "iso-8859-15";
 ```
 - [@charset](https://developer.mozilla.org/en-US/docs/Web/CSS/@charset)
+
+---
+
+```css
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+font-family: 'Noto Sans TC', sans-serif;
+
+```
