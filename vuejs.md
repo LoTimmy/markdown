@@ -2,78 +2,59 @@
 
 ---
 
-```
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>vue 异步获取数据</title>
-    <style type="text/css">
-        div{
-            margin: 20px;
-            border: 1px solid red;
-        }
-    </style>
-</head>
-<body>
- 
-<!-- vue ajax获取数据 -->
-<div class="vue-box">
-    <h1>{{ posts.category }}</h1>
-    <ul v-for="item in posts.article">
-        <li>{{ item.title }}</li>
-        <li>{{ item.author }}</li>
-    </ul>
-</div>
- 
-<!-- 引入veujs -->
-<script src="./js/vue.js"></script>
-<!-- 引入用于配合vuejs执行ajax操作的插件 -->
-<script src="./js/vue-resource.min.js"></script>
- 
-<script>
-// ajax 获取数据
-var vm2=new Vue({
-    el: '.vue-ajax',
-    data: {
-        posts:{}
+```json
+{
+  "Name": "John Doe",
+  "PhoneNumbers": [
+    {
+      "Location": "Home",
+      "Number": "555-555-1234"
     },
-    // 页面加载的时候会自动执行ready
-    ready: function(){
-        // 等同于jquery的$.ajax
-        this.$http.get('data.php').then(function(response){
-                this.posts=response.data;
-            })
+    {
+      "Location": "Work",
+      "Number": "555-555-9999 Ext. 123"
     }
-});
-</script>
- 
-</body>
-</html>
+  ]
+}
 ```
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title></title>
-</head>
-<body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
-  <script src="https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js"></script>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
 
+  <body>
+    <div id="app">
+      {{ data.Name }}
+      <ul v-for="item in data.PhoneNumbers">
+        <li> {{ item.Location }} </li>
+        <li> {{ item.Number }} </li>
+      </ul>
+    </div>
 
-  <script>
-  var app6 = new Vue({
-    el: '#app-6',
-    data: {
-      message: 'Hello Vue!'
-    }
-  })
-  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js"></script>
 
-</body>
+    <script>
+      var app = new Vue({
+        el: '#app',
+        data: {
+          data: {}
+        },
+
+        created: function() {
+          this.$http.get('/2.json').then((response) => {
+            this.data = response.data;
+            console.log(response.data);
+          });
+        }
+      })
+
+    </script>
+  </body>
 </html>
 ```
 

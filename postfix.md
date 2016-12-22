@@ -449,6 +449,9 @@ MAILDIR=$HOME/Mail
 
 ---
 
+
+![Imgur](http://i.imgur.com/EMVHPdi.png)
+
 ```
 mydomain.com.   3600    IN  TXT "v=spf1 mx mx:mydomain.com -all"
 mydomain.com.   3600    IN  TXT "v=spf1 ip4:192.168.1.100 -all"

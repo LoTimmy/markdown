@@ -1,12 +1,9 @@
 - http://rubyinstaller.org/downloads/
 
-<img src="http://i.imgur.com/COF6WsD.png" width="200">
-
-![](https://cdn.rubyinstaller.org/images/logo.png)
+<img src="http://i.imgur.com/WQ9Fm38.png" width="200">
+<img src="https://cdn.rubyinstaller.org/images/logo.png" width="200">
 
 > `Compass` 是開放原始碼 `CSS` 撰寫架構，可讓您使用 `Sass` 來建立 `CSS3` 樣式表。
-
-
 
 ```console
 shell> gem update --system
@@ -58,12 +55,11 @@ To import your new stylesheets add the following lines of HTML (or equivalent) t
 </head>
 ```
 
-```
+```console
 shell> compass version
 ```
 
 ```
-$ compass version
 Compass 1.0.3 (Polaris)
 Copyright (c) 2008-2016 Chris Eppstein
 Released under the MIT License.
