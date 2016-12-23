@@ -197,12 +197,19 @@ a:active, a:hover { text-decoration: underline; }
   color: #ff0000;
 }
 
+bottom: 3px;
+right: 3px;
+
+
 ```
 
 ### :books: 參考網站：
 - [max-height](https://developer.mozilla.org/en-US/docs/Web/CSS/max-height)
 - [max-width](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width)
-
+- [bottom](https://developer.mozilla.org/en-US/docs/Web/CSS/bottom)
+- [top](https://developer.mozilla.org/en-US/docs/Web/CSS/top)
+- [left](https://developer.mozilla.org/en-US/docs/Web/CSS/left)
+- [right](https://developer.mozilla.org/en-US/docs/Web/CSS/right)
 
 ---
 
@@ -555,7 +562,7 @@ shell> bower install --save normalize-css
 
 ```css
 font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif !important;
-font-size: 2.5em;
+font-size: 14px;
 font-weight: 900;
 text-shadow: black 0.01em 0.01em 0.05em !important; 
 ```
