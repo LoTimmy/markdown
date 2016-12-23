@@ -142,6 +142,11 @@ margin-left: 3%;
 margin-right: 10px;
 margin-top: 10px;
 
+
+max-width: 100%;
+max-height: 100%;
+max-height: none;
+
 -moz-border-radius: 10em 0 5em 2em;
 -moz-border-radius: 10px;
 -moz-box-shadow: 10px 10px 10px #FFFFCC inset;
@@ -160,6 +165,7 @@ text-decoration: overline;
 text-decoration: underline;
 
 visibility: hidden;
+visibility: visible;
 
 /* Content is clipped, with no scrollbars */
 overflow-y: hidden;
@@ -192,6 +198,11 @@ a:active, a:hover { text-decoration: underline; }
 }
 
 ```
+
+### :books: 參考網站：
+- [max-height](https://developer.mozilla.org/en-US/docs/Web/CSS/max-height)
+- [max-width](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width)
+
 
 ---
 
@@ -524,6 +535,7 @@ shell> bower install --save normalize-css
 
 ```css
 @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
 * {
   font-family: 'Noto Sans TC', sans-serif;
 }
@@ -535,12 +547,20 @@ shell> bower install --save normalize-css
 @charset "UTF-8";
 @charset "iso-8859-15";
 ```
+
+### :books: 參考網站：
 - [@charset](https://developer.mozilla.org/en-US/docs/Web/CSS/@charset)
 
 ---
 
 ```css
-@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
-font-family: 'Noto Sans TC', sans-serif;
-
+font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif !important;
+font-size: 2.5em;
+font-weight: 900;
+text-shadow: black 0.01em 0.01em 0.05em !important; 
 ```
+
+### :books: 參考網站：
+- [text-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow)
+- [Microsoft JhengHei](https://www.microsoft.com/typography/fonts/family.aspx?FID=368)
+- [](https://www.microsoft.com/typography/fonts/family.aspx?FID=350)
