@@ -174,6 +174,7 @@ shell> bfg --no-blob-protection --delete-files id_{dsa,rsa} HelloWorld.git
 
 ```console
 shell> git log --pretty=oneline
+shell> git log --pretty=oneline --abbrev-commit
 shell> git remote add origin https://github.com/you/HelloWorld.git
 ```
 
