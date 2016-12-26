@@ -1,9 +1,10 @@
 
 ![](http://i.imgur.com/hSMa5Oy.png)
 
+![](https://developer.mozilla.org/files/4109/padding-bottom.svg)
+
 ##### CSS 规则示意图
 ![](http://www.ibm.com/developerworks/cn/web/1311_huangwh_jqueryhandson/image003.jpg)
-
 
 要将页面中一个 ID 为 message 的元素的字体颜色设置为蓝色、字体大小设置为 17px
 ```css

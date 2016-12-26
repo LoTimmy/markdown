@@ -301,3 +301,16 @@ const About = { template: '<p>about page</p>' }
 ### :books: 參考網站：
 - [vuejs](https://vuejs.org/)
 
+---
+
+```console
+shell> npm install -g vue-cli
+```
+
+```console
+shell> vue init <template-name> <project-name>
+shell> vue init webpack my-project
+```
+
+### :books: 參考網站：
+- [vue-cli](https://github.com/vuejs/vue-cli)

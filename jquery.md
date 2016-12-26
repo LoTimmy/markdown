@@ -216,6 +216,7 @@ $('#tip2').bind('click', {
 - [使用 jQuery 进行基于 DOM 的数据存储和检索 ](http://www.ibm.com/developerworks/cn/web/wa-domjquery/)
 - [.mouseout()](https://api.jquery.com/mouseout/)
 - [.css()](https://api.jquery.com/css/)
+- https://msdn.microsoft.com/en-us/library/bb299886.aspx
 
 ---
 

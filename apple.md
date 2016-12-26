@@ -4,10 +4,15 @@
 <!-- <img src="http://i.imgur.com/t51VWq9.png" width="100"> -->
 
 <kbd>Command ⌘</kbd>
+
 <kbd>Option ⌥</kbd>
+
 <kbd>Caps Lock ⇪</kbd>
+
 <kbd>Control ⌃</kbd>
+
 <kbd>Shift ⇧</kbd>
+
 <kbd>Fn</kbd>
 
 ### :books: 參考網站：
@@ -445,3 +450,4 @@ GC1HA-01Z14-H8D2P-04NNZ-Z6RY0
 ### :books: 參考網站：
 - https://support.apple.com/zh-tw/HT201253
 - [使用 AirDrop 從 Mac 傳送內容](https://support.apple.com/zh-tw/HT203106)
+- [透過 Apple ID 裝置列表來查看您所登入的裝置](https://support.apple.com/zh-tw/HT205064)

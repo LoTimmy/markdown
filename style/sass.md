@@ -292,4 +292,13 @@ $font-size: 20px;
   background: yellow;
   font-size: 20px; }
 ```
+---
 
+```sass
+invert($color)
+lighten($color, $amount)
+
+```
+
+### :books: 參考網站：
+- http://sass-lang.com/documentation/Sass/Script/Functions.html
