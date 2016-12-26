@@ -428,3 +428,12 @@ GC1HA-01Z14-H8D2P-04NNZ-Z6RY0
 [http://support.apple.com/kb/HT1629](http://support.apple.com/kb/HT1629)
 [https://developer.apple.com/library/mac/documentation/Darwin/Reference/Manpages/man8/diskutil.8.html](https://developer.apple.com/library/mac/documentation/Darwin/Reference/Manpages/man8/diskutil.8.html)
 [http://developer.apple.com/library/mac/#documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html](http://developer.apple.com/library/mac/#documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html)
+
+---
+
+![](https://support.apple.com/library/content/dam/edam/applecare/images/zh_TW/mac_apps/itunes/macos-itunes12-5-device-callout.jpg)
+![](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/mac_apps/itunes/osx-elcapitan-itunes12-4-device-iphone-icon.png)
+![](https://support.apple.com/library/content/dam/edam/applecare/images/zh_TW/mac_apps/itunes/macos-itunes12-5-device-summary.jpg)
+### :books: 參考網站：
+- https://support.apple.com/zh-tw/HT201253
+- [使用 AirDrop 從 Mac 傳送內容](https://support.apple.com/zh-tw/HT203106)
