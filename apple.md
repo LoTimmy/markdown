@@ -16,24 +16,32 @@
 ---
 
 > <kbd>Command ⌘</kbd> + <kbd>Shift ⇧</kbd> + <kbd>+</kbd> 放大所選項目。
-<kbd>Command ⌘</kbd> + <kbd>Shift ⇧</kbd> + <kbd>-</kbd> 縮小所選項目。
-<kbd>Command ⌘</kbd> + <kbd>0</kbd>
+
+> <kbd>Command ⌘</kbd> + <kbd>Shift ⇧</kbd> + <kbd>-</kbd> 縮小所選項目。
+
+> <kbd>Command ⌘</kbd> + <kbd>0</kbd>
 
 **睡眠、登出和關機快速鍵**
 
 > <kbd>Shift ⇧</kbd> + <kbd>Control ⌃</kbd> + <kbd>電源按鈕</kbd> 使顯示器進入睡眠。 
-<kbd>Command ⌘</kbd> + <kbd>Control ⌃</kbd> + <kbd>電源按鈕</kbd> 強制 Mac 重新啟動。 
-<kbd>Command ⌘</kbd> + <kbd>Shift ⇧</kbd> + <kbd>Option ⌥</kbd> + <kbd>Q</kbd> 立即登出 OS X 使用者帳號，系統不會要求確認。   
-<kbd>Command ⌘</kbd> + <kbd>Shift ⇧</kbd> + <kbd>Q</kbd> 登出 OS X 使用者帳號。系統會要求您確認。 
-<kbd>Command ⌘</kbd> + <kbd>Option ⌥</kbd> + <kbd>Control ⌃</kbd> + <kbd>電源按鈕</kbd> 結束所有 app，然後將 Mac 關機。如果任何開啟中文件尚有未儲存的變更，系統會詢問您是否要儲存。  
+
+> <kbd>Command ⌘</kbd> + <kbd>Control ⌃</kbd> + <kbd>電源按鈕</kbd> 強制 Mac 重新啟動。 
+
+> <kbd>Command ⌘</kbd> + <kbd>Shift ⇧</kbd> + <kbd>Option ⌥</kbd> + <kbd>Q</kbd> 立即登出 OS X 使用者帳號，系統不會要求確認。   
+
+> <kbd>Command ⌘</kbd> + <kbd>Shift ⇧</kbd> + <kbd>Q</kbd> 登出 OS X 使用者帳號。系統會要求您確認。 
+
+> <kbd>Command ⌘</kbd> + <kbd>Option ⌥</kbd> + <kbd>Control ⌃</kbd> + <kbd>電源按鈕</kbd> 結束所有 app，然後將 Mac 關機。如果任何開啟中文件尚有未儲存的變更，系統會詢問您是否要儲存。  
 
 ---
 
 **Finder 快速鍵**
 
 > <kbd>Command ⌘</kbd> + <kbd>E</kbd> 退出所選磁碟或卷宗。
-<kbd>Command ⌘</kbd> + <kbd>Shift ⇧</kbd> + <kbd>Delete</kbd> 清空垃圾桶。
-<kbd>Command ⌘</kbd> + <kbd>Shift ⇧</kbd> + <kbd>Option ⌥</kbd> + <kbd>Delete</kbd> 不顯示確認對話框便直接清空垃圾桶。
+
+> <kbd>Command ⌘</kbd> + <kbd>Shift ⇧</kbd> + <kbd>Delete</kbd> 清空垃圾桶。
+
+> <kbd>Command ⌘</kbd> + <kbd>Shift ⇧</kbd> + <kbd>Option ⌥</kbd> + <kbd>Delete</kbd> 不顯示確認對話框便直接清空垃圾桶。
 
 ---
 
@@ -428,3 +436,12 @@ GC1HA-01Z14-H8D2P-04NNZ-Z6RY0
 [http://support.apple.com/kb/HT1629](http://support.apple.com/kb/HT1629)
 [https://developer.apple.com/library/mac/documentation/Darwin/Reference/Manpages/man8/diskutil.8.html](https://developer.apple.com/library/mac/documentation/Darwin/Reference/Manpages/man8/diskutil.8.html)
 [http://developer.apple.com/library/mac/#documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html](http://developer.apple.com/library/mac/#documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html)
+
+---
+
+![](https://support.apple.com/library/content/dam/edam/applecare/images/zh_TW/mac_apps/itunes/macos-itunes12-5-device-callout.jpg)
+![](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/mac_apps/itunes/osx-elcapitan-itunes12-4-device-iphone-icon.png)
+![](https://support.apple.com/library/content/dam/edam/applecare/images/zh_TW/mac_apps/itunes/macos-itunes12-5-device-summary.jpg)
+### :books: 參考網站：
+- https://support.apple.com/zh-tw/HT201253
+- [使用 AirDrop 從 Mac 傳送內容](https://support.apple.com/zh-tw/HT203106)
