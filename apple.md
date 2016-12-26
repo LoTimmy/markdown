@@ -22,18 +22,18 @@
 **睡眠、登出和關機快速鍵**
 
 > <kbd>Shift ⇧</kbd> + <kbd>Control ⌃</kbd> + <kbd>電源按鈕</kbd> 使顯示器進入睡眠。 
-<kbd>Command ⌘</kbd> + <kbd>Control ⌃</kbd> + <kbd>電源按鈕</kbd> 強制 Mac 重新啟動。 
-<kbd>Command ⌘</kbd> + <kbd>Shift ⇧</kbd> + <kbd>Option ⌥</kbd> + <kbd>Q</kbd> 立即登出 OS X 使用者帳號，系統不會要求確認。   
-<kbd>Command ⌘</kbd> + <kbd>Shift ⇧</kbd> + <kbd>Q</kbd> 登出 OS X 使用者帳號。系統會要求您確認。 
-<kbd>Command ⌘</kbd> + <kbd>Option ⌥</kbd> + <kbd>Control ⌃</kbd> + <kbd>電源按鈕</kbd> 結束所有 app，然後將 Mac 關機。如果任何開啟中文件尚有未儲存的變更，系統會詢問您是否要儲存。  
+> <kbd>Command ⌘</kbd> + <kbd>Control ⌃</kbd> + <kbd>電源按鈕</kbd> 強制 Mac 重新啟動。 
+> <kbd>Command ⌘</kbd> + <kbd>Shift ⇧</kbd> + <kbd>Option ⌥</kbd> + <kbd>Q</kbd> 立即登出 OS X 使用者帳號，系統不會要求確認。   
+> <kbd>Command ⌘</kbd> + <kbd>Shift ⇧</kbd> + <kbd>Q</kbd> 登出 OS X 使用者帳號。系統會要求您確認。 
+> <kbd>Command ⌘</kbd> + <kbd>Option ⌥</kbd> + <kbd>Control ⌃</kbd> + <kbd>電源按鈕</kbd> 結束所有 app，然後將 Mac 關機。如果任何開啟中文件尚有未儲存的變更，系統會詢問您是否要儲存。  
 
 ---
 
 **Finder 快速鍵**
 
 > <kbd>Command ⌘</kbd> + <kbd>E</kbd> 退出所選磁碟或卷宗。
-<kbd>Command ⌘</kbd> + <kbd>Shift ⇧</kbd> + <kbd>Delete</kbd> 清空垃圾桶。
-<kbd>Command ⌘</kbd> + <kbd>Shift ⇧</kbd> + <kbd>Option ⌥</kbd> + <kbd>Delete</kbd> 不顯示確認對話框便直接清空垃圾桶。
+> <kbd>Command ⌘</kbd> + <kbd>Shift ⇧</kbd> + <kbd>Delete</kbd> 清空垃圾桶。
+> <kbd>Command ⌘</kbd> + <kbd>Shift ⇧</kbd> + <kbd>Option ⌥</kbd> + <kbd>Delete</kbd> 不顯示確認對話框便直接清空垃圾桶。
 
 ---
 
