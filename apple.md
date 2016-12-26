@@ -38,7 +38,9 @@
 **Finder 快速鍵**
 
 > <kbd>Command ⌘</kbd> + <kbd>E</kbd> 退出所選磁碟或卷宗。
+
 > <kbd>Command ⌘</kbd> + <kbd>Shift ⇧</kbd> + <kbd>Delete</kbd> 清空垃圾桶。
+
 > <kbd>Command ⌘</kbd> + <kbd>Shift ⇧</kbd> + <kbd>Option ⌥</kbd> + <kbd>Delete</kbd> 不顯示確認對話框便直接清空垃圾桶。
 
 ---
