@@ -33,7 +33,7 @@ MyWebsite/
 
 ---
 
-**doctype**<a name="doctype"></a>
+`doctype`<a name="doctype"></a>
 
 ```html
 <!doctype html>
@@ -74,7 +74,7 @@ MyWebsite/
 
 ---
 
-**script**<a name="script"></a>
+`script`<a name="script"></a>
 
 ```html
 <!-- HTML4 and (x)HTML -->
@@ -103,8 +103,7 @@ MyWebsite/
 - [alert](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert)
 
 ---
-**css**
-<a name="css"></a>
+`css`<a name="css"></a>
 
 ```html
 <link rel="shortcut icon" href="https://www.example.com/H3nktOa7ZMg.ico">	
@@ -137,8 +136,7 @@ MyWebsite/
 ```
 
 ---
-**meta**
-<a name="meta"></a>
+`meta`<a name="meta"></a>
 
 ```html
 <meta charset="utf-8">
@@ -201,7 +199,7 @@ MyWebsite/
 
 <img src="http://ogp.me/logo.png" width="200">
 
-`opengraph`
+`opengraph`<a name="opengraph"></a>
 
 ```html
 <meta property="og:type" content="article" />
@@ -232,6 +230,71 @@ MyWebsite/
 
 ---
 
+```css
+list-style-type: disc;
+list-style-type: circle;
+list-style-type: square;
+list-style-type: decimal;
+list-style-type: georgian;
+list-style-type: cjk-ideographic;
+list-style-type: kannada;
+```
+
+<a href="https://jsfiddle.net/grpkdp33/"><img src="http://i.imgur.com/A9cwqLx.png" width="50"></a>
+
+```html
+<ul>
+  <li></li>
+</ul>
+
+<ul style="list-style-type: square;">
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+
+<ul style="list-style-type: decimal;">
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+
+<ul style="list-style-type: decimal-leading-zero;">
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+
+<ul style="list-style-type: lower-alpha;">
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+
+<ul style="list-style-type: upper-alpha;">
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+
+<ul style="list-style-type: lower-roman;">
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+
+<ul style="list-style-type: trad-chinese-formal;">
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+
+<ul style="list-style-type: trad-chinese-informal;">
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+```
+
+- [list-style-type](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type)
+- [list-style](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style)
+- [list-style-image](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-image)
+- https://msdn.microsoft.com/zh-tw/library/1f6ss9cc(v=vs.100).aspx
+
+---
+
 ```html
 <option selected="" value="">請擇一</option>	
 <option selected="" value="">Select one</option>	
@@ -239,8 +302,7 @@ MyWebsite/
 <body> </body>
 <div> </div>
 <div id="clickme"> </div>
-<ul> </ul>
-<li> </li>
+
 
 <h1>Hello, world!</h1>
 <h2> </h2>

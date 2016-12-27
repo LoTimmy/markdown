@@ -2,6 +2,50 @@
 ![](http://i.imgur.com/hSMa5Oy.png)
 
 ![](https://developer.mozilla.org/files/4109/padding-bottom.svg)
+![](https://mdn.mozillademos.org/files/11781/rendering.svg)
+
+---
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My CSS experiment</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <p>This is my first CSS example</p>
+  </body>
+</html>
+```
+
+`style.css`
+```css
+h1 {
+  color: blue;
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+p {
+  color: red;
+}
+```
+
+---
+
+```html
+<style>
+  body {
+    background-color: #CFCFCF;
+  }
+  @import url("otherStyleSheet.css");
+</style>
+```
+
+---
 
 ##### CSS 规则示意图
 ![](http://www.ibm.com/developerworks/cn/web/1311_huangwh_jqueryhandson/image003.jpg)

@@ -819,3 +819,12 @@ setInterval(function() {
 
 - [jQuery.Marquee](https://github.com/aamirafridi/jQuery.Marquee)
 
+---
+
+```html
+<script>
+  window.onload = fnInit;
+
+  function fnInit() {}
+</script>
+```
