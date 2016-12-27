@@ -225,6 +225,7 @@ MyWebsite/
 
 ![Imgur](http://i.imgur.com/DXvQWTV.png)
 
+### :books: 參考網站：
 - [Open Graph protocol](http://ogp.me/)
 - [opengraph](https://developers.facebook.com/docs/sharing/opengraph)
 
@@ -288,6 +289,7 @@ list-style-type: kannada;
 </ul>
 ```
 
+### :books: 參考網站：
 - [list-style-type](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type)
 - [list-style](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style)
 - [list-style-image](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-image)
@@ -332,8 +334,7 @@ id="myDiv"
 ```
 
 ---
-**form**
-<a name="form"></a>
+`form`<a name="form"></a>
 
 ```html
 <form> </form>
@@ -375,7 +376,8 @@ id="myDiv"
 ```
 ---
 
-[f188595e.html](https://dl.dropboxusercontent.com/u/4276183/docs/f188595e.html)
+<a href="https://jsfiddle.net/y9po4nxv/"><img src="http://i.imgur.com/A9cwqLx.png" width="50"></a>
+
 ```html
 <!DOCTYPE HTML>
 <html lang="en">
@@ -439,10 +441,8 @@ id="myDiv"
         // alert( $( "#myselect option:selected" ).text() );
         alert($("#myselect").val());
       });
-
     </script>
   </body>
-
 </html>
 
 <!-- Bootstrap core CSS -->
@@ -454,6 +454,7 @@ id="myDiv"
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Varela+Round">
 ```
+
 `data_URIs`
 
 ```html
@@ -478,9 +479,7 @@ AAAFSDNYfAAAAaklEQVR42u3XQQrAIAwAQeP%2F%2F6wf8CJBJTK9lnQ7FpHGaOurt1
 I34nfH9pMMZAZ8BwMGEvvh%2BBsJCAgICLwIOA8EBAQEBAQEBAQEBK79H5RfIQAAAAA
 AAAAAAAAAAAAAAAAAAAAAAID%2FABMSqAfj%2FsLmvAAAAABJRU5ErkJggg%3D%3D">mygraphic.png</a>
   </body>
-
 </html>
-
 ```
 
 ### :books: 參考網站：
@@ -509,7 +508,6 @@ a {
 ```html
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta http-equiv="refresh" content="0;url=pages/index.html">
     <title>Untitled</title>
@@ -579,7 +577,6 @@ a {
     // Find another way to add the rows to the table because 
     // the HTML template element is not supported.
   }
-
 </script>
 ```
 
@@ -621,6 +618,11 @@ myfile2.html
 
 
 ---
+
+<img src="http://placehold.it/60/ffffff/000000">
+<img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=&w=800&h=300">
+<img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=img&w=800&h=300">
+<img src="https://placeholdit.imgix.net/~text?txtsize=8&bg=008000&txtclr=000000&txt=&w=60&h=60">
 
 - http://placehold.it/60/ffffff/000000
 - https://placeholdit.imgix.net/~text?txtsize=75&txt=&w=800&h=300
