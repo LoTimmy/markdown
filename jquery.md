@@ -60,7 +60,7 @@ objTargetElements.action(actionParameter);
 <html>
   <head>
     <title>使用 jQuery</title>
-    <script src='//ajax.googleapis.com/ajax/libs/jQuery/1.9.1/jQuery.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
 
   <body>
@@ -817,6 +817,7 @@ setInterval(function() {
 ```
 ---
 
+### :books: 參考網站：
 - [jQuery.Marquee](https://github.com/aamirafridi/jQuery.Marquee)
 
 ---
@@ -828,3 +829,156 @@ setInterval(function() {
   function fnInit() {}
 </script>
 ```
+
+---
+
+```js
+function Person(firstName) {
+  this.age = 0;
+  this.firstName = firstName;
+
+  setInterval(function growUp() {
+    this.age++;
+  }, 1000);
+};
+
+Person.prototype = {
+  sayHello: function() {
+    console.log("Hello, I'm " + this.firstName);
+  },
+  walk: function() {
+    console.log("I am walking!");
+  },
+  sayGoodBye: function() {
+    console.log("Goodbye!");
+  }
+};
+
+/*
+var p = new Person();
+var person1 = new Person();
+var person2 = new Person();
+*/
+
+var person1 = new Person('Alice');
+var person2 = new Person('Bob');
+
+console.log('person1 is ' + person1.firstName); // logs "person1 is Alice"
+console.log('person2 is ' + person2.firstName); // logs "person2 is Bob"
+
+person1.sayHello();
+person2.sayHello();
+
+person1.walk();
+person2.walk();
+```
+---
+
+<img src="https://jqueryvalidation.org/wp-content/themes/jqueryvalidation/jQVP_Logo_gr.png" width="200">
+
+bower install jquery-validation
+
+```html
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.min.js"></script>
+```
+
+
+https://jsfiddle.net/18mgdre5/
+
+```html
+<form class="cmxform" id="commentForm" method="get" action="">
+  <fieldset>
+    <legend>Please provide your name, email address (won't be published) and a comment</legend>
+    <p>
+      <label for="cname">Name (required, at least 2 characters)</label>
+      <input id="cname" name="name" minlength="2" type="text" required>
+    </p>
+    <p>
+      <label for="cemail">E-Mail (required)</label>
+      <input id="cemail" type="email" name="email" required>
+    </p>
+    <p>
+      <label for="curl">URL (optional)</label>
+      <input id="curl" type="url" name="url">
+    </p>
+    <p>
+      <label for="ccomment">Your comment (required)</label>
+      <textarea id="ccomment" name="comment" required></textarea>
+    </p>
+    <p>
+      <input class="submit" type="submit" value="Submit">
+    </p>
+  </fieldset>
+</form>
+<script>
+  $("#commentForm").validate();
+</script>
+```
+
+```js
+$("#myform").validate({
+  rules: {
+    field: {
+      required: true,
+      step: 10
+    }
+  }
+});
+```
+
+### :books: 參考網站：
+- [jQuery Validation Plugin](https://jqueryvalidation.org/)
+- https://jqueryvalidation.org/require_from_group-method/
+- https://jqueryvalidation.org/normalizer/
+- https://jqueryvalidation.org/step-method/
+- https://jqueryvalidation.org/
+
+---
+
+```
+
+```
+
+```js
+$.ajax({
+  dataType: 'mycustomtype',
+  dataType: "script",
+  dataType: "html",
+  dataType: "json",
+  dataType: "jsonp",
+  dataType: "xml",
+  dataType: "text",
+
+  url: "test.html",
+  url: "test.js",
+  url: "script.php",
+
+  method: "POST",
+  method: "GET",
+
+  data: { name: "John", location: "Boston" },
+  data: { id : menuId },
+
+  global: false,
+
+  cache: false,
+});
+
+```
+
+
+```js
+$.ajax({
+  url: "script.php",
+  dataType: "json",
+  method: "POST",
+});
+```
+
+
+### :books: 參考網站：
+- http://api.jquery.com/jquery.ajax/

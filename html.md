@@ -298,13 +298,12 @@ list-style-type: kannada;
 ---
 
 ```html
-<option selected="" value="">請擇一</option>	
-<option selected="" value="">Select one</option>	
+<option selected="" value="">請擇一</option>
+<option selected="" value="">Select one</option>
 
 <body> </body>
 <div> </div>
 <div id="clickme"> </div>
-
 
 <h1>Hello, world!</h1>
 <h2> </h2>
@@ -313,8 +312,8 @@ list-style-type: kannada;
 <label>	</label>
 <textarea> </textarea>
 <button> </button>
-<br>	
-<br />	
+<br>
+<br />
 <p>	</p>
 <b>	</b>
 <i>	</i>
@@ -553,7 +552,6 @@ a {
 
 <script type="text/javascript">
   if ('content' in document.createElement('template')) {
-
     // Instantiate the table with the existing HTML tbody and the row with the template
     var t = document.querySelector('#productrow'),
       td = t.content.querySelectorAll("td");
@@ -572,7 +570,6 @@ a {
     // Clone the new row and insert it into the table
     var clone2 = document.importNode(t.content, true);
     tb[0].appendChild(clone2);
-
   } else {
     // Find another way to add the rows to the table because 
     // the HTML template element is not supported.
@@ -619,10 +616,6 @@ myfile2.html
 
 ---
 
-<img src="http://placehold.it/60/ffffff/000000">
-<img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=&w=800&h=300">
-<img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=img&w=800&h=300">
-<img src="https://placeholdit.imgix.net/~text?txtsize=8&bg=008000&txtclr=000000&txt=&w=60&h=60">
 
 - http://placehold.it/60/ffffff/000000
 - https://placeholdit.imgix.net/~text?txtsize=75&txt=&w=800&h=300

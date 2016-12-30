@@ -2,9 +2,10 @@
 ![](http://i.imgur.com/hSMa5Oy.png)
 
 ![](https://developer.mozilla.org/files/4109/padding-bottom.svg)
-![](https://mdn.mozillademos.org/files/11781/rendering.svg)
 
 ---
+
+**`External stylesheet`**
 
 ```html
 <!DOCTYPE html>
@@ -44,6 +45,51 @@ p {
   @import url("otherStyleSheet.css");
 </style>
 ```
+
+**`Internal stylesheet`**
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My CSS experiment</title>
+    <style>
+      h1 {
+        color: blue;
+        background-color: yellow;
+        border: 1px solid black;
+      }
+
+      p {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <p>This is my first CSS example</p>
+  </body>
+</html>
+
+```
+
+**`Inline styles`**
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My CSS experiment</title>
+  </head>
+  <body>
+    <h1 style="color: blue;background-color: yellow;border: 1px solid black;">Hello World!</h1>
+    <p style="color:red;">This is my first CSS example</p>
+  </body>
+</html>
+```
+### :books: 參考網站：
+- [How_CSS_works](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works)
 
 ---
 
@@ -122,8 +168,24 @@ background-image: none;
 background-image: url("http://www.example.com/bck.png");
 background-image: inherit;
 
+background-attachment: fixed;
+
 background-repeat: repeat;
 background-repeat: no-repeat;
+
+background-position: top;
+background-position: bottom;
+background-position: left;
+background-position: right;
+background-position: center;
+background-position: 25% 75%;
+
+background-size: cover;
+background-size: contain;
+background-size: auto;
+background-size: 50%;
+background-size: 50% auto;
+
 background-color: #123456;
 background-color: #f11;
 background-color: red;
@@ -131,24 +193,96 @@ background-color: blue;
 background-color: lightblue;
 background-color: rgb(15, 99, 30);
 background-color: transparent;
+```
 
+```css
 border: 2px solid green;
 border: solid 2px blue;
+
 border-bottom-left-radius: 15px 30px;
 border-bottom-left-radius: 2em;
 border-bottom-right-radius: 15px 30px;
 border-bottom-right-radius: 5em;
+
 border-color: #7f7f7f;
+
 border-radius: 5px;
+
 border-style: dashed;
 border-style: solid;
+
 border-top-left-radius: 10em;
 border-top-left-radius: 50px 25px;
 border-top-left-radius: 50px 30px;
+
 border-top-right-radius: 50px 25px;
 border-top-right-radius: 50px 30px;
-border-width: 1px;
 
+border-width: 1px;
+```
+
+```css
+font: 11px Verdana, Arial, Helvetica;
+
+font-family: Arial;
+font-family: sans-serif;
+font-family: 'Microsoft JhengHei UI', 'Microsoft JhengHei', PMingLiU, MingLiU, 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+
+font-size: 20px;
+font-style: italic;
+
+font-weight: bold;
+```
+
+```css
+margin: 20px 0px 10px 75%;
+margin: 8px;
+margin: 0px auto;
+margin-left: 3%;
+margin-right: 10px;
+margin-top: 10px;
+```
+
+---
+
+```css
+display: none;
+
+display: inline;
+display: block;
+display: inline-block;
+display: contents;
+display: list-item;
+display: inline-list-item;
+display: table;
+display: inline-table;
+display: table-cell;
+display: table-column;
+display: table-column-group;
+display: table-footer-group;
+display: table-header-group;
+display: table-row;
+display: table-row-group;
+display: table-caption;
+display: flex;
+display: inline-flex;
+display: grid;
+display: inline-grid;
+display: subgrid;
+display: ruby;
+display: ruby-base;
+display: ruby-text;
+display: ruby-base-container;
+display: ruby-text-container;
+display: run-in;
+```
+
+### :books: 參考網站：
+- [display](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
+
+---
+
+```css
 box-shadow: 0 0 5px 5px sienna;
 box-shadow: 5px 5px 5px lightgray;
 
@@ -164,29 +298,42 @@ color: white;
 
 cursor: pointer;
 
-display: none;
-display: block;
+
+vertical-align: baseline;
+vertical-align: sub;
+vertical-align: super;
+vertical-align: text-top;
+vertical-align: text-bottom;
+vertical-align: middle;
+vertical-align: top;
+vertical-align: bottom;
+vertical-align: 10em;
+vertical-align: 4px;
+vertical-align: 20%;
+
+
+
+
+
+direction: ltr;
+direction: rtl;
 
 float: left;
-font: 11px Verdana, Arial, Helvetica;
-font-family: Arial;
-font-family: sans-serif;
-font-family: 'Microsoft JhengHei UI', 'Microsoft JhengHei', PMingLiU, MingLiU, 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
-font-size: 20px;
-font-style: italic;
-font-weight: bold;
+
 height: 60px;
 left: 50px;
-line-height: 25px;
+
 list-style: none;
 
-margin: 20px 0px 10px 75%;
-margin: 8px;
-margin: 0px auto;
-margin-left: 3%;
-margin-right: 10px;
-margin-top: 10px;
+letter-spacing: 0.3em;
+letter-spacing: 3px;
+letter-spacing: .3px;
 
+line-height: 25px;
+line-height: normal;
+line-height: 3.5;
+line-height: 3em;
+line-height: 34%;
 
 max-width: 100%;
 max-height: 100%;
@@ -204,10 +351,39 @@ position: absolute;
 position: relative;
 position: fixed;
 
+text-align: left;
+text-align: right;
 text-align: center;
+
 text-decoration: line-through;
 text-decoration: overline;
 text-decoration: underline;
+
+text-transform: capitalize;
+text-transform: uppercase;
+text-transform: lowercase;
+text-transform: none;
+text-transform: full-width;
+
+text-decoration: none;                 /* No text decoration */
+text-decoration: underline red;        /* Red underlining */
+text-decoration: underline wavy red;   /* Red wavy underlining */
+text-decoration: underline;
+text-decoration: overline;
+text-decoration: line-through;
+text-decoration: blink;
+text-decoration: none;
+text-decoration: underline overline;
+
+
+vertical-align: baseline;
+vertical-align: sub;
+vertical-align: super;
+vertical-align: text-top;
+vertical-align: text-bottom;
+vertical-align: middle;
+vertical-align: top;
+vertical-align: bottom;
 
 visibility: hidden;
 visibility: visible;
@@ -248,6 +424,12 @@ right: 3px;
 
 ```
 
+<a href="https://jsfiddle.net/q7dxrj3t/"><img src="http://i.imgur.com/A9cwqLx.png" width="50"></a>
+
+**`line-height`** <a href="https://jsfiddle.net/yfddkmwp/"><img src="http://i.imgur.com/A9cwqLx.png" width="50"></a>
+
+**`position`** <a href="https://jsfiddle.net/2o8qm4ft/"><img src="http://i.imgur.com/A9cwqLx.png" width="50"></a>
+
 ### :books: 參考網站：
 - [max-height](https://developer.mozilla.org/en-US/docs/Web/CSS/max-height)
 - [max-width](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width)
@@ -255,6 +437,13 @@ right: 3px;
 - [top](https://developer.mozilla.org/en-US/docs/Web/CSS/top)
 - [left](https://developer.mozilla.org/en-US/docs/Web/CSS/left)
 - [right](https://developer.mozilla.org/en-US/docs/Web/CSS/right)
+- [direction](https://developer.mozilla.org/en-US/docs/Web/CSS/direction)
+- [letter-spacing](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
+- [text-align](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align)
+- [position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
+- [text-transform](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform)
+- [text-decoration](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration)
+- [background-attachment](https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment)
 
 ---
 
@@ -616,3 +805,78 @@ text-shadow: black 0.01em 0.01em 0.05em !important;
 - [text-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow)
 - [Microsoft JhengHei](https://www.microsoft.com/typography/fonts/family.aspx?FID=368)
 - [](https://www.microsoft.com/typography/fonts/family.aspx?FID=350)
+
+
+---
+
+### :books: 參考網站：
+- [linear-gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient)
+
+---
+
+```html
+<ul class="one"> List 1
+  <li>List Item 1-1</li>
+  <li>List Item 1-2</li>
+  <li>List Item 1-3</li>
+  <li>List Item 1-4</li>
+</ul>
+<ul class="two"> List 2
+  <li>List Item 2-1</li>
+  <li>List Item 2-2</li>
+  <li>List Item 2-3</li>
+  <li>List Item 2-4</li>
+</ul>
+<ul class="three"> List 3
+  <li>List Item 3-1</li>
+  <li>List Item 3-2</li>
+  <li>List Item 3-3</li>
+  <li>List Item 3-4</li>
+</ul>
+```
+
+```css
+.one {
+  list-style:square inside;
+}
+
+.two {
+  list-style-position: outside;
+  list-style-type: circle;
+}
+
+.three {
+  list-style-image: url("https://mdn.mozillademos.org/files/11979/starsolid.gif");
+  list-style-position: inherit;
+}
+```
+
+### :books: 參考網站：
+- [](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position)
+
+---
+
+<a href="https://jsfiddle.net/v3wyehnn/"><img src="http://i.imgur.com/A9cwqLx.png" width="50"></a>
+
+```css
+.exciting-text::after {
+  content: "<- now this *is* exciting!";
+  color: green;
+}
+
+.boring-text::after {
+  content: "<- BORING!";
+  color: red;
+}
+```
+
+```html
+<p class="boring-text">Here is some good old boring text.</p>
+<p>Here is some moderate text that is neither boring nor exciting.</p>
+<p class="exciting-text">Contributing to MDN is easy and fun. Just hit the edit button to add new live samples, or improve existing samples.</p>
+```
+
+### :books: 參考網站：
+- [::after](https://developer.mozilla.org/en-US/docs/Web/CSS/::after)
+- [clear](https://developer.mozilla.org/en-US/docs/Web/CSS/clear)
+---

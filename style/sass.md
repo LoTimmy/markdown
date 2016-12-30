@@ -296,7 +296,17 @@ $font-size: 20px;
 
 ```sass
 invert($color)
+mix($color1, $color2)
 lighten($color, $amount)
+darken($color, $amount)
+
+
+
+mix(#f00, #00f) => #7f007f
+mix(#f00, #00f, 25%) => #3f00bf
+
+lighten(#800, 20%) => #e00
+darken(#800, 20%) => #200
 
 ```
 
