@@ -760,6 +760,7 @@ shell> bower install --save normalize-css
 ### :books: 參考網站：
 - [svg4everybody](https://github.com/jonathantneal/svg4everybody)
 - [svg4everybody](https://jonathantneal.github.io/svg4everybody/)
+
 ---
 
 ### :books: 參考網站：
@@ -852,7 +853,7 @@ text-shadow: black 0.01em 0.01em 0.05em !important;
 ```
 
 ### :books: 參考網站：
-- [](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position)
+- [list-style-position](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position)
 
 ---
 
@@ -879,4 +880,5 @@ text-shadow: black 0.01em 0.01em 0.05em !important;
 ### :books: 參考網站：
 - [::after](https://developer.mozilla.org/en-US/docs/Web/CSS/::after)
 - [clear](https://developer.mozilla.org/en-US/docs/Web/CSS/clear)
+
 ---
