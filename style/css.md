@@ -223,10 +223,12 @@ border-top-right-radius: 50px 30px;
 border-width: 1px;
 ```
 
-```css
-font: 11px Verdana, Arial, Helvetica;
+---
 
-font-family: Arial;
+```css
+font: 11px Verdana, Arial, Helvetica; /* 設定物件的個別字型屬性組合。亦或是從使用者喜好設定中的六個字型當中，設定一或多個字型。 */
+
+font-family: Arial; /* 設定用於物件中文字的字型名稱。 */
 font-family: sans-serif;
 font-family: 'Microsoft JhengHei UI', 'Microsoft JhengHei', PMingLiU, MingLiU, 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
 
@@ -235,29 +237,49 @@ font-style: italic;
 
 font-weight: bold;
 ```
+> `font-family` 屬性可用的任何字型家族值範圍。此屬性可設為多個以逗號分隔的值。其預設值會隨著使用者設定的不同而改變。
 
-```css
-margin: 20px 0px 10px 75%;
-margin: 8px;
-margin: 0px auto;
-margin-left: 3%;
-margin-right: 10px;
-margin-top: 10px;
-```
+### :books: 參考網站：
+- [font](https://msdn.microsoft.com/zh-tw/library/ee371240(v=expression.40).aspx)
+- [font-family](https://msdn.microsoft.com/zh-tw/library/ee371191(v=expression.40).aspx)
 
 ---
 
 ```css
-display: none;
+margin: 20px 0px 10px 75%;
+margin: 8px;
+margin: 0px auto; /* 設定物件上、下、左、右邊界的寬度。 */
+margin-top: 10px; /* 設定物件的上邊界高度。 */
+margin-right: 10px; /* 設定物件的右邊界高度。 */
+margin-bottom: 4cm; /* 設定物件的下邊界高度。 */
+margin-left: 3%; /* 設定物件左邊界的高度。 */
+```
 
-display: inline;
-display: block;
-display: inline-block;
+> `margin` 此屬性為最多可指定四個寬度值的省略屬性；四個值的順序為：上、右、下、左。
+> 如果指定一個寬度值，所有四個邊都會使用這個值。
+> 如果指定兩個寬度值，那麼上和下框線會使用第一個寬度，而左和右框線則會使用第二個寬度。
+> 如果指定三個值，這三個值將分別用於上、右/左及下框線。
+
+
+### :books: 參考網站：
+- [margin-top](https://msdn.microsoft.com/zh-tw/library/ee371241(v=expression.40).aspx)
+- [margin-right](https://msdn.microsoft.com/zh-tw/library/ee371256(v=expression.40).aspx)
+
+---
+
+```css
+display: none; /* 設定是否呈現物件。 */
+
+display: none; /* 不呈現物件。 */
+display: inline; /* 預設值。物件會呈現為內嵌元素，並根據內容尺寸調整大小。 */
+display: block; /* 物件會呈現為區塊元素。 */
+display: inline-block; /* 物件會呈現為內嵌，但物件內容會呈現為區塊元素。相鄰的內嵌元素在空間允許的情況下會在同一行呈現。 */
+
 display: contents;
 display: list-item;
 display: inline-list-item;
-display: table;
-display: inline-table;
+display: table; /* 物件會呈現為表格。 */
+display: inline-table; /* 物件會呈現為區塊元素，並且會新增清單項目標記。 */
 display: table-cell;
 display: table-column;
 display: table-column-group;
@@ -281,6 +303,7 @@ display: run-in;
 
 ### :books: 參考網站：
 - [display](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
+- [display](https://msdn.microsoft.com/zh-tw/library/ee371238(v=expression.40).aspx)
 
 ---
 
@@ -300,7 +323,6 @@ color: white;
 
 cursor: pointer;
 
-
 vertical-align: baseline;
 vertical-align: sub;
 vertical-align: super;
@@ -312,10 +334,6 @@ vertical-align: bottom;
 vertical-align: 10em;
 vertical-align: 4px;
 vertical-align: 20%;
-
-
-
-
 
 direction: ltr;
 direction: rtl;
@@ -377,27 +395,34 @@ text-decoration: blink;
 text-decoration: none;
 text-decoration: underline overline;
 
+vertical-align: sAlign; /* 設定物件的垂直對齊。 */
 
-vertical-align: baseline;
-vertical-align: sub;
-vertical-align: super;
+vertical-align: baseline; /* 預設值。將物件的內容對齊至基準線。 */
+vertical-align: sub; /* 將文字垂直對齊至下標。不適用於表格儲存格。 */
+vertical-align: super; /* 將文字垂直對齊至上標。不適用於表格儲存格。 */
+
 vertical-align: text-top;
 vertical-align: text-bottom;
 vertical-align: middle;
-vertical-align: top;
+vertical-align: top; /* 將物件內容垂直對齊至物件頂端。 */
 vertical-align: bottom;
 
-visibility: hidden;
-visibility: visible;
+visibility: sVisibility; /* 設定是否顯示物件內容。 */
+visibility: hidden; /* 隱藏物件。 */
+visibility: visible; /* 物件為可見。 */
 
-/* Content is clipped, with no scrollbars */
-overflow-y: hidden;
-/* Content is not clipped */
-overflow-y: visible;
-/* Content is clipped, with scrollbars */
-overflow-y: scroll;
-/* Let the browser decide */
-overflow-y: auto;
+.vis1 {
+  visibility: visible
+}
+.vis2 {
+  visibility: hidden
+}
+
+overflow-y: hidden; /* Content is clipped, with no scrollbars */
+overflow-y: visible; /* Content is not clipped */
+overflow-y: scroll; /* Content is clipped, with scrollbars */
+overflow-y: auto; /* Let the browser decide */
+
 /* Global values */
 overflow-y: inherit;
 overflow-y: initial;
@@ -410,7 +435,8 @@ white-space: normal;
 white-space: nowrap;
 width: 45%;
 width: 60px;
-z-index: -1;
+
+z-index: -1; /* 設定定位物件的堆疊順序。 */
 
 a:link { color: #ff0000; text-decoration: none; }
 a:visited { color: #990000; text-decoration: none; }
@@ -422,8 +448,6 @@ a:active, a:hover { text-decoration: underline; }
 
 bottom: 3px;
 right: 3px;
-
-
 ```
 
 <a href="https://jsfiddle.net/q7dxrj3t/"><img src="http://i.imgur.com/A9cwqLx.png" width="50"></a>
@@ -719,7 +743,8 @@ div {
 
 ### :books: 參考網站：
 - https://msdn.microsoft.com/zh-tw/library/ms531188.aspx
-- https://msdn.microsoft.com/zh-tw/library/ee371254(v=expression.40).aspx 
+- [z-index](https://msdn.microsoft.com/zh-tw/library/ee371254(v=expression.40).aspx)
+ 
 
 ---
 
