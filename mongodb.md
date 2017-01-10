@@ -15,24 +15,12 @@
 - `MongoDB`連續兩年(2013/2014)拿下DB-Engines.COM公司所頒發的DBMS of the year獎項。這個`文件式資料庫` (`Document-based Database`) 從2007開始，到目前已經是`NoSQL`資料庫領域的領先者。在整個資料庫產業裡，也以僅次於`Oracle`、`MySQL`、`Microsoft SQL Server`的姿態，成為目前資料庫領域的第四名 (DB-Engines發佈)。
 - `MongoDB`以開放原始碼、免費、架構簡單、易學易用、效能佳等優點成為許多新創公司建構系統的首選。傳統上`LAMP` (Linux/Apache/MySQL/Perl,Python)的架構，有許多人倡議要將`MySQL`改為`MongoDB`，不過`MySQL`還是有其優勢，特別是`交易` (`transaction`) 控制方面，是目前NoSQL資料庫尚未克服的部分，但其他方面的應用，`MongoDB`就足以與任何資料庫匹敵。
 
+---
 
-
-
-- NoSQL介紹
-- MongoDB介紹
-- MongoDB安裝-Linux系統為例
-- MongoDB建立資料庫與基本設定
-- MongoDB CRUD操作說明
-- MongoDB索引介紹
-- MongoDB綱要設計
-- MongoDB彙集
-- MongoDB複製集設定
-- MongoDB資料分片技術說明
-- MongoDB安全性說明
-- MongoDB備份與復原
-- MongoDB效能調整與問題解決
-
-
+```
+iptables -A INPUT -s <ip-address> -p tcp --destination-port 27017 -m state --state NEW,ESTABLISHED -j ACCEPT
+iptables -A OUTPUT -d <ip-address> -p tcp --source-port 27017 -m state --state ESTABLISHED -j ACCEPT
+```
 
 
 ### 
@@ -95,6 +83,9 @@ net:
 ```
 replSet = rs0
 ```
+
+### :books: 參考網站：
+- https://docs.mongodb.com/manual/reference/configuration-options/
 
 ![](http://docs.mongodb.org/manual/_images/crud-annotated-document.png)
 ![](http://docs.mongodb.org/manual/_images/crud-annotated-collection.png)
@@ -192,10 +183,41 @@ shell> mongoimport --collection <collection> --db <database> --type csv --file <
 ```console
 shell> mongo --eval 'db.collection.find().forEach(printjson)'
 ```
+---
+
 ```console
 shell> mongodump --collection collection --db test
 shell> mongodump --out /opt/backup/mongodump-2011-10-24
+shell> mongodump --host mongodb.example.net --port 27017
+shell> mongodump --out /data/backup/
+shell> mongodump --host mongodb1.example.net --port 3017 --username user --password pass --out /opt/backup/mongodump-2013-10-24
 ```
+
+```console
+shell> mongorestore --port <port number> <path to the backup>
+shell> mongorestore dump-2013-10-25/
+shell> mongorestore --host mongodb1.example.net --port 3017 --username user --password pass /opt/backup/mongodump-2013-10-24
+```
+
+```console
+shell> mongodump -h 127.0.0.1 -d test -o /opt/backup/mongodump-2017-01-01
+shell> mongorestore -h 127.0.0.1 -d test --directoryperdb /opt/backup/mongodump-2017-01-01/test   
+```
+
+
+```js
+use admin
+db.runCommand( {fsync: 1, lock: true} )
+db.currentOp()
+db.fsyncUnlock();
+```
+
+### :books: 參考網站：
+- [db.runCommand](https://docs.mongodb.com/v3.2/reference/method/db.runCommand/)
+- [use-database-commands](https://docs.mongodb.com/manual/tutorial/use-database-commands/)
+- [fsync](https://docs.mongodb.com/manual/reference/command/fsync/)
+- [db.currentOp](https://docs.mongodb.com/manual/reference/method/db.currentOp/)
+
 ---
 
 ### :books: 參考網站：
@@ -208,3 +230,4 @@ shell> mongodump --out /opt/backup/mongodump-2011-10-24
 - [Getting Started](http://mongoosejs.com/docs/)
 - [http://mongoosejs.com/docs/api.html](http://mongoosejs.com/docs/api.html)
 - [東方航空用MongoDB挑戰1天10億次網站查詢](http://www.ithome.com.tw/news/98087)
+- https://docs.mongodb.com/v3.2/tutorial/configure-linux-iptables-firewall/

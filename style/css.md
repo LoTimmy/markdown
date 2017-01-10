@@ -3,6 +3,8 @@
 
 ![](https://developer.mozilla.org/files/4109/padding-bottom.svg)
 
+![](http://api.jquery.com/resources/0042_04_04.png)
+
 ---
 
 **`External stylesheet`**
@@ -449,39 +451,46 @@ right: 3px;
 
 ```html
 <style>
-@media (max-width: 600px) {
-  .facet_sidebar {
-    display: none;
+  @media (max-width: 600px) {
+    .facet_sidebar {
+      display: none;
+    }
   }
-}
-
-.show {
-  display: block !important;
-}
-.hidden {
-  display: none !important;
-}
-.invisible {
-  visibility: hidden;
-}
-
+  
+  .show {
+    display: block !important;
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+  
+  .invisible {
+    visibility: hidden;
+  }
 </style>
 ```
 
 ```html
 <head> 
 <style>
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px) {
-    .hidden { display: none; }
-}
-
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) {
-    .hidden { display: none; }
-}
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .hidden {
+      display: none;
+    }
+  }
+  
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .hidden {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    .show {
+      display: block !important;
+    }
+  }
 </style>
 </head>
 

@@ -939,8 +939,15 @@ $("#myform").validate({
 
 ---
 
-```
-
+```html
+<script type="text/javascript">
+  $.ajax({
+    url: 'data/content.xml',
+    success: function(xml) {
+      // Parse the response
+    }
+  });
+</script>
 ```
 
 ```js
@@ -960,25 +967,198 @@ $.ajax({
   method: "POST",
   method: "GET",
 
+  type: "GET",
+  type: "POST",
+
   data: { name: "John", location: "Boston" },
   data: { id : menuId },
 
   global: false,
 
   cache: false,
+success:
+complete:
+
+
+     success: function(xml) {
+          // Parse the response
+     }
+
+
 });
+
+
+error_func
+        success: doSuccess,
+        error: doError
+
 
 ```
 
+```html
+<script>
+  $("a").click(function(event) {
+    event.preventDefault();
+    $("<div>")
+      .append("default " + event.type + " prevented")
+      .appendTo("#log");
+  });
+</script>
+```
+
+
 
 ```js
+$.ajax({
+  statusCode: {
+    404: function() {
+      alert("page not found");
+    }
+  }
+});
+
 $.ajax({
   url: "script.php",
   dataType: "json",
   method: "POST",
 });
+
+$.ajax({
+    method: "POST",
+    url: "some.php",
+    data: {
+      name: "John",
+      location: "Boston"
+    }
+  })
+  .done(function(msg) {
+    alert("Data Saved: " + msg);
+  });
+
+$.ajax({
+  url: fileurl,
+  type: "GET",
+  dataType: "xml",
+  complete: xml_ready,
+  error: error_func
+});
+
 ```
 
+```js
+$("#target").click(function() {
+  // get the value from the username field                              
+  var username = $('#username').val();
+
+  $.ajax({
+    url: "script.php",
+    contentType: 'application/json',
+    data: JSON.stringify({
+      'username': username,
+      'location': $("#location").val()
+    }),
+    method: "POST",
+    dataType: "json",
+    success: function() {},
+    error: function() {},
+    complete: function() {}
+  });
+});
+
+```
+
+```html
+<script type="text/javascript">
+  $.ajax({
+    type: "GET",
+    url: "/path/to/data.xml",
+    dataType: "xml",
+    success: function(xmlData) {
+      var totalNodes = $('*', xmlData).length; // count XML nodes
+      alert("This XML file has " + totalNodes);
+    },
+    error: function() {
+      alert("Could not retrieve XML file.");
+    }
+  });
+</script>
+```
+
+```js
+$("#target").submit(function(event) {
+  alert("Handler for .submit() called.");
+  event.preventDefault();
+});
+```
 
 ### :books: 參考網站：
-- http://api.jquery.com/jquery.ajax/
+- https://api.jquery.com/jquery.ajax/
+- https://api.jquery.com/Ajax_Events/
+- https://api.jquery.com/click/
+- https://api.jquery.com/val/
+- https://api.jquery.com/find/
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
+
+---
+
+```html
+<script type="text/javascript">
+  var allImages = $("img"); // all IMG elements 
+  var allPhotos = $("img.photo"); // all IMG elements with class "photo"
+  var curPhoto = $("img#currentPhoto"); // IMG element with id "currentPhoto"
+</script>
+
+<script type="text/javascript">
+  $("img").css({
+      "padding": "1px",
+      "border": "1px solid #333"
+    })
+    .wrap("<div class='img-wrap'/>");
+</script>
+```
+
+```js
+// shows every <p> on the page
+$("p").show();
+
+// hides every <p> on the page
+$("p").hide();
+
+// hides every other <p> on the page
+$("p:odd").hide();
+```
+```html
+<input type="button" id="showPicture">
+<img src="/pic.jpg" id="picture"><span>This is the picture's caption</span>
+
+<script type="text/javascript">
+  $("#picture").hide().next().hide();
+  $("#showPicture").click(function() {
+    $("#picture").show("fast", function() {
+      $("#picture").next().show();
+    });
+  });
+</script>
+```
+
+### :books: 參考網站：
+- https://www.ibm.com/developerworks/xml/tutorials/x-processxmljquerytut/
+
+---
+
+### :books: 參考網站：
+- [CodeIgniter and Ajax using jQuery](https://www.ibm.com/developerworks/library/wa-aj-codeigniter/)
+- [Very simple login using Perl, jQuery, Ajax, JSON and MySQL](https://www.ibm.com/developerworks/library/ws-simplelogin/)
+
+---
+
+```js
+if ($(window).width() < 960) {
+  console.log('Less than 960');
+} else {
+  console.log('More than 960');
+}
+```
+
+### :books: 參考網站：
+- [width](http://api.jquery.com/width/)
