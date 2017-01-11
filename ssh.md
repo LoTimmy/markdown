@@ -38,6 +38,13 @@ shell> sudo service ssh restart
 
 ---
 
+> `SSH` 会自动加密和解密所有 `SSH` 客户端与服务端之间的网络数据。
+> `SSH` 还同时提供了一个非常有用的功能，这就是端口转发。
+> 它能够将其他 `TCP` 端口的网络数据通过 `SSH` 链接来转发，并且自动提供了相应的加密及解密服务。这一过程有时也被叫做“隧道”（tunneling），这是因为 `SSH` 为其他 `TCP` 链接提供了一个安全的通道来进行传输而得名。
+> 加密 SSH Client 端至 SSH Server 端之间的通讯数据。
+> 突破防火墙的限制完成一些之前无法建立的 TCP 连接。
+
+**本地端口转发**
 ```
 Host remotehost
     User matt
@@ -48,6 +55,7 @@ Host remotehost
 shell> ssh -NC matt@remotehost -L 9999:localhost:3306
 ```
 
+**远程端口转发**
 ```
 Host remotehost
     User matt
@@ -58,6 +66,7 @@ Host remotehost
 shell> ssh -NfR 12429:127.0.0.1:22 matt@remotehost
 ```
 
+**动态端口转发**
 ```
 Host remotehost
     User matt
@@ -243,3 +252,5 @@ autossh
 - [serverguide](https://help.ubuntu.com/lts/serverguide/)
 - [openssh-server](https://help.ubuntu.com/lts/serverguide/openssh-server.html)
 - [保护 SSH 的三把锁](https://www.ibm.com/developerworks/cn/aix/library/au-sshlocks/)
+- http://www.ibm.com/support/knowledgecenter/SSWT7D_1.0.0/com.ibm.commercecloud.administering.doc/tasks/tad_connect_jumphosts_cyg.htm
+- [实战 SSH 端口转发](https://www.ibm.com/developerworks/cn/linux/l-cn-sshforward/)
