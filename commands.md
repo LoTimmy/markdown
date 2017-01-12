@@ -305,6 +305,9 @@ shell> tar zxvf file.tar.gz
 
 shell> tar jxvf file.tar.bz
 
+shell> tar Jcvf file.tar.xz directory
+shell> tar Jxvf file.tar.xz
+
 shell> tar Zxvf file.tar.Z directory
 shell> tar Zxvf file.tar.Z
 
@@ -1079,6 +1082,7 @@ shell> arping -I ethX -c 3 ip-addr
 <a name="fuser"></a>
 
 ```console
+shell> fuser 80/tcp
 shell> fuser -k 80/tcp
 ```
 
@@ -1844,6 +1848,26 @@ shell> screen -d -m aria2c http://example.org/mylinux.torrent
 
 ### :books: 參考網站：
 - [screen](https://www.gnu.org/software/screen/)
+
+**[⬆ Back to Top](#table-of-contents)**
+
+---
+
+**tmux - terminal multiplexer**
+
+
+<img src="https://tmux.github.io/ss-tmux1.png" width="600">
+
+<img src="https://tmux.github.io/ss-tmux2.png" width="600">
+
+
+
+```console
+shell> apt-get install tmux
+```
+
+### :books: 參考網站：
+- [tmux](https://tmux.github.io/)
 
 **[⬆ Back to Top](#table-of-contents)**
 

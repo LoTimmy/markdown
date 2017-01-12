@@ -1,6 +1,8 @@
 
 <img src="https://pbs.twimg.com/profile_images/788014136575668224/lxEKmMnB_400x400.jpg" width="200">
 
+<img src="http://i.imgur.com/yqRg1pl.png" width="100">
+
 ---
 
 <a name="getstarted"></a>
@@ -395,7 +397,7 @@ $.post("ajax/test.html", function(data) {
 
 <a name="lazyload"></a>
 
-- https://jsfiddle.net/cccgtso7/
+<a href="https://jsfiddle.net/cccgtso7/"><img src="http://i.imgur.com/A9cwqLx.png" width="50"></a>
 
 ```html
 <script src="jquery.js"></script>
@@ -1050,6 +1052,7 @@ $("#target").click(function() {
   // get the value from the username field                              
   var username = $('#username').val();
 
+  // post a JSON payload:
   $.ajax({
     url: "script.php",
     contentType: 'application/json',
@@ -1162,3 +1165,12 @@ if ($(window).width() < 960) {
 
 ### :books: 參考網站：
 - [width](http://api.jquery.com/width/)
+
+---
+
+<img src="http://zeptojs.com/logo.png" width="300">
+
+### :books: 參考網站：
+- [zeptojs](http://zeptojs.com/)
+
+---

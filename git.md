@@ -40,10 +40,9 @@ shell> brew cask install sourcetree
 
 ---
 
-![Imgur](http://i.imgur.com/2V2g0Sx.png)
-![Imgur](http://i.imgur.com/unRQXHr.png)
+<img src="http://i.imgur.com/2V2g0Sx.png" width="500">
 
-
+<img src="http://i.imgur.com/unRQXHr.png" width="500">
 
 ```console
 shell> mkdir helloworld 
@@ -100,11 +99,12 @@ shell> git commit --amend --reset-author
 shell> edit hello.c hello.h
 shell> git add hello.c
 shell> git status
+shell> touch .gitignore
 shell> edit .gitignore
 shell> git commit -m "My changes"
 shell> git log
 ```
-.gitignore
+`.gitignore`
 
 ```
 .gitignore
@@ -113,6 +113,7 @@ shell> git log
 
 ### :books: 參考網站：
 - [gitignore](https://git-scm.com/docs/gitignore)
+- [ignoring-files](https://help.github.com/articles/ignoring-files/)
 
 
 ---

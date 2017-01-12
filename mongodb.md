@@ -15,6 +15,12 @@
 - `MongoDB`連續兩年(2013/2014)拿下DB-Engines.COM公司所頒發的DBMS of the year獎項。這個`文件式資料庫` (`Document-based Database`) 從2007開始，到目前已經是`NoSQL`資料庫領域的領先者。在整個資料庫產業裡，也以僅次於`Oracle`、`MySQL`、`Microsoft SQL Server`的姿態，成為目前資料庫領域的第四名 (DB-Engines發佈)。
 - `MongoDB`以開放原始碼、免費、架構簡單、易學易用、效能佳等優點成為許多新創公司建構系統的首選。傳統上`LAMP` (Linux/Apache/MySQL/Perl,Python)的架構，有許多人倡議要將`MySQL`改為`MongoDB`，不過`MySQL`還是有其優勢，特別是`交易` (`transaction`) 控制方面，是目前NoSQL資料庫尚未克服的部分，但其他方面的應用，`MongoDB`就足以與任何資料庫匹敵。
 
+
+---
+
+**mongod - MongoDB Server**
+
+
 ---
 
 ```
@@ -104,8 +110,6 @@ replSet = rs0
 
 <img src="http://docs.mongodb.org/manual/_images/crud-annotated-collection.png" width="300">
 
-<img src="http://docs.mongodb.org/manual/_images/crud-insert-stages.png" width="300">
-
 <img src="http://i.imgur.com/enCNaiB.png" width="300">
 
 
@@ -122,6 +126,8 @@ rs.add(""mongodb1.example.net"")
 rs.add(""mongodb2.example.net"")
 ```
 
+---
+
 ```js
 show dbs
 use mydb
@@ -129,21 +135,7 @@ db
 ```
 
 ```js
-j = { name : "mongo" }
-k = { x : 3 }
-db.testData.insert( j )
-db.testData.insert( k )
-```
-
-```js
 show collections
-```
-
-```js
-db.getCollection('testData').find({})
-db.testData.find()
-db.testData.find( { x : 18 } )
-db.testData.find( { name : "mongo" } )
 ```
 
 ```js
@@ -153,6 +145,9 @@ db.employees.save(person1);
 db.employees.save(person2);
 db.employees.find();
 ```
+---
+
+**新增 (Insert)**
 
 ```js
 use mydb
@@ -174,18 +169,166 @@ db.friends.insert( {name:'Erika', age:27, gender:'girl'} )
 db.friends.insert( {name:'Patrick', age:40, gender:'boy'} )
 db.friends.insert( {name:'Samantha', age:60, gender:'girl'} )
 
-
 for(var i = 1; i < 10; i++) db.testData.insert( { x : i } );
 
-
-db.createCollection("people", { size: 2147483648 } )
 db.contacts.insert( { name: "Amanda", status: "Updated" } )
 
+j = { name : "mongo" }
+k = { x : 3 }
+db.testData.insert( j )
+db.testData.insert( k )
+```
+
+```js
+name = { first: "Yukihiro",  last: "Matsumoto" }
+db.testData.insert(name)
+
+name = {}
+name.first = 'Yukihiro'
+name.last = 'Matsumoto'
+db.testData.insert(name)
+```
+
+```js
+db.createCollection("myColl")
+db.createCollection("people", { size: 2147483648 } )
 ```
 
 ### :books: 參考網站：
 - [db.createCollection](https://docs.mongodb.org/manual/reference/method/db.createCollection/#db.createCollection)
 - [db.collection.insert](https://docs.mongodb.org/manual/reference/method/db.collection.insert/#db.collection.insert)
+
+---
+
+**查詢 (Find)**
+
+**Find All Documents in a Collection**
+
+```js
+db.getCollection('testData').find({})
+db.testData.find()
+```
+```js
+db.testData.find( { x: 18 } )
+db.testData.find( { name: "mongo" } )
+db.inventory.find( { qty: { $gt: 4 } } )
+db.inventory.find( { qty: { $lt: 4 } } )
+db.inventory.find( { qty: { $gte: 20 } } )
+db.inventory.find( { qty: { $lte: 20 } } )
+db.inventory.find( { qty: { $in: [ 5, 15 ] } } )
+db.inventory.find( { qty: { $nin: [ 5, 15 ] } } )
+db.inventory.find( { $or: [ { quantity: { $lt: 20 } }, { price: 10 } ] } )
+
+db.testData.find( { "name": /m+/ } )
+
+db.orders.find().sort( { amount: -1 } )
+```
+
+### :books: 參考網站：
+- [db.collection.find](https://docs.mongodb.com/manual/reference/method/db.collection.find/)
+- [gte](https://docs.mongodb.com/manual/reference/operator/query/gte/)
+- [lte](https://docs.mongodb.com/manual/reference/operator/query/lte/)
+- [in](https://docs.mongodb.com/manual/reference/operator/query/in/)
+- [nin](https://docs.mongodb.com/manual/reference/operator/query/nin/)
+- [or](https://docs.mongodb.com/manual/reference/operator/query/or/)
+- [sort](https://docs.mongodb.com/v3.2/reference/method/cursor.sort/)
+
+---
+
+**更新 (Update)**
+
+```js
+db.testData.update( { x : 3 }, { x : 18 } )
+```
+
+### :books: 參考網站：
+- [db.collection.update](https://docs.mongodb.com/manual/reference/method/db.collection.update/)
+
+---
+
+**移除 (Remove)**
+
+**Remove All Documents from a Collection**
+
+```js
+db.testData.remove( { } )
+```
+
+```js
+db.products.remove( { qty: { $gt: 20 } } )
+```
+
+### :books: 參考網站：
+- https://docs.mongodb.com/manual/reference/method/db.collection.remove/
+
+
+---
+
+```js
+db.orders.count()
+db.orders.count( { ord_dt: { $gt: new Date('01/01/2012') } } )
+```
+
+### :books: 參考網站：
+- https://docs.mongodb.com/manual/reference/method/db.collection.count/
+
+---
+
+```js
+db.myCollection.find( { $where: "this.credits == this.debits" } );
+db.myCollection.find( { $where: "obj.credits == obj.debits" } );
+
+db.myCollection.find( { $where: function() { return (this.credits == this.debits) } } );
+db.myCollection.find( { $where: function() { return obj.credits == obj.debits; } } );
+```
+
+
+### :books: 參考網站：
+- [where](https://docs.mongodb.com/manual/reference/operator/query/where/)
+
+---
+
+```json
+{ "_id": 1, "dept": "A", "item": { "sku": "111", "color": "red" }, "sizes": [ "S", "M" ] }
+{ "_id": 2, "dept": "A", "item": { "sku": "111", "color": "blue" }, "sizes": [ "M", "L" ] }
+{ "_id": 3, "dept": "B", "item": { "sku": "222", "color": "blue" }, "sizes": "S" }
+{ "_id": 4, "dept": "A", "item": { "sku": "333", "color": "black" }, "sizes": [ "S" ] }
+```
+
+```js
+db.inventory.distinct( "dept" )
+```
+
+### :books: 參考網站：
+- [db.collection.distinct](https://docs.mongodb.com/manual/reference/method/db.collection.distinct/)
+
+---
+
+```js
+db.orders.group(
+   {
+     key: { ord_dt: 1, 'item.sku': 1 },
+     cond: { ord_dt: { $gt: new Date( '01/01/2012' ) } },
+     reduce: function ( curr, result ) { },
+     initial: { }
+   }
+)
+```
+
+```
+SELECT ord_dt, item_sku
+FROM orders
+WHERE ord_dt > '01/01/2012'
+GROUP BY ord_dt, item_sku
+```
+
+### :books: 參考網站：
+- [db.collection.group](https://docs.mongodb.com/manual/reference/method/db.collection.group/)
+
+---
+
+### :books: 參考網站：
+- [db.collection.mapReduce](https://docs.mongodb.com/manual/reference/method/db.collection.mapReduce/)
 
 ---
 ###### 匯入 CSV檔
@@ -194,6 +337,7 @@ CSV檔編碼使用UTF-8
 ```console
 shell> mongoimport --collection <collection> --db <database> --type csv --file <filename> --headerline     
 ```
+---
 
 ```console
 shell> mongo --eval 'db.collection.find().forEach(printjson)'
@@ -374,3 +518,46 @@ db.getUsers()
 - [db.dropAllUsers](https://docs.mongodb.com/manual/reference/method/db.dropAllUsers/)
 - [db.changeUserPassword](https://docs.mongodb.com/manual/reference/method/db.changeUserPassword/)
 - [db.grantRolesToUser](https://docs.mongodb.com/manual/reference/method/db.grantRolesToUser/)
+
+
+---
+
+
+### :books: 參考網站：
+- https://www.mongodb.org/dl/win32
+
+
+---
+
+```
+sku
+description
+subject
+author
+results
+product
+score
+name
+phone
+city
+status
+```
+
+```json
+{
+  "name": "Anne",
+  "phone": "+1 555 123 456",
+  "city": "London",
+  "status": "Complete"
+}
+
+{
+  "name": "Ivan",
+  "city": "Vancouver"
+}
+
+{
+  "user": "myTester",
+  "pwd": "xyz123"
+}
+```

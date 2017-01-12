@@ -298,6 +298,28 @@ const About = { template: '<p>about page</p>' }
 
 ---
 
+<a href="https://jsfiddle.net/2zftunqp/"><img src="http://i.imgur.com/A9cwqLx.png" width="50"></a>
+
+```html
+<div id="example-1">
+  <label for="checkbox">
+    <input type="checkbox" id="checkbox" v-model="checked">
+  </label>
+  <button :disabled="!checked">Button</button>
+</div>
+```
+
+```js
+new Vue({
+  el: '#example-1',
+  data: {
+    checked: false
+  }
+})
+```
+
+---
+
 ### :books: 參考網站：
 - [vuejs](https://vuejs.org/)
 
