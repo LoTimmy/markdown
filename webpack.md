@@ -133,7 +133,31 @@ $("p").text("It works.");
 
 ```js
 require("coffee!./cup.coffee");
+require("./loader!./dir/file.txt");
+require("jade!./template.jade");
+require("!style!css!less!bootstrap/less/bootstrap.less");
 ```
+
+```js
+{
+    module: {
+        loaders: [
+            { test: /\.jade$/, loader: "jade" },
+            // => "jade" loader is used for ".jade" files
+
+            { test: /\.css$/, loader: "style!css" },
+            // => "style" and "css" loader is used for ".css" files
+            // Alternative syntax:
+            { test: /\.css$/, loaders: ["style", "css"] },
+        ]
+    }
+}
+```
+
+
+- https://webpack.github.io/docs/using-loaders.html
+- https://webpack.js.org/loaders/json-loader/
+- https://webpack.js.org/loaders/css-loader/
 
 ```js
 const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
