@@ -16,40 +16,38 @@
 - `MongoDB`以開放原始碼、免費、架構簡單、易學易用、效能佳等優點成為許多新創公司建構系統的首選。傳統上`LAMP` (Linux/Apache/MySQL/Perl,Python)的架構，有許多人倡議要將`MySQL`改為`MongoDB`，不過`MySQL`還是有其優勢，特別是`交易` (`transaction`) 控制方面，是目前NoSQL資料庫尚未克服的部分，但其他方面的應用，`MongoDB`就足以與任何資料庫匹敵。
 
 
+---
+
+**mongod - MongoDB Server**
 
 
-- NoSQL介紹
-- MongoDB介紹
-- MongoDB安裝-Linux系統為例
-- MongoDB建立資料庫與基本設定
-- MongoDB CRUD操作說明
-- MongoDB索引介紹
-- MongoDB綱要設計
-- MongoDB彙集
-- MongoDB複製集設定
-- MongoDB資料分片技術說明
-- MongoDB安全性說明
-- MongoDB備份與復原
-- MongoDB效能調整與問題解決
+---
 
-
-
+```
+iptables -A INPUT -s <ip-address> -p tcp --destination-port 27017 -m state --state NEW,ESTABLISHED -j ACCEPT
+iptables -A OUTPUT -d <ip-address> -p tcp --source-port 27017 -m state --state ESTABLISHED -j ACCEPT
+```
 
 ### 
 
 [employeeName.csv](https://dl.dropboxusercontent.com/u/4276183/docs/employeeName.csv)
 
 ---
-- MongoDB安裝-Linux系統為例
-- Install MongoDB on Ubuntu
+
+**Install MongoDB on Ubuntu**
+
 ```console
-shell> sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
-shell> echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
+shell> sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
+
+shell> echo "deb [ arch=amd64 ] http://repo.mongodb.org/apt/ubuntu precise/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
+shell> echo "deb [ arch=amd64 ] http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
+shell> echo "deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
+
 shell> sudo apt-get update
 shell> sudo apt-get install -y mongodb-org
 ```
 
-Install Percona Server for MongoDB on Ubuntu
+**Install Percona Server for MongoDB on Ubuntu**
 ```console
 shell> sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A
 shell> echo "deb http://repo.percona.com/apt "$(lsb_release -sc)" main" | sudo tee /etc/apt/sources.list.d/percona.list
@@ -58,6 +56,8 @@ shell> sudo apt-get install percona-server-mongodb
 ```
 
 - [Installing Percona Server for MongoDB on Debian and Ubuntu](https://www.percona.com/doc/percona-server-for-mongodb/installation/apt_repo.html)
+- https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+
 
 **Start MongoDB**
 ```console
@@ -74,8 +74,7 @@ shell> sudo service mongod stop
 shell> sudo service mongod restart
 ```
 
-
-/etc/mongod.conf
+`/etc/mongod.conf`
 ```
 storage:
   dbPath: /var/lib/mongodb
@@ -90,18 +89,29 @@ processManagement:
 net:
   port: 27017
   bindIp: 172.16.7.103
+
+security:
+   authorization: enabled
+net:
+   bindIp: 127.0.0.1,10.8.0.10,192.168.4.24
 ```
 
 ```
 replSet = rs0
 ```
 
-![](http://docs.mongodb.org/manual/_images/crud-annotated-document.png)
-![](http://docs.mongodb.org/manual/_images/crud-annotated-collection.png)
-![](http://docs.mongodb.org/manual/_images/crud-insert-stages.png)
+### :books: 參考網站：
+- https://docs.mongodb.com/manual/reference/configuration-options/
+- https://docs.mongodb.com/manual/administration/configuration/
 
+---
 
-![](http://i.imgur.com/enCNaiB.png)
+<img src="http://docs.mongodb.org/manual/_images/crud-annotated-document.png" width="300">
+
+<img src="http://docs.mongodb.org/manual/_images/crud-annotated-collection.png" width="300">
+
+<img src="http://i.imgur.com/enCNaiB.png" width="300">
+
 
 ```console
 shell> mongo
@@ -116,6 +126,8 @@ rs.add(""mongodb1.example.net"")
 rs.add(""mongodb2.example.net"")
 ```
 
+---
+
 ```js
 show dbs
 use mydb
@@ -123,21 +135,7 @@ db
 ```
 
 ```js
-j = { name : "mongo" }
-k = { x : 3 }
-db.testData.insert( j )
-db.testData.insert( k )
-```
-
-```js
 show collections
-```
-
-```js
-db.getCollection('testData').find({})
-db.testData.find()
-db.testData.find( { x : 18 } )
-db.testData.find( { name : "mongo" } )
 ```
 
 ```js
@@ -147,6 +145,9 @@ db.employees.save(person1);
 db.employees.save(person2);
 db.employees.find();
 ```
+---
+
+**新增 (Insert)**
 
 ```js
 use mydb
@@ -168,18 +169,166 @@ db.friends.insert( {name:'Erika', age:27, gender:'girl'} )
 db.friends.insert( {name:'Patrick', age:40, gender:'boy'} )
 db.friends.insert( {name:'Samantha', age:60, gender:'girl'} )
 
-
 for(var i = 1; i < 10; i++) db.testData.insert( { x : i } );
 
-
-db.createCollection("people", { size: 2147483648 } )
 db.contacts.insert( { name: "Amanda", status: "Updated" } )
 
+j = { name : "mongo" }
+k = { x : 3 }
+db.testData.insert( j )
+db.testData.insert( k )
+```
+
+```js
+name = { first: "Yukihiro",  last: "Matsumoto" }
+db.testData.insert(name)
+
+name = {}
+name.first = 'Yukihiro'
+name.last = 'Matsumoto'
+db.testData.insert(name)
+```
+
+```js
+db.createCollection("myColl")
+db.createCollection("people", { size: 2147483648 } )
 ```
 
 ### :books: 參考網站：
 - [db.createCollection](https://docs.mongodb.org/manual/reference/method/db.createCollection/#db.createCollection)
 - [db.collection.insert](https://docs.mongodb.org/manual/reference/method/db.collection.insert/#db.collection.insert)
+
+---
+
+**查詢 (Find)**
+
+**Find All Documents in a Collection**
+
+```js
+db.getCollection('testData').find({})
+db.testData.find()
+```
+```js
+db.testData.find( { x: 18 } )
+db.testData.find( { name: "mongo" } )
+db.inventory.find( { qty: { $gt: 4 } } )
+db.inventory.find( { qty: { $lt: 4 } } )
+db.inventory.find( { qty: { $gte: 20 } } )
+db.inventory.find( { qty: { $lte: 20 } } )
+db.inventory.find( { qty: { $in: [ 5, 15 ] } } )
+db.inventory.find( { qty: { $nin: [ 5, 15 ] } } )
+db.inventory.find( { $or: [ { quantity: { $lt: 20 } }, { price: 10 } ] } )
+
+db.testData.find( { "name": /m+/ } )
+
+db.orders.find().sort( { amount: -1 } )
+```
+
+### :books: 參考網站：
+- [db.collection.find](https://docs.mongodb.com/manual/reference/method/db.collection.find/)
+- [gte](https://docs.mongodb.com/manual/reference/operator/query/gte/)
+- [lte](https://docs.mongodb.com/manual/reference/operator/query/lte/)
+- [in](https://docs.mongodb.com/manual/reference/operator/query/in/)
+- [nin](https://docs.mongodb.com/manual/reference/operator/query/nin/)
+- [or](https://docs.mongodb.com/manual/reference/operator/query/or/)
+- [sort](https://docs.mongodb.com/v3.2/reference/method/cursor.sort/)
+
+---
+
+**更新 (Update)**
+
+```js
+db.testData.update( { x : 3 }, { x : 18 } )
+```
+
+### :books: 參考網站：
+- [db.collection.update](https://docs.mongodb.com/manual/reference/method/db.collection.update/)
+
+---
+
+**移除 (Remove)**
+
+**Remove All Documents from a Collection**
+
+```js
+db.testData.remove( { } )
+```
+
+```js
+db.products.remove( { qty: { $gt: 20 } } )
+```
+
+### :books: 參考網站：
+- https://docs.mongodb.com/manual/reference/method/db.collection.remove/
+
+
+---
+
+```js
+db.orders.count()
+db.orders.count( { ord_dt: { $gt: new Date('01/01/2012') } } )
+```
+
+### :books: 參考網站：
+- https://docs.mongodb.com/manual/reference/method/db.collection.count/
+
+---
+
+```js
+db.myCollection.find( { $where: "this.credits == this.debits" } );
+db.myCollection.find( { $where: "obj.credits == obj.debits" } );
+
+db.myCollection.find( { $where: function() { return (this.credits == this.debits) } } );
+db.myCollection.find( { $where: function() { return obj.credits == obj.debits; } } );
+```
+
+
+### :books: 參考網站：
+- [where](https://docs.mongodb.com/manual/reference/operator/query/where/)
+
+---
+
+```json
+{ "_id": 1, "dept": "A", "item": { "sku": "111", "color": "red" }, "sizes": [ "S", "M" ] }
+{ "_id": 2, "dept": "A", "item": { "sku": "111", "color": "blue" }, "sizes": [ "M", "L" ] }
+{ "_id": 3, "dept": "B", "item": { "sku": "222", "color": "blue" }, "sizes": "S" }
+{ "_id": 4, "dept": "A", "item": { "sku": "333", "color": "black" }, "sizes": [ "S" ] }
+```
+
+```js
+db.inventory.distinct( "dept" )
+```
+
+### :books: 參考網站：
+- [db.collection.distinct](https://docs.mongodb.com/manual/reference/method/db.collection.distinct/)
+
+---
+
+```js
+db.orders.group(
+   {
+     key: { ord_dt: 1, 'item.sku': 1 },
+     cond: { ord_dt: { $gt: new Date( '01/01/2012' ) } },
+     reduce: function ( curr, result ) { },
+     initial: { }
+   }
+)
+```
+
+```
+SELECT ord_dt, item_sku
+FROM orders
+WHERE ord_dt > '01/01/2012'
+GROUP BY ord_dt, item_sku
+```
+
+### :books: 參考網站：
+- [db.collection.group](https://docs.mongodb.com/manual/reference/method/db.collection.group/)
+
+---
+
+### :books: 參考網站：
+- [db.collection.mapReduce](https://docs.mongodb.com/manual/reference/method/db.collection.mapReduce/)
 
 ---
 ###### 匯入 CSV檔
@@ -188,14 +337,61 @@ CSV檔編碼使用UTF-8
 ```console
 shell> mongoimport --collection <collection> --db <database> --type csv --file <filename> --headerline     
 ```
+---
 
 ```console
 shell> mongo --eval 'db.collection.find().forEach(printjson)'
 ```
+---
+
 ```console
 shell> mongodump --collection collection --db test
 shell> mongodump --out /opt/backup/mongodump-2011-10-24
+shell> mongodump --host mongodb.example.net --port 27017
+shell> mongodump --out /data/backup/
+shell> mongodump --host mongodb1.example.net --port 3017 --username user --password pass --out /opt/backup/mongodump-2013-10-24
 ```
+
+```console
+shell> mongorestore --port <port number> <path to the backup>
+shell> mongorestore dump-2013-10-25/
+shell> mongorestore --host mongodb1.example.net --port 3017 --username user --password pass /opt/backup/mongodump-2013-10-24
+```
+
+```console
+shell> mongodump -h 127.0.0.1 -d test -o /opt/backup/mongodump-2017-01-01
+shell> mongorestore -h 127.0.0.1 --port 27017 /opt/backup/mongodump-2017-01-01
+shell> mongorestore -h 127.0.0.1 --port 27017 --drop /opt/backup/mongodump-2017-01-01      
+```
+
+```sh
+ssh-keygen
+ssh-copy-id 155.94.159.51
+```
+
+```sh
+ssh -NCf 155.94.159.51 -L 3017:localhost:27017
+
+today=`date "+%Y-%m-%d"`
+mongodump --host 127.0.0.1 --port 3017 --out /opt/backup/mongodump-${today}
+mongorestore -h 127.0.0.1 --port 27017 --drop /opt/backup/mongodump-${today}
+```
+
+```js
+use admin
+db.runCommand( {fsync: 1, lock: true} )
+db.currentOp()
+db.fsyncUnlock();
+```
+
+### :books: 參考網站：
+- [db.runCommand](https://docs.mongodb.com/v3.2/reference/method/db.runCommand/)
+- [use-database-commands](https://docs.mongodb.com/manual/tutorial/use-database-commands/)
+- [fsync](https://docs.mongodb.com/manual/reference/command/fsync/)
+- [db.currentOp](https://docs.mongodb.com/manual/reference/method/db.currentOp/)
+- https://docs.mongodb.com/manual/reference/program/mongorestore/
+- https://docs.mongodb.com/v3.2/reference/program/mongorestore/
+
 ---
 
 ### :books: 參考網站：
@@ -208,3 +404,160 @@ shell> mongodump --out /opt/backup/mongodump-2011-10-24
 - [Getting Started](http://mongoosejs.com/docs/)
 - [http://mongoosejs.com/docs/api.html](http://mongoosejs.com/docs/api.html)
 - [東方航空用MongoDB挑戰1天10億次網站查詢](http://www.ithome.com.tw/news/98087)
+- https://docs.mongodb.com/v3.2/tutorial/configure-linux-iptables-firewall/
+
+---
+
+```js
+db.runCommand( { serverStatus: 1 } )
+db.serverStatus()
+```
+
+**mongostat - MongoDB Use Statistics**
+**mongotop - MongoDB Activity Monitor**
+
+```console
+shell> mongostat
+shell> mongostat --port 27017
+shell> mongotop   
+```
+
+### :books: 參考網站：
+- [serverStatus](https://docs.mongodb.com/manual/reference/command/serverStatus/)
+
+---
+
+```js
+use admin
+db.createUser(
+  {
+    user: "myUserAdmin",
+    pwd: "abc123",
+    roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
+  }
+)
+
+use admin
+db.auth("myUserAdmin", "abc123" )
+
+use test
+db.createUser(
+  {
+    user: "myTester",
+    pwd: "xyz123",
+    roles: [ { role: "readWrite", db: "test" },
+             { role: "read", db: "reporting" } ]
+  }
+)
+
+db.createUser({
+  user: "myTester",
+  pwd: "xyz123",
+  roles: ["readWrite", "dbAdmin"]
+})
+
+use test
+db.auth("myTester", "xyz123" )
+
+use products
+db.changeUserPassword("accountUser", "SOh3TbYhx8ypJPxmt1oOfL")
+```
+
+```
+Successfully added user: {
+	"user" : "myUserAdmin",
+	"roles" : [
+		{
+			"role" : "userAdminAnyDatabase",
+			"db" : "admin"
+		}
+	]
+}
+```
+
+```
+readAnyDatabase
+readWriteAnyDatabase
+userAdminAnyDatabase
+dbAdminAnyDatabase
+root
+
+dbAdmin
+dbOwner
+userAdmin
+
+readWrite
+
+clusterAdmin
+clusterManager
+clusterMonitor
+hostManager
+```
+
+```console
+shell> mongo --port 27017 -u "myUserAdmin" -p "abc123" --authenticationDatabase "admin"
+shell> mongo --port 27017 -u "myTester" -p "xyz123" --authenticationDatabase "test"
+```
+
+```js
+use products
+db.dropAllUsers()
+db.dropUser("myTester")
+```
+
+```
+db.getUsers()
+```
+
+### :books: 參考網站：
+
+- [Enable Auth](https://docs.mongodb.com/manual/tutorial/enable-authentication/)
+- https://docs.mongodb.com/manual/reference/built-in-roles/
+- [db.createUser](https://docs.mongodb.com/manual/reference/method/db.createUser/)
+- [db.dropUser](https://docs.mongodb.com/manual/reference/method/db.dropUser/)
+- [db.dropAllUsers](https://docs.mongodb.com/manual/reference/method/db.dropAllUsers/)
+- [db.changeUserPassword](https://docs.mongodb.com/manual/reference/method/db.changeUserPassword/)
+- [db.grantRolesToUser](https://docs.mongodb.com/manual/reference/method/db.grantRolesToUser/)
+
+
+---
+
+
+### :books: 參考網站：
+- https://www.mongodb.org/dl/win32
+
+
+---
+
+```
+sku
+description
+subject
+author
+results
+product
+score
+name
+phone
+city
+status
+```
+
+```json
+{
+  "name": "Anne",
+  "phone": "+1 555 123 456",
+  "city": "London",
+  "status": "Complete"
+}
+
+{
+  "name": "Ivan",
+  "city": "Vancouver"
+}
+
+{
+  "user": "myTester",
+  "pwd": "xyz123"
+}
+```

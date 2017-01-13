@@ -29,7 +29,36 @@ MyWebsite/
 ```
 
 ---
+
+```html
+<video width="480" controls poster="https://archive.org/download/WebmVp8Vorbis/webmvp8.gif">
+  <source src="https://archive.org/download/WebmVp8Vorbis/webmvp8.webm" type="video/webm">
+  <source src="https://archive.org/download/WebmVp8Vorbis/webmvp8_512kb.mp4" type="video/mp4">
+  <source src="https://archive.org/download/WebmVp8Vorbis/webmvp8.ogv" type="video/ogg"> Your browser doesn't support HTML5 video tag.
+</video>
+
+<video src="assets/launch.m4v" controls webkit-playsinline ad-outlet="video"></video>
+
+```
+
+
+
+```
+preload
+autoplay
+controls
+height
+width
+src
+poster
+loop
+muted
+playsinline
+```
+
 - [video](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)
+- https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009523
+- https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/iAdJSProgGuide/PlayingVideosinAds/PlayingVideosinAds.html
 
 ---
 
@@ -365,8 +394,13 @@ id="myDiv"
   </p>
 </form>
 
-<input id="username" maxlength="64" name="username" type="text">	
-<input id="password" maxlength="64" name="password" type="password">	
+<input id="username" maxlength="64" name="username" type="text">
+<input id="password" maxlength="64" name="password" type="password">
+
+<input placeholder="Email address" type="email">
+<input placeholder="Username" type="text">
+<input placeholder="Password" type="password">
+
 <input type="text" id="customerName" name="customerName" maxlength="50" size="30" tabindex="1" value="" autocomplete="off">	
 <input type="email" id="email" name="email" maxlength="64" size="30" tabindex="3" value="" autocorrect="off" autocapitalize="off">	
 
