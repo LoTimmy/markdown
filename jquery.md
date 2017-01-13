@@ -1172,5 +1172,6 @@ if ($(window).width() < 960) {
 
 ### :books: 參考網站：
 - [zeptojs](http://zeptojs.com/)
+- [velocityjs](http://velocityjs.org/)
 
 ---

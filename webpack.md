@@ -1,3 +1,8 @@
+
+<img src="https://webpack.github.io/assets/what-is-webpack.png" width="500">
+
+
+
 ```console
 shell> npm install webpack -g
 ```
@@ -57,7 +62,9 @@ shell> webpack ./entry.js bundle.js
 ```
 
 ---
-entry.js
+
+`entry.js`
+
 ```js
 require("./style.css");
 document.write(require("./content.js"));
@@ -109,6 +116,7 @@ shell> webpack -p
 shell> webpack --watch
 shell> webpack -d
 shell> webpack --progress --colors
+shell> webpack --progress --colors --watch
 ```
 
 
@@ -118,7 +126,38 @@ shell> webpack --progress --colors
 shell> npm install jquery --save-dev
 ```
 
-```
+```js
 var $ = require("jquery");
 $("p").text("It works.");
+```
+
+```js
+require("coffee!./cup.coffee");
+```
+
+```js
+const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
+const webpack = require('webpack'); //to access built-in plugins
+
+const config = {
+  entry: './path/to/my/entry/file.js',
+  output: {
+    filename: 'my-first-webpack.bundle.js',
+    path: './dist'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        loader: 'babel-loader'
+      }
+    ]
+  },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin(),
+    new HtmlWebpackPlugin({template: './src/index.html'})
+  ]
+};
+
+module.exports = config;
 ```
