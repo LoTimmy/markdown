@@ -805,7 +805,7 @@ text-shadow: black 0.01em 0.01em 0.05em !important;
 ### :books: 參考網站：
 - [text-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow)
 - [Microsoft JhengHei](https://www.microsoft.com/typography/fonts/family.aspx?FID=368)
-- [](https://www.microsoft.com/typography/fonts/family.aspx?FID=350)
+- [Microsoft YaHei](https://www.microsoft.com/typography/fonts/family.aspx?FID=350)
 
 
 ---
