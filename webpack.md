@@ -63,6 +63,68 @@ shell> webpack ./entry.js bundle.js
 
 ---
 
+```console
+shell> npm install sass-loader node-sass webpack
+```
+```js
+var css = require("!raw-loader!sass-loader!./file.scss");
+```
+
+```js
+module.exports = {
+  ...
+  module: {
+    loaders: [
+      {
+        test: /\.scss$/,
+        loaders: ["style-loader", "css-loader", "sass-loader"]
+      }
+    ]
+  }
+};
+```
+
+### :books: 參考網站：
+- [sass-loader](https://github.com/jtangelder/sass-loader)
+
+---
+
+```console
+shell> npm install bootstrap-sass
+```
+```
+require('bootstrap-loader');
+```
+
+### :books: 參考網站：
+- [bootstrap-loader](https://github.com/shakacode/bootstrap-loader)
+
+---
+
+```
+var webpack = require("webpack");
+
+module.exports = {
+  entry: {
+    app: "./app.js",
+    vendor: ["jquery", "underscore", ...],
+  },
+  output: {
+    filename: "bundle.js"
+  },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js")
+  ]
+};
+```
+```
+<script src="vendor.bundle.js"></script>
+<script src="bundle.js"></script>
+```
+- https://webpack.github.io/docs/code-splitting.html
+
+---
+
 `entry.js`
 
 ```js
@@ -104,7 +166,6 @@ shell> webpack --progress --colors
 
 
 ### :books: 參考網站：
-
 - [getting-started](http://webpack.github.io/docs/tutorials/getting-started/)
 
 
@@ -118,7 +179,6 @@ shell> webpack -d
 shell> webpack --progress --colors
 shell> webpack --progress --colors --watch
 ```
-
 
 ---
 
@@ -158,6 +218,7 @@ require("!style!css!less!bootstrap/less/bootstrap.less");
 - https://webpack.github.io/docs/using-loaders.html
 - https://webpack.js.org/loaders/json-loader/
 - https://webpack.js.org/loaders/css-loader/
+- https://github.com/jtangelder/sass-loader
 
 ```js
 const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
