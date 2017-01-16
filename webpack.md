@@ -248,11 +248,43 @@ module.exports = config;
 ```
 
 
+```js
+const path = require("path");
+const webpack = require('webpack');
 
+const config = {
+  entry: {
+    app: './src/app.js',
+    vendor: ["jquery", "other-lib"],
+  },
+  output: {
+    path: "/dist",
+    filename: "app.bundle.js"
+  },
+  resolve: {
+    alias: {
+      jquery: __dirname + '/node_modules' + '/jquery/dist/jquery.min.js'
+    }
+  },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js")
+  ],
+  module: {
+    noParse: /jquery|backbone/,
+    loaders: [
+      { test: /\.css$/, loader: "style-loader!css-loader" },
+      { test: /\.scss$/, loader: "style-loader!css-loader!scss-loader" },
+      { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&minetype=application/font-woff" },
+      { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" }
+    ]
+  },
+};
 
-
-
+module.exports = config;
 ```
+
+
+```js
 var webpack = require("webpack");
 
 module.exports = {
@@ -285,3 +317,8 @@ plugins: [
 };
 
 ```
+
+- https://webpack.js.org/concepts/entry-points/
+- https://webpack.github.io/docs/usage.html
+- https://webpack.github.io/docs/loader-conventions.html
+- https://webpack.js.org/guides/shimming/
