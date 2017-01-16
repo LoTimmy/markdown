@@ -8,6 +8,7 @@
 - [script](#script)
 - [css](#css)
 - [meta](#meta)
+- [video](#video)
 
 ---
 
@@ -29,6 +30,7 @@ MyWebsite/
 ```
 
 ---
+`video`<a name="video"></a>
 
 ```html
 <video width="480" controls poster="https://archive.org/download/WebmVp8Vorbis/webmvp8.gif">
@@ -37,10 +39,24 @@ MyWebsite/
   <source src="https://archive.org/download/WebmVp8Vorbis/webmvp8.ogv" type="video/ogg"> Your browser doesn't support HTML5 video tag.
 </video>
 
-<video src="assets/launch.m4v" controls webkit-playsinline ad-outlet="video"></video>
+<video controls>
+  <source src="somevideo.webm" type="video/webm">
+  <source src="somevideo.mp4" type="video/mp4">
+  I'm sorry; your browser doesn't support HTML5 video in WebM with VP8/VP9 or MP4 with H.264.
+  <!-- You can embed a Flash player here, to play your mp4 video in older browsers -->
+</video>
 
+<video src="assets/launch.m4v" controls webkit-playsinline ad-outlet="video"></video>
 ```
 
+`WebM`
+`video/webm`
+`audio/webm`
+
+`Ogg Theora Vorbis`
+`audio/ogg`
+`video/ogg`
+`application/ogg`
 
 
 ```
@@ -57,6 +73,7 @@ playsinline
 ```
 
 - [video](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)
+- [video](https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats)
 - https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009523
 - https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/iAdJSProgGuide/PlayingVideosinAds/PlayingVideosinAds.html
 

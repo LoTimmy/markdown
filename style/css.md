@@ -366,6 +366,7 @@ overflow: hidden;
 padding: 10px;
 padding: 5px;
 padding-top: 10px;
+padding-left: 10px;
 
 position: absolute;
 position: relative;
@@ -499,21 +500,15 @@ right: 3px;
 <head> 
 <style>
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    .hidden {
-      display: none;
-    }
+    .hidden { display: none; }
   }
   
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    .hidden {
-      display: none;
-    }
+    .hidden { display: none; }
   }
   
   @media screen and (max-width: 900px) {
-    .show {
-      display: block !important;
-    }
+    .show { display: block !important; }
   }
 </style>
 </head>
@@ -526,11 +521,56 @@ right: 3px;
 <link rel="stylesheet" media="screen and (max-device-width: 799px)" href="http://foo.bar.com/stylesheet.css" />
 ```
 
+```css
+// For computer screens, the font size is 12pt.
+@media screen {
+  body {font-size:12pt;}
+}
+// When printed, the font size is 8pt.
+@media print {
+  body {font-size:8pt;}
+}
+
+@media screen and (max-width:400px) {
+  div {border:none;}
+}
+
+@media screen and (max-width:400px) and (max-height:600px) {
+  ...
+}
+
+@media screen and (device-width: 800px) {
+  ... 
+}
+
+@media screen and (device-aspect-ratio: 16/9) { 
+  ... 
+}
+
+@media screen and (device-aspect-ratio: 32/18) { 
+  ... 
+}
+
+@media screen and (device-aspect-ratio: 1280/720) { 
+  ... 
+}
+
+@media screen and (device-aspect-ratio: 2560/1440) { 
+  ... 
+}
+
+```
+
+
+
 ### :books: 參考網站：
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
 - https://developer.mozilla.org/en-US/docs/Web/CSS/@media
 - https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat
 - https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-y
+- https://msdn.microsoft.com/zh-tw/library/ms530813.aspx
+- https://msdn.microsoft.com/zh-tw/library/hh772064.aspx
+- https://msdn.microsoft.com/zh-tw/library/windows/desktop/hh772062.aspx
 
 ---
 

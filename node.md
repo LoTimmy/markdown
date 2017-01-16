@@ -1040,11 +1040,56 @@ console.log(it.next().done);  // true
 
 ---
 
-``` .js
+```.js
 setInterval(function() {
   doSomething();
 }, 1800000 * Math.random() + 1200000); // between 20 and 50 min
 ```
+
+---
+
+```.js
+function doSomething() {
+  console.log("Hello World!");
+}
+
+doSomething();
+```
+
+```.js
+var doSomething = () => {
+  console.log("Hello World!");
+};
+
+doSomething();
+```
+
+```.js
+var doSomething = () => console.log("Hello World!");
+
+doSomething();
+```
+
+```.js
+var doSomething = function() {
+  return "Hello World!";
+}
+
+var doSomething = () => "Hello World!";
+console.log(doSomething());
+```
+
+```.js
+var func = function(x, y) {
+  return x + y;
+}
+
+var func = (x, y) => x + y;
+console.log(func(3, 5));
+```
+
+### :books: 參考網站：
+- [Arrow_functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 
 ---
 
@@ -1057,7 +1102,6 @@ setInterval(function() {
 - [非同步操作的多種模式](http://www.ithome.com.tw/node/82486)
 - [Visual Studio也能寫Node.js，擴充套件NTVS 1.0正式版釋出](http://www.ithome.com.tw/news/94807)
 - [建立 Node.js 和 MongoDB Web 服務](https://msdn.microsoft.com/zh-tw/library/dn754378.aspx)
-
 - [try...- catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
 - [var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
 - [Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
@@ -1067,7 +1111,6 @@ setInterval(function() {
 - [for](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
 - [for...in](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
 - [if...else](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
-
 - [JSON.stringify()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
 - [JSON.parse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
 
