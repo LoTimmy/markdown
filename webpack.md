@@ -161,3 +161,42 @@ const config = {
 
 module.exports = config;
 ```
+
+
+
+
+
+
+```
+var webpack = require("webpack");
+
+module.exports = {
+  entry: {
+    app: "./entry.js",
+//    vendor: ["jquery", "underscore", ...],
+    vendor: ["jquery"],
+  },
+  output: {
+    path: "./public/dist",
+    filename: "bundle.js"
+  },
+plugins: [
+    new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js")
+  ],
+  resolve: {
+    alias:{
+      "jquery": __dirname + '/node_modules' + '/jquery/dist/jquery.min.js',
+    }
+  },
+  module: {
+    noParse: ["jquery"],
+    loaders: [
+      { test: /\.css$/, loader: "style!css" }, 
+      { test: /\.scss$/, loaders: ["style-loader", "css-loader", "sass-loader"] },
+      { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url?limit=10000" }, 
+      { test: /\.(ttf|svg|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" }, 
+    ]
+  }
+};
+
+```
