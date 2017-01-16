@@ -378,3 +378,10 @@ shell> git mv JavaScript javascript
 - [持續整合下的版本控管做法](http://www.ithome.com.tw/node/67969)
 - [語意明確的版本變更](http://www.ithome.com.tw/voice/85505)
 - [軟體開發過程中不能缺少的系統](http://www.ithome.com.tw/node/76548)
+
+
+---
+
+### :books: 參考網站：
+- https://git-scm.com/book/be/v2/Git-Tools-Credential-Storage
+- https://help.github.com/articles/caching-your-github-password-in-git/
