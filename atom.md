@@ -1,4 +1,4 @@
-Atom
+**`Atom`**
 
 <img src="http://i.imgur.com/Je0OrHU.png" alt="atom" width=58 height=58>
 
@@ -20,7 +20,8 @@ ctrl-shift-d | editor:duplicate-lines
 ctrl-shift-m	 | markdown-preview:toggle
 ctrl-shift-p	 | command-palette:toggle	
 ---
-Open with Atom.reg
+
+`Open with Atom.reg`
 
 ```
 Windows Registry Editor Version 5.00
@@ -35,20 +36,19 @@ Windows Registry Editor Version 5.00
 
 ---
 
-autocomplete-html
 ![autocomplete-html](http://i.imgur.com/WS9X0Xs.gif)
 
+![](https://github-atom-io-herokuapp-com.global.ssl.fastly.net/assets/screenshot-main-80d8c9841da6ed11c9d87f31136a4ca9.png)
 
-vim-mode
+
+`vim-mode`
 ```console 
 shell> apm install vim-mode
 ```
-
-
-
 
 - [google](https://atom.io/users/google)
 
 ### :books: 參考網站：
 
 - [atom](https://atom.io/)
+- [emmet-atom](https://github.com/emmetio/emmet-atom)

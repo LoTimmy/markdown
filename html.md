@@ -76,6 +76,7 @@ playsinline
 - [video](https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats)
 - https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009523
 - https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/iAdJSProgGuide/PlayingVideosinAds/PlayingVideosinAds.html
+- [video](https://msdn.microsoft.com/zh-tw/library/hh924820(v=vs.85).aspx)
 
 ---
 
@@ -669,6 +670,7 @@ myfile2.html
 
 
 - http://placehold.it/60/ffffff/000000
+- http://placehold.it/460x250/e67e22/ffffff&text=HTML5
 - https://placeholdit.imgix.net/~text?txtsize=75&txt=&w=800&h=300
 - https://placeholdit.imgix.net/~text?txtsize=75&txt=800×300&w=800&h=300
 - https://placeholdit.imgix.net/~text?txtsize=8&bg=008000&txtclr=000000&txt=&w=60&h=60
