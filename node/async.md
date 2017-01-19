@@ -1,5 +1,3 @@
-最後更新： 2015-09-25           
-
 :star::star::star:
 ```js
 var async = require('async');

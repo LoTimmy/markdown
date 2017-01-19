@@ -1,6 +1,3 @@
-
-上次更新日期： 5/24/2016 6:03:27 PM                                                          
-
 ```console
 shell> npm install tw-air-quality
 ```
