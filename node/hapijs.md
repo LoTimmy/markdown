@@ -19,6 +19,15 @@ server.connection({
   port: 8000
 });
 
+server.route({
+  method: 'GET',
+  path: '/',
+  handler: function(request, reply) {
+    reply('Hello, world!');
+  }
+});
+
+
 // Add the route
 server.route({
   method: 'GET',
