@@ -464,6 +464,18 @@ nginx-module-xslt-dbg - debug symbols for the nginx-module-xslt
 - [linux_packages](http://nginx.org/en/linux_packages.html)
 ---
 
+> 最常見的串流技術，包括：`HTTP Adaptive Bitrate Streaming`（簡稱`ABS`）、`RTSP`、`RTMP`和`HLS`等四種。
+> 其中，**`RTMP`來自於`Adobe`，也是`YouTube`正在使用的串流技術，最普遍也最穩定**；另外一個`HLS`串流技術，則是蘋果公司進行線上轉播所使用的技術，同樣也兼具新技術和穩定的特性；至於，`RSTP`目前則是比較少見的技術，但也具有技術穩定的特色。
+> `即時傳訊協定` (`Real-Time Messaging Protocol`，`RTMP`) ，這是`Adobe`的串流技術規格，提供有關音訊、視訊，及資料等各種`Adobe Flash`平台技術的高效能傳輸。
+> 蘋果制定的`HTML5`串流媒體協定`HTTP Live Streaming` (`HLS`)
+> `HLS`能將`H.264`影片轉換為多個時間長度約10秒的`MPEG2`片段，透過`HTTP`通信協定傳輸。
+> `HTTP`傳輸速度雖然遜於`Adobe`先前制定的`即時訊息協定` (`Real Time Message Protocol`, `RTMP`)，但大部分的`內容傳輸網路`(`CDN`，如`Akamai`)均支援`HTTP`協定，因此網站內容可以藉由`CDN`代為傳送。另外`HTTP`對於網路設備的通透性也比其他通訊協定好，除非管理人員刻意阻擋，`HTTP`可以通過大部分的分享器或防火牆。
+
+
+```console
+shell> brew install nginx-full --with-rtmp-module
+```
+
 ```console
 shell> sudo apt-get update
 shell> sudo apt-get install curl build-essential libpcre3-dev libpcre++-dev zlib1g-dev libcurl4-openssl-dev libssl-dev  git
@@ -481,15 +493,49 @@ shell> make install
 shell> /usr/local/nginx/sbin/nginx -v
 shell> vim /usr/local/nginx/conf/nginx.conf
 shell> /usr/local/nginx/sbin/nginx -v
+
+shell> /usr/local/nginx/sbin/nginx -s stop
+shell> /usr/local/nginx/sbin/nginx -s reload
 ```
 
 ```
 rtmp {
   server {
     listen 1935;
+    chunk_size 4000;
 
     application mytv {
+      # enable live streaming
       live on;
+
+      # append current timestamp to each flv
+      record_unique on;
+
+      # publish only from localhost
+      allow publish 127.0.0.1;
+      deny publish all;
+    }
+
+    application hls {
+      live on;
+      hls on;
+      hls_path /tmp/hls;
+    }
+
+  }
+}
+
+http {
+  server {
+    listen 8080;
+
+    location / hls {
+      types {
+        application/vnd.apple.mpegurl m3u8;
+        video/mp2t ts;
+      }
+      root /tmp;
+      add_header Cache-Control no-cache;
     }
   }
 }
@@ -528,8 +574,13 @@ Options:
   -g directives : set global directives out of configuration file
 ```
 
+
+rtmp://live.hkstv.hk.lxdns.com/live/hks
+
 ### :books: 參考網站：
 - https://github.com/arut/nginx-rtmp-module
+- http://www.ithome.com.tw/node/53142
+- http://brew.sh/homebrew-nginx/
 
 ---
 
