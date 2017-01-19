@@ -170,6 +170,8 @@ ffmpeg -f avfoundation -i "1"   -vcodec libx264 -preset ultrafast -acodec libfaa
 
 ffmpeg -f avfoundation -i "1:0" -vcodec libx264 -preset ultrafast -acodec libmp3lame -ar 44100 -ac 1 -f flv rtmp://148.72.245.43:1935/mytv/live
 
+ffmpeg -f avfoundation -video_size 1280X720 -framerate 30 -i "0" -vcodec libx264 -pix_fmt yuyv422  -preset veryfast -f flv rtmp://148.72.245.43:1935/mytv/live
+
 
 
 ffmpeg -i ${INPUT_RTMP_STREAM} -re -acodec libfaac 
