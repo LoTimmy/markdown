@@ -144,10 +144,12 @@ shell> oathtool --totp -b WQSWOTKQK6YQEY4E
 
 ```console
 shell> apt-get install dphys-swapfile
+shell> service dphys-swapfile start
 ```
 
-/var/swap
-/etc/dphys-swapfile
+`/var/swap`
+
+`/etc/dphys-swapfile`
 
 ```
 CONF_SWAPFILE=/var/swap
@@ -799,6 +801,7 @@ shell> ss -o state established '( dport = :ssh or sport = :ssh )'
 ```console
 shell> sysctl -w fs.file-max=65536
 shell> sysctl -w net.ipv6.conf.all.disable_ipv6=1
+shell> sysctl --system
 ```
 
 ### :books: 參考網站：

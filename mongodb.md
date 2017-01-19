@@ -20,7 +20,6 @@
 
 **mongod - MongoDB Server**
 
-
 ---
 
 ```
@@ -135,7 +134,11 @@ db
 ```
 
 ```js
+show dbs, show databases
 show collections
+show users
+show roles
+show logs
 ```
 
 ```js
@@ -145,6 +148,10 @@ db.employees.save(person1);
 db.employees.save(person2);
 db.employees.find();
 ```
+
+### :books: 參考網站：
+- https://docs.mongodb.com/v3.2/tutorial/write-scripts-for-the-mongo-shell/
+
 ---
 
 **新增 (Insert)**
@@ -341,7 +348,25 @@ shell> mongoimport --collection <collection> --db <database> --type csv --file <
 
 ```console
 shell> mongo --eval 'db.collection.find().forEach(printjson)'
+shell> mongo --username <user> --password <pass> --host <host> --port 28015
+shell> mongo script-file.js -u <user> -p
+
 ```
+
+`.mongorc.js`
+
+```js
+host = db.serverStatus().host;
+
+prompt = function() {
+             return db+"@"+host+"$ ";
+         }
+
+DBQuery.shellBatchSize = 10;
+```
+
+### :books: 參考網站：
+- https://docs.mongodb.com/manual/mongo/
 ---
 
 ```console

@@ -460,8 +460,77 @@ nginx-module-xslt-dbg - debug symbols for the nginx-module-xslt
 --with-ipv6
 ```
 
-
+### :books: 參考網站：
 - [linux_packages](http://nginx.org/en/linux_packages.html)
+---
+
+```console
+shell> sudo apt-get update
+shell> sudo apt-get install curl build-essential libpcre3-dev libpcre++-dev zlib1g-dev libcurl4-openssl-dev libssl-dev  git
+
+shell> cd /usr/local/src
+shell> wget http://nginx.org/download/nginx-1.10.2.tar.gz
+shell> git clone https://github.com/arut/nginx-rtmp-module.git
+shell> tar zxvf nginx-1.10.2.tar.gz
+
+shell> cd nginx-1.10.2
+shell> ./configure --add-module=../nginx-rtmp-module
+shell> make
+shell> make install
+
+shell> /usr/local/nginx/sbin/nginx -v
+shell> vim /usr/local/nginx/conf/nginx.conf
+shell> /usr/local/nginx/sbin/nginx -v
+```
+
+```
+rtmp {
+  server {
+    listen 1935;
+
+    application mytv {
+      live on;
+    }
+  }
+}
+```
+
+```
+nginx path prefix: "/usr/local/nginx"
+nginx binary file: "/usr/local/nginx/sbin/nginx"
+nginx modules path: "/usr/local/nginx/modules"
+nginx configuration prefix: "/usr/local/nginx/conf"
+nginx configuration file: "/usr/local/nginx/conf/nginx.conf"
+nginx pid file: "/usr/local/nginx/logs/nginx.pid"
+nginx error log file: "/usr/local/nginx/logs/error.log"
+nginx http access log file: "/usr/local/nginx/logs/access.log"
+nginx http client request body temporary files: "client_body_temp"
+nginx http proxy temporary files: "proxy_temp"
+nginx http fastcgi temporary files: "fastcgi_temp"
+nginx http uwsgi temporary files: "uwsgi_temp"
+nginx http scgi temporary files: "scgi_temp"
+```
+
+```
+nginx version: nginx/1.10.2
+Usage: nginx [-?hvVtTq] [-s signal] [-c filename] [-p prefix] [-g directives]
+
+Options:
+  -?,-h         : this help
+  -v            : show version and exit
+  -V            : show version and configure options then exit
+  -t            : test configuration and exit
+  -T            : test configuration, dump it and exit
+  -q            : suppress non-error messages during configuration testing
+  -s signal     : send signal to a master process: stop, quit, reopen, reload
+  -p prefix     : set prefix path (default: /usr/local/nginx/)
+  -c filename   : set configuration file (default: conf/nginx.conf)
+  -g directives : set global directives out of configuration file
+```
+
+### :books: 參考網站：
+- https://github.com/arut/nginx-rtmp-module
+
 ---
 
 ### :books: 參考網站：
@@ -473,16 +542,15 @@ nginx-module-xslt-dbg - debug symbols for the nginx-module-xslt
 - [checker](https://cryptoreport.websecurity.symantec.com/checker/)
 - [ssltest](https://www.ssllabs.com/ssltest/index.html)
 - [SSL/TLS Capabilities of Your Browser](https://www.ssllabs.com/ssltest/viewMyClient.html)
-
 - [nginx](https://www.raspberrypi.org/documentation/remote-access/web-server/nginx.md)
 - [Install Nginx + PHP FPM + Caching + MySQL on Ubuntu 12.04](https://www.vultr.com/docs/install-nginx-php-fpm-caching-mysql-on-ubuntu-12-04)
 - [Disabling SSLv3](https://www.vultr.com/docs/disabling-sslv3)
 - [Setup Nginx as Reverse Proxy Over Apache on Debian/Ubuntu](https://www.vultr.com/docs/setup-nginx-as-reverse-proxy-over-apache-on-debian-ubuntu)
 
 
+
+
+
+
 MacGyver
 馬蓋先
-
-<!--
-http://168gg.net/?p=71
--->

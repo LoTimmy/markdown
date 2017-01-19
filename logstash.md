@@ -1,5 +1,4 @@
-
-logstash
+`logstash`
 
 ```console
 shell> java -version
