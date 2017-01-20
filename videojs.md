@@ -99,8 +99,9 @@ videojs("example_video_1").ready(function(){
   var myPlayer = this;
 
   // EXAMPLE: Start playing the video.
-  myPlayer.play();
+  
   myPlayer.currentTime(120);
+  myPlayer.play();
 });
 ```
 

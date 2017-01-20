@@ -236,6 +236,23 @@ playsinline
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 ```
 
+`robots.txt`
+```
+User-agent: *
+Allow: /*?$
+```
+
+```
+User-agent: *
+User-agent: Googlebot
+User-agent: Googlebot-News
+User-agent: Googlebot-Image
+User-agent: Googlebot-Video
+User-agent: Googlebot-Mobile
+User-agent: Mediapartners-Google
+User-agent: Adsbot-Google
+```
+
 ### :books: 參考網站：
 - [可讓 Google 識別的中繼標記](https://support.google.com/webmasters/answer/79812?hl=zh-Hant)
 - [Viewport_meta_tag](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag)
@@ -243,7 +260,9 @@ playsinline
 - [viewport](https://developer.blackberry.com/playbook/html5/documentation/viewport.html)
 - http://www.ibm.com/support/knowledgecenter/SS4SHV_7.0.0/com.volantis.mcs.eclipse.doc/wag/wag_meta_viewport.html
 - https://support.google.com/webmasters/answer/93710?hl=zh-Hant
-
+- [Search Console](https://www.google.com/webmasters/tools/home?hl=zh-TW&pli=1)
+- [robots_txt](https://developers.google.com/webmasters/control-crawl-index/docs/robots_txt)
+- [建立 robots.txt 檔案](https://support.google.com/webmasters/answer/6062596?hl=zh-Hant)
 
 ---
 
@@ -380,6 +399,17 @@ list-style-type: kannada;
 
 class=""
 id="myDiv"
+```
+
+```
+80x80 (avatar)
+150x112 (thumbnail)
+320x240 (thumbnail)
+640x480 (message boards)
+800x600 (15-inch monitor)
+1024x768 (17-inch monitor)
+1280x1024 (19-inch monitor)
+1600x1200 (21-inch monitor)
 ```
 
 ---

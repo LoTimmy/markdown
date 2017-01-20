@@ -19,6 +19,32 @@
 ![](http://fishshell.com/assets/img/tarball_icon.png)
 -->
 
+![Imgur](http://i.imgur.com/pSxRqBQ.png)
+
+
+
+```
+80x80 (avatar)
+150x112 (thumbnail)
+320x240 (thumbnail)
+640x480 (message boards)
+800x600 (15-inch monitor)
+1024x768 (17-inch monitor)
+1280x1024 (19-inch monitor)
+1600x1200 (21-inch monitor)
+```
+
+```
+TTL
+1/2 Hour	1800
+1 Hour	3600
+12 Hours	43200
+1 Day	86400
+1 Week	604800
+Custom
+```
+
+
 🐒
 
 在距離遠或穿牆的情況下，5G WiFi的信號強度會弱於2.4G WiFi（5G頻率高，穿牆弱），在5G WiFi信號很弱的情況下，建議切換至2.4G WiFi。
