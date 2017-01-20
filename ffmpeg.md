@@ -133,12 +133,20 @@ shell> ffmpeg -f avfoundation -list_devices true -i ""
 shell> ffmpeg -f avfoundation -i "0:0" out.avi
 shell> ffmpeg -f avfoundation -pixel_format bgr0 -i "default:none" out.avi
 
-shell> ffmpeg -f avfoundation -i "1" -vcodec libx264 -f flv rtmp://148.72.245.43:1935/mytv/live
-shell> ffmpeg -f avfoundation -i "1:0" -vcodec libx264
+shell> ffmpeg -f avfoundation -i "1" -vcodec libx264 -preset ultrafast -f flv rtmp://148.72.245.43:1935/mytv/live
 
 shell> ffmpeg -re -i input.mp4 -c copy -f flv rtmp://148.72.245.43:1935/mytv/live
 shell> ffmpeg -re -i input.mp4 -c copy -vcodec libx264 -f flv rtmp://148.72.245.43:1935/mytv/live
-shell> ffmpeg -i rtmp://myserver/vod/sample -c copy output.flv      
+shell> ffmpeg -i rtmp://myserver/vod/sample -c copy output.flv
+
+shell> ffmpeg -f avfoundation -video_size 1280x720 -framerate 30 -i "0" -vcodec libx264 -preset ultrafast -pixel_format yuyv422 -f flv rtmp://148.72.245.43:1935/mytv/live
+
+shell> ffmpeg -f avfoundation -framerate 30 -i "1:0" \
+> -f avfoundation -framerate 30 -video_size 1280x720 -i "0" \
+> -vcodec libx264 -preset ultrafast \
+> -filter_complex overlay=x=W-w-10:y=H-h-10 \
+> -acodec libmp3lame -ac 1 -ar 44100 \
+> -f flv rtmp://148.72.245.43:1935/mytv/live   
 ```
 
 ```console
@@ -158,38 +166,20 @@ shell> ffmpeg -i input.mp4 -i img.png -ss 0 -t 10 -filter_complex overlay=x=W-w-
 
 shell> ffmpeg -i input.mp4 -i img.png -vcodec libx264 -filter_complex overlay -f flv rtmp://127.0.0.1:1935/mytv/live
 
-shell> ffmpeg -i input.mp4 -i img.png -vcodec libx264 -filter_complex overlay=x=W-w-10:y=H-h-10 -f flv rtmp://127.0.0.1:1935/mytv/live  
+shell> ffmpeg -i input.mp4 -i img.png -vcodec libx264 -filter_complex overlay=x=W-w-10:y=H-h-10 -f flv rtmp://127.0.0.1:1935/mytv/live
+
+shell> ffmpeg -i input.mp4 -i img.png -vcodec libx264 -preset ultrafast -filter_complex overlay output.mp4 
 ```
 
-- https://ffmpeg.org/ffmpeg-filters.html#overlay-1
+`-framerate 6`
+`-video_size vga`
+`-video_size hd720`
+`-video_size 1280x720`
+`-video_size hd1080`
+`-video_size 1920x1080`
 
-
-ffmpeg -threads 2 -crf 20 -y -i ML-02.avi -strict experimental ML-02.mp4
-
-ffmpeg -f avfoundation -i "1"   -vcodec libx264 -preset ultrafast -acodec libfaac -f flv rtmp://148.72.245.43:1935/mytv/live
-
-ffmpeg -f avfoundation -i "1:0" -vcodec libx264 -preset ultrafast -acodec libmp3lame -ar 44100 -ac 1 -f flv rtmp://148.72.245.43:1935/mytv/live
-
-ffmpeg -f avfoundation -video_size 1280X720 -framerate 30 -i "0" -vcodec libx264 -pix_fmt yuyv422  -preset veryfast -f flv rtmp://148.72.245.43:1935/mytv/live
-
-
-
-ffmpeg -i ${INPUT_RTMP_STREAM} -re -acodec libfaac 
--ab 64k 
--vcodec libx264 
--vb 230k 
--vpre default 
--vpre ipod640 
--r ${FRAME_RATE} -f flv ${OUTPUT_RTMP_STREAM}
-
-
-ffmpeg -f avfoundation -framerate 30 -i "1:0" \
- -f avfoundation -framerate 30 -video_size 640x480 -i "0" \
- -c:v libx264 -preset ultrafast \
- -filter_complex 'overlay=main_w-overlay_w-10:main_h-overlay_h-10' -acodec libmp3lame -ar 44100 -ac 1  -f flv rtmp://148.72.245.43:1935/mytv/live
-
-
-
+`-preset ultrafast`
+`-preset veryslow`
 
 `Real-Time Messaging Protocol.`
 
@@ -255,6 +245,8 @@ ffmpeg -f avfoundation -framerate 30 -i "1:0" \
 `-codec:a libfdk_aac`
 `-codec:a libmp3lame`
 
+`-acodec libfaac`
+`-acodec libmp3lame`
 `-acodec ac3_fixed`
 `-acodec copy`
 
@@ -272,6 +264,17 @@ ffmpeg -f avfoundation -framerate 30 -i "1:0" \
 `rtmp://username:password@myserver/`
 
 `/dev/null`
+
+`ultrafast`
+`superfast`
+`veryfast`
+`faster`
+`fast`
+`medium`
+`slow`
+`slower`
+`veryslow`
+`placebo`
 
 `img.jpeg`
 `img.png`
@@ -321,8 +324,6 @@ ffmpeg -f avfoundation -framerate 30 -i "1:0" \
 `output.avi`
 `output.mov`
 
-
-
 `out.flv`
 `out.gif`
 `out.h264`
@@ -342,24 +343,14 @@ ffmpeg -f avfoundation -framerate 30 -i "1:0" \
 `out1.ogg`
 `out2.ogg`
 
-```
-ffmpeg -f lavfi -i "movie=test.ts[out0+subcc]" -map v frame%08d.png -map s -c copy -f rawvideo subcc.bin
-ffmpeg -re -i <input> -f flv -rtmp_playpath some/long/path -rtmp_app long/app/name rtmp://username:password@myserver/
-ffmpeg -i foo.mpg -vcodec libx264 -x264opts keyint=123:min-keyint=20 -an out.mkv
-ffmpeg -f decklink -i 'Intensity Pro@11' -acodec copy -vcodec copy output.avi
-ffmpeg -f fbdev -framerate 1 -i /dev/fb0 -frames:v 1 screenshot.jpeg
-ffmpeg -i INPUT -codec:v libtheora -q:v 10 OUTPUT.ogg
-```
-
-
-
-
-
-
 
 ### :books: 參考網站：
 - [ffmpeg](https://ffmpeg.org/)
 - [ffmpeg](https://ffmpeg.org/ffmpeg.html)
 - https://www.ffmpeg.org/ffmpeg-devices.html
-- https://ffmpeg.org/ffmpeg-protocols.html
 - https://www.ffmpeg.org/ffmpeg-all.html
+- https://ffmpeg.org/ffmpeg-protocols.html
+- https://ffmpeg.org/ffmpeg-utils.html
+- https://ffmpeg.org/ffmpeg-filters.html#overlay-1 
+
+

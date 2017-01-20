@@ -1,5 +1,4 @@
-
-![](http://brew.sh/img/homebrew-256x256.png)
+<img src="http://brew.sh/img/homebrew-256x256.png" width="200">
 
 # Homebrew
 
@@ -198,6 +197,8 @@ shell> ls /opt/homebrew-cask/Caskroom
 
 ```console
 shell> brew cask install handbrakecli
+
+shell> brew install handbrakecli
 ```
 
 ```console
@@ -209,6 +210,9 @@ shell> HandBrakeCLI -i MyMovie.mkv -o MyMovie.avi --preset="High Profile" -s sca
 ```console
 shell> HandBrakeCLI --help
 ```
+
+### :books: 參考網站：
+- https://handbrake.fr/docs/en/latest/cli/cli-guide.html
 
 ---
 
