@@ -396,6 +396,10 @@ text-decoration: blink;
 text-decoration: none;
 text-decoration: underline overline;
 
+text-indent: 3mm; /* 設定物件中第一行文字的縮排。 */
+text-indent: 40px;
+text-indent: 5em;
+
 vertical-align: sAlign; /* 設定物件的垂直對齊。 */
 
 vertical-align: baseline; /* 預設值。將物件的內容對齊至基準線。 */
@@ -467,10 +471,13 @@ right: 3px;
 - [direction](https://developer.mozilla.org/en-US/docs/Web/CSS/direction)
 - [letter-spacing](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
 - [text-align](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align)
+- [text-indent](https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent)
+- [text-indent](https://msdn.microsoft.com/zh-tw/library/ee371258(v=expression.40).aspx)
 - [position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
 - [text-transform](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform)
 - [text-decoration](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration)
 - [background-attachment](https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment)
+
 
 ---
 

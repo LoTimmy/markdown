@@ -1,5 +1,5 @@
 
-<img src="https://pbs.twimg.com/profile_images/788014136575668224/lxEKmMnB_400x400.jpg" width="200">
+<img src="https://pbs.twimg.com/profile_images/788014136575668224/lxEKmMnB_400x400.jpg" width="100">
 
 <img src="http://i.imgur.com/yqRg1pl.png" width="100">
 
@@ -333,7 +333,6 @@ $(function() {});
 
 
 ```js
-
 $.post("ajax/test.html", function(data) {
   $(".result").html(data);
 });
@@ -941,61 +940,7 @@ $("#myform").validate({
 
 ---
 
-```html
-<script type="text/javascript">
-  $.ajax({
-    url: 'data/content.xml',
-    success: function(xml) {
-      // Parse the response
-    }
-  });
-</script>
-```
 
-```js
-$.ajax({
-  dataType: 'mycustomtype',
-  dataType: "script",
-  dataType: "html",
-  dataType: "json",
-  dataType: "jsonp",
-  dataType: "xml",
-  dataType: "text",
-
-  url: "test.html",
-  url: "test.js",
-  url: "script.php",
-
-  method: "POST",
-  method: "GET",
-
-  type: "GET",
-  type: "POST",
-
-  data: { name: "John", location: "Boston" },
-  data: { id : menuId },
-
-  global: false,
-
-  cache: false,
-success:
-complete:
-
-
-     success: function(xml) {
-          // Parse the response
-     }
-
-
-});
-
-
-error_func
-        success: doSuccess,
-        error: doError
-
-
-```
 
 ```html
 <script>
@@ -1010,65 +955,9 @@ error_func
 
 
 
-```js
-$.ajax({
-  statusCode: {
-    404: function() {
-      alert("page not found");
-    }
-  }
-});
 
-$.ajax({
-  url: "script.php",
-  dataType: "json",
-  method: "POST",
-});
 
-$.ajax({
-    method: "POST",
-    url: "some.php",
-    data: {
-      name: "John",
-      location: "Boston"
-    }
-  })
-  .done(function(msg) {
-    alert("Data Saved: " + msg);
-  });
 
-$.ajax({
-  url: fileurl,
-  type: "GET",
-  dataType: "xml",
-  complete: xml_ready,
-  error: error_func
-});
-
-```
-
-```js
-$("#target").click(function() {
-  // get the value from the username field                              
-  var username = $('#username').val();
-
-  // post a JSON payload:
-  $.ajax({
-    url: "script.php",
-    contentType: 'application/json',
-    data: JSON.stringify({
-      'username': username,
-      'location': $("#location").val()
-    }),
-    method: "POST",
-    dataType: "json",
-    success: function() {},
-    error: function() {},
-    complete: function() {}
-  });
-});
-
-```
 
 ```html
 <script type="text/javascript">
@@ -1090,17 +979,12 @@ $("#target").click(function() {
 ```js
 $("#target").submit(function(event) {
   alert("Handler for .submit() called.");
+  //prevent the default action	
   event.preventDefault();
 });
 ```
 
-### :books: 參考網站：
-- https://api.jquery.com/jquery.ajax/
-- https://api.jquery.com/Ajax_Events/
-- https://api.jquery.com/click/
-- https://api.jquery.com/val/
-- https://api.jquery.com/find/
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
+
 
 ---
 

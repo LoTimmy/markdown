@@ -175,3 +175,7 @@ body {
 - [BootstrapCDN](https://www.bootstrapcdn.com/)
 - [Start Bootstrap](http://startbootstrap.com/)
 - http://v4-alpha.getbootstrap.com/content/images/
+- https://msdn.microsoft.com/zh-tw/magazine/mt147241.aspx
+- https://msdn.microsoft.com/en-us/magazine/mt147241.aspx
+- https://msdn.microsoft.com/en-us/magazine/hh653584.aspx
+- https://msdn.microsoft.com/zh-tw/magazine/dn857356.aspx

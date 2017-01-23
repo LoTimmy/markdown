@@ -10,6 +10,9 @@
 ---
 Keystroke    | Command
 ------------ | -------------
+ctrl-,       |
+ctrl-↑       |
+ctrl-↓       |
 ctrl-\       | tree-view:toggle
 ctrl-n       | application:new-file
 cmd-s        | core:save
@@ -46,9 +49,16 @@ Windows Registry Editor Version 5.00
 shell> apm install vim-mode
 ```
 
+### :books: 參考網站：
 - [google](https://atom.io/users/google)
 
-### :books: 參考網站：
 
+
+---
+
+![Imgur](http://i.imgur.com/y931f3M.png)
+
+
+### :books: 參考網站：
 - [atom](https://atom.io/)
 - [emmet-atom](https://github.com/emmetio/emmet-atom)

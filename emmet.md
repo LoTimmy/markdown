@@ -129,7 +129,13 @@ div.panel.panel-default>div.panel-body{Basic panel example}
 </div>
 ```
 
+```
+lorem100
 
+p*4>lorem
+
+ul.generic-list>lorem10.item*4
+```
 
 ### :books: 參考網站：
 
@@ -137,3 +143,5 @@ div.panel.panel-default>div.panel-body{Basic panel example}
 - http://docs.emmet.io/abbreviations/syntax/
 - [emmet-atom](https://github.com/emmetio/emmet-atom)
 - [Cheat Sheet](http://docs.emmet.io/cheat-sheet/)
+- http://livestyle.io/
+- https://chrome.google.com/webstore/detail/emmet-livestyle/diebikgmpmeppiilkaijjbdgciafajmg?hl=zh-TW
