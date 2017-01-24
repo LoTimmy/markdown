@@ -200,6 +200,9 @@ background-color: transparent;
 ```css
 border: 2px solid green;
 border: solid 2px blue;
+border: 2px dotted;
+border: medium dashed green;
+
 
 border-bottom-left-radius: 15px 30px;
 border-bottom-left-radius: 2em;
@@ -248,6 +251,7 @@ font-weight: bold;
 ```css
 margin: 20px 0px 10px 75%;
 margin: 8px;
+margin: 0 0 0 .5em;
 margin: 0px auto; /* 設定物件上、下、左、右邊界的寬度。 */
 margin-top: 10px; /* 設定物件的上邊界高度。 */
 margin-right: 10px; /* 設定物件的右邊界高度。 */
@@ -341,6 +345,7 @@ direction: rtl;
 float: left;
 
 height: 60px;
+height: 100%;
 left: 50px;
 
 list-style: none;
@@ -354,6 +359,9 @@ line-height: normal;
 line-height: 3.5;
 line-height: 3em;
 line-height: 34%;
+
+
+float: right;
 
 max-width: 100%;
 max-height: 100%;
@@ -997,3 +1005,12 @@ md: 'screen and (min-width: 48em)',   // 768px
 lg: 'screen and (min-width: 64em)',   // 1024px
 xl: 'screen and (min-width: 80em)'    // 1280px
 ```
+
+
+```
+@import url(style600min.css) screen and (min-width: 600px);
+<link rel="stylesheet" type="text/css" media="screen and (max-device-width: 800px)" href="style800.css" />
+```
+
+
+

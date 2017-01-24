@@ -44,6 +44,7 @@ TTL
 Custom
 ```
 
+x ÷ y = z
 
 🐒
 

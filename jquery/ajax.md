@@ -154,6 +154,27 @@ arg1
 ```
 ---
 
+```html
+<input type="button" value="Click Me!" id="my_button" />
+```
+```js
+$("my_button").observe("click", buttonPressed);
+```
+```css
+#my_button { background-color: #999; }
+```
+
+```
+function buttonPressed() {
+    $("my_div").setStyle({
+        backgroundColor: "#FF6600",
+        fontSize: "12px"
+    })
+}
+```
+
+---
+
 
 ### :books: 參考網站：
 - https://api.jquery.com/jquery.ajax/

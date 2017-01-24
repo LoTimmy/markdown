@@ -43,20 +43,20 @@ shell> composer require twbs/bootstrap
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>Document</title>
 
-    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
   <body>
     <h1>Hello, world!</h1>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//getbootstrap.com/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
 ```
@@ -106,6 +106,16 @@ body {
 </div>
 ```
 ---
+
+`Grid system`
+
+`.col-xs-4`
+
+Phones (<768px) `xs`
+Tablets (≥768px) `sm`
+Desktops (≥992px) `md`
+Desktops (≥1200px) `lg`
+
 ```html
 <div class="row">
   <div class="col-md-1">.col-md-1</div>
@@ -144,7 +154,13 @@ body {
 
 ```
 
+```emmet
+div.panel.panel-default>div.panel-body{Basic panel example}
+div.panel.panel-default>div.panel-heading{Panel heading without title}+div.panel-body{Panel content}
+div.panel.panel-default>div.panel-body{Panel content}+div.panel-footer{Panel footer}
 ```
+
+```html
 <div class="panel panel-default">
   <div class="panel-body">
     Basic panel example
@@ -164,9 +180,7 @@ body {
   </div>
   <div class="panel-footer">Panel footer</div>
 </div>
-
 ```
-
 
 ---
 
@@ -179,3 +193,14 @@ body {
 - https://msdn.microsoft.com/en-us/magazine/mt147241.aspx
 - https://msdn.microsoft.com/en-us/magazine/hh653584.aspx
 - https://msdn.microsoft.com/zh-tw/magazine/dn857356.aspx
+
+```emmet
+div.well.well-lg
+div.well.well-sm>lorem10
+```
+
+```
+<div class="well well-lg">...</div>
+<div class="well well-sm">...</div>
+
+```

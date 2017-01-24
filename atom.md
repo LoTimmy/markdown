@@ -13,36 +13,36 @@ Keystroke    | Command
 ctrl-,       |
 ctrl-↑       |
 ctrl-↓       |
+
+
+Keystroke    | Command
+------------ | -------------
 ctrl-\       | tree-view:toggle
 ctrl-n       | application:new-file
 cmd-s        | core:save
 ctrl-s       | core:save
 ctrl-shift-s	 | core:save-as	
-⌘-shift-s  | core:save-as
-ctrl-shift-d | editor:duplicate-lines 
+⌘-shift-s        | core:save-as
 ctrl-shift-m	 | markdown-preview:toggle
 ctrl-shift-p	 | command-palette:toggle	
+ctrl-shift-K	 | editor:delete-line	
+ctrl-shift-d     | editor:duplicate-lines
 ---
 
-`Open with Atom.reg`
-
+`keymap.cson`
 ```
-Windows Registry Editor Version 5.00
-
-[HKEY_CLASSES_ROOT\*\shell\Atom]
-@="Open with Atom"
-"Icon"="\"C:\\ProgramData\\timmylo\\atom\\app-1.3.3\\atom.exe\""
-
-[HKEY_CLASSES_ROOT\*\shell\Atom\command]
-@="\"C:\\ProgramData\\timmylo\\atom\\app-1.3.3\\atom.exe\" \"%1\""
+'atom-text-editor:not([mini])':
+  'ctrl-shift-K': 'editor:delete-line'
+```
+```
+'atom-text-editor:not([mini])':
+  'ctrl-e': 'editor:delete-line'
 ```
 
----
 
-![autocomplete-html](http://i.imgur.com/WS9X0Xs.gif)
+<img src="http://i.imgur.com/WS9X0Xs.gif" alt="atom" width=500>
 
-![](https://github-atom-io-herokuapp-com.global.ssl.fastly.net/assets/screenshot-main-80d8c9841da6ed11c9d87f31136a4ca9.png)
-
+<img src="https://github-atom-io-herokuapp-com.global.ssl.fastly.net/assets/screenshot-main-80d8c9841da6ed11c9d87f31136a4ca9.png" alt="atom" width=500>
 
 `vim-mode`
 ```console 
