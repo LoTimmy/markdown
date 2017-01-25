@@ -6,6 +6,7 @@
 
 ```
 ffplay file.mov
+ffplay rtmp://148.72.245.43:1935/mytv/live
 ```
 
 ```
