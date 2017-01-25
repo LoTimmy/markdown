@@ -6,6 +6,7 @@
 
 - [Normalize.css](#normalize.css)
 - [CSS Reset](#cssreset)
+- [Pseudo-elements](#Pseudo-elements)
 
 ---
 
@@ -734,7 +735,7 @@ pre {
 <pre><p> HelloWorld</p><img id="sawezuswePh7" src="http://placehold.it/200x60" alt=""></pre>
 ```
 
-
+**[⬆ Back to Top](#table-of-contents)**
 ---
 
 <a href="https://jsfiddle.net/dcwnbthk/"><img src="http://i.imgur.com/A9cwqLx.png" width="50"></a>
@@ -762,6 +763,7 @@ img {
 }
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 
@@ -808,7 +810,8 @@ div {
 ### :books: 參考網站：
 - https://msdn.microsoft.com/zh-tw/library/ms531188.aspx
 - [z-index](https://msdn.microsoft.com/zh-tw/library/ee371254(v=expression.40).aspx)
- 
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 
@@ -835,6 +838,8 @@ div {
   margin-top: 10px;
 }
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 
@@ -866,13 +871,12 @@ shell> bower install --save normalize-css
 ```html
 <link rel="stylesheet" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
 <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
-<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset-context/cssreset-context-min.css">
-
 ```
-
+### :books: 參考網站：
 - [cssreset](http://yuilibrary.com/yui/docs/cssreset/)
 
 **[⬆ Back to Top](#table-of-contents)**
+
 ---
 
 `SVG for Everybody`
@@ -979,8 +983,18 @@ text-shadow: black 0.01em 0.01em 0.05em !important;
 
 ---
 
+`CSS Reset`<a name="Pseudo-elements"></a>
+
 <a href="https://jsfiddle.net/v3wyehnn/"><img src="http://i.imgur.com/A9cwqLx.png" width="50"></a>
 
+**`HTML content`**
+```html
+<p class="boring-text">Here is some good old boring text.</p>
+<p>Here is some moderate text that is neither boring nor exciting.</p>
+<p class="exciting-text">Contributing to MDN is easy and fun. Just hit the edit button to add new live samples, or improve existing samples.</p>
+```
+
+**`CSS content`**
 ```css
 .exciting-text::after {
   content: "<- now this *is* exciting!";
@@ -993,15 +1007,28 @@ text-shadow: black 0.01em 0.01em 0.05em !important;
 }
 ```
 
-```html
-<p class="boring-text">Here is some good old boring text.</p>
-<p>Here is some moderate text that is neither boring nor exciting.</p>
-<p class="exciting-text">Contributing to MDN is easy and fun. Just hit the edit button to add new live samples, or improve existing samples.</p>
-```
+<a href="https://jsfiddle.net/95fwzqt2/"><img src="http://i.imgur.com/A9cwqLx.png" width="50"></a>
 
+**`CSS content`**
+```css
+q::before { 
+  content: "«";
+  color: blue;
+}
+q::after { 
+  content: "»";
+  color: red;
+}
+```
 ### :books: 參考網站：
-- [::after](https://developer.mozilla.org/en-US/docs/Web/CSS/::after)
 - [clear](https://developer.mozilla.org/en-US/docs/Web/CSS/clear)
+- [Pseudo-elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
+- [::after](https://developer.mozilla.org/en-US/docs/Web/CSS/::after)
+- [::before](https://developer.mozilla.org/en-US/docs/Web/CSS/::before)
+- [::first-letter](https://developer.mozilla.org/en-US/docs/Web/CSS/::first-letter)
+- [::first-line](https://developer.mozilla.org/en-US/docs/Web/CSS/::first-line)
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 
