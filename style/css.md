@@ -1,15 +1,19 @@
 <img src="http://i.imgur.com/TjmgUA1.png" width="50">
 
+# Table of Contents
+
+<a name="table-of-contents"></a>
+
+- [Normalize.css](#normalize.css)
+- [CSS Reset](#cssreset)
+
+---
+
 <img src="http://i.imgur.com/zWoVYav.png" width="300">
 
 <img src="http://api.jquery.com/resources/0042_04_04.png" width="250">
 
 <img src="https://developer.mozilla.org/files/4109/padding-bottom.svg" width="350">
-
-# Table of Contents
-
-- [Normalize.css](#normalize.css)
-
 
 ---
 
@@ -838,6 +842,11 @@ div {
 
 ![](http://necolas.github.io/normalize.css/logo.svg)
 
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+```
+
 ### :books: 參考網站：
 - [Normalize.css](http://necolas.github.io/normalize.css/)
 - https://cdnjs.com/libraries/normalize
@@ -852,9 +861,18 @@ shell> bower install --save normalize-css
 
 ---
 
+`CSS Reset`<a name="cssreset"></a>
+
 ```html
 <link rel="stylesheet" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset-context/cssreset-context-min.css">
+
 ```
+
+- [cssreset](http://yuilibrary.com/yui/docs/cssreset/)
+
+**[⬆ Back to Top](#table-of-contents)**
 ---
 
 `SVG for Everybody`
