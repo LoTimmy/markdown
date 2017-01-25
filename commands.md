@@ -1,5 +1,7 @@
 # Table of Contents
 
+<a name="table-of-contents"></a>
+
 - [dig - DNS lookup utility](#dig)
 - [named-checkzone](#named-checkzone)
 - [freebcp](#freebcp) 

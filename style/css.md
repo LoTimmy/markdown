@@ -1,9 +1,15 @@
+<img src="http://i.imgur.com/TjmgUA1.png" width="50">
 
-![](http://i.imgur.com/hSMa5Oy.png)
+<img src="http://i.imgur.com/zWoVYav.png" width="300">
 
-![](https://developer.mozilla.org/files/4109/padding-bottom.svg)
+<img src="http://api.jquery.com/resources/0042_04_04.png" width="250">
 
-![](http://api.jquery.com/resources/0042_04_04.png)
+<img src="https://developer.mozilla.org/files/4109/padding-bottom.svg" width="350">
+
+# Table of Contents
+
+- [Normalize.css](#normalize.css)
+
 
 ---
 
@@ -359,7 +365,6 @@ line-height: normal;
 line-height: 3.5;
 line-height: 3em;
 line-height: 34%;
-
 
 float: right;
 
@@ -829,7 +834,7 @@ div {
 
 ---
 
-`Normalize.css`
+`Normalize.css`<a name="normalize.css"></a>
 
 ![](http://necolas.github.io/normalize.css/logo.svg)
 
@@ -842,6 +847,14 @@ div {
 shell> npm install --save normalize.css
 shell> bower install --save normalize-css
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+---
+
+```html
+<link rel="stylesheet" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+```
 ---
 
 `SVG for Everybody`
@@ -849,6 +862,8 @@ shell> bower install --save normalize-css
 ### :books: 參考網站：
 - [svg4everybody](https://github.com/jonathantneal/svg4everybody)
 - [svg4everybody](https://jonathantneal.github.io/svg4everybody/)
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 
@@ -858,7 +873,7 @@ shell> bower install --save normalize-css
 - [Semantic UI](http://semantic-ui.com/)
 - http://susy.oddbird.net/
 
-
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 
