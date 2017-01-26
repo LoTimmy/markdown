@@ -1,7 +1,8 @@
 <img src="http://i.imgur.com/TjmgUA1.png" width="50">
 
-# Table of Contents
+### Table of Contents
 
+**`Table of Contents`** `目錄`
 <a name="table-of-contents"></a>
 
 - [Normalize.css](#normalize.css)
@@ -14,6 +15,8 @@
 ---
 
 <img src="http://i.imgur.com/zWoVYav.png" width="300">
+<img src="http://i.imgur.com/BLxN8Y5.png" width="300">
+
 
 **`Selector`** `選擇器` `se・lec・tor`
 
@@ -139,8 +142,7 @@ p {
   font-size:17px;
 }
 ```
-从上述 CSS 规则中可见，我们期望的对元素外观的操作（字体颜色设置为蓝色、字体大小设置为 17px）是通过” color:blue”和”font-size:17px”这 2 个属性声明指定的。而这些操作要作用于哪些元素，则是通过 CSS 的选择器”#message”指定为 ID 等于“message”的元素。
-
+从上述 CSS 规则中可见，我们期望的对元素外观的操作（字体颜色设置为蓝色、字体大小设置为 17px）是通过  "color:blue" 和 "font-size:17px" 这 2 个属性声明指定的。而这些操作要作用于哪些元素，则是通过 CSS 的选择器 "#message" 指定为 ID 等于 "message" 的元素。
 
 ```css
 div {
@@ -230,6 +232,8 @@ background-color: lightblue;
 background-color: rgb(15, 99, 30);
 background-color: transparent;
 ```
+
+---
 
 ```css
 border: 2px solid green;

@@ -1,10 +1,9 @@
 <img src="http://i.imgur.com/Ovy92WP.png" width="80">
 <img src="http://i.imgur.com/Vk22Gg1.png" width="100">
 
-# Table of Contents
+### Table of Contents
 <a name="table-of-contents"></a>
 
-:blue_book:
 - [doctype](#doctype)
 - [script](#script)
 - [link](#link)
