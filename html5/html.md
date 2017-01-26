@@ -12,6 +12,73 @@
 - [video](#video)
 - [form](#form)
 - [img](#img)
+- [opengraph](#opengraph)
+
+
+---
+
+### :books: 參考網站：
+- [Markup Validation Service](https://validator.w3.org/)
+
+---
+
+```html
+<!--[if gte IE 7]>
+<![endif]-->
+
+<!--[if IE 8]>
+<![endif]-->
+
+<![if lt IE 8]>
+<![endif]>
+
+<!--[if lt IE 9]>
+<![endif]-->
+
+<!--[if IE]><p>You are using Internet Explorer.</p><![endif]-->
+<![if !IE]><p>You are not using Internet Explorer.</p><![endif]>
+
+<!--[if IE 7]><p>Welcome to Internet Explorer 7!</p><![endif]-->
+<!--[if !(IE 7)]><p>You are not using version 7.</p><![endif]-->
+
+<!--[if gte IE 7]><p>You are using IE 7 or greater.</p><![endif]-->
+<!--[if (IE 5)]><p>You are using IE 5 (any version).</p><![endif]-->
+<!--[if (gte IE 5.5)&(lt IE 7)]><p>You are using IE 5.5 or IE 6.</p><![endif]-->
+<!--[if lt IE 5.5]><p>Please upgrade your version of Internet Explorer.</p><![endif]-->
+
+
+<!--[if IE 8]>
+<p>Welcome to Internet Explorer 8.</p>
+<![endif]-->
+
+<![if lt IE 8]>
+<p>Please upgrade to Internet Explorer version 8.</p>
+<![endif]>
+
+<!--[if gte IE 7]>
+<script>
+  alert("Congratulations! You are running Internet Explorer 7 or a later version of Internet Explorer.");
+</script>
+<p>Thank you for closing the message box.</p>
+<![endif]-->
+
+
+```
+
+### :books: 參考網站：
+- https://msdn.microsoft.com/en-us/library/ms537512(v=vs.85).aspx
+- https://msdn.microsoft.com/zh-cn/library/cc817577.aspx
+
+---
+
+```html
+<noscript>
+   <strong>Warning !</strong>
+   Because your browser does not support HTML5, some elements are simulated using JScript.
+   Unfortunately your browser has disabled scripting. Please enable it in order to display this page.
+</noscript>
+```
+
 
 ---
 
@@ -105,13 +172,27 @@ playsinline
 ---
 
 ```html
+<HTML lang="en">
 <html lang="en"> </html>
 <html lang="en-US"> </html>
+<html lang="en-us"> </html>
+<html lang="zh-TW"> </html>
+<html lang="zh-HK"> </html>
+<html lang="zh-CN"> </html>
+
+<html prefix="og: http://ogp.me/ns#">
 
 <head> </head>
 <title>Untitled</title>
 <title>The Title of the Page</title>
+<title>My Web Page</title>
+<title>Test Page</title>
 ```
+
+### :books: 參考網站：
+- https://www.ietf.org/rfc/rfc4646.txt
+- https://msdn.microsoft.com/zh-tw/windows/uwp/publish/supported-languages
+- https://msdn.microsoft.com/en-us/microsoft-r/jj657969
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -168,14 +249,37 @@ playsinline
 ---
 `css`<a name="css"></a>
 
+
+> 「網站圖示」(也稱為「捷徑圖示」或 `Favicon`) 是與特定網站或網頁相關聯的小型影像。
+> `16x16`、`24x24`、`32x32`、`64x64`
+
+<img src="http://i.imgur.com/fiyZJux.png" width="50" alt="Example">
+
+`favicon.ico`
+
 ```html
-<link rel="shortcut icon" href="https://www.example.com/H3nktOa7ZMg.ico">	
-<link rel="Shortcut Icon" href="/H3nktOa7ZMg.ico" type="image/x-icon">	
+<head>
+  <link rel="SHORTCUT ICON" href="http://www.mydomain.com/myicon.ico"/>
+  <title>My Title</title>
+</head>
+```
+
+> 使用 `rel="canonical"` 連結元素指出偏好網址
+
+
+```html
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="shortcut icon" href="https://www.example.com/favicon.ico">	
+<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon">	
 <link rel="icon" type="image/png" href="assets/i/favicon.png">
+<link rel="icon" type="text/x-icon" href="tmp/favicon.ico">
 <link href="https://www.example.com/CqvycaYb5lt.png" rel="apple-touch-icon">	
 <link type="text/css" rel="stylesheet" href="https://www.example.com/style.css">	
 
 <link href='https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister' rel='stylesheet' type='text/css'>
+
+<link rel="canonical" href="https://blog.example.com/dresses/green-dresses-are-awesome" />
+<link rel="canonical" href="http://www.apple.com/" />
 
 <!-- Include the CSS -->
 <link rel="stylesheet" href="style.css">	
@@ -197,6 +301,10 @@ playsinline
 
 <style>	</style>
 ```
+### :books: 參考網站：
+- [使用標準網址](https://support.google.com/webmasters/answer/139066?hl=zh-Hant)
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 `meta`<a name="meta"></a>
@@ -205,16 +313,16 @@ playsinline
 <meta charset="utf-8">
 <meta name="en:locale" content="zh_TW">
 
+<meta name="robots" content="noindex,nofollow">
 <meta name="robots" content="noodp, noydir">
 <meta name="robots" content="noodp">
-
-<meta name="robots" content="noindex,nofollow">
-<meta name="googlebot" content="noindex,nofollow">
-
 <meta name="robots" content="noindex">
+
+<meta name="googlebot" content="noindex,nofollow">
 <meta name="googlebot" content="noindex">
 
 <meta name="description" content="">
+<meta name="Description" content="" />
 <meta name="description" content="A description of the page" />
 
 <meta name="author" content="">
@@ -237,8 +345,12 @@ playsinline
 
 <meta content="" name="description">
 
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8; IE=9" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
 <meta http-equiv="refresh" content="0;url=pages/index.html">
 
 <meta name="google" content="notranslate" />
@@ -282,19 +394,66 @@ User-agent: Adsbot-Google
 
 `img`<a name="img"></a>
 
+```html
 <img src="mygraphic.bmp">	
 <img src="large.png" width="20">
 <img src="mdn-logo-sm.png" alt="MDN">
+<img src="/uploads/100-marie-lloyd.jpg" alt="" width="100" height="150">
+```
 
 ### :books: 參考網站：
 - [img](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img)
 
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 
 <img src="http://ogp.me/logo.png" width="200">
 
 `opengraph`<a name="opengraph"></a>
+
+
+<img src="http://i.imgur.com/fiyZJux.png" width="50" alt="Example">
+
+```html
+<html prefix="og: http://ogp.me/ns#">
+<head>
+<title>The Rock (1996)</title>
+<meta property="og:title" content="The Rock" />
+<meta property="og:type" content="video.movie" />
+<meta property="og:url" content="http://www.imdb.com/title/tt0117500/" />
+<meta property="og:image" content="http://ia.media-imdb.com/images/rock.jpg" />
+...
+</head>
+...
+</html>
+```
+
+<img src="http://i.imgur.com/fiyZJux.png" width="50" alt="Example">
+
+```html
+<meta property="og:title" content="" />
+<meta property="og:description" content="" />
+<meta property="og:url" content="http://" />
+<meta property="og:locale" content="zh_TW" />
+<meta property="og:locale" content="zh_CN" />
+<meta property="og:locale" content="zh_HK" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:image" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="" />
+```
+
+<img src="http://i.imgur.com/fiyZJux.png" width="50" alt="Example">
+
+```html
+<meta property="fb:app_id"          content="1234567890" /> 
+<meta property="og:type"            content="article" /> 
+<meta property="og:url"             content="http://newsblog.org/news/136756249803614" /> 
+<meta property="og:title"           content="Introducing our New Site" /> 
+<meta property="og:image"           content="https://scontent-sea1-1.xx.fbcdn.net/hphotos-xap1/t39.2178-6/851565_496755187057665_544240989_n.jpg" /> 
+<meta property="og:description"    content="http://samples.ogp.me/390580850990722" />
+```
 
 ```html
 <meta property="og:type" content="article" />
@@ -308,6 +467,8 @@ User-agent: Adsbot-Google
 <meta property="og:url" content="http://newsblog.org/news/136756249803614" />
 ```
 
+<img src="http://i.imgur.com/fiyZJux.png" width="50" alt="Example">
+
 ```html
 <meta property="og:url" content="http://www.imdb.com/title/tt2562232/" />
 <meta property='og:image' content="https://images-na.ssl-images-amazon.com/images/M/MV5BODAzNDMxMzAxOV5BMl5BanBnXkFtZTgwMDMxMjA4MjE@._V1_UY1200_CR90,0,630,1200_AL_.jpg" />
@@ -318,11 +479,22 @@ User-agent: Adsbot-Google
 />
 ```
 
+```html
+<meta property="fb:app_id" content="1234567890" /> 
+```
+
+
 ![Imgur](http://i.imgur.com/DXvQWTV.png)
 
 ### :books: 參考網站：
 - [Open Graph protocol](http://ogp.me/)
 - [opengraph](https://developers.facebook.com/docs/sharing/opengraph)
+- https://developers.facebook.com/docs/reference/opengraph/object-type/article/
+- https://developers.facebook.com/docs/sharing/opengraph/using-objects
+- https://developers.facebook.com/docs/opengraph/getting-started
+- [分享偵錯工具](https://developers.facebook.com/tools/debug/)
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 

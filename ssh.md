@@ -1,3 +1,13 @@
+<img src="https://www.openssh.com/images/openssh.gif" width="200">
+
+### Table of Contents
+
+<a name="table-of-contents"></a>
+
+- [ipv6](#ipv6)
+- [autossh](#autossh)
+
+---
 
 ```
 Port 22960 
@@ -7,16 +17,15 @@ Protocol 2
 PermitRootLogin no
 ```
 
-- 把 SSH 的标准端口改为不常用的值并增强 SSH 配置，从而挡住最简单的攻击。
-- LoginGraceTime 允许一次登录花费 30 秒；如果用户花费的时间超过 30 秒，就不允许他访问，必须重新登录。
-- MaxAuthTries 把错误尝试的次数限制为 3 次，3 次之后拒绝登录尝试。
-- 上面的 Protocol 2 行禁止使用比较弱的协议。
+- 把 `SSH` 的标准端口改为不常用的值并增强 `SSH` 配置，从而挡住最简单的攻击。
+- `LoginGraceTime` 允许一次登录花费 30 秒；如果用户花费的时间超过 30 秒，就不允许他访问，必须重新登录。
+- `MaxAuthTries` 把错误尝试的次数限制为 3 次，3 次之后拒绝登录尝试。
+- 上面的 `Protocol 2` 行禁止使用比较弱的协议。
 - 最后一行不允许任何人作为根用户登录，这会让黑客攻击更困难。
 
-**OpenSSH Server**
+**`OpenSSH Server`**
 
-
-/etc/ssh/sshd_config
+`/etc/ssh/sshd_config`
 ```
 UseDNS no
 
@@ -26,7 +35,6 @@ GSSAPIAuthentication no
 GSSAPICleanupCredentials yes
 
 #Banner /etc/issue.net
-
 ```
 
 ```console
@@ -40,9 +48,11 @@ shell> sudo service ssh restart
 
 > `SSH` 会自动加密和解密所有 `SSH` 客户端与服务端之间的网络数据。
 > `SSH` 还同时提供了一个非常有用的功能，这就是端口转发。
-> 它能够将其他 `TCP` 端口的网络数据通过 `SSH` 链接来转发，并且自动提供了相应的加密及解密服务。这一过程有时也被叫做“隧道”（tunneling），这是因为 `SSH` 为其他 `TCP` 链接提供了一个安全的通道来进行传输而得名。
+> 它能够将其他 `TCP` 端口的网络数据通过 `SSH` 链接来转发，并且自动提供了相应的加密及解密服务。这一过程有时也被叫做“隧道”（`Tunneling`），这是因为 `SSH` 为其他 `TCP` 链接提供了一个安全的通道来进行传输而得名。
 > 加密 SSH Client 端至 SSH Server 端之间的通讯数据。
 > 突破防火墙的限制完成一些之前无法建立的 TCP 连接。
+
+`Tunneling` `通道`
 
 **本地端口转发**
 ```
@@ -239,14 +249,28 @@ shell> ssh-keygen -f "/root/.ssh/known_hosts" -R 192.168.42.19
 
 ---
 
+`autossh`<a name="autossh"></a>
+
 ```console
 shell> apt-get install autossh
 shell> autossh -M 20000 -t remotehost 'screen -raAd sessionname'
 shell> ssh -t remotehost screen -xRR
 ```
 
-autossh
+**[⬆ Back to Top](#table-of-contents)**
 
+---
+
+`ipv6`<a name="ipv6"></a>
+
+```console
+shell> ssh user@fe80::20c:29ff:fe2e:7281
+shell> scp user@\[fe80::20c:29ff:fe2e:7281\]:~
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+---
 
 ###  參考網站：
 - [serverguide](https://help.ubuntu.com/lts/serverguide/)

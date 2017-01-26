@@ -18,25 +18,20 @@
 <img src="http://i.imgur.com/BLxN8Y5.png" width="300">
 
 
-**`Selector`** `選擇器` `se・lec・tor`
-
-**`Declaration`** `[͵dɛkləˋreʃən]` `宣告` `de・cla・ra・tion`
-
-**`Property`** `[ˋprɑpɚtɪ]` `屬性` `prop・er・ty`
-
-**`Separator`** `[ˋsɛpə͵retɚ]` `分隔符號` `sep・a・ra・tor`
+- **`Selector`** `選擇器` `se・lec・tor`
+- **`Declaration`** `[͵dɛkləˋreʃən]` `宣告` `de・cla・ra・tion`
+- **`Property`** `[ˋprɑpɚtɪ]` `屬性` `prop・er・ty`
+- **`Separator`** `[ˋsɛpə͵retɚ]` `分隔符號` `sep・a・ra・tor`
 
 <img src="http://api.jquery.com/resources/0042_04_04.png" width="250">
 
-**`Padding`** `[ˋpædɪŋ]` `邊框間距` `與邊框距離` `pad・ding`
-
-**`Margin`** `[ˋmɑrdʒɪn]` `邊界` `mar・gin`
-
-**`Border`** `[ˋbɔrdɚ]` `框線` `bor・der`
+- **`Padding`** `[ˋpædɪŋ]` `邊框間距` `與邊框距離` `pad・ding`
+- **`Margin`** `[ˋmɑrdʒɪn]` `邊界` `mar・gin`
+- **`Border`** `[ˋbɔrdɚ]` `框線` `bor・der`
 
 <img src="https://developer.mozilla.org/files/4109/padding-bottom.svg" width="350">
 
-**`Area`** `[ˋɛrɪə]` `區域` `ar・e・a`
+- **`Area`** `[ˋɛrɪə]` `區域` `ar・e・a`
 
 ---
 
@@ -231,6 +226,8 @@ background-color: blue;
 background-color: lightblue;
 background-color: rgb(15, 99, 30);
 background-color: transparent;
+background-color: #000000;
+background-color: #ffffff;
 ```
 
 ---
@@ -1201,6 +1198,16 @@ xl: 'screen and (min-width: 80em)'    // 1280px
 ```
 @import url(style600min.css) screen and (min-width: 600px);
 <link rel="stylesheet" type="text/css" media="screen and (max-device-width: 800px)" href="style800.css" />
+```
+
+```css 
+.myclass {
+  ...
+}
+
+.DivClass1 {
+  ...
+}
 ```
 
 

@@ -233,6 +233,13 @@ shell> git remote add origin https://username@your-azure-website.scm.azurewebsit
 shell> git push
 ```
 
+```
+Aborting commit due to empty commit message.
+```
+- **`Aborting`** `正在中止`
+- **`Empty`** `[ˋɛmptɪ]` `空的` `空` `空白` `emp・ty`
+
+
 ```console
 shell> git clone --bare HelloWorld HelloWorld.git
 shell> scp -r HelloWorld.git user@git.example.com:/opt/git
