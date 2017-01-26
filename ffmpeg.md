@@ -3,6 +3,17 @@
 `ffmpeg2theora`
 `ffmpeg`
 
+
+```
+ffplay file.mov
+ffplay rtmp://148.72.245.43:1935/mytv/live
+```
+
+```
+ffprobe -show_format -show_streams -print_format json foo.mov
+```
+
+
 ```
 ffmpeg version 2.8.10-0ubuntu0.16.04.1 Copyright (c) 2000-2016 the FFmpeg developers
   built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609

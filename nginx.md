@@ -206,7 +206,6 @@ shell> openssl s_client -connect www.godaddy.com:443
 - [最佳化效能](https://developers.google.com/web/fundamentals/performance/?hl=zh-tw)
 - [configuring_https_servers](http://nginx.org/en/docs/http/configuring_https_servers.html)
 - [sslanalyzer](https://sslanalyzer.comodoca.com/)
-
 - [root-comodo-rsa-certification-authority-sha-2](https://support.comodo.com/index.php?/Knowledgebase/Article/View/969/0/root-comodo-rsa-certification-authority-sha-2)
 - [intermediate-2-sha-2-comodo-rsa-domain-validation-secure-server-ca](https://support.comodo.com/index.php?/Knowledgebase/Article/View/970/0/intermediate-2-sha-2-comodo-rsa-domain-validation-secure-server-ca)
 
@@ -462,6 +461,7 @@ nginx-module-xslt-dbg - debug symbols for the nginx-module-xslt
 
 ### :books: 參考網站：
 - [linux_packages](http://nginx.org/en/linux_packages.html)
+
 ---
 
 > 最常見的串流技術，包括：`HTTP Adaptive Bitrate Streaming`（簡稱`ABS`）、`RTSP`、`RTMP`和`HLS`等四種。
@@ -574,9 +574,6 @@ Options:
   -g directives : set global directives out of configuration file
 ```
 
-
-rtmp://live.hkstv.hk.lxdns.com/live/hks
-
 ### :books: 參考網站：
 - https://github.com/arut/nginx-rtmp-module
 - http://www.ithome.com.tw/node/53142
@@ -597,10 +594,6 @@ rtmp://live.hkstv.hk.lxdns.com/live/hks
 - [Install Nginx + PHP FPM + Caching + MySQL on Ubuntu 12.04](https://www.vultr.com/docs/install-nginx-php-fpm-caching-mysql-on-ubuntu-12-04)
 - [Disabling SSLv3](https://www.vultr.com/docs/disabling-sslv3)
 - [Setup Nginx as Reverse Proxy Over Apache on Debian/Ubuntu](https://www.vultr.com/docs/setup-nginx-as-reverse-proxy-over-apache-on-debian-ubuntu)
-
-
-
-
 
 
 MacGyver
