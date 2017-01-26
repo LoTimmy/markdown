@@ -1,5 +1,6 @@
 <img src="http://i.imgur.com/diUQ0Gl.png" width="200">
 
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -20,6 +21,8 @@
 <meta name=viewport content="width=device-width, initial-scale=1">
 ```
 ---
+
+<img src="http://i.imgur.com/tgEkCDP.png" width="200">
 
 ```
 80x80 (avatar)
@@ -66,8 +69,6 @@
 
 `Portrait` `直向`
 `Landscape` `橫向`
-
-
 
 `ipad`
 ```css
@@ -124,7 +125,26 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) { ... }
 ```
 
+`SMARTPHONES`
+```css
+@media (max-width:480px) { ... }
+```
 
+`TABLETS`
+```css 
+@media (min-width:768px) and (max-width:979px) { ... }
+```
+
+
+`SMARTPHONES TO TABLETS`
+```css
+@media (max-width:767px) { ... }
+```
+
+`DEFAULT`
+```css
+@media (min-width:980px) { ... }
+```
 
 ### :books: 參考網站：
 - https://developers.google.com/speed/docs/insights/ConfigureViewport

@@ -1,17 +1,18 @@
-
-<img src="http://i.imgur.com/Ovy92WP.png" width="200">
-<img src="http://i.imgur.com/Vk22Gg1.png" width="200">
-
+<img src="http://i.imgur.com/Ovy92WP.png" width="80">
+<img src="http://i.imgur.com/Vk22Gg1.png" width="100">
 
 # Table of Contents
+<a name="table-of-contents"></a>
 
 :blue_book:
 - [doctype](#doctype)
 - [script](#script)
+- [link](#link)
 - [css](#css)
 - [meta](#meta)
 - [video](#video)
 - [form](#form)
+- [img](#img)
 
 ---
 
@@ -75,11 +76,14 @@ muted
 playsinline
 ```
 
+### :books: 參考網站：
 - [video](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)
 - [video](https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats)
 - https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009523
 - https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/iAdJSProgGuide/PlayingVideosinAds/PlayingVideosinAds.html
 - [video](https://msdn.microsoft.com/zh-tw/library/hh924820(v=vs.85).aspx)
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 
@@ -97,6 +101,8 @@ playsinline
 ### :books: 參考網站：
 - [!DOCTYPE](https://msdn.microsoft.com/zh-tw/library/ms535242(v=vs.85).aspx)
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
 
 ```html
@@ -108,19 +114,21 @@ playsinline
 <title>The Title of the Page</title>
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ---
+
+`link`<a name="link"></a>
 
 ```html
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 
@@ -132,7 +140,11 @@ playsinline
 
 <!-- HTML5 -->
 <script src="javascript.js"></script>
+```
 
+```
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 ```
 
 ```html
@@ -151,6 +163,8 @@ playsinline
 ### :books: 參考網站：
 - [script](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
 - [alert](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert)
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 `css`<a name="css"></a>
@@ -264,6 +278,18 @@ User-agent: Adsbot-Google
 - [Search Console](https://www.google.com/webmasters/tools/home?hl=zh-TW&pli=1)
 - [robots_txt](https://developers.google.com/webmasters/control-crawl-index/docs/robots_txt)
 - [建立 robots.txt 檔案](https://support.google.com/webmasters/answer/6062596?hl=zh-Hant)
+
+---
+
+`img`<a name="img"></a>
+
+<img src="mygraphic.bmp">	
+<img src="large.png" width="20">
+<img src="mdn-logo-sm.png" alt="MDN">
+
+### :books: 參考網站：
+- [img](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img)
+
 
 ---
 
@@ -387,8 +413,8 @@ list-style-type: kannada;
 <p>	</p>
 <b>	</b>
 <i>	</i>
-<img src="mygraphic.bmp">	
-<img src="large.png" width="20">
+
+
 	
 <tbody>	</tbody>
 <thead>	</thead>
@@ -412,6 +438,9 @@ id="myDiv"
 1280x1024 (19-inch monitor)
 1600x1200 (21-inch monitor)
 ```
+
+
+---
 
 ---
 `form`<a name="form"></a>

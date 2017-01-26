@@ -4,21 +4,38 @@
 
 <a name="table-of-contents"></a>
 
+:blue_book:
 - [Normalize.css](#normalize.css)
 - [CSS Reset](#cssreset)
-- [Pseudo-elements](#Pseudo-elements)
+- [Pseudo-elements](#pseudo-element)
+- [margin](#margin)
+
+`Pseudo` `[ˋsudo]` `虛擬` `pseu・do`
 
 ---
 
 <img src="http://i.imgur.com/zWoVYav.png" width="300">
 
+**`Selector`** `選擇器` `se・lec・tor`
+**`Declaration`** `[͵dɛkləˋreʃən]` `宣告` `de・cla・ra・tion`
+**`Property`** `[ˋprɑpɚtɪ]` `屬性` `prop・er・ty`
+**`Separator`** `[ˋsɛpə͵retɚ]` `分隔符號` `sep・a・ra・tor`
+
 <img src="http://api.jquery.com/resources/0042_04_04.png" width="250">
 
+`Padding` `[ˋpædɪŋ]` `邊框間距` `與邊框距離` `pad・ding`
+`Margin` `[ˋmɑrdʒɪn]` `邊界` `mar・gin`
+`Border` `[ˋbɔrdɚ]` `框線` `bor・der`
+
 <img src="https://developer.mozilla.org/files/4109/padding-bottom.svg" width="350">
+
+`Area` `[ˋɛrɪə]` `區域` `ar・e・a`
 
 ---
 
 **`External stylesheet`**
+
+`Stylesheet` `樣式表`
 
 ```html
 <!DOCTYPE html>
@@ -87,6 +104,8 @@ p {
 ```
 
 **`Inline styles`**
+
+`Inline` `內嵌` 
 
 ```html
 <!DOCTYPE html>
@@ -259,6 +278,8 @@ font-weight: bold;
 
 ---
 
+`margin`<a name="margin"></a>
+
 ```css
 margin: 20px 0px 10px 75%;
 margin: 8px;
@@ -279,6 +300,8 @@ margin-left: 3%; /* 設定物件左邊界的高度。 */
 ### :books: 參考網站：
 - [margin-top](https://msdn.microsoft.com/zh-tw/library/ee371241(v=expression.40).aspx)
 - [margin-right](https://msdn.microsoft.com/zh-tw/library/ee371256(v=expression.40).aspx)
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 
@@ -736,6 +759,7 @@ pre {
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
+
 ---
 
 <a href="https://jsfiddle.net/dcwnbthk/"><img src="http://i.imgur.com/A9cwqLx.png" width="50"></a>
@@ -815,6 +839,18 @@ div {
 
 ---
 
+```
+<div class="text1">入陣曲</div>
+```
+```
+.text1 {
+  color: red;
+  text-shadow: 4em 0 0 gray;
+}
+```
+
+---
+
 <a href="https://jsfiddle.net/5sn6d0hg/"><img src="http://i.imgur.com/A9cwqLx.png" width="50"></a>
 
 ```html
@@ -879,6 +915,14 @@ shell> bower install --save normalize-css
 
 ---
 
+
+### :books: 參考網站：
+- [gridbuilder](http://yui.github.io/gridbuilder/)
+
+**[⬆ Back to Top](#table-of-contents)**
+
+---
+
 `SVG for Everybody`
 
 ### :books: 參考網站：
@@ -933,13 +977,17 @@ text-shadow: black 0.01em 0.01em 0.05em !important;
 - [Microsoft JhengHei](https://www.microsoft.com/typography/fonts/family.aspx?FID=368)
 - [Microsoft YaHei](https://www.microsoft.com/typography/fonts/family.aspx?FID=350)
 
-
 ---
 
 ### :books: 參考網站：
 - [linear-gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient)
 
 ---
+
+<img src="http://i.imgur.com/fiyZJux.png" width="50" alt="Example">
+
+<a href="https://jsfiddle.net/cavbrsed/"><img src="http://i.imgur.com/A9cwqLx.png" width="50"></a>
+
 
 ```html
 <ul class="one"> List 1
@@ -983,7 +1031,21 @@ text-shadow: black 0.01em 0.01em 0.05em !important;
 
 ---
 
-`CSS Reset`<a name="Pseudo-elements"></a>
+`Pseudo-elements`<a name="pseudo-element"></a>
+
+```css
+/* CSS3 syntax */
+::after { style properties }
+
+/* CSS2 syntax */
+:after { style properties }
+
+p::first-line {font-variant: small-caps;}
+p::first-letter {font-weight: bold; font-size: 32pt;}
+label::after {content: ": "}  
+```
+
+<img src="http://i.imgur.com/fiyZJux.png" width="50" alt="Example">
 
 <a href="https://jsfiddle.net/v3wyehnn/"><img src="http://i.imgur.com/A9cwqLx.png" width="50"></a>
 
@@ -1007,6 +1069,8 @@ text-shadow: black 0.01em 0.01em 0.05em !important;
 }
 ```
 
+<img src="http://i.imgur.com/fiyZJux.png" width="50" alt="Example">
+Example
 <a href="https://jsfiddle.net/95fwzqt2/"><img src="http://i.imgur.com/A9cwqLx.png" width="50"></a>
 
 **`CSS content`**
@@ -1020,6 +1084,45 @@ q::after {
   color: red;
 }
 ```
+
+<img src="http://i.imgur.com/fiyZJux.png" width="50" alt="Example">
+
+<a href="https://jsfiddle.net/o48bxf8r/"><img src="http://i.imgur.com/A9cwqLx.png" width="50"></a>
+
+**`HTML content`**
+```html
+<p>Here is the live example of the above code.<br />
+  We have some <span data-descr="collection of words and punctuation">text</span> here with a few
+  <span data-descr="small popups which also hide again">tooltips</span>.<br />
+  Don't be shy, hover over to take a <span data-descr="not to be taken literally">look</span>.
+</p>
+```
+
+**`CSS content`**
+```css
+span[data-descr] {
+  position: relative;
+  text-decoration: underline;
+  color: #00F;
+  cursor: help;
+}
+
+span[data-descr]:hover::after {
+  content: attr(data-descr);
+  position: absolute;
+  left: 0;
+  top: 24px;
+  min-width: 200px;
+  border: 1px #aaaaaa solid;
+  border-radius: 10px;
+  background-color: #ffffcc;
+  padding: 12px;
+  color: #000000;
+  font-size: 14px;
+  z-index: 1;
+}
+```
+
 ### :books: 參考網站：
 - [clear](https://developer.mozilla.org/en-US/docs/Web/CSS/clear)
 - [Pseudo-elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
@@ -1066,11 +1169,33 @@ lg: 'screen and (min-width: 64em)',   // 1024px
 xl: 'screen and (min-width: 80em)'    // 1280px
 ```
 
+`SMARTPHONES`
+```css
+@media (max-width:480px) { ... }
+```
+
+`TABLETS`
+```css 
+@media (min-width:768px) and (max-width:979px) { ... }
+```
+
+
+`SMARTPHONES TO TABLETS`
+```css
+@media (max-width:767px) { ... }
+```
+
+`DEFAULT`
+```css
+@media (min-width:980px) { ... }
+```
 
 ```
 @import url(style600min.css) screen and (min-width: 600px);
 <link rel="stylesheet" type="text/css" media="screen and (max-device-width: 800px)" href="style800.css" />
 ```
 
+
+`Example`
 
 
