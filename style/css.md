@@ -4,7 +4,6 @@
 
 <a name="table-of-contents"></a>
 
-:blue_book:
 - [Normalize.css](#normalize.css)
 - [CSS Reset](#cssreset)
 - [Pseudo-elements](#pseudo-element)
@@ -17,19 +16,24 @@
 <img src="http://i.imgur.com/zWoVYav.png" width="300">
 
 **`Selector`** `選擇器` `se・lec・tor`
+
 **`Declaration`** `[͵dɛkləˋreʃən]` `宣告` `de・cla・ra・tion`
+
 **`Property`** `[ˋprɑpɚtɪ]` `屬性` `prop・er・ty`
+
 **`Separator`** `[ˋsɛpə͵retɚ]` `分隔符號` `sep・a・ra・tor`
 
 <img src="http://api.jquery.com/resources/0042_04_04.png" width="250">
 
-`Padding` `[ˋpædɪŋ]` `邊框間距` `與邊框距離` `pad・ding`
-`Margin` `[ˋmɑrdʒɪn]` `邊界` `mar・gin`
-`Border` `[ˋbɔrdɚ]` `框線` `bor・der`
+**`Padding`** `[ˋpædɪŋ]` `邊框間距` `與邊框距離` `pad・ding`
+
+**`Margin`** `[ˋmɑrdʒɪn]` `邊界` `mar・gin`
+
+**`Border`** `[ˋbɔrdɚ]` `框線` `bor・der`
 
 <img src="https://developer.mozilla.org/files/4109/padding-bottom.svg" width="350">
 
-`Area` `[ˋɛrɪə]` `區域` `ar・e・a`
+**`Area`** `[ˋɛrɪə]` `區域` `ar・e・a`
 
 ---
 
