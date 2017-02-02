@@ -51,6 +51,23 @@
 ### :books: 參考網站：
 - http://maps.googleapis.com/maps/api/geocode/json?address=三和路四段191巷5號&sensor=false&language=zh-TW
 
+---
+
+> `HAR` (`HTTP 封存`) 是多項 `HTTP` 工作階段工具用於匯出擷取資料的檔案格式。 這種格式基本上是 `JSON` 物件，且具有特定的欄位分佈。
+> 「`HAR 分析工具`」可讓您檢視及瀏覽擷取的 `HAR` 檔案，並且對擷取的資料提供了一些分析。
+> `Flush Google DNS` 可讓您在 `Google` 公用 `DNS` 快取 (`8.8.4.4` 和 `8.8.8.8`) 中 排清網域的 `DNS` 快取。
+> `Chrome 連線診斷工具`是 `Chrome` 和 `Chrome 作業系統`專用的網路測試及疑難排解工具，既快速又簡便。
+
+
+### :books: 參考網站：
+- https://toolbox.googleapps.com/apps/main/
+- [Browserinfo](https://toolbox.googleapps.com/apps/browserinfo/)
+- [Check MX](https://toolbox.googleapps.com/apps/checkmx/)
+- [Dig](https://toolbox.googleapps.com/apps/dig/)
+- [Messageheader](https://toolbox.googleapps.com/apps/messageheader/)
+- [HAR 分析工具](https://toolbox.googleapps.com/apps/har_analyzer/)
+- [編碼/解碼](https://toolbox.googleapps.com/apps/encode_decode/)
+- [Flush Google DNS](https://google-public-dns.appspot.com/cache)
 
 ---
 

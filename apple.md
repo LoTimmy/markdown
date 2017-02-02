@@ -50,6 +50,18 @@
 
 ---
 
+- **`Token`** `[ˋtokən]` `to・ken`
+- **`Provider`** `[prəˋvaɪdɚ]` `提供者` `pro・vid・er`
+- **`Field`** `[fild]` `欄位` `field`
+- **`Communication`** `[kə͵mjunəˋkeʃən]` `通訊` `com・mu・ni・ca・tion`
+- **`Macintosh`** [ˋmækɪn͵tɑʃ] `mac・in・tosh` 
+
+---
+
+
+- `Apple Pay`採用`Visa`的`Token`代碼化服務
+- `Apple Pay`是基於`近場無線通訊` (`Near Field Communication`，`NFC`) 技術
+- `Apple Pay`背後的關鍵技術之一是採用`Visa`的`Token`代碼化服務，讓消費者可以把真實卡換替換成一組代碼，來避免因手機遭竊、商店系統被駭而導致卡號被盜的風險。因此，在整個支付流程中，必須經過一個組織進行代碼轉換後，再與發卡銀行系統串接。而這個進行代碼轉換的組織可以是`Visa`、`MasterCard`、中國銀聯這類的國際組織，也可以是經過國際晶片卡發卡組織`EMVCo`驗證過的`TSP業者` (`Token Services Provider`)
 - `OS X`是`蘋果公司`以`Unix`為基礎所開發的圖形化使用者介面作業系統，專屬於`Macintosh`電腦，是`Mac OS`的最終版本。
 - `OS X`作業系統包含兩個主要的部分：核心名為「`Darwin`」，是以`FreeBSD`原始碼和`Mach`微核心為基礎，由`蘋果公司`和獨立開發者社群協力開發，以及一個名為「`Aqua`」之專有版權的圖形使用者介面，由蘋果電腦自行開發。 
 - 以往的`OS X`版本是以大型貓科動物命名，例如Mac OS X v10.7被稱為「`Lion`」，隨著2013年6月OS X Mavericks的公布，命名方式開始轉為採用加州地標。 
@@ -393,6 +405,8 @@ root    ALL=(ALL) ALL
 
 ---
 
+`Xcode`
+
 ```console
 shell> xcodebuild
 
@@ -401,6 +415,7 @@ shell> xcode-select --install
 ```
 
 ### :books: 參考網站：
+- [xcode](https://developer.apple.com/xcode/)
 - [xcode-select](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html)
 - [xcodebuild](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/xcodebuild.1.html)
 

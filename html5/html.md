@@ -14,6 +14,11 @@
 - [img](#img)
 - [opengraph](#opengraph)
 
+---
+
+`DOM` (`Document Object Model`，`文件物件模型`)
+
+<img src="http://i.imgur.com/ZAwncGq.png" width="400">
 
 ---
 

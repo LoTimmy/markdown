@@ -1,6 +1,14 @@
-<img src="http://brew.sh/img/homebrew-256x256.png" width="200">
+<img src="http://brew.sh/img/homebrew-256x256.png" width="100">
 
-# Homebrew
+`Homebrew` 
+
+
+---
+
+```console
+shell> /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+shell> brew doctor
+```
 
 ---
 
@@ -9,7 +17,7 @@ shell> brew update
 shell> brew upgrade --all
 
 shell> brew list
-shell> brew doctor
+
 shell> brew help
 
 shell> brew search
@@ -21,27 +29,21 @@ shell> brew info
 ```
 ---
 
-`ioping - Simple disk I/O latency measuring tool`
 
-`wget - retrieves files from the web`
+
 
 `bash-completion - programmable completion for the bash shell`
 
-`aria2 - High speed download utility`
 
 `fio - flexible I/O tester`
 
 ```console
-shell> brew install wget
+
 shell> brew install bash-completion
 shell> brew install git
-shell> brew install lftp
-shell> brew install aria2
+
 shell> brew install nvm
 shell> brew install ssh-copy-id
-
-shell> brew install ioping
-shell> ioping -c 10 .
 
 shell> mkdir ~/.nvm
 shell> cp $(brew --prefix nvm)/nvm-exec ~/.nvm/
@@ -250,12 +252,6 @@ shell> brew install dnscrypt-proxy
 
 ```console
 shell> brew cask install tuntap
-```
-
----
-
-```console
-shell> /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 ---

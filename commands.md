@@ -60,8 +60,7 @@
 - [modprobe - Add and remove modules from the Linux Kernel](#lsmod)
 - [fio - flexible I/O tester](#fio)
 - [systemctl - Control the systemd system and service manager](#systemctl)
-
-
+- [qpdf](#qpdf)
 
 ---
 - [pv - Shell pipeline element to meter data passing through](#pv)
@@ -81,13 +80,32 @@
 
 ---
 
+**ioping - Simple disk I/O latency measuring tool**
 
+```console
+shell> brew install ioping
+shell> ioping -c 10 .
+```
+
+---
+
+<a name="qpdf"></a>
+
+```console
+shell> brew install qpdf
+shell> qpdf --show-encryption --password=password
+shell> qpdf --decrypt --password=password
+```
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ---
 **tree - displays an indented directory tree, in color**
 
 ```console
 shell> apt-get install tree
+shell> yum install tree -y
+shell> brew install tree
 shell> tree
 ```
 **[⬆ Back to Top](#table-of-contents)**
@@ -124,9 +142,7 @@ logrotate.conf
 
 ---
 
-<a name="ifstat"></a>
-
-**ifstat - InterFace STATistics Monitoring**
+**ifstat - InterFace STATistics Monitoring**<a name="ifstat"></a>
 
 ```console
 shell> apt-get install ifstat
@@ -691,9 +707,9 @@ shell> apt-get install figlet
 **[⬆ Back to Top](#table-of-contents)**
 
 ---
-**systemctl - Control the systemd system and service manager**
 
-<a name="systemctl"></a>
+**systemctl - Control the systemd system and service manager**<a name="systemctl"></a>
+
 ```console
 shell> systemctl
 shell> systemctl list-units
@@ -713,6 +729,7 @@ shell> systemctl status nginx.service
 ---
 
 **pstree - display a tree of processes**
+
 ```console
 shell> pstree -a
 ```
@@ -720,9 +737,8 @@ shell> pstree -a
 **[⬆ Back to Top](#table-of-contents)**
 
 ---
-**hostname - show or set the system's host name**
 
-<a name="hostname"></a>
+**hostname - show or set the system's host name**<a name="hostname"></a>
 
 ```console
 shell> hostname -a
@@ -731,9 +747,9 @@ shell> hostname -a
 **[⬆ Back to Top](#table-of-contents)**
 
 ---
-**fio - flexible I/O tester**
 
-<a name="fio"></a>
+**fio - flexible I/O tester**<a name="fio"></a>
+
 ```console
 shell> apt-get install fio
 shell> fio --name=str --direct=1 --readwrite=randwrite --bs=4k --size=1G --numjobs=16 --runtime=180 --group_reporting --refill_buffers --ioengine=libaio --iodepth=16 
@@ -763,9 +779,8 @@ shell> modprobe nf_nat_pptp
 **[⬆ Back to Top](#table-of-contents)**
 
 ---
-**netstat - Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships**
+**netstat - Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships**<a name="netstat"></a>
 
-<a name="netstat"></a>
 ```console
 shell> netstat -nr
 Kernel IP routing table
@@ -780,8 +795,8 @@ shell> netstat -ntlp
 **[⬆ Back to Top](#table-of-contents)**
 
 ---
-**ss - another utility to investigate sockets**
-<a name="ss"></a>
+**ss - another utility to investigate sockets**<a name="ss"></a>
+
 ```console
 Display all TCP sockets.
 shell> ss -t -a
@@ -798,8 +813,9 @@ shell> ss -o state established '( dport = :ssh or sport = :ssh )'
 **[⬆ Back to Top](#table-of-contents)**
 
 ---
-<a name="sysctl"></a>
-**sysctl - configure kernel parameters at runtime**
+
+**sysctl - configure kernel parameters at runtime**<a name="sysctl"></a>
+
 ```console
 shell> sysctl -w fs.file-max=65536
 shell> sysctl -w net.ipv6.conf.all.disable_ipv6=1
@@ -813,9 +829,10 @@ shell> sysctl --system
 **[⬆ Back to Top](#table-of-contents)**
 
 ---
-<a name="mtr"></a>
-**mtr - a network diagnostic tool**
+
+**mtr - a network diagnostic tool**<a name="mtr"></a>
 **traceroute - print the route packets trace to network host**
+
 ```console
 shell> apt-get install mtr
 shell> apt-get install mtr-tiny
@@ -1473,6 +1490,13 @@ shell> grep -nrI PATTERN .
 shell> grep -r PATTERN --include "*.txt" .
 ```
 
+
+`GREP_COLOR` `GREP_COLORS`
+
+```
+shell> head testfile.txt | grep --color=always "PATTERN1" | GREP_COLOR="1;32" --color "PATTERN2" 
+```
+
 ```console
 shell> grep `PATTERN1\|PATTERN2` testfile.txt
 ```
@@ -1606,8 +1630,9 @@ password mypass
 **[⬆ Back to Top](#table-of-contents)**
 
 ---
-**curl - transfer a URL**
-<a name="curl"></a>
+
+**curl - transfer a URL**<a name="curl"></a>
+
 ```console
 shell> curl -s --head http://127.0.0.1/
 
@@ -1627,8 +1652,13 @@ shell> curl -w "\n" -d '{"username":"admin", "password":"secret"}' -H "Content-T
 **[⬆ Back to Top](#table-of-contents)**
 
 ---
-**Wget - The non-interactive network downloader.**
-<a name="wget"></a>
+**Wget - The non-interactive network downloader.**<a name="wget"></a>
+
+`wget - retrieves files from the web`
+
+```console
+shell> brew install wget
+```
 
 ```console
 shell> wget --spider https://www.google.com/textinputassistant/tia.png
@@ -1638,6 +1668,11 @@ shell> wget -nv --spider https://www.google.com/textinputassistant/tia.png
 shell> wget --mirror --convert-links --adjust-extension --page-requisites --no-parent http://getbootstrap.com/
 shell> wget -mkEpnp http://getbootstrap.com/      
 ```
+
+```console
+shell> wget -r --no-parent http://getbootstrap.com/
+```
+
 
 `~/.wgetrc`
 ```
@@ -1790,11 +1825,14 @@ shell> rsync -avz --delete --append --progress -e ssh 10.1.2.3:~/src dst_directo
 ---
 
 **aria2 - High speed download utility**<a name="aria2"></a>
+
 ```console
 shell> apt-get install aria2
+shell> brew install aria2
 ```
 
 **Download a file**
+
 ```console
 shell> aria2c http://example.org/mylinux.iso
 ```
