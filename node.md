@@ -55,6 +55,8 @@ shell> nvm install v0.12.0
 shell> nvm install v4.2.2
 shell> nvm install v6.1.0
 
+shell> nvm uninstall v6.1.0
+
 shell> nvm use --lts
 shell> nvm use --lts=argon
 shell> nvm use --lts=boron
