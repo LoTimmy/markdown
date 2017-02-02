@@ -17,6 +17,7 @@ shell> brew update
 shell> brew upgrade --all
 
 shell> brew list
+shell> brew list --versions
 
 shell> brew help
 
