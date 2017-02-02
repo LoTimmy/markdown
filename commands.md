@@ -73,10 +73,34 @@
 - [nikto - Scan web server for known vulnerabilities](#nikto)
 - [iotop - simple top-like I/O monitor](#iotop)
 - [dmitry - Deepmagic Information Gathering Tool](#dmitry)
+
+---
+
+- [bash-completion](#bash-completion)
+- [tcptrack](#tcptrack)
+
 ---
 
 - [yum](https://www.centos.org/docs/5/html/yum/sn-managing-packages.html)
 - [tools](http://tools.kali.org/tools-listing)
+
+
+---
+
+<a name="bash-completion"></a>
+
+```console
+shell> brew install bash-completion
+```
+
+---
+
+<a name="tcptrack"></a>
+
+```console
+shell> brew install tcptrack
+shell> sudo tcptrack -d -r5 -i en0 port 80 
+```
 
 ---
 
