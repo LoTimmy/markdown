@@ -44,6 +44,15 @@ shell> brew cask install sourcetree
 
 <img src="http://i.imgur.com/unRQXHr.png" width="500">
 
+<img src="http://i.imgur.com/UAfIe37.png" width="300">
+
+<img src="http://i.imgur.com/pf5uNCz.png" width="300">
+
+<img src="http://i.imgur.com/Z6gnVPv.png" width="300">
+
+<img src="http://i.imgur.com/eBmGfJb.png" width="300">
+
+
 ```console
 shell> mkdir helloworld 
 shell> git init
@@ -391,4 +400,5 @@ shell> git mv JavaScript javascript
 
 ### :books: 參考網站：
 - https://git-scm.com/book/be/v2/Git-Tools-Credential-Storage
-- https://help.github.com/articles/caching-your-github-password-in-git/
+- [caching-your-github-password-in-git](https://help.github.com/articles/caching-your-github-password-in-git/)
+- [connecting-to-github-with-ssh](https://help.github.com/articles/connecting-to-github-with-ssh/)
