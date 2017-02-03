@@ -28,22 +28,12 @@ shell> brew outdated
 
 shell> brew info
 ```
+
 ---
 
-
-
-
-`bash-completion - programmable completion for the bash shell`
-
-
-`fio - flexible I/O tester`
-
 ```console
-
-shell> brew install bash-completion
 shell> brew install git
 
-shell> brew install nvm
 shell> brew install ssh-copy-id
 
 shell> mkdir ~/.nvm
@@ -55,9 +45,6 @@ shell> source $(brew --prefix nvm)/nvm.sh
 shell> nvm install v0.12.2
 shell> nvm use 0.12.2
 shell> nvm alias default 0.12.2
-
-shell> brew install tcptrack
-shell> sudo tcptrack -d -r5 -i en0 port 80 
 
 shell> brew install mongodb
 shell> brew services start mongodb 
@@ -82,23 +69,26 @@ shell> brew install findutils --with-default-names
 
 shell> whatmask 192.168.5.6/22
 
-shell> brew cask install java
-shell> brew install rename
 
-shell> brew install qpdf
-shell> qpdf --show-encryption --password=password
-shell> qpdf --decrypt --password=password
+shell> brew install rename
 
 shell> brew install jmeter --with-plugins
 
 shell> brew install the_silver_searcher
+```
+
+```console
 shell> brew install caskroom/cask/brew-cask
 
+shell> brew cask list
+
+shell> brew cask search '/^google.c[a-z]rome$/'
 
 shell> brew cask info mplayerx
 shell> brew cask info unity-web-player
 shell> brew cask info google-chrome
 
+shell> brew cask install java
 shell> brew cask install google-chrome
 shell> brew cask install dropbox
 shell> brew cask install airserver
@@ -138,6 +128,10 @@ shell> brew install vim --with-override-system-vi
 
 s3cmd
 ```
+
+### :books: 參考網站：
+- https://github.com/caskroom/homebrew-cask/blob/master/USAGE.md
+
 <!--
 ```
 vmware-fusion

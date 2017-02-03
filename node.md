@@ -2,7 +2,7 @@
 
 # Table of Contents
 
-- [install](#install)
+- [installing-node](#installing-node)
 - [變數 (Variable)](#var)
 - [布林值 (Boolean)](#boolean) 
 - [函數 (Function)](#function)
@@ -30,21 +30,27 @@
 - `NW.js`為一結合`Node.js`與`Chromium`專案的`JavaScript`應用程式開發框架，可用來打造支援`Windows`、`Mac OS X`與`Linux`的應用程式，有別於瀏覽器對`JavaScript`程式碼的沙箱執行限制，`NW.js`移除了相關的限制，並允許程式直接與作業系統互動。`NW.js`除了允許程式在不同的平台上運作之外，也讓開發人員更容易把網路程式轉成桌面程式。
 - `NW.js`的最大優勢在於它所需的`.Net`或`Java`運行環境都已經安裝在各個系統上了。
 
-![](https://i-msdn.sec.s-msft.com/dynimg/IC736472.png)
+<img src="https://i-msdn.sec.s-msft.com/dynimg/IC736472.png" width="300">
 
 ---
-<a name="install"></a>
+<a name="installing-node"></a>
+
+```console
+shell> brew install node
+```
 
 ```console
 shell> apt-get install nodejs
+shell> brew install nvm
 ```
 
 ```console
 shell> curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
 shell> wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
-
 shell> echo "source ~/.nvm/nvm.sh" >> .bashrc
+```
 
+```console
 shell> nvm ls-remote
 shell> nvm ls-remote --lts
 
@@ -55,6 +61,7 @@ shell> nvm install v0.12.0
 shell> nvm install v4.2.2
 shell> nvm install v6.1.0
 
+shell> nvm uninstall v4.2.2
 shell> nvm uninstall v6.1.0
 
 shell> nvm use --lts
@@ -80,13 +87,63 @@ iojs -> N/A (default)
 lts/* -> lts/boron (-> v6.9.1)
 lts/argon -> v4.6.1
 lts/boron -> v6.9.1
-
 ```
 
 ```console
 shell> node --version
 v4.1.1
 ```
+
+---
+
+<img src="http://i.imgur.com/onUAoMT.png" width="100">
+
+```
+shell> npm install <package_name>
+shell> npm install lodash
+shell> npm install <package_name> --save
+shell> npm install <package_name> --save-dev
+
+shell> npm uninstall --save lodash
+
+shell> npm install npm@latest -g
+
+shell> npm init
+shell> npm init --yes
+
+shell> npm set init.author.email "wombat@npmjs.com"
+shell> npm set init.author.name "ag_dubs"
+shell> npm set init.license "MIT"
+
+shell> npm outdated
+
+shell> npm install -g jshint
+shell> sudo npm install -g jshint
+
+shell> npm uninstall -g jshint
+
+shell> npm config list
+shell> npm config edit
+
+shell> npm cache ls
+shell> npm cache clean
+
+shell> npm update -g jshint
+shell> npm update -g
+
+```
+
+- [installing-node](https://docs.npmjs.com/getting-started/installing-node)
+- [using-a-package.json](https://docs.npmjs.com/getting-started/using-a-package.json)
+- [npm config](https://docs.npmjs.com/cli/config)
+- [npm ls](https://docs.npmjs.com/cli/ls)
+- [installing-npm-packages-globally](https://docs.npmjs.com/getting-started/installing-npm-packages-globally)
+- [updating-global-packages](https://docs.npmjs.com/getting-started/updating-global-packages)
+- https://docs.npmjs.com/misc/coding-style
+
+---
+
+
 
 **Specifying a Node.js Version**
 ``` .json
