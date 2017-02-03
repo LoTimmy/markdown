@@ -223,6 +223,68 @@ server.route(Routes);
 ```
 
 
+```
+var Hapi            = require('hapi'),
+    Inert           = require('inert'),
+    Vision          = require('vision'),
+    Joi             = require('joi'),
+    HapiSwagger     = require('hapi-swagger')
+
+
+var server = new Hapi.Server();
+server.connection({
+    host: 'localhost',
+    port: 3000
+});
+
+var swaggerOptions = {
+    apiVersion: "1.0"
+};
+
+server.register([
+    Inert,
+    Vision,
+    {
+        register: HapiSwagger,
+        options: swaggerOptions
+    }], function (err) {
+    server.start(function(){
+        // Add any server.route() config here
+        console.log('Server running at:', server.info.uri);
+    });
+});
+
+server.route(
+    {
+        method: 'GET',
+        path: '/models',
+        config: {
+            handler: function (request, reply) {
+                reply("list of models")
+            },
+            description: 'Get todo',
+            notes: 'Returns a todo item by the id passed in the path',
+            tags: ['api'],
+            validate: {
+                params: {
+                    username: Joi.number()
+                        .required()
+                        .description('the id for the todo item')
+                }
+            }
+        }
+    }
+)
+
+
+
+server.start(function(){
+    // Add any server.route() config here
+    console.log('Server running at:', server.info.uri);
+});
+
+```
+
 
 ### :books: 參考網站：
 - [hapi-swagger](https://github.com/glennjones/hapi-swagger)
