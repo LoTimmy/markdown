@@ -11,7 +11,11 @@
 ```console
 shell> npm install -g gitbook-cli
 shell> gitbook help
-shell> gitbook build ./mybook 
+
+shell> mkdir mybook
+shell> cd mybook
+shell> gitbook init
+shell> gitbook serve
 ```
 
 ### :books: 參考網站：
