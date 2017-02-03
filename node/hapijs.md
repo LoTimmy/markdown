@@ -177,11 +177,13 @@ server.register({
 
 ---
 
-npm install hapi-swagger --save
-npm install inert --save
-npm install vision --save
-
+```console
+shell> npm install hapi-swagger --save
+shell> npm install inert --save
+shell> npm install vision --save 
 ```
+
+```js
 const Hapi = require('hapi');
 const Inert = require('inert');
 const Vision = require('vision');

@@ -108,10 +108,80 @@ shell> git config --global --edit
 shell> git commit --amend --reset-author
 ```
 
+<img src="http://i.imgur.com/fiyZJux.png" width="50" alt="Example">
+
+```console
+shell> git config --global user.name "Your Name"
+shell> git config --global user.email you@example.com
+shell> git config --global color.ui true
+```
+
 ### :books: 參考網站：
 - [git-config](https://git-scm.com/docs/git-config)
 
 ---
+
+<img src="http://i.imgur.com/fiyZJux.png" width="50" alt="Example">
+
+```console
+shell> mkdir helloworld 
+shell> git init
+shell> edit hello.c
+shell> edit hello.h
+shell> git add .
+shell> git status
+
+shell> git rm --cached hello.h
+shell> git status 
+```
+
+### :books: 參考網站：
+- [git-rm](https://git-scm.com/docs/git-rm)
+
+---
+
+<img src="http://i.imgur.com/fiyZJux.png" width="50" alt="Example">
+
+```
+shell> git show --pretty="" --name-only de05672
+shell> git ls-tree --name-only HEAD
+```
+
+```console
+shell> mkdir helloworld 
+shell> git init
+shell> edit hello.c
+shell> edit hello.h
+shell> git add .
+shell> git commit -m "initial revision"
+shell> git log --pretty=oneline --abbrev-commit
+
+810801f initial revision
+
+shell> git ls-tree --name-only HEAD
+shell> git ls-tree --name-only 810801f
+
+shell> git rm --cached hello.h
+shell> git commit --amend -C HEAD
+shell> git ls-tree --name-only HEAD
+```
+
+### :books: 參考網站：
+- [git-reset](https://git-scm.com/docs/git-reset)
+- [git-ls-tree](https://git-scm.com/docs/git-ls-tree)
+
+---
+
+```console
+shell> git filter-branch --tree-filter 'rm filename' HEAD
+```
+
+### :books: 參考網站：
+- [git-filter-branch](https://git-scm.com/docs/git-filter-branch)
+
+---
+
+<img src="http://i.imgur.com/fiyZJux.png" width="50" alt="Example">
 
 ```console
 shell> edit hello.c hello.h
@@ -122,8 +192,8 @@ shell> edit .gitignore
 shell> git commit -m "My changes"
 shell> git log
 ```
-`.gitignore`
 
+`.gitignore`
 ```
 .gitignore
 *.h
@@ -133,8 +203,49 @@ shell> git log
 - [gitignore](https://git-scm.com/docs/gitignore)
 - [ignoring-files](https://help.github.com/articles/ignoring-files/)
 
+---
+
+<img src="http://i.imgur.com/fiyZJux.png" width="50" alt="Example">
+
+```console
+shell> rm -f hello.c
+shell> git checkout hello.c
+```
+
+```console
+shell> git checkout -- '*.c'
+```
+
+```console
+shell> git checkout -- *
+shell> git checkout -- hello.c
+```
+
+<img src="http://i.imgur.com/fiyZJux.png" width="50" alt="Example">
+
+```console
+shell> edit hello.c
+shell> git add hello.c
+shell> git commit -m "initial revision"
+
+shell> edit hello.c
+shell> git add hello.c
+shell> git commit -m "My changes"
+
+shell> edit hello.c
+shell> git log --pretty=oneline
+53ae079ba38047b2d8709c42e1ef88705e497936 My changes
+0a717d53efd86893b1bf47c7c7a43135ea3279d6 initial revision
+
+shell> git checkout 0a71 hello.c
+```
+
+
+### :books: 參考網站：
+- [git-checkout](https://git-scm.com/docs/git-checkout)
 
 ---
+
 ```console
 shell> git add .
 ```
@@ -282,6 +393,15 @@ shell> git diff 0fcd2baef5b6741412db6eb3bd2c2b559a02b64f fd7f63f055f2e6ecc23be1a
 
 shell> git remote add origin https://username@your-azure-website.scm.azurewebsites.net:443/your-azure-website.git
 shell> git push
+```
+
+
+```
+shell> git show --pretty="" --name-only HEAD
+shell> git show --pretty="" --name-only HEAD~1
+shell> git show --pretty="" --name-only HEAD~2
+shell> git show HEAD:testfile.txt
+shell> git show HEAD:testfile.txt> testfile.txt 
 ```
 
 ```
@@ -436,6 +556,9 @@ shell> git mv JavaScript javascript
 - [持續整合下的版本控管做法](http://www.ithome.com.tw/node/67969)
 - [語意明確的版本變更](http://www.ithome.com.tw/voice/85505)
 - [軟體開發過程中不能缺少的系統](http://www.ithome.com.tw/node/76548)
+- https://www.ibm.com/developerworks/library/d-learn-workings-git/
+- https://www.ibm.com/developerworks/library/wa-git/
+- https://developer.ibm.com/opentech/2016/02/01/git-with-it/
 
 
 ---
@@ -450,3 +573,7 @@ shell> git mv JavaScript javascript
 ### :books: 參考網站：
 - [hello-world](https://guides.github.com/activities/hello-world/)
 
+```
+WEB_DIR="/var/www/html"
+export GIT_DIR="$WEB_DIR/.git"
+```
