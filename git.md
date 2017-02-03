@@ -145,10 +145,38 @@ The file will have its original line endings in your working directory.
 ```
 
 ```console
+shell> git config --global core.autocrlf
 shell> git config --global core.autocrlf input
 shell> git config --global core.autocrlf true
 shell> git config --global core.autocrlf false
 ```
+
+```
+shell> git config --global core.eol
+```
+
+```console
+shell> echo "* text=auto" >.gitattributes
+```
+
+`.gitattributes`
+```
+*               text=auto
+*.txt		text
+*.vcproj	text eol=crlf
+*.sh		text eol=lf
+*.jpg		-text
+
+*.md text eol=lf
+*.markdown text eol=lf
+
+manual.pdf	-text
+weirdchars.txt	text
+*.c	filter=indent
+```
+
+- [gitattributes](https://git-scm.com/docs/gitattributes)
+
 ---
 
 ```console
@@ -412,3 +440,5 @@ shell> git mv JavaScript javascript
 - https://git-scm.com/book/be/v2/Git-Tools-Credential-Storage
 - [caching-your-github-password-in-git](https://help.github.com/articles/caching-your-github-password-in-git/)
 - [connecting-to-github-with-ssh](https://help.github.com/articles/connecting-to-github-with-ssh/)
+
+
