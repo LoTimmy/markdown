@@ -65,6 +65,15 @@ shell> git commit --amend -m "Initial commit" --author "A U Thor <author@example
 shell> git log
 ```
 
+```console
+shell> git add .
+shell> git commit -m "initial revision"
+```
+
+- **`Revision`** `[rɪˋvɪʒən]` `修訂` `re・vi・sion`
+- **`Initial`** `[ɪˋnɪʃəl]` `初始` `起始` `i・ni・tial`
+- **`Commit`** `[kəˋmɪt]` `認可` `交付` `確認` `com・mit`
+
 ### :books: 參考網站：
 - [git-log](https://git-scm.com/docs/git-log)
 - [git-init](https://git-scm.com/docs/git-init)
@@ -136,10 +145,42 @@ The file will have its original line endings in your working directory.
 ```
 
 ```console
+shell> git config --global core.autocrlf
 shell> git config --global core.autocrlf input
 shell> git config --global core.autocrlf true
 shell> git config --global core.autocrlf false
 ```
+
+```
+shell> git config --global core.eol
+```
+
+```console
+shell> echo "* text=auto" >.gitattributes
+```
+
+`.gitattributes`
+```
+* text=auto
+
+*.txt text
+*.vcproj text eol=crlf
+*.sh text eol=lf
+*.jpg -text
+*.jpg -text -diff
+
+*.md text eol=lf
+*.markdown text eol=lf
+
+*.c	filter=indent
+
+manual.pdf	-text
+weirdchars.txt	text
+```
+
+### :books: 參考網站：
+- [gitattributes](https://git-scm.com/docs/gitattributes)
+
 ---
 
 ```console
@@ -185,6 +226,7 @@ shell> bfg --no-blob-protection --delete-files id_{dsa,rsa} HelloWorld.git
 ```console
 shell> git log --pretty=oneline
 shell> git log --pretty=oneline --abbrev-commit
+shell> git remote add origin YOUR_GIT_CLONE_URL_HERE
 shell> git remote add origin https://github.com/you/HelloWorld.git
 ```
 
@@ -402,3 +444,9 @@ shell> git mv JavaScript javascript
 - https://git-scm.com/book/be/v2/Git-Tools-Credential-Storage
 - [caching-your-github-password-in-git](https://help.github.com/articles/caching-your-github-password-in-git/)
 - [connecting-to-github-with-ssh](https://help.github.com/articles/connecting-to-github-with-ssh/)
+
+---
+
+### :books: 參考網站：
+- [hello-world](https://guides.github.com/activities/hello-world/)
+
