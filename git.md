@@ -161,18 +161,21 @@ shell> echo "* text=auto" >.gitattributes
 
 `.gitattributes`
 ```
-*               text=auto
-*.txt		text
-*.vcproj	text eol=crlf
-*.sh		text eol=lf
-*.jpg		-text
+* text=auto
+
+*.txt text
+*.vcproj text eol=crlf
+*.sh text eol=lf
+*.jpg -text
+*.jpg -text -diff
 
 *.md text eol=lf
 *.markdown text eol=lf
 
+*.c	filter=indent
+
 manual.pdf	-text
 weirdchars.txt	text
-*.c	filter=indent
 ```
 
 - [gitattributes](https://git-scm.com/docs/gitattributes)
@@ -441,4 +444,8 @@ shell> git mv JavaScript javascript
 - [caching-your-github-password-in-git](https://help.github.com/articles/caching-your-github-password-in-git/)
 - [connecting-to-github-with-ssh](https://help.github.com/articles/connecting-to-github-with-ssh/)
 
+---
+
+### :books: 參考網站：
+- [hello-world](https://guides.github.com/activities/hello-world/)
 
