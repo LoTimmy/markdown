@@ -65,6 +65,15 @@ shell> git commit --amend -m "Initial commit" --author "A U Thor <author@example
 shell> git log
 ```
 
+```console
+shell> git add .
+shell> git commit -m "initial revision"
+```
+
+- **`Revision`** `[rɪˋvɪʒən]` `修訂` `re・vi・sion`
+- **`Initial`** `[ɪˋnɪʃəl]` `初始` `起始` `i・ni・tial`
+- **`Commit`** `[kəˋmɪt]` `認可` `交付` `確認` `com・mit`
+
 ### :books: 參考網站：
 - [git-log](https://git-scm.com/docs/git-log)
 - [git-init](https://git-scm.com/docs/git-init)
@@ -185,6 +194,7 @@ shell> bfg --no-blob-protection --delete-files id_{dsa,rsa} HelloWorld.git
 ```console
 shell> git log --pretty=oneline
 shell> git log --pretty=oneline --abbrev-commit
+shell> git remote add origin YOUR_GIT_CLONE_URL_HERE
 shell> git remote add origin https://github.com/you/HelloWorld.git
 ```
 
