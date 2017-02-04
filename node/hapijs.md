@@ -188,7 +188,7 @@ const Hapi = require('hapi');
 const Inert = require('inert');
 const Vision = require('vision');
 const HapiSwagger = require('hapi-swagger');
-const Pack = require('./package');
+const Joi = require('joi');
 
 const server = new Hapi.Server();
 server.connection({
@@ -199,9 +199,64 @@ server.connection({
 const options = {
   info: {
     'title': 'Test API Documentation',
-    'version': Pack.version,
+    'version': '0.0.2',
   }
 };
+
+server.route({
+  method: 'GET',
+  path: '/{name}',
+  config: {
+    tags: ['api'],
+    validate: {
+      params: {
+        name: Joi.string().required()
+      },
+    },
+    handler: function(request, reply) {
+      reply('Hello, ' + encodeURIComponent(request.params.name) + '!');
+    }
+  }
+});
+
+server.route({
+  method: 'POST',
+  path: '/items',
+  config: {
+    tags: ['api'],
+    handler: (request, reply) => {
+      reply('OK');
+    },
+    validate: {
+      payload: Joi.object({
+        a: Joi.number(),
+        b: Joi.number()
+      })
+    }
+  }
+});
+
+server.route({
+  method: 'GET',
+  path: '/items/{pageNo}',
+  config: {
+    handler: (request, reply) => {
+      reply('OK');
+    },
+    tags: ['api'],
+    validate: {
+      params: {
+        pageNo: Joi.number()
+      },
+      query: {
+        search: Joi.string()
+      },
+      headers: Joi.object({
+        'authorization': Joi.string().required()
+      }).unknown()
+    }
+  }
+});
 
 server.register([
   Inert,
@@ -218,8 +273,6 @@ server.register([
     }
   });
 });
-
-server.route(Routes);
 ```
 
 <img src="https://raw.github.com/hapijs/joi/master/images/joi.png" width="200">
