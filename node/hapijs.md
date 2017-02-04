@@ -223,6 +223,8 @@ server.route(Routes);
 ```
 
 
+<img src="https://raw.github.com/hapijs/joi/master/images/joi.png" width="200">
+
 
 ### :books: 參考網站：
 - [hapi-swagger](https://github.com/glennjones/hapi-swagger)
