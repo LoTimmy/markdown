@@ -222,7 +222,6 @@ server.register([
 server.route(Routes);
 ```
 
-
 <img src="https://raw.github.com/hapijs/joi/master/images/joi.png" width="200">
 
 
